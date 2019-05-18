@@ -229,3 +229,7 @@ body {
     transform: translateY(-100%); }
     #loader.done img {
       transform: translateY(5vh); }
+
+@media (min-width: 992px) {
+  .mobileSoon {
+    display: none; } }
