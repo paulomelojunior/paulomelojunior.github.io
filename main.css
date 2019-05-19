@@ -134,7 +134,7 @@ body {
   text-align: center;
   text-transform: uppercase; }
   .pageTitle small {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: .5rem; }
 
@@ -270,5 +270,6 @@ body {
     #loader.done img {
       transform: translateY(5vh); }
 
-.mobileSoon {
-  display: none; }
+@media (min-width: 992px) {
+  .mobileSoon {
+    display: none; } }
