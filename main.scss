@@ -350,6 +350,20 @@ body {
     }
 }
 
+.mobileSoon {
+    display: block;
+    background: black;
+    font-size: 3rem;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    line-height: 100vh;
+    font-weight: 900;
+    z-index: 100;
+}
+
 @media (min-width: 992px) {
     .mobileSoon {
         display: none;
