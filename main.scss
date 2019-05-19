@@ -159,7 +159,6 @@ body {
     flex-direction: column;
     transition: calc(var(--time-base)*8) var(--slow-end);
     transform: scale(1.05);
-    transform-origin: bottom;
 
     &:after {
         content: '';
