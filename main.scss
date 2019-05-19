@@ -93,7 +93,9 @@ body {
     height: 100vh;
     z-index: -1;
     opacity: 0;
-    animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*3) reverse forwards;
+    &.done {
+        animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*1.5) reverse forwards;
+    }
 }
 
 .pageMenu {
@@ -152,11 +154,10 @@ body {
     color: white;
     flex: 1;
     flex-direction: column;
-    transition: calc(var(--time-base)*6) var(--slow-end);
+    transition: calc(var(--time-base)*8) var(--slow-end);
     transform: scale(1.5);
     transform-origin: bottom;
 
-    
     &.done {
         transform: none;
         * {
@@ -165,7 +166,7 @@ body {
     
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
-                    animation-delay: calc(var(--time-base) * #{$i} + var(--time-base) * .5);
+                    animation-delay: calc(var(--time-base) * #{$i});
                 }
             }
         }

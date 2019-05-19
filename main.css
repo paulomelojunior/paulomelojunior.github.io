@@ -99,8 +99,9 @@ body {
   position: absolute;
   height: 100vh;
   z-index: -1;
-  opacity: 0;
-  animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*3) reverse forwards; }
+  opacity: 0; }
+  .pagePicture.done {
+    animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*1.5) reverse forwards; }
 
 .pageMenu {
   align-items: center;
@@ -145,7 +146,7 @@ body {
   color: white;
   flex: 1;
   flex-direction: column;
-  transition: calc(var(--time-base)*6) var(--slow-end);
+  transition: calc(var(--time-base)*8) var(--slow-end);
   transform: scale(1.5);
   transform-origin: bottom; }
   .pageContent.done {
@@ -154,11 +155,11 @@ body {
       animation: maximumEffort calc(var(--time-base)*3) var(--slow-end);
       animation-fill-mode: backwards; }
       .pageContent.done *:nth-child(1) {
-        animation-delay: calc(var(--time-base) * 1 + var(--time-base) * .5); }
+        animation-delay: calc(var(--time-base) * 1); }
       .pageContent.done *:nth-child(2) {
-        animation-delay: calc(var(--time-base) * 2 + var(--time-base) * .5); }
+        animation-delay: calc(var(--time-base) * 2); }
       .pageContent.done *:nth-child(3) {
-        animation-delay: calc(var(--time-base) * 3 + var(--time-base) * .5); }
+        animation-delay: calc(var(--time-base) * 3); }
 
 .pageFooter {
   align-items: baseline;

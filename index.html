@@ -97,6 +97,7 @@
     window.addEventListener('load', function () {
         document.querySelector('body').classList.remove('preload');
         setTimeout(() => {
+            document.querySelector('.pagePicture').classList.add('done');
             document.querySelector('.pageContent').classList.add('done');
             document.querySelector('#loader').classList.add('done');
         }, 500);
