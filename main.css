@@ -72,7 +72,8 @@
   width: 50%;
   transform: translateX(100%);
   transform-origin: 0%;
-  transition: transform calc(var(--time-base)*2) var(--slow-end); }
+  transition: transform calc(var(--time-base)*2) var(--slow-end);
+  z-index: 1; }
   .open.pageMenu, .open.pageFooter {
     transform: translateX(0%); }
 
@@ -105,7 +106,7 @@ body {
 
 .pageMenu {
   align-items: center;
-  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.9));
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   height: 100vh; }
   .pageMenu li {
@@ -125,6 +126,9 @@ body {
   .pageMenu.open li {
     opacity: 1;
     transform: translateX(0); }
+  .pageMenu.open ~ .pageContent:after {
+    opacity: .75;
+    visibility: visible; }
 
 .pageTitle {
   font-size: 6rem;
@@ -149,6 +153,17 @@ body {
   transition: calc(var(--time-base)*8) var(--slow-end);
   transform: scale(1.5);
   transform-origin: bottom; }
+  .pageContent:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: black;
+    opacity: 0;
+    transition: var(--time-base);
+    visibility: hidden; }
   .pageContent.done {
     transform: none; }
     .pageContent.done * {
@@ -183,7 +198,8 @@ body {
   height: 2.5rem;
   padding: 0;
   position: absolute;
-  width: 2.5rem; }
+  width: 2.5rem;
+  z-index: 1; }
   .toggleMenu span {
     color: white;
     font-family: 'font';
@@ -261,14 +277,10 @@ body {
   background: white;
   transition: calc(var(--time-base)*2) var(--fast-end);
   z-index: 1; }
-  #loader img {
-    transition: calc(var(--time-base)*2) var(--fast-end); }
   #loader.done {
     visibility: hidden;
     overflow: hidden;
     transform: translateY(-100%); }
-    #loader.done img {
-      transform: translateY(5vh); }
 
 @media (min-width: 992px) {
   .mobileSoon {

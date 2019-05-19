@@ -56,6 +56,7 @@
     transform: translateX(100%);
     transform-origin: 0%;
     transition: transform calc(var(--time-base)*2) var(--slow-end);
+    z-index: 1;
 
     &.open {
         transform: translateX(0%);
@@ -93,6 +94,7 @@ body {
     height: 100vh;
     z-index: -1;
     opacity: 0;
+
     &.done {
         animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*1.5) reverse forwards;
     }
@@ -102,7 +104,7 @@ body {
     @extend %paddingBase;
     @extend %menuBase;
     align-items: center;
-    background: linear-gradient(to right, white, transparentize(white, .1));
+    background: transparentize(white, .1);
     display: flex;
     height: 100vh;
 
@@ -114,6 +116,7 @@ body {
         text-transform: uppercase;
         transform: translateX(10rem);
         transition: calc(var(--time-base)*2);
+
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) {
                 transition-delay: calc(.1s * #{$i});
@@ -125,6 +128,13 @@ body {
         li {
             opacity: 1;
             transform: translateX(0);
+        }
+
+        ~.pageContent {
+            &:after {
+                opacity: .75;
+                visibility: visible;
+            }
         }
     }
 }
@@ -158,12 +168,26 @@ body {
     transform: scale(1.5);
     transform-origin: bottom;
 
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: black;
+        opacity: 0;
+        transition: var(--time-base);
+        visibility: hidden;
+    }
+
     &.done {
         transform: none;
+
         * {
             animation: maximumEffort calc(var(--time-base)*3) var(--slow-end);
             animation-fill-mode: backwards;
-    
+
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     animation-delay: calc(var(--time-base) * #{$i});
@@ -201,6 +225,7 @@ body {
     padding: 0;
     position: absolute;
     width: 2.5rem;
+    z-index: 1;
 
     span {
         color: white;
@@ -318,18 +343,10 @@ body {
     transition: calc(var(--time-base)*2) var(--fast-end);
     z-index: 1;
 
-    img {
-        transition: calc(var(--time-base)*2) var(--fast-end);
-    }
-
     &.done {
         visibility: hidden;
         overflow: hidden;
         transform: translateY(-100%);
-
-        img {
-            transform: translateY(5vh);
-        }
     }
 }
 
