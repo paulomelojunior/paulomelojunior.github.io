@@ -156,19 +156,19 @@ body {
     transform: scale(1.5);
     transform-origin: bottom;
 
-    * {
-        animation: maximumEffort calc(var(--time-base)*3) var(--slow-end);
-        animation-fill-mode: backwards;
-
-        @for $i from 1 through 3 {
-            &:nth-child(#{$i}) {
-                animation-delay: calc(var(--time-base) * #{$i} + var(--time-base) * .5);
-            }
-        }
-    }
-
+    
     &.done {
         transform: none;
+        * {
+            animation: maximumEffort calc(var(--time-base)*3) var(--slow-end);
+            animation-fill-mode: backwards;
+    
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: calc(var(--time-base) * #{$i} + var(--time-base) * .5);
+                }
+            }
+        }
     }
 }
 
