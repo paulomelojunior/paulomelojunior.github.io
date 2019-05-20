@@ -24,8 +24,12 @@
             }, 500);
         }
 
-        window.addEventListener('load', pageLoad);
-        document.addEventListener('click', pageLoad);
+        
+        if (window.innerWidth < 768) {
+            pageLoad()
+        } else {
+            window.addEventListener('load', pageLoad);
+        }
 
     </script>
     <div id="loader">
