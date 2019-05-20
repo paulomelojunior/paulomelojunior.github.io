@@ -13,20 +13,6 @@
 </head>
 
 <body class="preload">
-    <script>
-
-        function pageLoad() {
-            document.querySelector('body').classList.remove('preload');
-            setTimeout( function() {
-                document.querySelector('.pagePicture').classList.add('done');
-                document.querySelector('.pageContent').classList.add('done');
-                document.querySelector('#loader').classList.add('done');
-            }, 500);
-        }
-
-        window.addEventListener('load', pageLoad);
-
-    </script>
     <div id="loader">
         <img height="32" src="assets/images/dark.svg" alt="Loading...">
     </div>
@@ -102,6 +88,15 @@
             toggleMenu()
         }
     })
+
+    window.addEventListener('load', function() {
+        document.querySelector('body').classList.remove('preload');
+        setTimeout(function () {
+            content.classList.add('done');
+            document.querySelector('.pagePicture').classList.add('done');
+            document.querySelector('#loader').classList.add('done');
+        }, 500);        
+    });
 
 </script>
 
