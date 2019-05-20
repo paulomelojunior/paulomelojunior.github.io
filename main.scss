@@ -370,11 +370,7 @@ body {
 
 @media all and (max-width: 768px) {
     :root {
-        --layout-base: 8px;
-    }
-
-    .logo {
-        padding: .5rem 0;
+        --layout-base: 4px;
     }
 
     .toggleMenu {
