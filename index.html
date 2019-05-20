@@ -14,14 +14,18 @@
 
 <body class="preload">
     <script>
-        window.addEventListener('load', function () {
+
+        function pageLoad() {
             document.querySelector('body').classList.remove('preload');
             setTimeout(() => {
                 document.querySelector('.pagePicture').classList.add('done');
                 document.querySelector('.pageContent').classList.add('done');
                 document.querySelector('#loader').classList.add('done');
             }, 500);
-        });
+        }
+
+        window.addEventListener('load', pageLoad);
+
     </script>
     <div id="loader">
         <img height="32" src="assets/images/dark.svg" alt="Loading...">
