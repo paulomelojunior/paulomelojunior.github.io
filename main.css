@@ -43,11 +43,16 @@
     opacity: .9;
     transform: scale(1.1); } }
 
+@keyframes maximumEffort {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(60rem); } }
+
 * {
   box-sizing: border-box; }
 
 :root {
-  --hue: 210;
+  --hue: 350;
   --color: hsl(var(--hue), 100%, 50%);
   --gray: hsl(var(--hue), 30%, 60%);
   --primary: hsl(var(--hue), 50%, 20%);
@@ -59,6 +64,16 @@
   font-size: calc(var(--layout-base)*2);
   font-family: 'font';
   line-height: 1; }
+
+::-moz-selection {
+  background: black;
+  color: white;
+  opacity: .9; }
+
+::selection {
+  background: black;
+  color: white;
+  opacity: .9; }
 
 .pageMenu, .pageFooter {
   bottom: 0;
@@ -128,15 +143,27 @@ body {
 .pageTitle {
   font-size: 6rem;
   font-weight: 900;
-  line-height: 3rem;
   margin: auto 0;
+  text-transform: uppercase;
   text-align: center;
-  text-transform: uppercase; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .pageTitle small {
+    display: block;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: .5rem;
-    margin-right: -.5rem; }
+    margin-right: -.5rem;
+    position: absolute;
+    margin-top: 5rem; }
+    .pageTitle small a {
+      color: white;
+      transition: var(--time-base) var(--slow-end);
+      text-decoration-color: transparent;
+      position: relative; }
+      .pageTitle small a:hover {
+        text-decoration-color: white; }
 
 .pageSubtitle {
   color: var(--gray); }
@@ -147,7 +174,7 @@ body {
   flex: 1;
   flex-direction: column;
   transition: calc(var(--time-base)*8) var(--slow-end);
-  transform: scale(1.05); }
+  transform: scale(1.1); }
   .pageContent:after {
     content: '';
     width: 100%;
