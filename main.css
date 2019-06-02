@@ -41,7 +41,7 @@
 @keyframes superheroLanding {
   0% {
     opacity: .9;
-    transform: scale(1.1); } }
+    transform: scale(1.05); } }
 
 @keyframes maximumEffort {
   0% {
@@ -52,7 +52,7 @@
   box-sizing: border-box; }
 
 :root {
-  --hue: 220;
+  --hue: 265;
   --color: hsl(var(--hue), 100%, 50%);
   --gray: hsl(var(--hue), 30%, 60%);
   --primary: hsl(var(--hue), 50%, 20%);
@@ -87,7 +87,7 @@
   .open.pageMenu, .open.pageFooter {
     transform: translateX(0%); }
 
-.pageMenu, .pageContent, .pageFooter {
+article, .pageHeader, .pageMenu, .pageContent, .pageFooter {
   padding: 8vw; }
 
 body {
@@ -97,6 +97,9 @@ body {
   background-color: black; }
   body.preload * {
     transition: none !important; }
+
+.pageLogo {
+  height: 2.5rem; }
 
 .pageWrapper {
   display: flex;
@@ -114,31 +117,15 @@ body {
   .pagePicture.done {
     animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*1.5) reverse forwards; }
 
-.pageMenu {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.9);
+.pageHeader {
   display: flex;
-  height: 100vh; }
-  .pageMenu li {
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 4rem;
-    opacity: 0;
-    text-transform: uppercase;
-    transform: translateX(10rem);
-    transition: calc(var(--time-base)*2); }
-    .pageMenu li:nth-child(1) {
-      transition-delay: calc(.1s * 1); }
-    .pageMenu li:nth-child(2) {
-      transition-delay: calc(.1s * 2); }
-    .pageMenu li:nth-child(3) {
-      transition-delay: calc(.1s * 3); }
-  .pageMenu.open li {
-    opacity: 1;
-    transform: translateX(0); }
-  .pageMenu.open ~ .pageContent:after {
-    opacity: .75;
-    visibility: visible; }
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  transition: calc(var(--time-base)*6) var(--slow-end);
+  transform: scale(1.1); }
+  .pageHeader.done {
+    transform: none; }
 
 .pageTitle {
   font-size: 6rem;
@@ -152,7 +139,7 @@ body {
   .pageTitle small {
     display: block;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: .5rem;
     margin-right: -.5rem;
     position: absolute;
@@ -164,16 +151,48 @@ body {
       position: relative; }
       .pageTitle small a:hover {
         text-decoration-color: white; }
+  .pageTitle mark {
+    padding: .25rem 0 .25rem  .5rem;
+    background-color: black;
+    color: white; }
 
 .pageSubtitle {
   color: var(--gray); }
 
+.pageMenu {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  height: 100vh; }
+  .pageMenu li {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 4rem;
+    opacity: 0;
+    text-transform: uppercase;
+    transform: translateX(10rem);
+    transition: calc(var(--time-base)*2) var(--slow-end); }
+    .pageMenu li:nth-child(1) {
+      transition-delay: calc(.1s * 1); }
+    .pageMenu li:nth-child(2) {
+      transition-delay: calc(.1s * 2); }
+    .pageMenu li:nth-child(3) {
+      transition-delay: calc(.1s * 3); }
+    .pageMenu li:nth-child(4) {
+      transition-delay: calc(.1s * 4); }
+  .pageMenu.open li {
+    opacity: 1;
+    transform: translateX(0); }
+  .pageMenu.open ~ .pageContent:after {
+    opacity: .75;
+    visibility: visible; }
+
 .pageContent {
   display: flex;
-  color: white;
   flex: 1;
   flex-direction: column;
-  transition: calc(var(--time-base)*8) var(--slow-end);
+  align-items: center;
+  transition: calc(var(--time-base)*6) var(--slow-end);
   transform: scale(1.1); }
   .pageContent:after {
     content: '';
@@ -203,17 +222,17 @@ body {
     display: inline;
     margin-left: .5rem; }
 
-.toggleMenu {
+.buttonMenu {
   align-self: flex-end;
   background: none;
   border: none;
   cursor: pointer;
   height: 2.5rem;
   padding: 0;
-  position: absolute;
+  position: relative;
   width: 2.5rem;
   z-index: 1; }
-  .toggleMenu span {
+  .buttonMenu span {
     color: white;
     font-family: 'font';
     font-size: 1.5rem;
@@ -228,45 +247,41 @@ body {
     top: 0;
     transition: var(--time-base);
     visibility: hidden; }
-  .toggleMenu:focus {
+  .buttonMenu:focus {
     outline: none; }
-  .toggleMenu:hover {
+  .buttonMenu:hover {
     outline: none; }
-    .toggleMenu:hover span {
+    .buttonMenu:hover span {
       right: 2rem;
       visibility: visible;
       opacity: 1; }
-    .toggleMenu:hover:after, .toggleMenu:hover:before {
+    .buttonMenu:hover:after, .buttonMenu:hover:before {
       width: 120%;
       top: calc(50% - 1px); }
-  .toggleMenu:after, .toggleMenu:before {
+  .buttonMenu:after, .buttonMenu:before {
     background: white;
     content: '';
     height: 2px;
     position: absolute;
     right: 0;
     transition: var(--time-base); }
-  .toggleMenu:after {
+  .buttonMenu:after {
     top: calc(60% - 1px);
     width: 75%; }
-  .toggleMenu:before {
+  .buttonMenu:before {
     top: calc(40% - 1px);
     width: 100%; }
-  .toggleMenu.x span {
+  .buttonMenu.x span {
     color: transparent; }
-  .toggleMenu.x:after, .toggleMenu.x:before {
+  .buttonMenu.x:after, .buttonMenu.x:before {
     top: calc(50% - 1px);
     width: 60%;
     right: 40%;
     background: var(--gray); }
-  .toggleMenu.x:after {
+  .buttonMenu.x:after {
     transform: rotate(-135deg); }
-  .toggleMenu.x:before {
+  .buttonMenu.x:before {
     transform: rotate(-225deg); }
-
-.logo {
-  position: absolute;
-  height: 2.5rem; }
 
 .list {
   padding: 0;

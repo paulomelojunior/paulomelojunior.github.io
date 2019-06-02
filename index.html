@@ -14,54 +14,54 @@
 
 <body class="preload">
     <div id="loader">
-        <img height="32" src="assets/images/dark.svg" alt="Loading...">
+        <img height="40" src="assets/images/b.svg" alt="Loading...">
     </div>
     <div class="pageWrapper">
-        <img class="pagePicture" src="assets/images/bg.jpg" alt="Picture of Paulo Melo">
+        <img class="pagePicture" src="assets/images/bg.png" alt="Picture of Paulo Melo">
         <nav class="pageMenu">
             <ul class="list">
                 <li>
                     <a target="_blank" href="https://github.com/paulomelojunior">
-                        github
+                        GitHub
                     </a>
                 </li>
                 <li>
                     <a target="_blank" href="https://instagram.com/paulomelojunior">
-                        instagram
+                        LinkedIn
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" href="https://www.linkedin.com/in/paulomelojunior/">
-                        linkedin
+                    <a target="_blank" href="https://m.me/paulomelojunior">
+                        Let's talk
                     </a>
                 </li>
             </ul>
         </nav>
-        <main class="pageContent">
-            <img class="logo" src="assets/images/light.svg" alt="Tech Niceness">
-            <h1 class="pageTitle">
-                Hi, I'm Paul&#216;
-                <small>
-                    a designer and coder based in 
-                    <a target="_blank" href="https://goo.gl/maps/W9JgRBbe5dsopCuj6">
-                        Belo Horizonte, Brazil.
-                    </a>
-                </small>
-            </h1>
-            <button class="toggleMenu">
+        <header class="pageHeader">
+            <img class="pageLogo" src="assets/images/w.svg" alt="Loading...">
+            <button class="buttonMenu">
                 <span>
                     menu
                 </span>
             </button>
+        </header>
+        <main class="pageContent">
+            <h1 class="pageTitle">
+                Hi, I'm Paul
+                <small>
+                    a <mark>designer and coder</mark> based in Belo Horizonte, Brazil.
+                </small>
+            </h1>
         </main>
         <footer class="pageFooter">
             <span class="pageSubtitle">
-                Soon or never.
+                More soon, or never.
             </span>
             <ul class="list">
                 <li>
-                    <a target="_blank" href="https://github.com/techniceness">
-                        &copy; 2019 techniceness.com
+                    MIT &copy; 
+                    <a href="https://github.com/paulomelojunior">
+                        techniceness.com
                     </a>
                 </li>
             </ul>
@@ -73,7 +73,7 @@
 </body>
 <script>
 
-    const button = document.querySelector('.toggleMenu');
+    const button = document.querySelector('.buttonMenu');
     const menu = document.querySelector('.pageMenu');
     const content = document.querySelector('.pageContent');
     const footer = document.querySelector('.pageFooter');
@@ -95,13 +95,14 @@
         }
     })
 
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         document.querySelector('body').classList.remove('preload');
         setTimeout(function () {
             content.classList.add('done');
             document.querySelector('.pagePicture').classList.add('done');
+            document.querySelector('.pageHeader').classList.add('done');
             document.querySelector('#loader').classList.add('done');
-        }, 500);        
+        }, 500);
     });
 
 </script>
