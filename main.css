@@ -88,7 +88,7 @@
     transform: translateX(0%); }
 
 article, .pageHeader, .pageMenu, .pageContent, .pageFooter {
-  padding: 10rem; }
+  padding: 8vw; }
 
 body {
   height: 100vh;
@@ -122,7 +122,7 @@ body {
   position: absolute;
   justify-content: space-between;
   width: 100%;
-  transition: calc(var(--time-base)*6) var(--slow-end);
+  transition: transform calc(var(--time-base)*6) var(--slow-end);
   transform: scale(1.1); }
   .pageHeader.done {
     transform: none; }
@@ -132,10 +132,7 @@ body {
   font-weight: 900;
   margin: auto 0;
   text-transform: uppercase;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  text-align: center; }
   .pageTitle small {
     display: block;
     font-size: 1.5rem;
@@ -143,7 +140,9 @@ body {
     letter-spacing: .5rem;
     margin-right: -.5rem;
     position: absolute;
-    margin-top: 5rem; }
+    margin-top: 1rem;
+    left: 0;
+    width: 100%; }
     .pageTitle small a {
       color: white;
       transition: var(--time-base) var(--slow-end);
@@ -192,7 +191,7 @@ body {
   flex: 1;
   flex-direction: column;
   align-items: center;
-  transition: calc(var(--time-base)*6) var(--slow-end);
+  transition: transform calc(var(--time-base)*6) var(--slow-end);
   transform: scale(1.1); }
   .pageContent:after {
     content: '';
@@ -223,7 +222,6 @@ body {
     margin-left: .5rem; }
 
 .buttonMenu {
-  align-self: flex-end;
   background: none;
   border: none;
   cursor: pointer;
@@ -310,19 +308,15 @@ body {
     overflow: hidden;
     transform: translateY(-100%); }
 
-.mobileSoon {
-  display: block;
-  background: black;
-  font-size: 3rem;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  color: white;
-  text-align: center;
-  line-height: 100vh;
-  font-weight: 900;
-  z-index: 100; }
-
-@media all and (min-width: 768px) {
-  .mobileSoon {
-    display: none; } }
+@media (max-width: 768px) {
+  :root {
+    --layout-base: 6px; }
+  .pageLogo {
+    height: 3rem;
+    padding-top: .5rem; }
+  .pageTitle {
+    font-size: 4rem; }
+    .pageTitle small {
+      line-height: 2rem; }
+  .pageMenu, .pageFooter {
+    width: 100%; } }

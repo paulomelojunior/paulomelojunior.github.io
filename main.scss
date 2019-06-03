@@ -77,7 +77,7 @@
 }
 
 %paddingBase {
-    padding: 10rem;
+    padding: 8vw;
 }
 
 article {
@@ -128,7 +128,7 @@ body {
         position: absolute;
         justify-content: space-between;
         width: 100%;
-        transition: calc(var(--time-base)*6) var(--slow-end);
+        transition: transform calc(var(--time-base)*6) var(--slow-end);
         transform: scale(1.1);
 
         &.done {
@@ -142,9 +142,6 @@ body {
         margin: auto 0;
         text-transform: uppercase;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     
         small {
             display: block;
@@ -153,8 +150,9 @@ body {
             letter-spacing: .5rem;
             margin-right: -.5rem;
             position: absolute;
-            margin-top: 5rem;
-    
+            margin-top: 1rem;
+            left: 0;
+            width: 100%;
             a {
                 color: white;
                 transition: var(--time-base) var(--slow-end);
@@ -223,7 +221,7 @@ body {
         flex: 1;
         flex-direction: column;
         align-items: center;
-        transition: calc(var(--time-base)*6) var(--slow-end);
+        transition: transform calc(var(--time-base)*6) var(--slow-end);
         transform: scale(1.1);
 
         &:after {
@@ -267,7 +265,6 @@ body {
 
 .button {
     &Menu {
-        align-self: flex-end;
         background: none;
         border: none;
         cursor: pointer;
@@ -396,22 +393,23 @@ body {
     }
 }
 
-.mobileSoon {
-    display: block;
-    background: black;
-    font-size: 3rem;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    color: white;
-    text-align: center;
-    line-height: 100vh;
-    font-weight: 900;
-    z-index: 100;
-}
-
-@media all and (min-width: 768px) {
-    .mobileSoon {
-        display: none;
+@media (max-width: 768px) {
+    :root {
+        --layout-base: 6px;
+    }
+    .pageLogo {
+        height: 3rem;
+        padding-top: .5rem;
+    }
+    .pageTitle {
+        font-size: 4rem;
+        small {
+            line-height: 2rem;
+        }
+    }
+    .page {
+        &Menu, &Footer {
+            width: 100%;
+        }
     }
 }
