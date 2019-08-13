@@ -1,40 +1,9 @@
-@mixin Akrobat($weight) {
-    @font-face {
-        font-family: 'font';
-        src: url(assets/fonts/Akrobat-#{$weight}.woff);
-        font-weight: $weight;
-    }
-}
-
-@for $i from 2 through 9 {
-    @include Akrobat(100 * $i)
-}
-
-@keyframes superheroLanding {
-    0% {
-        opacity: .9;
-        transform: scale(1.05);
-    }
-}
-
-@keyframes maximumEffort {
-    0% {
-        opacity: 0;
-        transform: scale(.5) translateY(60rem);
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
 :root {
     // color
     --hue: 265;
     --color: hsl(var(--hue), 100%, 50%);
     --gray: hsl(var(--hue), 30%, 60%);
     --primary: hsl(var(--hue), 50%, 20%);
-    --primary-light: hsl(var(--hue), 90%, 60%);
 
     // motion
     --layout-base: 8px;
@@ -44,14 +13,8 @@
 
     // text
     font-size: calc(var(--layout-base)*2);
-    font-family: 'font';
-    line-height: 1;
-}
-
-::-moz-selection {
-    background: black;
-    color: white;
-    opacity: .9;
+    font-family: 'Inter';
+    line-height: 0.75;
 }
 
 ::selection {
@@ -60,356 +23,183 @@
     opacity: .9;
 }
 
+::-moz-selection {
+    background: black;
+    color: white;
+    opacity: .9;
+}
 
-%menuBase {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    width: 50%;
-    transform: translateX(100%);
-    transform-origin: 0%;
-    transition: transform calc(var(--time-base)*2) var(--slow-end);
-    z-index: 1;
-
-    &.open {
-        transform: translateX(0%);
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: 0;
     }
 }
 
-%paddingBase {
-    padding: 8vw;
+@for $i from 1 through 10 {
+    .spacing-#{$i} {
+        margin-bottom: $i + rem;
+    }
 }
 
-article {
-    @extend %paddingBase;
+h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    
+}
+
+h2 {
+    line-height: 1;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     margin: 0;
+    overflow: hidden;
     padding: 0;
-    background-color: black;
-
-    &.preload {
-        * {
-            transition: none !important;
-        }
-    }
-}
-
-.page {
-    &Logo {
-        height: 2.5rem;
-    }
-
-    &Wrapper {
-        display: flex;
-        height: 100vh;
-        width: 100vw;
-        position: relative;
-        overflow: hidden;
-        justify-content: center;
-    }
-    
-    &Picture {
-        position: absolute;
-        height: 100vh;
-        z-index: -1;
-        opacity: 0;
-    
-        &.done {
-            animation: superheroLanding calc(var(--time-base)*2.5) var(--fast-end) calc(var(--time-base)*1.5) reverse forwards;
-        }
-    }
-
-    &Header {
-        @extend %paddingBase;
-        display: flex;
-        position: absolute;
-        justify-content: space-between;
-        width: 100%;
-        transition: transform calc(var(--time-base)*6) var(--slow-end);
-        transform: scale(1.1);
-
-        &.done {
-            transform: none;
-        }
-    }
-
-    &Title {
-        font-size: 6rem;
-        font-weight: 900;
-        margin: auto 0;
-        text-transform: uppercase;
-        text-align: center;
-    
-        small {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: .5rem;
-            margin-right: -.5rem;
-            position: absolute;
-            margin-top: 1rem;
-            left: 0;
-            width: 100%;
-            a {
-                color: white;
-                transition: var(--time-base) var(--slow-end);
-                text-decoration-color: transparent;
-                position: relative;
-    
-                &:hover {
-                    text-decoration-color: white;
-                }
-            }
-        }
-    
-        mark {
-            padding: .25rem 0 .125rem  .5rem;
-            background-color: black;
-            color: white;
-        }
-    }
-    
-    &Subtitle {
-        color: var(--gray);
-    }
-
-    &Menu {
-        @extend %paddingBase;
-        @extend %menuBase;
-        align-items: center;
-        background: transparentize(white, .1);
-        display: flex;
-        height: 100vh;
-    
-        li {
-            font-size: 3rem;
-            font-weight: 900;
-            line-height: 4rem;
-            opacity: 0;
-            text-transform: uppercase;
-            transform: translateX(10rem);
-            transition: calc(var(--time-base)*2) var(--slow-end);
-    
-            @for $i from 1 through 4 {
-                &:nth-child(#{$i}) {
-                    transition-delay: calc(.1s * #{$i});
-                }
-            }
-        }
-    
-        &.open {
-            li {
-                opacity: 1;
-                transform: translateX(0);
-            }
-    
-            ~.pageContent {
-                &:after {
-                    opacity: .75;
-                    visibility: visible;
-                }
-            }
-        }
-    }
-
-    &Content {
-        @extend %paddingBase;
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: center;
-        transition: transform calc(var(--time-base)*6) var(--slow-end);
-        transform: scale(1.1);
-
-        &:after {
-            content: '';
-            width: 100%;
+    &.loading {
+        &:before {
+            align-items: center;
+            background: white;
+            content: 'loading...';
+            display: flex;
+            font-weight: 500;
             height: 100%;
-            top: 0;
-            left: 0;
+            justify-content: center;
             position: absolute;
-            background: black;
-            opacity: 0;
-            transition: var(--time-base);
-            visibility: hidden;
+            width: 100%;
+            z-index: 2;
+            font-size: 2rem;
+            font-weight: 700;
         }
-
-        &.done {
-            transform: none;
-        }
-    }
-
-    &Footer {
-        @extend %menuBase;
-        @extend %paddingBase;
-        align-items: baseline;
-        color: var(--primary);
-        display: flex;
-        font-size: 1.25rem;
-        font-weight: 600;
-        justify-content: space-between;
-        letter-spacing: .5px;
-        line-height: 0rem;
-        padding-top: 0;
-
-        li {
-            display: inline;
-            margin-left: .5rem;
-        }
-
     }
 }
 
-.button {
-    &Menu {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    transition: padding var(--time-base) var(--slow-end);
+    padding:
+        10vw 10vw 0 10vw;
+
+    button {
+        -webkit-appearance: none;
+        appearance: none;
         background: none;
         border: none;
         cursor: pointer;
-        height: 2.5rem;
-        padding: 0;
+        margin: -1rem;
+        padding: 1rem;
         position: relative;
-        width: 2.5rem;
         z-index: 1;
-    
-        span {
-            color: white;
-            font-family: 'font';
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: .5rem;
-            line-height: 2.75rem;
-            opacity: 0;
-            padding-right: 4rem;
-            position: absolute;
-            right: 0;
-            text-transform: uppercase;
-            top: 0;
-            transition: var(--time-base);
-            visibility: hidden;
-        }
-    
+        font-weight: 600;
+        z-index: 1;
+        line-height: .75;
+        font-size: 1rem;
         &:focus {
             outline: none;
         }
-    
-        &:hover {
-            outline: none;
-    
-            span {
-                right: 2rem;
-                visibility: visible;
-                opacity: 1;
-            }
-    
-            &:after,
-            &:before {
-                width: 120%;
-                top: calc(50% - 1px);
-            }
-        }
-    
-        &:after,
-        &:before {
-            background: white;
-            content: '';
-            height: 2px;
-            position: absolute;
-            right: 0;
-            transition: var(--time-base);
-        }
-    
-        &:after {
-            top: calc(60% - 1px);
-            width: 75%;
-        }
-    
-        &:before {
-            top: calc(40% - 1px);
-            width: 100%;
-        }
-    
-        &.x {
-            span {
-                color: transparent;
-            }
-    
-            &:after,
-            &:before {
-                top: calc(50% - 1px);
-                width: 60%;
-                right: 40%;
-                background: var(--gray);
-            }
-    
-            &:after {
-                transform: rotate(-135deg);
-            }
-    
-            &:before {
-                transform: rotate(-225deg);
-            }
+        
+        &.inverted {
+            content: 'Close it';
+            color: white;
         }
     }
 }
 
-.list {
-    padding: 0;
-    margin: 0;
-
-    li {
-        list-style: none;
-
-        a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color calc(var(--time-base)/2);
-
-            &:hover,
-            &:focus {
-                color: var(--primary-light);
-            }
-        }
-    }
-}
-
-#loader {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav {
     position: absolute;
-    width: 100%;
-    background: white;
-    transition: calc(var(--time-base)*2) var(--fast-end);
+    right: 0;
+    top: 0;
+    padding: 15vw 15vw 5vw 5vw;
+    box-sizing: border-box;
+    display: flex;
+    background: black;
+    justify-content: flex-end;
+    flex-direction: column;
+    transition: var(--time-base) var(--slow-end);
     z-index: 1;
-
-    &.done {
-        visibility: hidden;
-        overflow: hidden;
-        transform: translateY(-100%);
+    margin: 5vw;
+    overflow: hidden;
+    a {
+        margin: 2rem 0 0;
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        transition: transform var(--time-base) var(--slow-end);
+        line-height: .625;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}):hover {
+                align-self: flex-start;
+                background: hsl($i * 90, 100%, 50%);
+                color: black;
+            }
+        }
     }
+
+    &.closed {
+        overflow: hidden;
+        padding: 15vw 0rem 5vw 0rem;
+        width: 0;
+        a {
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+    }
+
+}
+
+main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10vw;
+    transition: padding var(--time-base) var(--slow-end);
 }
 
 @media (max-width: 768px) {
     :root {
-        --layout-base: 6px;
+        font-size: calc(var(--layout-base)*1.75);
     }
-    .pageLogo {
-        height: 3rem;
-        padding-top: .5rem;
+    h1 {
+        font-size: 1rem;
+        font-weight: 400;
     }
-    .pageTitle {
-        font-size: 4rem;
-        small {
-            line-height: 2rem;
+    nav {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        padding: 10vw;
+        &.closed {            
+            padding: 10vw 0;
+            a {
+                transform: translateX(-300%);
+            }
         }
     }
-    .page {
-        &Menu, &Footer {
-            width: 100%;
-        }
+    header {
+        box-sizing: border-box;
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+        padding: 10vw;
     }
 }

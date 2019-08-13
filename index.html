@@ -1,107 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Drama free website. MIT © techniceness.com -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        @paulomelojunior
-    </title>
+
+    <title>Oh, hi!</title>
+
     <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/inter.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+
 </head>
 
-<body class="preload">
-    <div id="loader">
-        <img height="40" src="assets/images/b.svg" alt="Loading...">
-    </div>
-    <div class="pageWrapper">
-        <img class="pagePicture" src="assets/images/bg.png" alt="Picture of Paulo Melo">
-        <nav class="pageMenu">
-            <ul class="list">
-                <li>
-                    <a target="_blank" href="https://github.com/paulomelojunior">
-                        GitHub
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://linkedin.com/in/paulomelojunior">
-                        LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://m.me/paulomelojunior">
-                        Let's talk
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <header class="pageHeader">
-            <img class="pageLogo" src="assets/images/w.svg" alt="Loading...">
-            <button class="buttonMenu">
-                <span>
-                    menu
-                </span>
-            </button>
-        </header>
-        <main class="pageContent">
-            <h1 class="pageTitle">
-                Hi, I'm Paulo
-                <small>
-                    a <mark>designer and coder</mark> based in Belo Horizonte, Brazil.
-                </small>
-            </h1>
-        </main>
-        <footer class="pageFooter">
-            <span class="pageSubtitle">
-                More soon, or never.
-            </span>
-            <ul class="list">
-                <li>
-                    MIT &copy; 
-                    <a href="https://github.com/paulomelojunior">
-                        techniceness.com
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </div>
+<body class="loading">
+    <nav class="closed">
+        <a target="_blank" href="https://github.com/paulomelojunior">
+            GitHub
+        </a>
+        <a target="_blank" href="https://linkedin.com/in/paulomelojunior">
+            LinkedIn
+        </a>
+        <a target="_blank" href="https://m.me/paulomelojunior">
+            Messenger
+        </a>
+        <a target="_blank" href="https://instagram.com/paulomelojunior">
+            Instagram
+        </a>
+    </nav>
+    <header>
+        <h1>
+            @paulomelojunior
+        </h1>
+        <button>
+            Find me here
+        </button>
+    </header>
+    <main>
+        <h2 class="spacing-1">
+            Strategy, design and code. This is what I do.
+        </h2>
+        <h3>
+            Currently working with a technology company from Denver, CO.
+        </h3>
+    </main>
 </body>
-<script>
 
-    const button = document.querySelector('.buttonMenu');
-    const menu = document.querySelector('.pageMenu');
-    const content = document.querySelector('.pageContent');
-    const footer = document.querySelector('.pageFooter');
-
-    function toggleMenu() {
-        menu.classList.toggle('open');
-        footer.classList.toggle('open');
-        button.classList.toggle('x');
-    }
-
-    button.addEventListener('click', function (e) {
-        toggleMenu();
-        e.stopPropagation();
-    })
-
-    content.addEventListener('click', function () {
-        if (menu.classList.contains('open')) {
-            toggleMenu()
-        }
-    })
-
-    window.addEventListener('load', function () {
-        document.querySelector('body').classList.remove('preload');
-        setTimeout(function () {
-            content.classList.add('done');
-            document.querySelector('.pagePicture').classList.add('done');
-            document.querySelector('.pageHeader').classList.add('done');
-            document.querySelector('#loader').classList.add('done');
-        }, 500);
-    });
-
-</script>
+<script src="assets/js/loader.js"></script>
+<script src="assets/js/menu.js"></script>
 
 </html>
