@@ -153,7 +153,6 @@ nav {
     padding: 15vw 0rem 5vw 0rem;
     width: 0; }
     nav.closed a {
-      opacity: 0;
       transform: translateX(-200%); }
 
 main {
@@ -185,7 +184,7 @@ main {
     nav.closed {
       padding: 10vw 0; }
       nav.closed a {
-        transform: translateX(-200%); }
+        transform: translateX(-200vw); }
   header {
     box-sizing: border-box;
     width: 100%;
