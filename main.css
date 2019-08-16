@@ -184,7 +184,7 @@ main {
     nav.closed {
       padding: 10vw 0; }
       nav.closed a {
-        transform: translateX(-200vw); }
+        transform: translateX(-300vw); }
   header {
     box-sizing: border-box;
     width: 100%;
