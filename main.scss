@@ -68,29 +68,19 @@ body {
     margin: 0;
     overflow: hidden;
     padding: 0;
+    position: relative;
     &.loading {
-        &:before {
-            align-items: center;
-            background: white;
-            content: 'loading...';
-            display: flex;
-            font-weight: 500;
-            height: 100%;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            z-index: 2;
-            font-size: 2rem;
-            font-weight: 700;
-        }
+        opacity: 0;
+        transform: translateY(-1rem);
     }
+    opacity: 1;
+    transition: opacity 1.2s var(--slow-end), transform .8s var(--slow-end);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    transition: padding var(--time-base) var(--slow-end);
     padding:
         10vw 10vw 0 10vw;
 
@@ -172,7 +162,6 @@ main {
     flex-direction: column;
     box-sizing: border-box;
     padding: 10vw;
-    transition: padding var(--time-base) var(--slow-end);
 }
 
 @media (max-width: 768px) {
@@ -188,6 +177,7 @@ main {
         height: 100%;
         width: 100%;
         padding: 10vw;
+        justify-content: center;
         &.closed {            
             padding: 10vw 0;
             a {

@@ -12,8 +12,9 @@
     <link rel="stylesheet" type="text/css" href="assets/fonts/inter.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 
-</head>
+    <script src="assets/js/loader.js"></script>
 
+</head>
 <body class="loading">
     <nav class="closed">
         <a target="_blank" href="https://github.com/paulomelojunior">
@@ -46,8 +47,25 @@
         </h3>
     </main>
 </body>
+<script>
+    const button = document.querySelector('button');
+    const menu = document.querySelector('nav');
 
-<script src="assets/js/loader.js"></script>
-<script src="assets/js/menu.js"></script>
+    function toggleMenu() {
+        menu.classList.toggle('closed');
+        menu.classList.toggle('opened');
+        button.classList.toggle('inverted');
+    }
 
+    button.addEventListener('click', function (e) {
+        toggleMenu();
+        e.stopPropagation();
+    })
+
+    main.addEventListener('click', function (e) {
+        if (menu.classList.contains('opened')) {
+            toggleMenu()
+        }
+    })
+</script>
 </html>

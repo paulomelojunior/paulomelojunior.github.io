@@ -1,3 +1,5 @@
 window.addEventListener('load', function () {
-    document.querySelector('body').classList.remove('loading');
+    setTimeout(() => {
+        document.querySelector('body').classList.remove('loading');
+    }, 500);
 });
