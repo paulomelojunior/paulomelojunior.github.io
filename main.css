@@ -71,7 +71,7 @@ h6 {
 
 h1 {
   font-size: 1.5rem;
-  font-weight: 300; }
+  font-weight: 400; }
 
 h2 {
   line-height: 1;
@@ -181,16 +181,20 @@ main {
   padding: 10vw; }
 
 @media (max-width: 768px) {
-  :root {
-    font-size: calc(var(--layout-base)*1.75); }
   h1 {
     font-size: 1rem;
     font-weight: 400; }
+  h2 {
+    font-size: 2.75rem; }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.5; }
   nav {
     margin: 0;
     height: 100%;
     width: 100%;
-    padding: 10vw; }
+    padding: 10vw;
+    justify-content: center; }
     nav.closed {
       padding: 10vw 0; }
       nav.closed a {
@@ -200,4 +204,7 @@ main {
     width: 100%;
     bottom: 0;
     position: absolute;
-    padding: 10vw; } }
+    padding: 10vw; }
+    header button {
+      padding: .75rem;
+      font-size: .875rem; } }

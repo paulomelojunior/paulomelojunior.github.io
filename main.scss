@@ -43,7 +43,7 @@
 
 h1 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     
 }
 
@@ -165,12 +165,16 @@ main {
 }
 
 @media (max-width: 768px) {
-    :root {
-        font-size: calc(var(--layout-base)*1.75);
-    }
     h1 {
         font-size: 1rem;
         font-weight: 400;
+    }
+    h2 {
+        font-size: 2.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.5;
     }
     nav {
         margin: 0;
@@ -191,5 +195,9 @@ main {
         bottom: 0;
         position: absolute;
         padding: 10vw;
+        button {
+            padding: .75rem;
+            font-size: .875rem;
+        }
     }
 }
