@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Drama free website. MIT © techniceness.com -->
+<!--
+    Drama free website.
+    MIT © techniceness.com
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +12,10 @@
     <title>Oh, hi!</title>
 
     <link rel="icon" href="favicon.png">
-    <link rel="stylesheet" type="text/css" href="assets/fonts/inter.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <script src="assets/js/loader.js"></script>
+    <script src="assets/js/menu.js" async></script>
 
 </head>
 <body class="loading">
@@ -39,34 +42,14 @@
         </button>
     </header>
     <main>
-        <h2 class="spacing-1">
-            Strategy, design and code. This is what I do.
-        </h2>
-        <h3>
-            Currently working with a technology company from Denver, CO.
-        </h3>
+        <section>
+            <h2>
+                Strategy, design and code. This is what I do.
+            </h2>
+            <h3>
+                Currently working with a technology company from Denver, CO.
+            </h3>
+        </section>
     </main>
 </body>
-<script>
-    const button = document.querySelector('button');
-    const menu = document.querySelector('nav');
-    const main = document.querySelector('main');
-
-    function toggleMenu() {
-        menu.classList.toggle('closed');
-        menu.classList.toggle('opened');
-        button.classList.toggle('inverted');
-    }
-
-    button.addEventListener('click', function (e) {
-        toggleMenu();
-        e.stopPropagation();
-    })
-
-    main.addEventListener('click', function (e) {
-        if (menu.classList.contains('opened')) {
-            toggleMenu()
-        }
-    })
-</script>
 </html>

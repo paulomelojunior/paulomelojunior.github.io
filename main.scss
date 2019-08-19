@@ -1,9 +1,7 @@
 :root {
     // color
     --hue: 265;
-    --color: hsl(var(--hue), 100%, 50%);
-    --gray: hsl(var(--hue), 30%, 60%);
-    --primary: hsl(var(--hue), 50%, 20%);
+     -webkit-tap-highlight-color: transparent;
 
     // motion
     --layout-base: 8px;
@@ -12,9 +10,10 @@
     --slow-end: cubic-bezier(0, 0, 0, 1);
 
     // text
-    font-size: calc(var(--layout-base)*2);
-    font-family: 'Inter';
-    line-height: 0.75;
+    --font-base: 'Inter', sans-serif;
+      font-size: calc(var(--layout-base)*2);
+      line-height: .675;
+      text-rendering: geometricPrecision;
 }
 
 ::selection {
@@ -41,16 +40,24 @@
     }
 }
 
+@import url('https://rsms.me/inter/inter.css');
+
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: 'Inter var', sans-serif;
+    }
+}
+
 h1 {
     font-size: 1.5rem;
     font-weight: 400;
-    
 }
 
 h2 {
     line-height: 1;
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 900;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -61,6 +68,7 @@ h3 {
 
 html {
     height: 100%;
+    font-family: var(--font-base);
 }
 
 body {
@@ -69,12 +77,16 @@ body {
     overflow: hidden;
     padding: 0;
     position: relative;
+
     &.loading {
         opacity: 0;
         transform: translateY(-1rem);
     }
+
     opacity: 1;
-    transition: opacity var(--time-base) var(--slow-end), transform var(--time-base) var(--slow-end);
+    transition:
+    opacity var(--time-base) var(--slow-end),
+    transform calc(var(--time-base)*2) var(--slow-end);
 }
 
 header {
@@ -86,22 +98,25 @@ header {
 
     button {
         -webkit-appearance: none;
-        appearance: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin: -1rem;
-        padding: 1rem;
-        position: relative;
-        z-index: 1;
-        font-weight: 600;
-        z-index: 1;
-        line-height: .75;
-        font-size: 1rem;
+                appearance: none;
+                background: none;
+                    border: none;
+                    cursor: pointer;
+                    font: 800 1.25rem var(--font-base);
+                    margin: -1rem;
+                    padding: 1rem;
+                    position: relative;
+                    transition: background-color var(--time-base) linear;
+                    z-index: 1;
+
         &:focus {
             outline: none;
         }
-        
+
+        &:active {
+            background-color: hsla(var(--hue), 0%, 0%, .0);
+        }
+
         &.inverted {
             content: 'Close it';
             color: white;
@@ -123,6 +138,7 @@ nav {
     z-index: 1;
     margin: 5vw;
     overflow: hidden;
+
     a {
         margin: 2rem 0 0;
         text-decoration: none;
@@ -130,8 +146,8 @@ nav {
         font-size: 2rem;
         font-weight: 600;
         transition: transform var(--time-base) var(--slow-end), opacity calc(var(--time-base)/2) var(--slow-end);
-        line-height: .625;
         position: relative;
+
         &:hover {
             opacity: .5;
         }
@@ -141,6 +157,7 @@ nav {
         overflow: hidden;
         padding: 15vw 0rem 5vw 0rem;
         width: 0;
+
         a {
             transform: translateX(-200%);
         }
@@ -165,32 +182,39 @@ main {
         font-size: 1rem;
         font-weight: 400;
     }
+
     h2 {
-        font-size: 2.75rem;
+        font-size: 2.5rem;
     }
+
     h3 {
         font-size: 1.5rem;
         line-height: 1.5;
     }
+
     nav {
         margin: 0;
         height: 100%;
         width: 100%;
         padding: 10vw;
         justify-content: center;
-        &.closed {            
+
+        &.closed {
             padding: 10vw 0;
+
             a {
-                transform: translateX(-300vw);
+                transform: translateX(-200vw);
             }
         }
     }
+
     header {
         box-sizing: border-box;
         width: 100%;
         bottom: 0;
         position: absolute;
         padding: 10vw;
+
         button {
             padding: .75rem;
             font-size: .875rem;
