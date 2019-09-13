@@ -1,6 +1,7 @@
 const button = document.querySelector('button');
 const menu = document.querySelector('nav');
 const main = document.querySelector('main');
+const header = document.querySelector('header');
 
 function toggleMenu() {
     menu.classList.toggle('closed');
@@ -18,3 +19,11 @@ main.addEventListener('click', function (e) {
         toggleMenu()
     }
 })
+
+main.onscroll = function() {
+    if (main.scrollTop == 0) {
+        header.classList.remove('shrunken');            
+    } else {
+        header.classList.add('shrunken');            
+    }
+}
