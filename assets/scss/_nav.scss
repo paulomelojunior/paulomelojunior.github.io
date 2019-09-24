@@ -1,0 +1,43 @@
+nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5vw 15vw 5vw 5vw;
+    box-sizing: border-box;
+    display: flex;
+    background: black;
+    justify-content: center;
+    flex-direction: column;
+    transition: var(--time-base) var(--slow-end);
+    z-index: 1;
+    height: calc(100vh - 10vw);
+    margin: 5vw;
+    overflow: hidden;
+
+    a {
+        margin: 2rem 0 0;
+        text-decoration: none;
+        color: white;
+        font-size: 2.25rem;
+        font-weight: 600;
+        transition: transform var(--time-base) var(--slow-end), opacity calc(var(--time-base)/2) var(--slow-end);
+        position: relative;
+        &:first-child {
+            margin: 0;
+        }
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    &.closed {
+        overflow: hidden;
+        padding: 5vw 0rem 5vw 0rem;
+        width: 0;
+
+        a {
+            transform: translateX(-200%);
+        }
+    }
+
+}

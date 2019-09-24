@@ -1,6 +1,7 @@
 const button = document.querySelector('button');
 const menu = document.querySelector('nav');
 const main = document.querySelector('main');
+const header = document.querySelector('header');
 
 function toggleMenu() {
     menu.classList.toggle('closed');
@@ -15,6 +16,12 @@ button.addEventListener('click', function (e) {
 
 main.addEventListener('click', function (e) {
     if (menu.classList.contains('opened')) {
-        toggleMenu()
+        toggleMenu();
     }
 })
+
+window.onscroll = function() {
+    if (menu.classList.contains('opened')) {
+        toggleMenu();
+    }
+}

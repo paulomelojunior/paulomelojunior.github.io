@@ -1,0 +1,16 @@
+section {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10vw;
+    align-items: center;
+    &:first-child {
+        height: 100vh;
+    }
+    &:nth-child(even) {
+        background: black;
+        color: white;
+    }
+}
