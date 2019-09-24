@@ -16,14 +16,12 @@ button.addEventListener('click', function (e) {
 
 main.addEventListener('click', function (e) {
     if (menu.classList.contains('opened')) {
-        toggleMenu()
+        toggleMenu();
     }
 })
 
-main.onscroll = function() {
-    if (main.scrollTop == 0) {
-        header.classList.remove('shrunken');            
-    } else {
-        header.classList.add('shrunken');            
+window.onscroll = function() {
+    if (menu.classList.contains('opened')) {
+        toggleMenu();
     }
 }

@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10vw 10vw 0 10vw;
+    transition: opacity var(--time-base) var(--slow-end);
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    button {
+        -webkit-appearance: none;
+                appearance: none;
+                background: none;
+                    border: none;
+                    box-shadow: 0 0 0 0;
+                    color: black;
+                    cursor: pointer;
+                    font: 800 1.25rem var(--font-base);
+                    margin: -2rem;
+                    padding: 1rem 2rem;
+                    transition: calc(var(--time-base)/4) linear;
+                    position: relative;
+                    z-index: 2;
+        &:focus, &:hover {
+            outline: none;
+        }
+
+        &:active {
+            background-color: hsla(var(--hue), 0%, 0%, .0);
+        }
+        &.inverted {
+            color: white;
+        }
+    }
+    img {
+        align-self: center;
+        position: absolute;
+        left: calc(50% - 2.25rem);
+        height: 2.5rem;
+        background: white;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(90deg, white calc(100% - 1px), hsla(0, 0%, 0%, .1)), white;
+    background-size: 10vw;
+    height: 100%;
+    margin: 0;
+    opacity: 1;
+    padding: 0;
+    position: relative;
+    transition:
+        opacity var(--time-base) var(--slow-end),
+        transform calc(var(--time-base)*2) var(--slow-end);
+
+    &.loading {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+
+}

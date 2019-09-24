@@ -1,0 +1,69 @@
+@import
+'_body',
+'_fonts',
+'_footer',
+'_header',
+'_headings',
+'_html',
+'_main',
+'_nav',
+'_root',
+'_scrollbar',
+'_section',
+'_spacing',
+'_text';
+
+@media (max-width: 768px) {
+    body {
+        background: white;
+    }
+    h1 {
+        font-size: 1rem;
+        font-weight: 400;
+        display: none;
+    }
+    
+    h2 {
+        letter-spacing: 0;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    nav {
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        padding: 10vw;
+        justify-content: center;
+
+        &.closed {
+            padding: 10vw 0;
+
+            a {
+                transform: translateX(-200vw);
+            }
+        }
+    }
+
+    header {
+        align-items: center;
+        img {
+            padding: 0;
+            position: relative;
+            left: 0;
+        }
+    }
+    
+    section {
+        justify-content: flex-end;
+    }
+
+    section:nth-child(even), footer {
+        display: none;
+    }
+
+}
