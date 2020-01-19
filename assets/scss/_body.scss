@@ -1,18 +1,40 @@
+@keyframes loadingBarProgress {
+    0% {
+		background-position:125% 0;
+    }
+    100% {
+		background-position:0% 0;
+    }
+}
+
 body {
-    background: linear-gradient(90deg, white calc(100% - 1px), hsla(0, 0%, 0%, .1)), white;
-    background-size: 10vw;
     height: 100%;
     margin: 0;
-    opacity: 1;
     padding: 0;
     position: relative;
-    transition:
-        opacity var(--time-base) var(--slow-end),
-        transform calc(var(--time-base)*2) var(--slow-end);
-
-    &.loading {
-        opacity: 0;
-        transform: translateY(-1rem);
+    > div {
+        background: linear-gradient(90deg, white calc(100% - 1px), hsla(0, 0%, 0%, .1)), white;
+        background-size: 10vw;
+        opacity: 1;
+        transition:
+            opacity calc(var(--time-base)*1) var(--slow-end),
+            transform calc(var(--time-base)*2) var(--slow-end);
     }
-
+    &.loading {
+        overflow: hidden;
+        > div {
+            opacity: 0;
+            transform: translateY(-1rem);
+        }
+        > span {
+            animation: loadingBarProgress 2s linear infinite;
+            background: linear-gradient(90deg, hsl(0, 0%, 0%), hsl(0, 0%, 80%), hsl(0, 0%, 20%), hsl(0, 0%, 80%), hsl(0, 0%, 0%));    
+            background-size: 500%;
+            display: block;
+            height: .125rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+    }
 }

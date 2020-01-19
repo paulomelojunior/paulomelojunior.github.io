@@ -1,10 +1,20 @@
 footer {
-    display: flex;
-    justify-content: center;
     position: absolute;
     color: white;
-    margin-top: -3rem;
-    width: 100%;
-    box-sizing: border-box;
-    opacity: .2;
+    background: black;
+    bottom: 10vw;
+    padding: 1rem;
+    right: 10vw;
+    transform-origin: bottom right;
+    transform: rotate(-90deg) translateX(100%);
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: .125rem;
+    img {
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        background: white;
+        display: block;
+    }
 }

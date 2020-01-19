@@ -1,6 +1,7 @@
 :root {
     // color
-    --hue: 265;
+    --hue: 60;
+    --color: hsl(var(--hue), 100%, 50%);
      -webkit-tap-highlight-color: transparent;
 
     // motion

@@ -1,30 +1,57 @@
 @import url("https://rsms.me/inter/inter.css");
+@keyframes loadingBarProgress {
+  0% {
+    background-position: 125% 0; }
+  100% {
+    background-position: 0% 0; } }
+
 body {
-  background: linear-gradient(90deg, white calc(100% - 1px), rgba(0, 0, 0, 0.1)), white;
-  background-size: 10vw;
   height: 100%;
   margin: 0;
-  opacity: 1;
   padding: 0;
-  position: relative;
-  transition: opacity var(--time-base) var(--slow-end), transform calc(var(--time-base)*2) var(--slow-end); }
+  position: relative; }
+  body > div {
+    background: linear-gradient(90deg, white calc(100% - 1px), rgba(0, 0, 0, 0.1)), white;
+    background-size: 10vw;
+    opacity: 1;
+    transition: opacity calc(var(--time-base)*1) var(--slow-end), transform calc(var(--time-base)*2) var(--slow-end); }
   body.loading {
-    opacity: 0;
-    transform: translateY(-1rem); }
+    overflow: hidden; }
+    body.loading > div {
+      opacity: 0;
+      transform: translateY(-1rem); }
+    body.loading > span {
+      animation: loadingBarProgress 2s linear infinite;
+      background: linear-gradient(90deg, black, #cccccc, #333333, #cccccc, black);
+      background-size: 500%;
+      display: block;
+      height: .125rem;
+      position: fixed;
+      width: 100%;
+      top: 0; }
 
 @supports (font-variation-settings: normal) {
   html {
     font-family: 'Inter var', sans-serif; } }
 
 footer {
-  display: flex;
-  justify-content: center;
   position: absolute;
   color: white;
-  margin-top: -3rem;
-  width: 100%;
-  box-sizing: border-box;
-  opacity: .2; }
+  background: black;
+  bottom: 10vw;
+  padding: 1rem;
+  right: 10vw;
+  transform-origin: bottom right;
+  transform: rotate(-90deg) translateX(100%);
+  text-transform: uppercase;
+  font-size: .75rem;
+  letter-spacing: .125rem; }
+  footer img {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    display: block; }
 
 header {
   display: flex;
@@ -46,22 +73,16 @@ header {
     font: 800 1.25rem var(--font-base);
     margin: -2rem;
     padding: 1rem 2rem;
-    transition: calc(var(--time-base)/4) linear;
     position: relative;
     z-index: 2; }
     header button:focus, header button:hover {
       outline: none; }
     header button:active {
       background-color: hsla(var(--hue), 0%, 0%, 0); }
-    header button.inverted {
-      color: white; }
-  header img {
-    align-self: center;
-    position: absolute;
-    left: calc(50% - 2.25rem);
-    height: 2.5rem;
-    background: white;
-    padding: 1rem; }
+  header > * {
+    transition: calc(var(--time-base)/4) linear; }
+  header.inverted > * {
+    color: white; }
 
 h1 {
   margin: 0; }
@@ -81,24 +102,25 @@ h5 {
 h6 {
   margin: 0; }
 
-h1 {
+small {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  margin-left: -.125rem; }
-  h1 span {
-    margin: 0 .125rem; }
+  margin-left: -.125rem;
+  z-index: 2; }
 
-h2 {
+h1 {
   line-height: 1;
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: -.125rem; }
 
-h3 {
-  font-size: 2rem;
+h2 {
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.25; }
+  line-height: .75;
+  position: absolute;
+  bottom: 10vw; }
 
 html {
   height: 100%; }
@@ -108,42 +130,59 @@ main {
   top: 0;
   width: 100%; }
 
+mark {
+  background: var(--color); }
+
 nav {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 5vw 15vw 5vw 5vw;
+  padding: 5vw;
   box-sizing: border-box;
   display: flex;
-  background: black;
-  justify-content: center;
-  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: flex-start;
+  flex-direction: column-reverse;
   transition: var(--time-base) var(--slow-end);
   z-index: 1;
   height: calc(100vh - 10vw);
+  width: calc(100% - 10vw);
   margin: 5vw;
-  overflow: hidden; }
+  overflow: hidden;
+  backdrop-filter: blur(2rem); }
   nav a {
-    margin: 2rem 0 0;
+    margin: 1rem 0;
     text-decoration: none;
-    color: white;
     font-size: 2.25rem;
     font-weight: 600;
-    transition: transform var(--time-base) var(--slow-end), opacity calc(var(--time-base)/2) var(--slow-end);
-    position: relative; }
-    nav a:first-child {
-      margin: 0; }
-    nav a:hover {
-      opacity: .5; }
+    transition: transform calc(var(--time-base)*2) var(--slow-end), opacity calc(var(--time-base)*2) var(--slow-end);
+    position: relative;
+    transform: translateY(0);
+    opacity: 1; }
+    nav a:nth-child(1) {
+      transition-delay: 0.28s; }
+    nav a:nth-child(2) {
+      transition-delay: 0.36s; }
+    nav a:nth-child(3) {
+      transition-delay: 0.44s; }
+    nav a:nth-child(4) {
+      transition-delay: 0.52s; }
+    nav a span {
+      color: white;
+      transition: color calc(var(--time-base)/4) linear; }
+      nav a span:hover {
+        color: var(--color); }
   nav.closed {
     overflow: hidden;
-    padding: 5vw 0rem 5vw 0rem;
-    width: 0; }
+    padding: 0 5vw;
+    height: 0; }
     nav.closed a {
-      transform: translateX(-200%); }
+      transform: translateY(-10vh);
+      opacity: 0; }
 
 :root {
-  --hue: 265;
+  --hue: 60;
+  --color: hsl(var(--hue), 100%, 50%);
   -webkit-tap-highlight-color: transparent;
   --layout-base: 8px;
   --time-base: .4s;
@@ -186,8 +225,7 @@ section {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 10vw;
-  align-items: center; }
+  padding: 10vw; }
   section:first-child {
     height: 100vh; }
   section:nth-child(even) {
@@ -228,18 +266,17 @@ p {
   margin: 0; }
 
 @media (max-width: 768px) {
-  body {
-    background: white; }
-  h1 {
-    font-size: 1rem;
-    font-weight: 400;
+  body > div {
+    background-size: 50vw; }
+  small span:not(.mobile) {
     display: none; }
-  h2 {
-    letter-spacing: 0;
+  h1 {
     font-size: 2.5rem; }
-  h3 {
+  h2 {
     font-size: 1.5rem;
-    line-height: 1.5; }
+    line-height: 1.5;
+    position: relative;
+    bottom: auto; }
   nav {
     margin: 0;
     height: 100vh;
@@ -247,16 +284,9 @@ p {
     padding: 10vw;
     justify-content: center; }
     nav.closed {
-      padding: 10vw 0; }
-      nav.closed a {
-        transform: translateX(-200vw); }
-  header {
-    align-items: center; }
-    header img {
-      padding: 0;
-      position: relative;
-      left: 0; }
+      padding: 0 10vw; }
   section {
-    justify-content: flex-end; }
-  section:nth-child(even), footer {
-    display: none; } }
+    justify-content: center; }
+  footer {
+    left: 10vw;
+    transform: none; } }

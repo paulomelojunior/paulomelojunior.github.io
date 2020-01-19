@@ -2,42 +2,48 @@ nav {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 5vw 15vw 5vw 5vw;
+    padding: 5vw;
     box-sizing: border-box;
     display: flex;
-    background: black;
-    justify-content: center;
-    flex-direction: column;
+    background: transparentize(black, .1);
+    justify-content: flex-start;
+    flex-direction: column-reverse;
     transition: var(--time-base) var(--slow-end);
     z-index: 1;
     height: calc(100vh - 10vw);
+    width: calc(100% - 10vw);
     margin: 5vw;
     overflow: hidden;
-
+    backdrop-filter: blur(2rem);
     a {
-        margin: 2rem 0 0;
+        margin: 1rem 0;
         text-decoration: none;
-        color: white;
         font-size: 2.25rem;
         font-weight: 600;
-        transition: transform var(--time-base) var(--slow-end), opacity calc(var(--time-base)/2) var(--slow-end);
+        transition:
+            transform calc(var(--time-base)*2) var(--slow-end),
+            opacity calc(var(--time-base)*2) var(--slow-end);
         position: relative;
-        &:first-child {
-            margin: 0;
+        transform: translateY(0);
+        opacity: 1;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                transition-delay: (.08s * $i) + .2s;
+            }
         }
-        &:hover {
-            opacity: .5;
+        span {
+            color: white;
+            transition: color calc(var(--time-base)/4) linear;
+            &:hover {
+                color: var(--color);
+            }
         }
     }
 
     &.closed {
         overflow: hidden;
-        padding: 5vw 0rem 5vw 0rem;
-        width: 0;
-
-        a {
-            transform: translateX(-200%);
-        }
+        padding: 0 5vw;
+        height: 0;
+        a {transform: translateY(-10vh); opacity: 0;}
     }
-
 }

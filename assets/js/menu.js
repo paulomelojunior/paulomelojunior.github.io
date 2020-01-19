@@ -6,7 +6,7 @@ const header = document.querySelector('header');
 function toggleMenu() {
     menu.classList.toggle('closed');
     menu.classList.toggle('opened');
-    button.classList.toggle('inverted');
+    header.classList.toggle('inverted');
 }
 
 button.addEventListener('click', function (e) {

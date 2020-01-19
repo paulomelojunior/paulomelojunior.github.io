@@ -18,7 +18,6 @@ header {
                     font: 800 1.25rem var(--font-base);
                     margin: -2rem;
                     padding: 1rem 2rem;
-                    transition: calc(var(--time-base)/4) linear;
                     position: relative;
                     z-index: 2;
         &:focus, &:hover {
@@ -28,16 +27,9 @@ header {
         &:active {
             background-color: hsla(var(--hue), 0%, 0%, .0);
         }
-        &.inverted {
-            color: white;
-        }
     }
-    img {
-        align-self: center;
-        position: absolute;
-        left: calc(50% - 2.25rem);
-        height: 2.5rem;
-        background: white;
-        padding: 1rem;
+    > * {transition: calc(var(--time-base)/4) linear;}
+    &.inverted {
+        > * {color: white;}
     }
 }
