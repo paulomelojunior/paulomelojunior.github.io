@@ -6,7 +6,7 @@ section {
     box-sizing: border-box;
     padding: 10vw;
     &:first-child {
-        height: 100vh;
+        height: 100%;
     }
     &:nth-child(even) {
         background: black;
