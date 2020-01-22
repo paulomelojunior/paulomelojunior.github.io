@@ -177,7 +177,6 @@ nav {
       nav a span:hover {
         color: var(--color); }
   nav.closed {
-    overflow: hidden;
     padding: 0 5vw;
     height: 0; }
     nav.closed a {

@@ -42,7 +42,6 @@ nav {
     }
 
     &.closed {
-        overflow: hidden;
         padding: 0 5vw;
         height: 0;
         a {transform: translateY(-10vh); opacity: 0;}
