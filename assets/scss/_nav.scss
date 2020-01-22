@@ -14,7 +14,8 @@ nav {
     width: calc(100% - 10vw);
     margin: 5vw;
     overflow: hidden;
-    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+            backdrop-filter: blur(2rem);
     a {
         margin: 1rem 0;
         text-decoration: none;
