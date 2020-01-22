@@ -16,6 +16,7 @@ body {
         background: linear-gradient(90deg, white calc(100% - 1px), hsla(0, 0%, 0%, .1)), white;
         background-size: 10vw;
         opacity: 1;
+        height: 100%;
         transition:
             opacity calc(var(--time-base)*1) var(--slow-end),
             transform calc(var(--time-base)*2) var(--slow-end);
@@ -28,7 +29,7 @@ body {
         }
         > span {
             animation: loadingBarProgress 2s linear infinite;
-            background: linear-gradient(90deg, hsl(0, 0%, 0%), hsl(0, 0%, 80%), hsl(0, 0%, 20%), hsl(0, 0%, 80%), hsl(0, 0%, 0%));    
+            background: linear-gradient(90deg, hsl(0, 0%, 0%), hsl(0, 0%, 80%), hsl(0, 0%, 50%), hsl(0, 0%, 80%), hsl(0, 0%, 0%));    
             background-size: 500%;
             display: block;
             height: .125rem;
