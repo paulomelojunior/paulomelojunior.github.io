@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    overflow: hidden;
     > div {
         background: linear-gradient(90deg, white calc(100% - 1px), hsla(0, 0%, 0%, .1)), white;
         background-size: 10vw;
