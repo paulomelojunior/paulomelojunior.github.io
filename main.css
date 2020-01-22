@@ -14,6 +14,7 @@ body {
     background: linear-gradient(90deg, white calc(100% - 1px), rgba(0, 0, 0, 0.1)), white;
     background-size: 10vw;
     opacity: 1;
+    height: 100%;
     transition: opacity calc(var(--time-base)*1) var(--slow-end), transform calc(var(--time-base)*2) var(--slow-end); }
   body.loading {
     overflow: hidden; }
@@ -22,7 +23,7 @@ body {
       transform: translateY(-1rem); }
     body.loading > span {
       animation: loadingBarProgress 2s linear infinite;
-      background: linear-gradient(90deg, black, #cccccc, #333333, #cccccc, black);
+      background: linear-gradient(90deg, black, #cccccc, gray, #cccccc, black);
       background-size: 500%;
       display: block;
       height: .125rem;
@@ -128,7 +129,8 @@ html {
 main {
   position: relative;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 mark {
   background: var(--color); }
@@ -149,6 +151,7 @@ nav {
   width: calc(100% - 10vw);
   margin: 5vw;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(2rem);
   backdrop-filter: blur(2rem); }
   nav a {
     margin: 1rem 0;
@@ -227,7 +230,7 @@ section {
   box-sizing: border-box;
   padding: 10vw; }
   section:first-child {
-    height: 100vh; }
+    height: 100%; }
   section:nth-child(even) {
     background: black;
     color: white; }
