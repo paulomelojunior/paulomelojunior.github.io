@@ -270,7 +270,7 @@ p {
 
 @media (max-width: 768px) {
   body > div {
-    background-size: 50vw; }
+    background: white; }
   small span:not(.mobile) {
     display: none; }
   h1 {
