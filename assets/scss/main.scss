@@ -15,7 +15,7 @@
 '_text';
 
 @media (max-width: 768px) {
-    body > div, body > span {
+    body > div, body.loading > span {
         background: white;
     }
 
