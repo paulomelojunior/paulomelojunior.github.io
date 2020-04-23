@@ -1,3 +1,5 @@
+
+
 :root {
     // color
     --hue: 85;
@@ -27,4 +29,10 @@
     background: black;
     color: white;
     opacity: .9;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --layout-base: 6px;
+    }
 }
