@@ -26,14 +26,24 @@
     }
     
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    mark {
+        margin-right: -2rem;
+        display: block;
+        padding: 2rem;
+        margin-bottom: -4.75rem;
     }
 
     h2 {
-        font-size: 1.5rem;
         line-height: 1.5;
-        position: relative;
-        bottom: auto;
+        bottom: calc(10vw + 3rem);
+        left: calc(10vw + 1rem);
+        text-transform: uppercase;
+        font-size: .75rem;
+        letter-spacing: .125rem;
+        font-weight: 600;
     }
 
     nav {
@@ -42,6 +52,7 @@
         width: 100%;
         padding: 10vw;
         justify-content: center;
+        border-radius: 0;
         &.closed {
             padding: 0 10vw;
         }

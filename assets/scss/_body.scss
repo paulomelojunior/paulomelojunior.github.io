@@ -24,19 +24,32 @@ body {
     }
     &.loading {
         overflow: hidden;
+        &.dark {
+            filter: invert(1);
+        }
         > div {
             opacity: 0;
             transform: translateY(-1rem);
         }
         > span {
-            animation: loadingBarProgress 2s linear infinite;
-            background: linear-gradient(90deg, hsl(0, 0%, 0%), hsl(0, 0%, 80%), hsl(0, 0%, 50%), hsl(0, 0%, 80%), hsl(0, 0%, 0%));    
-            background-size: 500%;
+            background: linear-gradient(90deg, white calc(100% - 1px), hsla(0, 0%, 0%, .1)), white;
+            background-size: 10vw;
             display: block;
-            height: .125rem;
+            height: 100%;
             position: fixed;
             width: 100%;
             top: 0;
+            &:before {
+                content: '';
+                animation: loadingBarProgress 2s linear infinite;
+                background: linear-gradient(90deg, greenyellow, green, greenyellow, green, greenyellow);    
+                background-size: 500%;
+                display: block;
+                height: .25rem;
+                position: fixed;
+                width: 100%;
+                top: 0;
+            }
         }
     }
 }

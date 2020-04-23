@@ -5,7 +5,7 @@ nav {
     padding: 5vw;
     box-sizing: border-box;
     display: flex;
-    background: transparentize(black, .1);
+    background: transparentize(black, .2);
     justify-content: flex-start;
     flex-direction: column-reverse;
     transition: var(--time-base) var(--slow-end);
@@ -14,8 +14,10 @@ nav {
     width: calc(100% - 10vw);
     margin: 5vw;
     overflow: hidden;
-    -webkit-backdrop-filter: blur(2rem);
-            backdrop-filter: blur(2rem);
+    align-items: flex-start;
+    border-radius: .125rem;
+    -webkit-backdrop-filter: blur(3rem);
+            backdrop-filter: blur(3rem);
     a {
         margin: 1rem 0;
         text-decoration: none;

@@ -1,3 +1,12 @@
 mark {
-    background: var(--color);
+    background: linear-gradient(45deg, greenyellow, green);
+    background-size: cover;
+    background-position: top;
+    padding: 2rem;
+    margin-left: -2rem;
+    border-radius: .125rem;
+    color: white;
+    &.error {
+        background: linear-gradient(45deg, coral, crimson);
+    }
 }

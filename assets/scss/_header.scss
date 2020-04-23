@@ -28,8 +28,23 @@ header {
             background-color: hsla(var(--hue), 0%, 0%, .0);
         }
     }
+
     > * {transition: calc(var(--time-base)/4) linear;}
     &.inverted {
         > * {color: white;}
     }
+
+    img {
+        align-self: center;
+        position: absolute;
+        left: calc(50% - 2rem);
+        height: 4rem;
+        border-radius: .125rem;
+        z-index: 1;
+        cursor: pointer;
+        &:hover {
+            opacity: .9;
+        }
+    }
+
 }
