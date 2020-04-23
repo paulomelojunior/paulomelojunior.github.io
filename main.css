@@ -305,7 +305,7 @@ p {
   margin: 0; }
 
 @media (max-width: 768px) {
-  body > div, body > span {
+  body > div, body.loading > span {
     background: white; }
   small span:not(.mobile) {
     display: none; }
