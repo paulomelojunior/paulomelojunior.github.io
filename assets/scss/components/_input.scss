@@ -1,0 +1,41 @@
+@use '../mixins/' as m;
+
+.input:has(input:focus) {
+    label {
+        color: var(--white);
+        transition: color 200ms ease-in-out;
+    }
+}
+
+input {
+    @include m.focus;
+    background-color: var(--600);
+    border-radius: var(--radius-md);
+    border: none;
+    color: var(--white);
+    display: block;
+    line-height: var(--line-height-lg);
+    padding: .75rem;
+    transition: outline-color 200ms ease-in-out, background-color 200ms ease-in-out;
+    width: 100%;
+
+    &[type="number"] {
+        letter-spacing: 1px;
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+                    appearance: none;
+        }
+    }
+
+    &:focus {
+        background-color: var(--500);
+    }
+
+	@media (min-width: 768px) {
+        background-color: var(--black-40);
+        
+        &:focus {
+            background-color: var(--black-80);
+        }    
+	}
+}

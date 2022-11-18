@@ -1,0 +1,54 @@
+@use '../mixins/' as m;
+
+button,
+.button {
+	--button-background: var(--100);
+	--button-background-hover: var(--white);
+	--button-color: var(--800);
+	--button-color-hover: var(--black);
+
+	@include m.path;
+	@include m.focus;
+	
+	align-items: center;
+	background-color: var(--button-background);
+	border-radius: var(--radius-md);
+	border: none;
+	color: var(--button-color);
+	display: flex;
+	font-weight: 500;
+	line-height: var(--line-height-md);
+	padding: var(--gap-md);
+	text-decoration: none;
+	transition: background-color 200ms ease-in-out;
+	
+	&.link {
+		--button-background: none;
+		--button-background-hover: var(--600);
+		--button-color: var(--100);
+		--button-color-hover: var(--white);
+	}
+	
+	svg {
+		fill: var(--button-color);
+		height: 1.25rem;
+		margin-right: .75rem;
+		transition: calc(var(--link-transition-duration) / 4) linear;
+	}
+
+	&:active,
+	&:hover,
+	&:focus {
+		background-color: var(--button-background-hover);
+		color: var(--button-color-hover);
+		svg {
+			fill: var(--button-color-hover);
+		}
+	}
+
+	@media (min-width: 768px) {
+		&.link {
+			--button-background-hover: var(--black-60);
+		}
+	}
+}

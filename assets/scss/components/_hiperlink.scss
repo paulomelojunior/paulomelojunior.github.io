@@ -1,0 +1,11 @@
+a {
+    color: var(--white);
+    &:hover,
+    &:focus {
+        color: var(--blue);
+    }
+
+    &.disabled {
+        opacity: .25;
+    }
+}

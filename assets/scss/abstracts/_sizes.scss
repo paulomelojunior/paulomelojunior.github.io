@@ -1,0 +1,34 @@
+$sizes: (
+    radius: (
+        sm: .125rem,
+        md: .25rem,
+        lg: .5rem,
+    ),
+    gap: (
+        xs: .25rem,
+        sm: .5rem,
+        md: 1rem,
+        lg: 2rem,
+    ),
+    line-height: (
+        sm: .75,
+        md: 1,
+        lg: 1.5,
+    )
+);
+
+:root {
+    --base: 8px;
+
+	@each $size, $variances in $sizes {
+		@each $variance, $value in $variances {
+			#{"--" + $size}-#{$variance}: #{$value};
+		}
+	}
+}
+
+@media (max-width: 425px) {
+    :root {
+        --base: 7px;
+    }
+}

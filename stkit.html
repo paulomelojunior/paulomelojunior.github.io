@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="icon" href="assets/images/favicon.png">
+    <title>
+        Stkit - @paulomelojunior
+    </title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-between flex-column h-100">
+        <div class="d-flex gap-2 mb-4">
+            <h1 title="Stkit">
+                stk<span class="color-accent">///</span>it
+            </h1>
+            <small class="color-white">alpha</small>
+        </div>
+        <div class="grid align-items-center gap-0 my-auto">
+                
+                <div class="g-col-12 g-col-lg-3 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <div class="input">
+                            <label for="brl" class="mb-2">
+                                BRL Sold
+                            </label>
+                            <input id="brl" type="number" value="2100" onchange="getResults()">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="input">
+                            <div class="mb-2 d-flex justify-content-between align-items-baseline">
+                                <label for="sat">
+                                    Purchased Bitcoin
+                                </label>
+                                <small class="color-100">
+                                    <span id="brlSaved">BRL 00,00</span> / <span id="usdSaved">USD 00,00</span>
+                                </small>
+                            </div>
+                            <input id="sat" type="number" value="0.21" onchange="getResults()">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="input">
+                            <label for="usd" class="mb-2 d-flex justify-content-between align-items-baseline">
+                                Dollar Value
+                            </label>
+                            <input id="usd" type="number" value="5.30" onchange="getResults()">
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <div class="input">
+                            <label for="btc" class="mb-2">
+                                Bitcoin Value
+                            </label>
+                            <input id="btc" type="number" value="210000" onchange="getResults()">
+                        </div>
+                    </div>
+                    <button class="d-block w-100 button" onclick="getResults()">
+                        Calculate
+                    </button>
+                </div>
+    
+                <div class="g-col-12 g-col-lg-5 g-start-lg-6">
+                    <div class="d-flex flex-lg-column flex-column-reverse">
+                        <div class="fw-normal">
+                            <p id="disclaimer" class="color-100">
+                                <b class='color-white' title='Stkit'>stk///it</b> is a profit and loss calculator for bitcoin hodlers. In the <a class='color-white' href='https://github.com/paulomelojunior/paulomelojunior.github.io/blob/main/stkit.html'>repository</a> of this project, you can verify that the information filled in will be treated directly in the front-end script. No data storage, nothing but an algorithm with predefined equations. Enjoy and always check.
+                            </p>
+                            <p class="color-100 mb-0">
+                                Vires in numeris.
+                            </p>
+                        </div>
+                        <hr class="my-5">
+                        <!-- Results -->
+                        <div class="d-flex flex-column gap-5 flex-lg-row gap-lg-0">
+                            <div class="me-auto">
+                                <span id="profitAndLoss__label" class="d-block mb-2 color-100">
+                                    Profit and Loss
+                                </span>
+                                <h2 id="profitAndLoss" class="color-white">
+                                    BRL 00,00
+                                </h2>
+                                <span id="profitAndLoss__usd" class="d-block mt-2 color-200">
+                                    USD 00,00
+                                </span>
+                            </div>
+                            <div class="me-auto">
+                                <span id="turningPoint__label" class="d-block mb-2 color-100">
+                                    Turning Point
+                                </span>
+                                <h2 id="turningPoint" class="color-white">
+                                    BRL 00,00
+                                </h2>
+                                <span id="turningPoint__usd" class="d-block mt-2 color-200">
+                                    USD 00,00
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/engine.js"></script>
+</body>
+
+</html>

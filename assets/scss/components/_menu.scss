@@ -1,0 +1,55 @@
+@keyframes menu {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@mixin animation {
+    animation-name: menu;
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+h1.animate {
+    opacity: 0;
+    transform: translateY(5rem);
+    filter: blur(.25rem);
+
+    body:not([class]) & {
+        @include animation();
+    }
+}
+
+.menu {
+    max-width: auto;
+    
+    @media (min-width: 768px) {
+        max-width: 15rem;
+	}
+
+    > * {
+        opacity: 0;
+        transform: translateY(5rem);
+        filter: blur(.25rem);
+    }
+
+    body:not([class]) & > * {
+        @include animation();
+        transform-origin: left;
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 100}ms;
+            }
+        }
+    }
+    body:not([class]) &:last-of-type > * {
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 100 + 600}ms;
+            }
+        }
+    }
+}

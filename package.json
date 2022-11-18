@@ -1,0 +1,27 @@
+{
+  "name": "paulomelojunior.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "sass": "sass --no-source-map --watch assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulomelojunior/paulomelojunior.github.io.git"
+  },
+  "author": "Paulo Melo Jr.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulomelojunior/paulomelojunior.github.io/issues"
+  },
+  "homepage": "https://github.com/paulomelojunior/paulomelojunior.github.io#readme",
+  "devDependencies": {
+    "bootstrap": "^5.2.2",
+    "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

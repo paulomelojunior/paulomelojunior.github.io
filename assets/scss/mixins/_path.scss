@@ -1,0 +1,4 @@
+@mixin path {
+    --cut-size: 1rem;
+      clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut-size)), calc(100% - var(--cut-size)) 100%, 0% 100%);
+}
