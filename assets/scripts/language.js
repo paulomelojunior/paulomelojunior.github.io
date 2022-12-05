@@ -41,10 +41,9 @@ function setLang(lang) {
     window.location.reload()
 }
 
-
 const form = document.querySelector('#form')
 const labels = form.querySelectorAll('label[for]')
-const texts = form.querySelectorAll('#pnl, #tpt, #disclaimer')
+const texts = form.querySelectorAll('#pnl, #tpt, #disclaimer, #submit')
 
 labels.forEach(label => {
     const key = label.getAttribute('for')

@@ -40,7 +40,7 @@ function getResult() {
 	}
 }
 
-document.querySelector('#getResult').addEventListener('click', () => {
+document.querySelector('#submit').addEventListener('click', () => {
 	getResult()
 })
 
