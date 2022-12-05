@@ -7,20 +7,20 @@ langSelector.addEventListener('click', () => {
 
 langSelectorModal.addEventListener('click', function (event) {
 
-    let rect = langSelectorModal.getBoundingClientRect();
+    let rect = langSelectorModal.getBoundingClientRect()
 
     let isInDialog = (
         rect.top <= event.clientY &&
         event.clientY <= rect.top + rect.height &&
         rect.left <= event.clientX &&
         event.clientX <= rect.left + rect.width
-    );
+    )
 
     if (!isInDialog) {
-        langSelectorModal.close();
+        langSelectorModal.close()
     }
 
-});
+})
 
 let language
 
@@ -42,17 +42,17 @@ function setLang(lang) {
 }
 
 
-const form = document.querySelector('#form');
-const labels = form.querySelectorAll('label[for]');
+const form = document.querySelector('#form')
+const labels = form.querySelectorAll('label[for]')
 const texts = form.querySelectorAll('#pnl, #tpt, #disclaimer')
 
 labels.forEach(label => {
-    const key = label.getAttribute('for');
-    label.innerHTML = language[key];
+    const key = label.getAttribute('for')
+    label.innerHTML = language[key]
 })
 
 texts.forEach(text => {
-    text.innerHTML = language[text.id];
-});
+    text.innerHTML = language[text.id]
+})
 
 langSelector.firstChild.textContent = language.lang
