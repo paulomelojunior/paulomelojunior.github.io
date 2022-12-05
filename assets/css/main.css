@@ -8246,6 +8246,26 @@ progress {
   --accent-30: rgba(69, 161, 145, 0.3);
   --accent-20: rgba(69, 161, 145, 0.2);
   --accent-10: rgba(69, 161, 145, 0.1);
+  --green: hsl(120deg, 85%, 55%);
+  --green-90: rgba(43, 238, 43, 0.9);
+  --green-80: rgba(43, 238, 43, 0.8);
+  --green-70: rgba(43, 238, 43, 0.7);
+  --green-60: rgba(43, 238, 43, 0.6);
+  --green-50: rgba(43, 238, 43, 0.5);
+  --green-40: rgba(43, 238, 43, 0.4);
+  --green-30: rgba(43, 238, 43, 0.3);
+  --green-20: rgba(43, 238, 43, 0.2);
+  --green-10: rgba(43, 238, 43, 0.1);
+  --red: hsl(355deg, 90%, 55%);
+  --red-90: rgba(244, 37, 54, 0.9);
+  --red-80: rgba(244, 37, 54, 0.8);
+  --red-70: rgba(244, 37, 54, 0.7);
+  --red-60: rgba(244, 37, 54, 0.6);
+  --red-50: rgba(244, 37, 54, 0.5);
+  --red-40: rgba(244, 37, 54, 0.4);
+  --red-30: rgba(244, 37, 54, 0.3);
+  --red-20: rgba(244, 37, 54, 0.2);
+  --red-10: rgba(244, 37, 54, 0.1);
 }
 
 .color-100 {
@@ -8292,6 +8312,14 @@ progress {
   color: hsl(170deg, 40%, 45%) !important;
 }
 
+.color-green {
+  color: hsl(120deg, 85%, 55%) !important;
+}
+
+.color-red {
+  color: hsl(355deg, 90%, 55%) !important;
+}
+
 .background-100 {
   background: hsl(210deg, 25%, 89%) !important;
 }
@@ -8334,6 +8362,14 @@ progress {
 
 .background-accent {
   background: hsl(170deg, 40%, 45%) !important;
+}
+
+.background-green {
+  background: hsl(120deg, 85%, 55%) !important;
+}
+
+.background-red {
+  background: hsl(355deg, 90%, 55%) !important;
 }
 
 :root {

@@ -18,6 +18,8 @@ $colors: (
 	
 	// Colors
 	accent: hsl( 170deg,  40%, 45% ),
+	green:  hsl( 120deg,  85%, 55% ),
+	red:    hsl( 355deg,  90%, 55% ),
 );
 
 @mixin alphaVariables($name, $value) {
