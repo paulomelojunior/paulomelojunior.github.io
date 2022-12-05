@@ -13,10 +13,10 @@ input {
     border-radius: var(--radius-md);
     border: none;
     color: var(--white);
-    display: block;
     line-height: var(--line-height-lg);
     padding: .75rem;
     transition: outline-color 200ms ease-in-out, background-color 200ms ease-in-out;
+    display: flex;
     width: 100%;
 
     &[type="number"] {
@@ -31,7 +31,7 @@ input {
         background-color: var(--500);
     }
 
-	@media (min-width: 768px) {
+	@media (min-width: 992px) {
         background-color: var(--black-40);
         
         &:focus {

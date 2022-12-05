@@ -8136,16 +8136,16 @@ progress {
   }
 }
 :root {
-  --100: hsl(210deg, 25%, 84%);
-  --100-90: rgba(204, 214, 224, 0.9);
-  --100-80: rgba(204, 214, 224, 0.8);
-  --100-70: rgba(204, 214, 224, 0.7);
-  --100-60: rgba(204, 214, 224, 0.6);
-  --100-50: rgba(204, 214, 224, 0.5);
-  --100-40: rgba(204, 214, 224, 0.4);
-  --100-30: rgba(204, 214, 224, 0.3);
-  --100-20: rgba(204, 214, 224, 0.2);
-  --100-10: rgba(204, 214, 224, 0.1);
+  --100: hsl(210deg, 25%, 89%);
+  --100-90: rgba(220, 227, 234, 0.9);
+  --100-80: rgba(220, 227, 234, 0.8);
+  --100-70: rgba(220, 227, 234, 0.7);
+  --100-60: rgba(220, 227, 234, 0.6);
+  --100-50: rgba(220, 227, 234, 0.5);
+  --100-40: rgba(220, 227, 234, 0.4);
+  --100-30: rgba(220, 227, 234, 0.3);
+  --100-20: rgba(220, 227, 234, 0.2);
+  --100-10: rgba(220, 227, 234, 0.1);
   --200: hsl(210deg, 25%, 55%);
   --200-90: rgba(112, 140, 169, 0.9);
   --200-80: rgba(112, 140, 169, 0.8);
@@ -8289,7 +8289,7 @@ progress {
 }
 
 .color-100 {
-  color: hsl(210deg, 25%, 84%) !important;
+  color: hsl(210deg, 25%, 89%) !important;
 }
 
 .color-200 {
@@ -8349,7 +8349,7 @@ progress {
 }
 
 .background-100 {
-  background: hsl(210deg, 25%, 84%) !important;
+  background: hsl(210deg, 25%, 89%) !important;
 }
 
 .background-200 {
@@ -8408,11 +8408,6 @@ progress {
   background: hsl(170deg, 40%, 45%) !important;
 }
 
-/*	To Do
-
-	[ ] Alpha Classes
-
-*/
 :root {
   --base: 8px;
   --radius-sm: 0.125rem;
@@ -8420,8 +8415,9 @@ progress {
   --radius-lg: 0.5rem;
   --gap-xs: 0.25rem;
   --gap-sm: 0.5rem;
-  --gap-md: 1rem;
-  --gap-lg: 2rem;
+  --gap-md: 0.75rem;
+  --gap-lg: 1rem;
+  --gap-xl: 2rem;
   --line-height-sm: 0.75;
   --line-height-md: 1;
   --line-height-lg: 1.5;
@@ -8499,34 +8495,24 @@ body {
   font-family: var(--complement-font);
   font-weight: 500;
   line-height: var(--line-height-lg);
-  padding: var(--body-padding);
+  opacity: 1;
+  padding: clamp(2rem, var(--body-padding), var(--body-padding));
+  transition: opacity 400ms ease-in-out;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   body {
-    --body-padding: 5vw;
-    background: url("../images/Cole-Thomas_The-Course-of-Empire-Destruction_1836.webp"), var(--500);
     background-blend-mode: overlay;
+    background-color: var(--500);
+    background-image: url("../images/Cole-Thomas_The-Course-of-Empire-Destruction_1836.webp");
     background-position: center;
     background-size: cover;
   }
 }
-@media (min-width: 992px) {
-  body {
-    padding-right: 0;
-  }
-}
-@media (min-width: 1600px) {
-  body {
-    --body-padding: 7vw;
-  }
-}
-
-body {
-  transition: opacity 400ms ease-in-out;
-  opacity: 1;
-}
 body.loading {
   opacity: 0;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
 }
 
 button,
@@ -8535,8 +8521,6 @@ button,
   --button-background-hover: var(--white);
   --button-color: var(--800);
   --button-color-hover: var(--black);
-  --cut-size: 1rem;
-  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut-size)), calc(100% - var(--cut-size)) 100%, 0% 100%);
   align-items: center;
   background-color: var(--button-background);
   border-radius: var(--radius-md);
@@ -8544,8 +8528,9 @@ button,
   color: var(--button-color);
   display: flex;
   font-weight: 500;
+  gap: 0.75rem;
   line-height: var(--line-height-md);
-  padding: var(--gap-md);
+  padding: var(--gap-lg);
   text-decoration: none;
   transition: background-color 200ms ease-in-out;
 }
@@ -8555,6 +8540,11 @@ button:focus, button:focus-visible, button:focus-within,
 .button:focus-within {
   outline: none;
 }
+button:not(.small):not(.light),
+.button:not(.small):not(.light) {
+  --cut-size: 1rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - var(--cut-size)), calc(100% - var(--cut-size)) 100%, 0% 100%);
+}
 button.link,
 .button.link {
   --button-background: none;
@@ -8562,33 +8552,72 @@ button.link,
   --button-color: var(--100);
   --button-color-hover: var(--white);
 }
-button svg,
-.button svg {
-  fill: var(--button-color);
-  height: 1.25rem;
-  margin-right: 0.75rem;
-  transition: calc(var(--link-transition-duration) / 4) linear;
+button.link.light,
+.button.link.light {
+  --button-background-hover: var(--accent-20);
+  --button-color: var(--300);
+  --button-color-hover: var(--800);
 }
-button:active, button:hover, button:focus,
+button.small,
+.button.small {
+  padding: var(--gap-sm) var(--gap-md);
+}
+button:active, button:hover,
 .button:active,
-.button:hover,
-.button:focus {
+.button:hover {
   background-color: var(--button-background-hover);
   color: var(--button-color-hover);
 }
-button:active svg, button:hover svg, button:focus svg,
-.button:active svg,
-.button:hover svg,
-.button:focus svg {
+button:active svg:not([stroke]), button:hover svg:not([stroke]),
+.button:active svg:not([stroke]),
+.button:hover svg:not([stroke]) {
   fill: var(--button-color-hover);
 }
-@media (min-width: 768px) {
+button svg,
+.button svg {
+  height: 1.25rem;
+  transition: calc(var(--link-transition-duration) / 4) linear;
+}
+button svg:not([stroke]),
+.button svg:not([stroke]) {
+  fill: var(--button-color);
+}
+@media (min-width: 992px) {
   button.link,
   .button.link {
     --button-background-hover: var(--black-60);
   }
 }
 
+dialog {
+  --cut-size: 1rem;
+  clip-path: polygon(var(--cut-size) 0%, 0% 0%, 100% 0%, 100% calc(100% - var(--cut-size)), calc(100% - var(--cut-size)) 100%, 0% 100%, 0% var(--cut-size));
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: none;
+  padding: 2rem;
+  max-width: calc(100% - 2rem);
+  min-width: 320px;
+}
+dialog[open] {
+  animation: showDialog 400ms ease-in-out;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+  animation: showBackdrop 400ms linear;
+}
+
+@keyframes showDialog {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+@keyframes showBackdrop {
+  from {
+    opacity: 0;
+  }
+}
 a {
   color: var(--white);
 }
@@ -8609,10 +8638,10 @@ input {
   border-radius: var(--radius-md);
   border: none;
   color: var(--white);
-  display: block;
   line-height: var(--line-height-lg);
   padding: 0.75rem;
   transition: outline-color 200ms ease-in-out, background-color 200ms ease-in-out;
+  display: flex;
   width: 100%;
 }
 input:focus, input:focus-visible, input:focus-within {
@@ -8628,7 +8657,7 @@ input[type=number]::-webkit-inner-spin-button {
 input:focus {
   background-color: var(--500);
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   input {
     background-color: var(--black-40);
   }
@@ -8711,13 +8740,13 @@ body:not([class]) .menu > *:nth-child(6) {
   animation-delay: 600ms;
 }
 body:not([class]) .menu:last-of-type > *:nth-child(1) {
-  animation-delay: 700ms;
+  animation-delay: 500ms;
 }
 body:not([class]) .menu:last-of-type > *:nth-child(2) {
-  animation-delay: 800ms;
+  animation-delay: 600ms;
 }
 body:not([class]) .menu:last-of-type > *:nth-child(3) {
-  animation-delay: 900ms;
+  animation-delay: 700ms;
 }
 
 .wrapper {

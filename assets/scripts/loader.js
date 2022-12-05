@@ -1,11 +1,3 @@
-const body = document.querySelector('body')
-
-function loadBody() {
-
-    window.addEventListener('load', () => {
-        body.removeAttribute('class');
-    })
-
-}
-
-loadBody()
+window.addEventListener('load', () => {
+    document.querySelector('body').removeAttribute('class')
+})

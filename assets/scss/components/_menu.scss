@@ -48,7 +48,7 @@ h1.animate {
     body:not([class]) &:last-of-type > * {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) {
-                animation-delay: #{$i * 100 + 600}ms;
+                animation-delay: #{$i * 100 + 400}ms;
             }
         }
     }

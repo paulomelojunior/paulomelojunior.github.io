@@ -1,0 +1,11 @@
+{
+    "lang": "Português",
+    "brl": "Reais Vendidos",
+    "sat": "Satoshis Comprados",
+    "usd": "Cotação do Dólar",
+    "btc": "Cotação do Bitcoin",
+    "submit": "Calcular",
+    "pnl": "Lucros e Perdas",
+    "tpt": "Ponto de Virada",
+    "disclaimer": "A <b class='color-white' title='Stkit'>stk///it</b> é uma calculadora de lucros e perdas para <i>hodlers</i> de Bitcoin. No <a class='color-white' href='https://github.com/paulomelojunior/paulomelojunior.github.io/'>repositório</a> desse projeto é possível constatar que as informações inseridas nos campos ao lado são tratadas diretamente no script do front-end. Em outras palavras, sem armazenamento de dados, nada além de um algoritmo com equações predefinidas. Aproveite e sempre verifique."
+}

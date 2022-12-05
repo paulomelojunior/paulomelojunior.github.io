@@ -3,7 +3,7 @@ $sat: 25%;
 
 $colors: (
 	// Grays
-	100: hsl($hue, $sat, 84%),
+	100: hsl($hue, $sat, 89%),
 	200: hsl($hue, $sat, 55%),
 	300: hsl($hue, $sat, 34%),
 	400: hsl($hue, $sat, 21%),
@@ -17,11 +17,11 @@ $colors: (
 	black: black,
 	
 	// Colors
-	blue:   hsl(240deg, 100%, 70%),
-	green:  hsl(120deg,  85%, 55%),
-	red:    hsl(355deg,  90%, 55%),
-	yellow: hsl(60deg,   90%, 55%),
-	accent: hsl(170deg,  40%, 45%),
+	blue:   hsl( 240deg, 100%, 70% ),
+	green:  hsl( 120deg,  85%, 55% ),
+	red:    hsl( 355deg,  90%, 55% ),
+	yellow: hsl(  60deg,  90%, 55% ),
+	accent: hsl( 170deg,  40%, 45% ),
 );
 
 @mixin alphaVariables($name, $value) {
@@ -44,9 +44,3 @@ $colors: (
 		}
 	}
 }
-
-/*	To Do
-	
-	[ ] Alpha Classes
-
-*/

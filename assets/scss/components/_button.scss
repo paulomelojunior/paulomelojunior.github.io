@@ -6,10 +6,13 @@ button,
 	--button-background-hover: var(--white);
 	--button-color: var(--800);
 	--button-color-hover: var(--black);
-
-	@include m.path;
-	@include m.focus;
 	
+	@include m.focus;
+
+	&:not(.small):not(.light) {
+		@include m.path;
+	}
+
 	align-items: center;
 	background-color: var(--button-background);
 	border-radius: var(--radius-md);
@@ -17,36 +20,50 @@ button,
 	color: var(--button-color);
 	display: flex;
 	font-weight: 500;
+	gap: .75rem;
 	line-height: var(--line-height-md);
-	padding: var(--gap-md);
+	padding: var(--gap-lg);
 	text-decoration: none;
 	transition: background-color 200ms ease-in-out;
-	
+
 	&.link {
 		--button-background: none;
 		--button-background-hover: var(--600);
 		--button-color: var(--100);
 		--button-color-hover: var(--white);
-	}
-	
-	svg {
-		fill: var(--button-color);
-		height: 1.25rem;
-		margin-right: .75rem;
-		transition: calc(var(--link-transition-duration) / 4) linear;
-	}
-
-	&:active,
-	&:hover,
-	&:focus {
-		background-color: var(--button-background-hover);
-		color: var(--button-color-hover);
-		svg {
-			fill: var(--button-color-hover);
+		&.light {
+			--button-background-hover: var(--accent-20);
+			--button-color: var(--300);
+			--button-color-hover: var(--800);
 		}
 	}
 
-	@media (min-width: 768px) {
+	&.small {
+		padding: var(--gap-sm) var(--gap-md);
+	}
+
+	&:active,
+	&:hover {
+		background-color: var(--button-background-hover);
+		color: var(--button-color-hover);
+		svg {
+			
+			&:not([stroke]) {
+				fill: var(--button-color-hover);
+			}
+		}
+	}
+
+	svg {
+		height: 1.25rem;
+		transition: calc(var(--link-transition-duration) / 4) linear;
+
+		&:not([stroke]) {
+			fill: var(--button-color);		
+		}
+	}
+
+	@media (min-width: 992px) {
 		&.link {
 			--button-background-hover: var(--black-60);
 		}

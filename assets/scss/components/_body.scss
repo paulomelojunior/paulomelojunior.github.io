@@ -5,33 +5,23 @@ body {
     font-family: var(--complement-font);
     font-weight: 500;
     line-height: var(--line-height-lg);
-    padding: var(--body-padding);
+    opacity: 1;
+    padding: clamp(2rem, var(--body-padding), var(--body-padding));
+    transition: opacity 400ms ease-in-out;
     
-    @media (min-width: 768px) { 
-        --body-padding: 5vw;
-
-        background:
-            url('../images/Cole-Thomas_The-Course-of-Empire-Destruction_1836.webp'), var(--500);
-    
+    @media (min-width: 992px) {
         background-blend-mode: overlay;
+        background-color: var(--500);
+        background-image: url('../images/Cole-Thomas_The-Course-of-Empire-Destruction_1836.webp');
         background-position: center;
         background-size: cover;
     }
-
-    @media (min-width: 992px) { 
-        padding-right: 0;
-    }
-
-    @media (min-width: 1600px) {
-        --body-padding: 7vw;
-    }
-}
-
-body {
-    transition: opacity 400ms ease-in-out;
-    opacity: 1;
     
     &.loading {
         opacity: 0;
+    }
+
+    &:has(dialog[open]) {
+        overflow: hidden;
     }
 }

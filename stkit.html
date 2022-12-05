@@ -15,99 +15,115 @@
 
 <body>
     <div class="d-flex justify-content-between flex-column h-100">
-        <div class="d-flex gap-2 mb-4">
-            <h1 title="Stkit">
-                stk<span class="color-accent">///</span>it
-            </h1>
-            <small class="color-white">alpha</small>
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="d-flex gap-2">
+                <h1 title="Stkit">
+                    stk<span class="color-accent">///</span>it
+                </h1>
+                <small class="color-white">alpha</small>
+            </div>
+            <div class="d-flex gap-1">
+                <button id="langSelector" class="button link small">
+                    English
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="grid align-items-center gap-0 my-auto">
-                
-                <div class="g-col-12 g-col-lg-3 mb-5 mb-lg-0">
-                    <div class="mb-4">
-                        <div class="input">
-                            <label for="brl" class="mb-2">
-                                BRL Sold
-                            </label>
-                            <input id="brl" type="number" value="2100" onchange="getResults()">
-                        </div>
+        <div id="form" class="grid align-items-center gap-0 my-auto">
+            <div class="g-col-12 g-col-lg-4 mb-5 mb-lg-0">
+                <div class="mb-4">
+                    <div class="input">
+                        <label for="brl" class="mb-2">
+                            BRL Sold
+                        </label>
+                        <input inputmode="numeric" id="brl" type="number" value="">
                     </div>
-                    <div class="mb-4">
-                        <div class="input">
-                            <div class="mb-2 d-flex justify-content-between align-items-baseline">
-                                <label for="sat">
-                                    BTC Bought
-                                </label>
-                                <small class="color-100">
-                                    <span id="brlSaved">BRL 00,00</span> / <span id="usdSaved">USD 00,00</span>
-                                </small>
-                            </div>
-                            <input id="sat" type="number" value="0.21" onchange="getResults()">
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="input">
-                            <label for="usd" class="mb-2 d-flex justify-content-between align-items-baseline">
-                                Dollar Value
-                            </label>
-                            <input id="usd" type="number" value="5.30" onchange="getResults()">
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <div class="input">
-                            <label for="btc" class="mb-2">
-                                Bitcoin Value
-                            </label>
-                            <input id="btc" type="number" value="210000" onchange="getResults()">
-                        </div>
-                    </div>
-                    <button class="d-block w-100 button" onclick="getResults()">
-                        Calculate
-                    </button>
                 </div>
-    
-                <div class="g-col-12 g-col-lg-5 g-start-lg-6">
-                    <div class="d-flex flex-lg-column flex-column-reverse">
-                        <div class="fw-normal">
-                            <p id="disclaimer" class="color-100">
-                                <b class='color-white' title='Stkit'>stk///it</b> is a profit and loss calculator for bitcoin hodlers. In the <a class='color-white' href='https://github.com/paulomelojunior/paulomelojunior.github.io/blob/main/stkit.html'>repository</a> of this project, you can verify that the information filled in will be treated directly in the front-end script. No data storage, nothing but an algorithm with predefined equations. Enjoy and always check.
-                            </p>
-                            <p class="color-100 mb-0">
-                                Vires in numeris.
-                            </p>
+                <div class="mb-4">
+                    <div class="input">
+                        <div class="mb-2 d-flex justify-content-between align-items-baseline">
+                            <label for="sat">
+                                BTC Bought
+                            </label>
+                            <small class="color-100">
+                                <span id="brlSaved">BRL 00,00</span> / <span id="usdSaved">USD 00,00</span>
+                            </small>
                         </div>
-                        <hr class="my-5">
-                        <!-- Results -->
-                        <div class="d-flex flex-column gap-5 flex-lg-row gap-lg-0">
-                            <div class="me-auto">
-                                <span id="profitAndLoss__label" class="d-block mb-2 color-100">
-                                    Profit and Loss
-                                </span>
-                                <h2 id="profitAndLoss" class="color-white">
-                                    BRL 00,00
-                                </h2>
-                                <span id="profitAndLoss__usd" class="d-block mt-2 color-200">
-                                    USD 00,00
-                                </span>
-                            </div>
-                            <div class="me-auto">
-                                <span id="turningPoint__label" class="d-block mb-2 color-100">
-                                    Turning Point
-                                </span>
-                                <h2 id="turningPoint" class="color-white">
-                                    BRL 00,00
-                                </h2>
-                                <span id="turningPoint__usd" class="d-block mt-2 color-200">
-                                    USD 00,00
-                                </span>
-                            </div>
+                        <input inputmode="numeric" id="sat" type="number" value="">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="input">
+                        <label for="usd" class="mb-2 d-flex justify-content-between align-items-baseline">
+                            Dollar Value
+                        </label>
+                        <input inputmode="numeric" id="usd" type="number" value="">
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="input">
+                        <label for="btc" class="mb-2">
+                            Bitcoin Value
+                        </label>
+                        <input inputmode="numeric" id="btc" type="number" value="">
+                    </div>
+                </div>
+                <button id="getResult" class="d-block w-100 button">
+                    Calculate
+                </button>
+            </div>
+            <div class="g-col-12 g-col-lg-6 g-start-lg-6">
+                <div class="d-flex flex-lg-column flex-column-reverse">
+                    <div class="fw-normal">
+                        <p id="disclaimer" class="color-100">
+                            <b class='color-white' title='Stkit'>stk///it</b> is a profit and loss calculator for bitcoin <i>hodlers</i>. In the <a class='color-white' href='https://github.com/paulomelojunior/paulomelojunior.github.io/'>repository</a> of this project, you can verify that the information filled in will be treated directly in the front-end script. No data storage, nothing but an algorithm with predefined equations. Enjoy and always check.
+                        </p>
+                        <p class="color-100 mb-0">
+                            Vires in numeris.
+                        </p>
+                    </div>
+                    <hr class="my-5">
+                    <!-- Results -->
+                    <div class="d-flex flex-column gap-5 flex-lg-row gap-lg-0">
+                        <div class="me-auto">
+                            <span id="pnl" class="d-block mb-2 color-100">
+                                Profit and Loss
+                            </span>
+                            <h2 id="profitAndLoss" class="color-white">
+                                BRL 00,00
+                            </h2>
+                            <span id="profitAndLoss__usd" class="d-block mt-2 color-200">
+                                USD 00,00
+                            </span>
+                        </div>
+                        <div class="me-auto">
+                            <span id="tpt" class="d-block mb-2 color-100">
+                                Turning Point
+                            </span>
+                            <h2 id="turningPoint" class="color-white">
+                                BRL 00,00
+                            </h2>
+                            <span id="turningPoint__usd" class="d-block mt-2 color-200">
+                                USD 00,00
+                            </span>
                         </div>
                     </div>
-    
                 </div>
             </div>
         </div>
     </div>
+    <dialog id="langSelectorModal" >
+        <button onclick="setLang('en')" class="w-100 button link light mb-3">
+            English
+        </button>
+        <button onclick="setLang('pt')" class="w-100 button link light">
+            Português
+        </button>
+    </dialog>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="assets/scripts/language.js"></script>
     <script src="assets/scripts/engine.js"></script>
 </body>
 
