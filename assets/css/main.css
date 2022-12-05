@@ -8236,46 +8236,6 @@ progress {
   --black-30: rgba(0, 0, 0, 0.3);
   --black-20: rgba(0, 0, 0, 0.2);
   --black-10: rgba(0, 0, 0, 0.1);
-  --blue: hsl(240deg, 100%, 70%);
-  --blue-90: rgba(102, 102, 255, 0.9);
-  --blue-80: rgba(102, 102, 255, 0.8);
-  --blue-70: rgba(102, 102, 255, 0.7);
-  --blue-60: rgba(102, 102, 255, 0.6);
-  --blue-50: rgba(102, 102, 255, 0.5);
-  --blue-40: rgba(102, 102, 255, 0.4);
-  --blue-30: rgba(102, 102, 255, 0.3);
-  --blue-20: rgba(102, 102, 255, 0.2);
-  --blue-10: rgba(102, 102, 255, 0.1);
-  --green: hsl(120deg, 85%, 55%);
-  --green-90: rgba(43, 238, 43, 0.9);
-  --green-80: rgba(43, 238, 43, 0.8);
-  --green-70: rgba(43, 238, 43, 0.7);
-  --green-60: rgba(43, 238, 43, 0.6);
-  --green-50: rgba(43, 238, 43, 0.5);
-  --green-40: rgba(43, 238, 43, 0.4);
-  --green-30: rgba(43, 238, 43, 0.3);
-  --green-20: rgba(43, 238, 43, 0.2);
-  --green-10: rgba(43, 238, 43, 0.1);
-  --red: hsl(355deg, 90%, 55%);
-  --red-90: rgba(244, 37, 54, 0.9);
-  --red-80: rgba(244, 37, 54, 0.8);
-  --red-70: rgba(244, 37, 54, 0.7);
-  --red-60: rgba(244, 37, 54, 0.6);
-  --red-50: rgba(244, 37, 54, 0.5);
-  --red-40: rgba(244, 37, 54, 0.4);
-  --red-30: rgba(244, 37, 54, 0.3);
-  --red-20: rgba(244, 37, 54, 0.2);
-  --red-10: rgba(244, 37, 54, 0.1);
-  --yellow: hsl(60deg, 90%, 55%);
-  --yellow-90: rgba(244, 244, 37, 0.9);
-  --yellow-80: rgba(244, 244, 37, 0.8);
-  --yellow-70: rgba(244, 244, 37, 0.7);
-  --yellow-60: rgba(244, 244, 37, 0.6);
-  --yellow-50: rgba(244, 244, 37, 0.5);
-  --yellow-40: rgba(244, 244, 37, 0.4);
-  --yellow-30: rgba(244, 244, 37, 0.3);
-  --yellow-20: rgba(244, 244, 37, 0.2);
-  --yellow-10: rgba(244, 244, 37, 0.1);
   --accent: hsl(170deg, 40%, 45%);
   --accent-90: rgba(69, 161, 145, 0.9);
   --accent-80: rgba(69, 161, 145, 0.8);
@@ -8328,22 +8288,6 @@ progress {
   color: black !important;
 }
 
-.color-blue {
-  color: hsl(240deg, 100%, 70%) !important;
-}
-
-.color-green {
-  color: hsl(120deg, 85%, 55%) !important;
-}
-
-.color-red {
-  color: hsl(355deg, 90%, 55%) !important;
-}
-
-.color-yellow {
-  color: hsl(60deg, 90%, 55%) !important;
-}
-
 .color-accent {
   color: hsl(170deg, 40%, 45%) !important;
 }
@@ -8386,22 +8330,6 @@ progress {
 
 .background-black {
   background: black !important;
-}
-
-.background-blue {
-  background: hsl(240deg, 100%, 70%) !important;
-}
-
-.background-green {
-  background: hsl(120deg, 85%, 55%) !important;
-}
-
-.background-red {
-  background: hsl(355deg, 90%, 55%) !important;
-}
-
-.background-yellow {
-  background: hsl(60deg, 90%, 55%) !important;
 }
 
 .background-accent {
