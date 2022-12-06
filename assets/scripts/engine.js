@@ -7,6 +7,24 @@ function formatValue(coin, val) {
 	)
 }
 
+function getPrices() {
+	fetch('https://economia.awesomeapi.com.br/last/USD-BRL,BTC-BRL')
+		.then(response => response.json())
+		.then(prices => { 
+			const price = {
+				btc: Number(prices.BTCBRL.bid * 1000),
+				usd: Number(prices.USDBRL.bid).toFixed(2)
+			}
+			document.querySelector('#btc').value = price.btc
+			document.querySelector('#usd').value = Number(price.usd)
+		})
+		.catch(erro => {
+			console.log(erro)
+		});
+}
+
+getPrices()
+
 const values = ['brl', 'sat', 'btc', 'usd']
 
 function getValue() {
@@ -14,12 +32,12 @@ function getValue() {
 		acc[current] = document.querySelector(`#${current}`).value
 		return acc
 	}, {})
+
 	return result
 }
 
 function getResult() {
 	const {brl, sat, btc, usd} = getValue()
-	
 	let pnl = (sat * btc) - brl
 
 	if(sat != 0 && usd != 0) {
@@ -39,11 +57,3 @@ function getResult() {
 		profitAndLoss.className = `color-${valueColor}`
 	}
 }
-
-document.querySelector('#submit').addEventListener('click', () => {
-	getResult()
-})
-
-
-
-
