@@ -1,10 +1,23 @@
 @use '../mixins/' as m;
 
-.input:has(input:focus) {
-    label {
-        color: var(--white);
-        transition: color 200ms ease-in-out;
+.input {
+    position: relative;
+    flex: 1;
+
+    &:has(input:focus) {
+        label {
+            color: var(--white);
+        }
     }
+
+    svg {
+        height: 1.25rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0.875rem;
+        box-sizing: content-box;
+	}
 }
 
 input {

@@ -37,6 +37,7 @@ function getValue() {
 }
 
 function getResult() {
+	const satLabel = document.querySelector('label[for="sat"]')
 	const {brl, sat, btc, usd} = getValue()
 	let pnl = (sat * btc) - brl
 
@@ -55,5 +56,17 @@ function getResult() {
 		pnl > 0 ? valueColor = 'green' : valueColor = 'red'
 		
 		profitAndLoss.className = `color-${valueColor}`
+
+		satLabel.removeAttribute('class')
+	} else {
+		profitAndLoss.innerHTML = formatValue('BRL', 0)
+		turningPoint.innerHTML = formatValue('BRL', 0)
+		
+		profitAndLoss__usd.innerHTML = formatValue('USD', 0)
+		turningPoint__usd.innerHTML = formatValue('USD', 0)
+
+		profitAndLoss.removeAttribute('class')
+
+		satLabel.classList.add('color-red')
 	}
 }

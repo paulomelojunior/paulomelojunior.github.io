@@ -21,8 +21,8 @@ button,
 	display: flex;
 	font-weight: 500;
 	gap: .75rem;
-	line-height: var(--line-height-md);
-	padding: var(--gap-lg);
+	line-height: var(--line-height-lg);
+	padding: var(--gap-md);
 	text-decoration: none;
 	transition: background-color 200ms ease-in-out;
 
@@ -38,11 +38,6 @@ button,
 		}
 	}
 
-	&.small {
-		padding: var(--gap-sm) var(--gap-md);
-	}
-
-	&:active,
 	&:hover {
 		background-color: var(--button-background-hover);
 		color: var(--button-color-hover);
@@ -61,6 +56,10 @@ button,
 		&:not([stroke]) {
 			fill: var(--button-color);		
 		}
+	}
+
+	&.small {
+		padding: var(--gap-sm) var(--gap-md);
 	}
 
 	@media (min-width: 992px) {

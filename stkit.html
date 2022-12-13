@@ -32,13 +32,13 @@
             </div>
         </div>
         <div id="form" class="grid align-items-center gap-0 my-auto">
-            <div class="g-col-12 g-col-lg-4 mb-5 mb-lg-0">
+            <div class="g-col-12 g-col-lg-3 mb-5 mb-lg-0">
                 <div class="mb-4">
                     <div class="input">
                         <label for="brl" class="mb-2">
                             BRL Sold
                         </label>
-                        <input inputmode="decimal" id="brl" type="number">
+                        <input inputmode="decimal" id="brl" type="number" onchange="getResult()" value="0">
                     </div>
                 </div>
                 <div class="mb-4">
@@ -51,23 +51,23 @@
                                 <span id="brlSaved">BRL 00,00</span> / <span id="usdSaved">USD 00,00</span>
                             </small>
                         </div>
-                        <input inputmode="decimal" id="sat" type="number">
+                        <input inputmode="decimal" id="sat" type="number" onchange="getResult()" value="0">
                     </div>
                 </div>
                 <div class="mb-4">
                     <div class="input">
-                        <label for="usd" class="mb-2 d-flex justify-content-between align-items-baseline">
-                            Dollar Value
+                        <label for="btc" class="mb-2">
+                            BTC / BRL
                         </label>
-                        <input inputmode="decimal" id="usd" type="number">
+                        <input inputmode="decimal" id="btc" type="number">
                     </div>
                 </div>
                 <div class="mb-5">
                     <div class="input">
-                        <label for="btc" class="mb-2">
-                            Bitcoin Value
+                        <label for="usd" class="mb-2 d-flex justify-content-between align-items-baseline">
+                            USD / BRL
                         </label>
-                        <input inputmode="decimal" id="btc" type="number">
+                        <input inputmode="decimal" id="usd" type="number">
                     </div>
                 </div>
                 <button id="submit" class="d-block w-100 button" onclick="getResult()">
@@ -92,10 +92,10 @@
                                 Profit and Loss
                             </span>
                             <h2 id="profitAndLoss" class="color-white">
-                                BRL 00,00
+                                BRL 0,00
                             </h2>
                             <span id="profitAndLoss__usd" class="d-block mt-2 color-200">
-                                USD 00,00
+                                USD 0,00
                             </span>
                         </div>
                         <div class="me-auto">
@@ -103,10 +103,10 @@
                                 Turning Point
                             </span>
                             <h2 id="turningPoint" class="color-white">
-                                BRL 00,00
+                                BRL 0,00
                             </h2>
                             <span id="turningPoint__usd" class="d-block mt-2 color-200">
-                                USD 00,00
+                                USD 0,00
                             </span>
                         </div>
                     </div>
