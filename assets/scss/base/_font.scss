@@ -9,11 +9,6 @@
 hr {
     border-color: var(--500);
     opacity: 1;
-    
-    @media (min-width: 728px) {
-        mix-blend-mode: overlay;
-        border-color: var(--white);
-    }
 }
 
 h1,
@@ -23,7 +18,6 @@ h4,
 h5,
 h5 {
     margin: 0;
-    font-weight: 900;
     line-height: var(--line-height-md);
     color: var(--white);
     font-family: var(--complement-font);

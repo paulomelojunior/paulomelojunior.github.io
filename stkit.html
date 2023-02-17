@@ -8,19 +8,25 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="icon" href="assets/images/favicon.png">
+    <meta name="robots" content="noindex, nofollow">
     <title>
-        Stkit - @paulomelojunior
+        Stkit
     </title>
 </head>
 
-<body>
+<body class="loading">
+    <a title="Go back" class="button link position-absolute top-0 start-0 m-3 d-sm-block d-none" href="/">
+        <svg class="m-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.41,8H17a1,1,0,0,0,0-2H7a1,1,0,0,0-.38.08,1,1,0,0,0-.54.54A1,1,0,0,0,6,7V17a1,1,0,0,0,2,0V9.41l8.29,8.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></svg>                                               
+    </a>
     <div class="d-flex justify-content-between flex-column h-100">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <div class="d-flex gap-2">
+            <div class="">
+                <small class="text-uppercase color-accent mb-1 d-block">
+                    Playground
+                </small>
                 <h1 title="Stkit">
-                    stk<span class="color-accent">///</span>it
+                    Stkit
                 </h1>
-                <small class="color-white">alpha</small>
             </div>
             <div class="d-flex gap-1">
                 <button id="langSelector" class="button link small">
@@ -91,7 +97,7 @@
                             <span id="pnl" class="d-block mb-2 color-100">
                                 Profit and Loss
                             </span>
-                            <h2 id="profitAndLoss" class="color-white">
+                            <h2 id="profitAndLoss" class="color-white fw-bolder">
                                 BRL 0,00
                             </h2>
                             <span id="profitAndLoss__usd" class="d-block mt-2 color-200">
@@ -102,7 +108,7 @@
                             <span id="tpt" class="d-block mb-2 color-100">
                                 Turning Point
                             </span>
-                            <h2 id="turningPoint" class="color-white">
+                            <h2 id="turningPoint" class="color-white fw-bolder">
                                 BRL 0,00
                             </h2>
                             <span id="turningPoint__usd" class="d-block mt-2 color-200">
@@ -125,6 +131,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="assets/scripts/language.js"></script>
     <script src="assets/scripts/engine.js"></script>
+    <script src="assets/scripts/loader.js"></script>
 </body>
 
 </html>

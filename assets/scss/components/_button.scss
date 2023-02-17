@@ -18,6 +18,7 @@ button,
 	border-radius: var(--radius-md);
 	border: none;
 	color: var(--button-color);
+	cursor: pointer;
 	display: flex;
 	font-weight: 500;
 	gap: .75rem;
@@ -38,20 +39,25 @@ button,
 		}
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: var(--button-background-hover);
 		color: var(--button-color-hover);
+		
 		svg {
-			
 			&:not([stroke]) {
 				fill: var(--button-color-hover);
 			}
 		}
 	}
 
+	&:active {
+		--button-background-hover: var(--accent);
+	}
+
 	svg {
 		height: 1.25rem;
-		transition: calc(var(--link-transition-duration) / 4) linear;
+		transition: 200ms linear;
 
 		&:not([stroke]) {
 			fill: var(--button-color);		
@@ -60,11 +66,5 @@ button,
 
 	&.small {
 		padding: var(--gap-sm) var(--gap-md);
-	}
-
-	@media (min-width: 992px) {
-		&.link {
-			--button-background-hover: var(--black-60);
-		}
 	}
 }

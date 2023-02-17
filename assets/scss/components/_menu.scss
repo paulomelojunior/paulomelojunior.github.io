@@ -1,25 +1,78 @@
 @keyframes menu {
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
         filter: blur(0);
     }
 }
 
-@mixin animation {
-    animation-name: menu;
-    animation-duration: 900ms;
+@keyframes load {
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translateX(-5rem);
+        filter: blur(.25rem);
+    }
+}
+
+@keyframes title {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+
+@mixin animation($name) {
+    animation-name: $name;
+    animation-duration: 1200ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
-h1.animate {
+span.load {
+    display: none;
+    align-items: baseline;
+    letter-spacing: -.325rem;
+
+    span {
+        opacity: 0;
+        transform: translateX(5rem);
+        filter: blur(.25rem);
+        
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 100}ms;
+            }
+        }
+        
+        body:not([class]) & {
+            @include animation(load);
+            animation-duration: 2400ms;
+            animation-iteration-count: 2;
+        }
+    }
+}
+
+h1.title {
     opacity: 0;
     transform: translateY(5rem);
     filter: blur(.25rem);
 
     body:not([class]) & {
-        @include animation();
+        @include animation(menu);
     }
 }
 
@@ -27,7 +80,7 @@ h1.animate {
     max-width: auto;
     
     @media (min-width: 768px) {
-        max-width: 15rem;
+        max-width: 10rem;
 	}
 
     > * {
@@ -37,8 +90,8 @@ h1.animate {
     }
 
     body:not([class]) & > * {
-        @include animation();
-        transform-origin: left;
+        @include animation(menu);
+        
         @for $i from 1 through 6 {
             &:nth-child(#{$i}) {
                 animation-delay: #{$i * 100}ms;
@@ -46,9 +99,9 @@ h1.animate {
         }
     }
     body:not([class]) &:last-of-type > * {
-        @for $i from 1 through 3 {
+        @for $i from 1 through 6 {
             &:nth-child(#{$i}) {
-                animation-delay: #{$i * 100 + 400}ms;
+                animation-delay: #{$i * 100 + 500}ms;
             }
         }
     }

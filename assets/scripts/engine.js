@@ -12,7 +12,7 @@ function getPrices() {
 		.then(response => response.json())
 		.then(prices => { 
 			const price = {
-				btc: Number(prices.BTCBRL.bid * 1000),
+				btc: Number(prices.BTCBRL.bid),
 				usd: Number(prices.USDBRL.bid).toFixed(2)
 			}
 			document.querySelector('#btc').value = price.btc

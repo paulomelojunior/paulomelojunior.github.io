@@ -22,7 +22,7 @@
 
 input {
     @include m.focus;
-    background-color: var(--600);
+    background-color: var(--700);
     border-radius: var(--radius-md);
     border: none;
     color: var(--white);
@@ -41,14 +41,14 @@ input {
     }
 
     &:focus {
-        background-color: var(--500);
+        background-color: var(--600);
     }
 
-	@media (min-width: 992px) {
-        background-color: var(--black-40);
+	// @media (min-width: 992px) {
+    //     background-color: var(--black-40);
         
-        &:focus {
-            background-color: var(--black-80);
-        }    
-	}
+    //     &:focus {
+    //         background-color: var(--black-80);
+    //     }    
+	// }
 }

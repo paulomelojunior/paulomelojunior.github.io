@@ -1,24 +1,22 @@
 body {
-    --body-padding: 7vw;
-    background: var(--700);
+    --body-padding: 5vw;
+    background: var(--black);
     color: var(--200);
     font-family: var(--complement-font);
     font-weight: 500;
     line-height: var(--line-height-lg);
     opacity: 1;
-    padding: clamp(2rem, var(--body-padding), var(--body-padding));
-    transition: opacity 400ms ease-in-out;
+    padding: clamp(1.5rem, var(--body-padding), var(--body-padding));
     
-    @media (min-width: 992px) {
-        background-blend-mode: overlay;
-        background-color: var(--500);
-        background-image: url('../images/Cole-Thomas_The-Course-of-Empire-Destruction_1836.webp');
-        background-position: center;
-        background-size: cover;
+    * {
+        opacity: 1;
+        transition: opacity 400ms ease-in-out;
     }
     
     &.loading {
-        opacity: 0;
+        > * {
+            opacity: 0;
+        }
     }
 
     &:has(dialog[open]) {
