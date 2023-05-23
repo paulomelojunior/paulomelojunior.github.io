@@ -22,4 +22,8 @@ body {
     &:has(dialog[open]) {
         overflow: hidden;
     }
+
+    @media (max-width: 425px) {
+        margin-right: 2.5rem;
+    }
 }

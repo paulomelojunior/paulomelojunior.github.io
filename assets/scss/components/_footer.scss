@@ -1,0 +1,18 @@
+footer {
+    bottom: clamp(1.5rem, 5vw, 5vw);
+    color: var(--300);
+    font-size: .75rem;
+    line-height: 1;
+    font-weight: 500;
+    position: fixed;
+    right: clamp(1.5rem, 5vw, 5vw);
+    text-transform: uppercase;
+    writing-mode: tb;
+    rotate: .5turn;
+}
+
+@media (max-width: 425px) {
+    footer {
+        font-size: 12px;
+    }
+}
