@@ -1,14 +1,10 @@
-:root {
-	font-size: calc(var(--base) * 2);
-    --accent-font: 'Satoshi', sans-serif;
-    --complement-font: 'Satoshi', sans-serif;
-    --accent-font-serif: 'Zodiak', serif;
-    --complement-font-serif: 'Zodiak', serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
 
-hr {
-    border-color: var(--600);
-    opacity: 1;
+:root {
+    --accent-font: 'Chakra Petch', sans-serif;
+    --complement-font: 'Chakra Petch', sans-serif;
+    font-size: calc(var(--base) * 2);
+    font-family: var(--accent-font);
 }
 
 h1,
@@ -16,20 +12,16 @@ h2,
 h3,
 h4,
 h5,
-h5 {
+h6 {
     margin: 0;
     line-height: var(--line-height-md);
     color: var(--white);
-    font-family: var(--complement-font);
-}
-
-h1,
-h2 {
-    font-size: 2rem;
 }
 
 small,
 .small {
-    font-size: .75rem;
-    letter-spacing: .5px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
 }

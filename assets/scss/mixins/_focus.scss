@@ -1,7 +1,0 @@
-@mixin focus {
-	&:focus,
-    &:focus-visible,
-    &:focus-within {
-        outline: none;
-    }
-}

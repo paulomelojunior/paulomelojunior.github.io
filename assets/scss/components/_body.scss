@@ -1,29 +1,8 @@
 body {
-    --body-padding: 5vw;
-    background: var(--black);
+    background-color: var(--black);
     color: var(--200);
-    font-family: var(--complement-font);
-    font-weight: 500;
-    line-height: var(--line-height-lg);
-    opacity: 1;
-    padding: clamp(1.5rem, var(--body-padding), var(--body-padding));
-    
-    * {
-        opacity: 1;
-        transition: opacity 400ms ease-in-out;
-    }
-    
-    &.loading {
-        > * {
-            opacity: 0;
-        }
-    }
-
-    &:has(dialog[open]) {
-        overflow: hidden;
-    }
-
-    @media (max-width: 425px) {
-        margin-right: 2.5rem;
-    }
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

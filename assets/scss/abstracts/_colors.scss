@@ -1,25 +1,22 @@
-$hue: 210;
-$sat: 25%;
+$hue: 200;
+$sat: 10%;
 
 $colors: (
-	// Grays
-	100: hsl($hue, $sat, 89%),
-	200: hsl($hue, $sat, 55%),
-	300: hsl($hue, $sat, 34%),
-	400: hsl($hue, $sat, 21%),
-	500: hsl($hue, $sat, 13%),
-	600: hsl($hue, $sat, 8%),
-	700: hsl($hue, $sat, 5%),
-	800: hsl($hue, $sat, 3%),
+	100: hsl( $hue, $sat, 89% ),
+	200: hsl( $hue, $sat, 55% ),
+	300: hsl( $hue, $sat, 34% ),
+	400: hsl( $hue, $sat, 21% ),
+	500: hsl( $hue, $sat, 13% ),
+	600: hsl( $hue, $sat, 8%  ),
+	700: hsl( $hue, $sat, 5%  ),
+	800: hsl( $hue, $sat, 3%  ),
 	
-	// Neutral
 	white: white,
 	black: black,
 	
-	// Colors
-	accent: hsl( 240deg,  100%, 75% ),
-	green:  hsl( 120deg,  85%, 55% ),
-	red:    hsl( 355deg,  90%, 55% ),
+	iris:  hsl( 240deg, 100%, 75% ),
+	green: hsl( 120deg,  85%, 55% ),
+	red:   hsl( 355deg,  90%, 55% ),
 );
 
 @mixin alphaVariables($name, $value) {
@@ -33,8 +30,6 @@ $colors: (
 		#{"--" + $color}: #{$value};
 		@include alphaVariables($color, $value);
 	}
-
-	--background-color: var(--white) !important;
 }
 
 @each $prop in (color, background) {

@@ -1,0 +1,19 @@
+.brand {
+    background-color: var(--white);
+    border-radius: var(--sizing-xxs);
+    display: grid;
+    gap: var(--sizing-xs);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .brand {
+        gap: var(--sizing-xxs);
+        padding: 7px;
+        
+        img {
+            height: 1rem;
+        }
+    }
+}

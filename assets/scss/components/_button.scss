@@ -1,70 +1,25 @@
-@use '../mixins/' as m;
-
-button,
 .button {
-	--button-background: var(--100);
-	--button-background-hover: var(--white);
-	--button-color: var(--800);
-	--button-color-hover: var(--black);
-	
-	@include m.focus;
+    --button-bg: transparent;
+    --button-cl: var(--100);
+    background-color: var(--button-bg);
+    border-radius: var(--default-radius);
+    border: none;
+    color: var(--button-cl);
+    display: flex;
+    font-family: var(--accent-font);
+    font-size: var(--sizing-md);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: var(--sizing-sm);
+    padding: var(--sizing-md);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: var(--speed-super-fast);
+    transition-timing-function: var(--ease-in-out);
+    white-space: nowrap;
 
-	&:not(.small):not(.light) {
-		@include m.path;
-	}
-
-	align-items: center;
-	background-color: var(--button-background);
-	border-radius: var(--radius-md);
-	border: none;
-	color: var(--button-color);
-	cursor: pointer;
-	display: flex;
-	font-weight: 500;
-	gap: .75rem;
-	line-height: var(--line-height-lg);
-	padding: var(--gap-md);
-	text-decoration: none;
-	transition: background-color 200ms ease-in-out;
-
-	&.link {
-		--button-background: none;
-		--button-background-hover: var(--600);
-		--button-color: var(--100);
-		--button-color-hover: var(--white);
-		&.light {
-			--button-background-hover: var(--accent-20);
-			--button-color: var(--300);
-			--button-color-hover: var(--800);
-		}
-	}
-
-	&:hover,
-	&:focus {
-		background-color: var(--button-background-hover);
-		color: var(--button-color-hover);
-		
-		svg {
-			&:not([stroke]) {
-				fill: var(--button-color-hover);
-			}
-		}
-	}
-
-	&:active {
-		--button-background-hover: var(--accent);
-	}
-
-	svg {
-		height: 1.25rem;
-		transition: 200ms linear;
-
-		&:not([stroke]) {
-			fill: var(--button-color);		
-		}
-	}
-
-	&.small {
-		padding: var(--gap-sm) var(--gap-md);
-	}
+    &:hover {
+        --button-bg: var(--600);
+        --button-cl: var(--white);
+    }
 }

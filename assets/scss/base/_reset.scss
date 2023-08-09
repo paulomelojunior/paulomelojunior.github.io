@@ -7,19 +7,3 @@
     color: var(--black);
     background: var(--white);
 }
-
-html,
-body {
-    max-width: 1920px;
-    margin: 0 auto;
-
-    @media (min-width: 992px) {
-        height: 100vh;
-    }
-}
-
-@media (max-width: 992px) {
-    body:has(.wrapper) {
-        height: 100vh;
-    }
-}
