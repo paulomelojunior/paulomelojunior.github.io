@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="icon" href="../assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <meta name="robots" content="noindex, nofollow">
+    <title>
+        Hackyoto
+    </title>
+</head>
+
+<body>
+    <header class="header flex-row align-items-center" style="height: auto;">
+        <div class="brand"></div>
+        <script>
+            const brand = document.querySelector('.brand')
+            const brandLetters = ['h', 'a', 'c', 'k']
+            
+            brandLetters.forEach(letter => {
+                const createLetter = `<img src="../assets/images/${letter}.png">`
+                brand.insertAdjacentHTML('beforeend', createLetter)
+            });
+        </script>
+        <nav class="nav d-none">
+            <div class="nav__separator d-flex"></div>
+            <button class="button d-md-none d-block">
+                Menu
+            </button>
+            <nav class="nav__list nav__list--hidden"></nav>
+        </nav>
+    </header>
+    <main>
+        <div class="workout__wrapper">
+            <div class="workout">
+                <h2 class="workout__title">
+                    Supino inclinado
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            2x
+                        </span>
+                        <span class="workout__detail">
+                            Max 20
+                        </span>
+                        <span class="workout__weight">
+                            30kg
+                        </span>
+                    </div>
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            4x
+                        </span>
+                        <span class="workout__detail">
+                            8 a 12
+                        </span>
+                        <span class="workout__weight">
+                            60kg
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="workout">
+                <h2 class="workout__title">
+                    Desenv. no smitch
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            1x
+                        </span>
+                        <span class="workout__detail">
+                            Max 12
+                        </span>
+                        <span class="workout__weight">
+                            24kg
+                        </span>
+                    </div>
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            4x
+                        </span>
+                        <span class="workout__detail">
+                            8 a 12
+                        </span>
+                        <span class="workout__weight">
+                            30kg
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="workout">
+                <h2 class="workout__title">
+                    Cruxifixo reto
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            3x
+                        </span>
+                        <span class="workout__detail">
+                            Max 10
+                        </span>
+                        <span class="workout__weight">
+                            12kg
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="workout">
+                <h2 class="workout__title">
+                    Fly 45º
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            2x
+                        </span>
+                        <span class="workout__detail">
+                            Max 12
+                        </span>
+                        <span class="workout__weight">
+                            18kg
+                        </span>
+                    </div>
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            2x
+                        </span>
+                        <span class="workout__detail">
+                            Max 8
+                        </span>
+                        <span class="workout__weight">
+                            20kg
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="workout">
+                <h2 class="workout__title">
+                    Voador
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            8x
+                        </span>
+                        <span class="workout__detail">
+                            20 seg
+                        </span>
+                        <span class="workout__weight">
+                            30kg
+                        </span>
+                    </div>
+                    <div class="workout__obs">
+                        TBT
+                    </div>
+                </div>
+            </div>
+            <div class="workout">
+                <h2 class="workout__title">
+                    Elev. lateral sentado
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            3x
+                        </span>
+                        <span class="workout__detail">
+                            8 a 12
+                        </span>
+                        <span class="workout__weight">
+                            10kg
+                        </span>
+                    </div>
+                    <div class="workout__obs">
+                        Drop <br/>
+                        Set
+                    </div>
+                </div>
+            </div>
+            <div class="workout">
+                <h2 class="workout__title">
+                    Desenv. com halter
+                </h2>
+                <div class="workout__cluster">
+                    <div class="workout__item">
+                        <span class="workout__detail">
+                            3x
+                        </span>
+                        <span class="workout__detail">
+                            Min 12
+                        </span>
+                        <span class="workout__weight">
+                            14kg
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <small class="color-400 lh-1 d-none d-md-block">
+            More soon, or never.
+        </small>
+        <small class="color-400 lh-1">
+            Copyright 2023 Hackyoto
+        </small>
+    </footer>
+    <script>
+        const workoutItem = document.querySelectorAll(".workout__item")
+
+        workoutItem.forEach(element => {
+            element.addEventListener('click', function () {
+                this.classList.toggle('workout__item--done')
+            })
+        });
+    </script>
+    <script src="../assets/scripts/nav.js"></script>
+</body>
+</html>

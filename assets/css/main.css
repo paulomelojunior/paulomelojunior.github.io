@@ -8719,7 +8719,6 @@ footer {
 main {
   padding: var(--default-global-spacing);
   padding-top: 0;
-  margin-top: auto;
 }
 
 @media (max-width: 768px) {
