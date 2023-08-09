@@ -1,15 +1,15 @@
 $sizes: (
-    radius: (
-        sm: .125rem,
-        md: .25rem,
-        lg: .5rem,
+    default: (
+        radius: .125rem,
+        global-spacing: 4.5rem,
     ),
-    gap: (
+    sizing: (
+        xxs: .125rem,
         xs: .25rem,
         sm: .5rem,
         md: .75rem,
         lg: 1rem,
-        xl: 2rem,
+        xl: 1.5rem,
     ),
     line-height: (
         sm: .75,
@@ -28,8 +28,8 @@ $sizes: (
 	}
 }
 
-@media (max-width: 425px) {
+@media (max-width: 728px) {
     :root {
-        --base: 6px;
+        --default-global-spacing: 1.5rem;
     }
 }

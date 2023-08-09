@@ -1,18 +1,18 @@
 footer {
-    bottom: clamp(1.5rem, 5vw, 5vw);
-    color: var(--300);
-    font-size: .75rem;
-    line-height: 1;
-    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
-    right: clamp(1.5rem, 5vw, 5vw);
-    text-transform: uppercase;
-    writing-mode: tb;
-    rotate: .5turn;
+    padding: var(--default-global-spacing);
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     footer {
-        font-size: .75rem;
+        rotate: 0.5turn;
+        width: auto;
+        writing-mode: tb;
+        right: 0;
     }
 }
