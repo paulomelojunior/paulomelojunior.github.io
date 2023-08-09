@@ -8,18 +8,18 @@ const navItems = {
         label: 'Instagram',
         url: 'https://www.instagram.com/paulomelojunior',
     },
-    // nostr: {
-    //     label: 'Nostr',
-    //     url: 'https://www.iris.to/boss',
-    // },
+    nostr: {
+        label: 'Nostr',
+        url: 'https://www.iris.to/boss',
+    },
     spotify: {
         label: 'Spotify',
         url: 'https://www.spotify.com/paulomelojunior',
     },
-    // twitch: {
-    //     label: 'Twitch',
-    //     url: 'https://www.twitch.tv/hackyoto',
-    // },
+    twitch: {
+        label: 'Twitch',
+        url: 'https://www.twitch.tv/hackyoto',
+    },
     xCorp: {
         label: 'X Corp.',
         url: 'https://www.x.com/hackyoto',
