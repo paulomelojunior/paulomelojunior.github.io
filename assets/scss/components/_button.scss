@@ -20,6 +20,7 @@
 
     &:hover {
         --button-bg: var(--600);
-        --button-cl: var(--white);
+        --button-cl: var(--iris);
+        color: var(--button-cl);
     }
 }

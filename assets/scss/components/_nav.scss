@@ -1,19 +1,25 @@
+@keyframes navItemEntry {
+    from {
+        opacity: 0;
+        translate: 5rem 0;
+    }
+}
+
 .nav {
     display: flex;
     gap: var(--default-global-spacing);
     flex: 1;
-    
+
     &__list {
         display: flex;
         gap: var(--sizing-md);
 
         > &Item {
-            opacity: 1;
-            transition: opacity var(--speed-super-slow) var(--ease-in-out);
+            animation: navItemEntry 1200ms var(--ease-out) both;
 
             @for $i from 1 through 6 {
                 &:nth-child(#{$i}) {
-                    transition-delay: calc($i * var(--speed-super-fast) / 3);
+                    animation-delay: calc($i * 200ms);
                 }
             }
         }
@@ -25,7 +31,7 @@
         flex: 1;
 
         &:before {
-            background-color: var(--600);
+            background-color: var(--500);
             content: '';
             height: 1px;
             width: 100%;

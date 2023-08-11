@@ -10,7 +10,7 @@ const navItems = {
     },
     nostr: {
         label: 'Nostr',
-        url: 'https://www.iris.to/boss',
+        url: 'https://iris.to/boss',
     },
     spotify: {
         label: 'Spotify',

@@ -1,3 +1,10 @@
+@keyframes brandEntry {
+    from {
+        opacity: 0;
+        translate: 0 5rem;
+    }
+}
+
 .brand {
     background-color: var(--white);
     border-radius: var(--sizing-xxs);
@@ -5,13 +12,27 @@
     gap: var(--sizing-xs);
     grid-template-columns: repeat(2, 1fr);
     padding: 10px;
+    min-width: 4.5rem;
+    aspect-ratio: 1 / 1;
+    animation: brandEntry 800ms var(--ease-in-out) both;
+    overflow: hidden;
+
+    > img {
+        animation: brandEntry 800ms var(--ease-out) both;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: calc(200ms * $i);
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .brand {
         gap: var(--sizing-xxs);
         padding: 7px;
-        
+        min-width: 3rem;
+
         img {
             height: 1rem;
         }
