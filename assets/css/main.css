@@ -9122,6 +9122,12 @@ body {
 .brand > img:nth-child(4) {
   animation-delay: 800ms;
 }
+.brand--training {
+  animation: none;
+}
+.brand--training > img {
+  animation: none;
+}
 
 @media (max-width: 768px) {
   .brand {

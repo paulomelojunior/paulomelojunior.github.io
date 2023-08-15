@@ -25,6 +25,13 @@
             }
         }
     }
+
+    &--training {
+        animation: none;
+        > img {
+            animation: none;
+        }
+    }
 }
 
 @media (max-width: 768px) {
