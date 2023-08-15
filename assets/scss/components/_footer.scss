@@ -6,6 +6,13 @@ footer {
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    animation: footerEntry 1200ms var(--ease-in-out) both;
+}
+
+@keyframes footerEntry {
+    from {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {

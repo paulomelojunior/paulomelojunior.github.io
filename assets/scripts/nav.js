@@ -37,16 +37,4 @@ navValues.forEach(element => {
         </div>`
         
     navList.insertAdjacentHTML('beforeend', navItem)
-});
-
-
-const workouts = {
-    a: {
-        1: {
-            l: 'Bench Press',
-            s: [2, 3],
-            r: ['20', '8 a 12'],
-            c: [15, 25]
-        }
-    }
-}
+})
