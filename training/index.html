@@ -20,7 +20,7 @@
 
 <body>
     <header class="header flex-row align-items-center" style="height: auto;">
-        <div class="brand brand--training"></div>
+        <div class="brand"></div>
         <script>
             const brand = document.querySelector('.brand')
             const brandLetters = ['h', 'a', 'c', 'k']
@@ -30,181 +30,40 @@
                 brand.insertAdjacentHTML('beforeend', createLetter)
             });
         </script>
-        <nav class="nav d-none">
-            <div class="nav__separator d-flex"></div>
-            <button class="button d-md-none d-block">
-                Menu
-            </button>
-            <nav class="nav__list nav__list--hidden"></nav>
-        </nav>
     </header>
-    <main>
-        <div class="workout__wrapper">
-            <div class="workout">
+    <main class="flex-grow-1 d-flex">
+        <div class="workout__wrapper flex-grow-1">
+            <div class="workout justify-content-between">
                 <h2 class="workout__title">
-                    Supino inclinado
+                    Treinos
                 </h2>
                 <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            2x
-                        </span>
-                        <span class="workout__detail">
-                            Max 20
-                        </span>
+                    <a href="a" class="workout__item">
+                        <div class="workout__details">
+                            Peito e Ombros
+                        </div>
                         <span class="workout__weight">
-                            30kg
+                            A
                         </span>
-                    </div>
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            4x
-                        </span>
-                        <span class="workout__detail">
-                            8 a 12
-                        </span>
+                    </a>
+                    
+                    <a href="b"  class="workout__item">
+                        <div class="workout__details">
+                            Costas e Biceps
+                        </div>
                         <span class="workout__weight">
-                            60kg
+                            B
                         </span>
-                    </div>
-                </div>
-            </div>
-            <div class="workout">
-                <h2 class="workout__title">
-                    Desenv. no smitch
-                </h2>
-                <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            1x
-                        </span>
-                        <span class="workout__detail">
-                            Max 12
-                        </span>
+                    </a>
+                    
+                    <a href="c" class="workout__item">
+                        <div class="workout__details">
+                            MMII e Triceps
+                        </div>
                         <span class="workout__weight">
-                            24kg
+                            C
                         </span>
-                    </div>
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            4x
-                        </span>
-                        <span class="workout__detail">
-                            8 a 12
-                        </span>
-                        <span class="workout__weight">
-                            30kg
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="workout">
-                <h2 class="workout__title">
-                    Cruxifixo reto
-                </h2>
-                <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            3x
-                        </span>
-                        <span class="workout__detail">
-                            Max 10
-                        </span>
-                        <span class="workout__weight">
-                            12kg
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="workout">
-                <h2 class="workout__title">
-                    Fly 45º
-                </h2>
-                <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            2x
-                        </span>
-                        <span class="workout__detail">
-                            Max 12
-                        </span>
-                        <span class="workout__weight">
-                            18kg
-                        </span>
-                    </div>
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            2x
-                        </span>
-                        <span class="workout__detail">
-                            Max 8
-                        </span>
-                        <span class="workout__weight">
-                            20kg
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="workout">
-                <h2 class="workout__title">
-                    Voador
-                </h2>
-                <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            8x
-                        </span>
-                        <span class="workout__detail">
-                            20 seg
-                        </span>
-                        <span class="workout__weight">
-                            30kg
-                        </span>
-                    </div>
-                    <div class="workout__obs">
-                        TBT
-                    </div>
-                </div>
-            </div>
-            <div class="workout">
-                <h2 class="workout__title">
-                    Elev. lateral sentado
-                </h2>
-                <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            3x
-                        </span>
-                        <span class="workout__detail">
-                            8 a 12
-                        </span>
-                        <span class="workout__weight">
-                            10kg
-                        </span>
-                    </div>
-                    <div class="workout__obs">
-                        Drop <br/>
-                        Set
-                    </div>
-                </div>
-            </div>
-            <div class="workout">
-                <h2 class="workout__title">
-                    Desenv. com halter
-                </h2>
-                <div class="workout__cluster">
-                    <div class="workout__item">
-                        <span class="workout__detail">
-                            3x
-                        </span>
-                        <span class="workout__detail">
-                            Min 12
-                        </span>
-                        <span class="workout__weight">
-                            14kg
-                        </span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -226,6 +85,6 @@
             })
         });
     </script>
-    <script src="../assets/scripts/nav.js"></script>
+    <script src="../assets/scripts/workouts.js"></script>
 </body>
 </html>

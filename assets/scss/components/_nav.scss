@@ -1,3 +1,9 @@
+@keyframes navEntry {
+    from {
+        opacity: 0;
+    }
+}
+
 @keyframes navItemEntry {
     from {
         opacity: 0;
@@ -57,9 +63,22 @@
         &__list {
             flex-direction: column;
             justify-content: end;
-
-            &--hidden {
+            
+            &--toggleable {
+                animation: navEntry 800ms var(--ease-out) both;
+                background-color: var(--black-70);
                 display: none;
+                inset: 0;
+                top: 5rem;
+                justify-content: end;
+                padding: var(--default-global-spacing);
+                padding-right: calc(var(--default-global-spacing) * 2 + 10px);
+                position: fixed;
+                backdrop-filter: blur(1rem);
+            }
+            
+            &--showing {
+                display: flex;
             }
         }
     }

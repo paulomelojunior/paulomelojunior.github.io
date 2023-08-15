@@ -9083,7 +9083,7 @@ body {
   background-color: var(--black);
   color: var(--200);
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   font-family: var(--accent-font);
@@ -9102,7 +9102,7 @@ body {
   gap: var(--sizing-xs);
   grid-template-columns: repeat(2, 1fr);
   padding: 10px;
-  min-width: 4.5rem;
+  width: 4.5rem;
   aspect-ratio: 1/1;
   animation: brandEntry 800ms var(--ease-in-out) both;
   overflow: hidden;
@@ -9122,21 +9122,17 @@ body {
 .brand > img:nth-child(4) {
   animation-delay: 800ms;
 }
-.brand--training {
-  animation: none;
-}
-.brand--training > img {
-  animation: none;
-}
 
 @media (max-width: 768px) {
   .brand {
     gap: var(--sizing-xxs);
     padding: 7px;
-    min-width: 3rem;
+    width: 3rem;
+    animation: none;
   }
   .brand img {
     height: 1rem;
+    animation: none;
   }
 }
 .button {
@@ -9161,7 +9157,7 @@ body {
 }
 .button:hover {
   --button-bg: var(--600);
-  --button-cl: var(--iris);
+  --button-cl: var(--red);
   color: var(--button-cl);
 }
 
@@ -9226,6 +9222,7 @@ footer {
   .header {
     align-items: start;
     height: 100vh;
+    animation: none;
   }
   .header__about br {
     display: none;
@@ -9263,6 +9260,11 @@ main {
   text-transform: uppercase;
 }
 
+@keyframes navEntry {
+  from {
+    opacity: 0;
+  }
+}
 @keyframes navItemEntry {
   from {
     opacity: 0;
@@ -9327,8 +9329,20 @@ main {
     flex-direction: column;
     justify-content: end;
   }
-  .nav__list--hidden {
+  .nav__list--toggleable {
+    animation: navEntry 800ms var(--ease-out) both;
+    background-color: var(--black-70);
     display: none;
+    inset: 0;
+    top: 5rem;
+    justify-content: end;
+    padding: var(--default-global-spacing);
+    padding-right: calc(var(--default-global-spacing) * 2 + 10px);
+    position: fixed;
+    backdrop-filter: blur(1rem);
+  }
+  .nav__list--showing {
+    display: flex;
   }
 }
 .workout {
@@ -9346,48 +9360,56 @@ main {
 .workout__title {
   font-size: var(--sizing-lg);
   white-space: nowrap;
+  font-weight: bold;
+  color: var(--200);
 }
 .workout__cluster {
   display: flex;
+  flex-direction: column;
   gap: var(--sizing-lg);
-  flex-wrap: wrap;
 }
 .workout__item {
   background-color: var(--600);
-  padding: var(--sizing-xl);
+  padding: var(--sizing-lg);
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  aspect-ratio: 1/1;
-  width: 7rem;
   border-radius: var(--sizing-xxs);
+  text-decoration: none;
   transition: translate var(--speed-fast) var(--ease-in-out);
+  align-items: center;
 }
 .workout__item--done {
   opacity: 0.25;
 }
 .workout__obs {
   background-color: var(--600);
-  padding: var(--sizing-xl);
+  padding: var(--sizing-lg);
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1/1;
-  width: 7rem;
   border-radius: var(--sizing-xxs);
   font-weight: bold;
   font-size: var(--sizing-xl);
   color: var(--400);
 }
-.workout__detail {
+.workout__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizing-xs);
   font-size: var(--sizing-md);
   font-weight: bold;
   color: var(--white);
 }
+.workout__details span {
+  white-space: nowrap;
+}
+.workout__details span:last-child {
+  font-size: var(--sizing-md);
+}
 .workout__weight {
   font-size: var(--sizing-xl);
   font-weight: bold;
-  color: var(--iris);
+  color: var(--red);
 }
 .workout__wrapper {
   display: flex;

@@ -28,7 +28,8 @@
     .header {
         align-items: start;
         height: 100vh;
-
+        animation: none;
+        
         &__about {
             br {
                 display: none;
