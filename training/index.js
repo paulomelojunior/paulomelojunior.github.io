@@ -3,15 +3,13 @@ const navItems = {
     a: {
         label: 'Peito e Ombros',
         content: 'a',
+        active: true
     },
     b: {
         label: 'Costas e Biceps',
         content: 'b',
+        active: false
     },
-    // c: {
-    //     label: 'MMII e Triceps',
-    //     content: 'c',
-    // },
 }
 
 const navValues = Object.values(navItems)
@@ -19,7 +17,7 @@ const navValues = Object.values(navItems)
 navValues.forEach(element => {
     const navItem = `
         <div class="nav__listItem">
-            <div class="button" id="${element.content}" data-bs-toggle="pill" data-bs-target="${"#content-" + element.content}">
+            <div class="button ${element.active === true && 'active'}" id="${element.content}" data-bs-toggle="pill" data-bs-target="${"#content-" + element.content}">
                 ${element.label}
             </div>
         </div>`
@@ -29,6 +27,6 @@ navValues.forEach(element => {
 
 function toggleNav() {
     navList.classList.toggle('nav__list--showing')
-    document.querySelector('body').classList.toggle('overflow-hidden')
     navList.addEventListener('click', toggleNav)
+    document.querySelector('body').classList.toggle('overflow-hidden')
 }
