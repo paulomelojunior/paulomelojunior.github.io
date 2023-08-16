@@ -551,7 +551,7 @@ main {
   }
   .nav__list--toggleable {
     animation: navEntry 800ms var(--ease-out) both;
-    background-color: var(--black-70);
+    background-color: var(--black);
     display: none;
     inset: 0;
     top: 5rem;
