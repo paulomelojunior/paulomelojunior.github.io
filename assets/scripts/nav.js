@@ -14,7 +14,7 @@ const navItems = {
     },
     spotify: {
         label: 'Spotify',
-        url: 'https://www.spotify.com/paulomelojunior',
+        url: 'https://open.spotify.com/user/paulomelojunior',
     },
     twitch: {
         label: 'Twitch',
