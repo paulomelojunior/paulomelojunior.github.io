@@ -2,16 +2,16 @@ const navList = document.querySelector('.nav__list')
 const navItems = {
     a: {
         label: 'Peito e Ombros',
-        url: 'a',
+        content: 'a',
     },
     b: {
         label: 'Costas e Biceps',
-        url: 'b',
+        content: 'b',
     },
-    c: {
-        label: 'MMII e Triceps',
-        url: 'c',
-    },
+    // c: {
+    //     label: 'MMII e Triceps',
+    //     content: 'c',
+    // },
 }
 
 const navValues = Object.values(navItems)
@@ -19,9 +19,9 @@ const navValues = Object.values(navItems)
 navValues.forEach(element => {
     const navItem = `
         <div class="nav__listItem">
-            <a class="button" href="${element.url}">
+            <div class="button" id="${element.content}" data-bs-toggle="pill" data-bs-target="${"#content-" + element.content}">
                 ${element.label}
-            </a>
+            </div>
         </div>`
         
     navList.insertAdjacentHTML('beforeend', navItem)
@@ -30,4 +30,5 @@ navValues.forEach(element => {
 function toggleNav() {
     navList.classList.toggle('nav__list--showing')
     document.querySelector('body').classList.toggle('overflow-hidden')
+    navList.addEventListener('click', toggleNav)
 }

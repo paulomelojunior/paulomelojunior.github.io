@@ -17,10 +17,15 @@
     transition-duration: var(--speed-super-fast);
     transition-timing-function: var(--ease-in-out);
     white-space: nowrap;
+    cursor: pointer;
 
     &:hover {
         --button-bg: var(--600);
-        --button-cl: var(--red);
+        --button-cl: var(--iris);
         color: var(--button-cl);
+    }
+
+    &.active {
+        --button-cl: var(--iris);
     }
 }

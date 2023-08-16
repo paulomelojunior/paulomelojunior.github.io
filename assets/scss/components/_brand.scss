@@ -8,12 +8,11 @@
 .brand {
     background-color: var(--white);
     border-radius: var(--sizing-xxs);
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--sizing-xs);
-    grid-template-columns: repeat(2, 1fr);
     padding: 10px;
     width: 4.5rem;
-    aspect-ratio: 1 / 1;
     animation: brandEntry 800ms var(--ease-in-out) both;
     overflow: hidden;
 
