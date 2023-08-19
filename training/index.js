@@ -6,8 +6,13 @@ const navItems = {
         active: true
     },
     b: {
-        label: 'Costas e Biceps',
+        label: 'Costas e Bíceps',
         content: 'b',
+        active: false
+    },
+    c: {
+        label: 'MMII e Tríceps',
+        content: 'c',
         active: false
     },
 }

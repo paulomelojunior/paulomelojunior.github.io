@@ -6,6 +6,7 @@
     padding: var(--default-global-spacing);
     width: 100%;
     animation: headerEntry 1200ms var(--ease-in-out) both;
+    overflow: hidden;
 
     &__about {
         line-height: 2;

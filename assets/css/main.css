@@ -363,7 +363,7 @@ body {
   border-radius: var(--default-radius);
   border: none;
   color: var(--button-cl);
-  display: flex;
+  display: block;
   font-family: var(--accent-font);
   font-size: var(--sizing-md);
   font-weight: 700;
@@ -428,6 +428,7 @@ footer {
   padding: var(--default-global-spacing);
   width: 100%;
   animation: headerEntry 1200ms var(--ease-in-out) both;
+  overflow: hidden;
 }
 .header__about {
   line-height: 2;
@@ -551,37 +552,33 @@ main {
   }
   .nav__list--toggleable {
     animation: navEntry 800ms var(--ease-out) both;
+    backdrop-filter: blur(1rem);
     background-color: var(--black);
     display: none;
     inset: 0;
-    top: 5rem;
-    justify-content: end;
+    justify-content: center;
     padding: var(--default-global-spacing);
     position: fixed;
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
+    top: 5rem;
   }
   .nav__list--showing {
     display: flex;
   }
 }
 .workout {
-  --workout-spacing: var(--sizing-xl);
-  background-color: var(--800);
-  border-radius: var(--sizing-xs);
   display: flex;
+  flex: 1 1 calc(20% - var(--sizing-md));
   flex-direction: column;
-  gap: var(--workout-spacing);
+  gap: var(--sizing-md);
   letter-spacing: 1px;
   line-height: 1;
-  padding: var(--workout-spacing);
   text-transform: uppercase;
 }
 .workout__title {
+  color: var(--300);
   font-size: var(--sizing-lg);
-  white-space: nowrap;
   font-weight: bold;
-  color: var(--200);
+  white-space: nowrap;
 }
 .workout__cluster {
   display: flex;
@@ -589,14 +586,15 @@ main {
   gap: var(--sizing-lg);
 }
 .workout__item {
+  align-items: center;
   background-color: var(--600);
-  padding: var(--sizing-lg);
-  display: flex;
-  justify-content: space-between;
   border-radius: var(--sizing-xxs);
+  display: flex;
+  gap: var(--sizing-lg);
+  justify-content: space-between;
+  padding: var(--sizing-lg);
   text-decoration: none;
   transition: translate var(--speed-fast) var(--ease-in-out);
-  align-items: center;
 }
 .workout__item--done {
   opacity: 0.25;
@@ -611,14 +609,15 @@ main {
   font-weight: bold;
   font-size: var(--sizing-xl);
   color: var(--400);
+  white-space: nowrap;
 }
 .workout__details {
   display: flex;
-  flex-direction: column;
   gap: var(--sizing-xs);
   font-size: var(--sizing-md);
   font-weight: bold;
   color: var(--white);
+  flex-direction: column;
 }
 .workout__details span {
   white-space: nowrap;
@@ -633,9 +632,18 @@ main {
 }
 .workout__wrapper {
   display: flex;
-  gap: var(--sizing-md);
+  gap: calc(var(--default-global-spacing) * 2);
+  margin-top: var(--default-global-spacing);
   flex-wrap: wrap;
 }
-.workout__wrapper > * {
-  flex: 1;
+
+@media (min-width: 425px) {
+  .workout {
+    padding: var(--sizing-xl);
+    background-color: var(--800);
+  }
+  .workout__wrapper {
+    gap: var(--sizing-md);
+    margin-top: 0;
+  }
 }
