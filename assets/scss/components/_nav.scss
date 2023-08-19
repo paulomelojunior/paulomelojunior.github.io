@@ -21,11 +21,11 @@
         gap: var(--sizing-md);
 
         > &Item {
-            animation: navItemEntry 1200ms var(--ease-out) both;
+            animation: navItemEntry var(--speed-super-slow) var(--ease-out) both;
 
             @for $i from 1 through 6 {
                 &:nth-child(#{$i}) {
-                    animation-delay: calc($i * 200ms);
+                    animation-delay: calc($i * var(--speed-super-fast));
                 }
             }
         }
@@ -65,7 +65,7 @@
             justify-content: end;
             
             &--toggleable {
-                animation: navEntry 800ms var(--ease-out) both;
+                animation: navEntry var(--speed-slow) var(--ease-out) both;
                 backdrop-filter: blur(1rem);
                 background-color: var(--black);
                 display: none;
@@ -74,6 +74,7 @@
                 padding: var(--default-global-spacing);
                 position: fixed;
                 top: 5rem;
+                z-index: 1;
             }
             
             &--showing {

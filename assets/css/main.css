@@ -257,10 +257,10 @@
   }
 }
 :root {
-  --speed-slow: 600ms;
   --speed-fast: 400ms;
-  --speed-super-slow: 1200ms;
+  --speed-slow: 800ms;
   --speed-super-fast: 200ms;
+  --speed-super-slow: 1200ms;
   --ease-in: cubic-bezier(0, 0, 1, 0);
   --ease-out: cubic-bezier(0, 0, 0, 1);
   --ease-in-out: cubic-bezier(0.75, 0, 0.25, 1);
@@ -502,25 +502,25 @@ main {
   gap: var(--sizing-md);
 }
 .nav__listItem {
-  animation: navItemEntry 1200ms var(--ease-out) both;
+  animation: navItemEntry var(--speed-super-slow) var(--ease-out) both;
 }
 .nav__listItem:nth-child(1) {
-  animation-delay: 200ms;
+  animation-delay: calc(1 * var(--speed-super-fast));
 }
 .nav__listItem:nth-child(2) {
-  animation-delay: 400ms;
+  animation-delay: calc(2 * var(--speed-super-fast));
 }
 .nav__listItem:nth-child(3) {
-  animation-delay: 600ms;
+  animation-delay: calc(3 * var(--speed-super-fast));
 }
 .nav__listItem:nth-child(4) {
-  animation-delay: 800ms;
+  animation-delay: calc(4 * var(--speed-super-fast));
 }
 .nav__listItem:nth-child(5) {
-  animation-delay: 1000ms;
+  animation-delay: calc(5 * var(--speed-super-fast));
 }
 .nav__listItem:nth-child(6) {
-  animation-delay: 1200ms;
+  animation-delay: calc(6 * var(--speed-super-fast));
 }
 .nav__separator {
   display: flex;
@@ -551,7 +551,7 @@ main {
     justify-content: end;
   }
   .nav__list--toggleable {
-    animation: navEntry 800ms var(--ease-out) both;
+    animation: navEntry var(--speed-slow) var(--ease-out) both;
     backdrop-filter: blur(1rem);
     background-color: var(--black);
     display: none;
@@ -560,9 +560,17 @@ main {
     padding: var(--default-global-spacing);
     position: fixed;
     top: 5rem;
+    z-index: 1;
   }
   .nav__list--showing {
     display: flex;
+  }
+}
+@keyframes workoutEntry {
+  from {
+    opacity: 0;
+    scale: 1.1;
+    translate: 0 5rem;
   }
 }
 .workout {
@@ -573,6 +581,37 @@ main {
   letter-spacing: 1px;
   line-height: 1;
   text-transform: uppercase;
+  animation: workoutEntry var(--speed-super-slow) var(--ease-out) both;
+}
+.workout:nth-child(1) {
+  animation-delay: calc(1 * var(--speed-super-fast));
+}
+.workout:nth-child(2) {
+  animation-delay: calc(2 * var(--speed-super-fast));
+}
+.workout:nth-child(3) {
+  animation-delay: calc(3 * var(--speed-super-fast));
+}
+.workout:nth-child(4) {
+  animation-delay: calc(4 * var(--speed-super-fast));
+}
+.workout:nth-child(5) {
+  animation-delay: calc(5 * var(--speed-super-fast));
+}
+.workout:nth-child(6) {
+  animation-delay: calc(6 * var(--speed-super-fast));
+}
+.workout:nth-child(7) {
+  animation-delay: calc(7 * var(--speed-super-fast));
+}
+.workout:nth-child(8) {
+  animation-delay: calc(8 * var(--speed-super-fast));
+}
+.workout:nth-child(9) {
+  animation-delay: calc(9 * var(--speed-super-fast));
+}
+.workout:nth-child(10) {
+  animation-delay: calc(10 * var(--speed-super-fast));
 }
 .workout__title {
   color: var(--300);
@@ -641,6 +680,7 @@ main {
   .workout {
     padding: var(--sizing-xl);
     background-color: var(--800);
+    animation: none;
   }
   .workout__wrapper {
     gap: var(--sizing-md);

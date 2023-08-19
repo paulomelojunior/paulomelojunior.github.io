@@ -1,3 +1,11 @@
+@keyframes workoutEntry {
+    from {
+        opacity: 0;
+        scale: 1.1;
+        translate: 0 5rem;
+    }
+}
+
 .workout {
     display: flex;
     flex: 1 1 calc(20% - var(--sizing-md));
@@ -6,6 +14,13 @@
     letter-spacing: 1px;
     line-height: 1;
     text-transform: uppercase;
+    animation: workoutEntry var(--speed-super-slow) var(--ease-out) both;
+    
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            animation-delay: calc($i * var(--speed-super-fast));
+        }
+    }
 
     &__title {
         color: var(--300);
@@ -30,7 +45,7 @@
         padding: var(--sizing-lg);
         text-decoration: none;
         transition: translate var(--speed-fast) var(--ease-in-out);
-
+        
         &--done {
             opacity: .25;
         }
@@ -84,6 +99,7 @@
     .workout {
         padding: var(--sizing-xl);
         background-color: var(--800);
+        animation: none;
 
         &__wrapper {
             gap: var(--sizing-md);
