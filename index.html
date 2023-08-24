@@ -16,7 +16,7 @@
 </head>
 
 <body class="justify-content-center">
-    <header class="header">
+    <header class="header d-none">
         <div class="brand"></div>
         <script>
             const brand = document.querySelector('.brand')
@@ -43,9 +43,14 @@
             More soon, or never.
         </small>
         <small class="color-400 lh-1">
-            Copyright 2023 Hackyoto
+            Copyright 2023 Hackyoto.
         </small>
     </footer>
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('header').classList.remove('d-none')
+        })
+    </script>
     <script src="assets/scripts/nav.js"></script>
 </body>
 </html>

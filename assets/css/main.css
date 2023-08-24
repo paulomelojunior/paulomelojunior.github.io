@@ -633,7 +633,7 @@ main {
   justify-content: space-between;
   padding: var(--sizing-lg);
   text-decoration: none;
-  transition: translate var(--speed-fast) var(--ease-in-out);
+  transition: opacity var(--speed-super-fast) var(--ease-in-out);
 }
 .workout__item--done {
   opacity: 0.25;

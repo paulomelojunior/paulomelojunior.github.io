@@ -35,3 +35,11 @@ function toggleNav() {
     navList.addEventListener('click', toggleNav)
     document.querySelector('body').classList.toggle('overflow-hidden')
 }
+
+const workoutItem = document.querySelectorAll(".workout__item")
+
+workoutItem.forEach(element => {
+    element.addEventListener('click', function () {
+        this.classList.toggle('workout__item--done')
+    })
+});
