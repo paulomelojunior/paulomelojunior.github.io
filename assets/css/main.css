@@ -427,11 +427,19 @@ footer {
   gap: var(--default-global-spacing);
   padding: var(--default-global-spacing);
   width: 100%;
-  animation: headerEntry 1200ms var(--ease-in-out) both;
+  animation: headerEntry 200ms var(--ease-in-out) both;
   overflow: hidden;
 }
 .header__about {
   line-height: 2;
+}
+.header__about .line {
+  display: grid !important;
+}
+.header__about .char {
+  opacity: 0;
+  transform: translate(1rem, 0);
+  transition: 100ms var(--ease-out);
 }
 
 @keyframes headerEntry {
@@ -448,7 +456,6 @@ footer {
   .header {
     align-items: start;
     height: 100vh;
-    animation: none;
   }
   .header__about br {
     display: none;

@@ -28,9 +28,15 @@
             });
         </script>
         <small class="header__about">
-            Hi, I'm a Designer and coder from Brazil, <br />
-            enthusiast of decentralized technologies <br />
-            and other geeky stuff.
+            <span>   
+                Hi, I'm a Designer and coder from Brazil,
+            </span>
+            <span>
+                enthusiast of decentralized technologies
+            </span>
+            <span>
+                and other geeky stuff.
+            </span>
         </small>
         <nav class="nav">
             <div class="nav__separator"></div>
@@ -52,5 +58,17 @@
         })
     </script>
     <script src="assets/scripts/nav.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const about = new SplitType('.header__about')
+        gsap.to('.char', {
+            y: 0,
+            x: 0,
+            stagger: .02,
+            opacity: 1,
+            duration: .4,
+        })
+    </script>
 </body>
 </html>

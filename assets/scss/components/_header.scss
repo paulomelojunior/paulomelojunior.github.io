@@ -10,6 +10,15 @@
 
     &__about {
         line-height: 2;
+        .line {
+            display: grid !important;
+        }
+
+        .char {
+            opacity: 0;
+            transform: translate(1rem, 0);
+            transition: 100ms var(--ease-out);
+        }
     }
 }
 
@@ -29,7 +38,6 @@
     .header {
         align-items: start;
         height: 100vh;
-        
         &__about {
             br {
                 display: none;
