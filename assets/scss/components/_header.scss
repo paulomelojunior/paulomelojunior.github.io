@@ -9,15 +9,16 @@
     overflow: hidden;
 
     &__about {
-        line-height: 2;
+        line-height: 1.5;
+        
         .line {
             display: grid !important;
-        }
-
-        .char {
-            opacity: 0;
-            transform: translate(1rem, 0);
-            transition: 100ms var(--ease-out);
+            
+            > span {
+                opacity: 0;
+                transform: translate(0, 1rem);
+                transition: 800ms var(--ease-out);
+            }
         }
     }
 }

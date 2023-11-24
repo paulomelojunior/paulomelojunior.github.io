@@ -16,6 +16,11 @@
 </head>
 
 <body class="justify-content-center">
+    <main class="d-none justify-content-end">
+        <small class="color-400">
+            V 0.2
+        </small>   
+    </main>
     <header class="header d-none">
         <div class="brand"></div>
         <script>
@@ -44,31 +49,38 @@
             <div class="nav__separator flex-row-reverse"></div>
         </nav>
     </header>
-    <footer>
-        <small class="color-400 lh-1 d-none d-md-block">
+    <footer class="d-none">
+        <small class="color-300 d-none d-md-block">
             More soon, or never.
         </small>
-        <small class="color-400 lh-1">
-            Copyright 2023 Hackyoto.
+        <small class="color-300">
+            [ c ] Hackyoto 2023
         </small>
     </footer>
     <script>
         window.addEventListener('load', () => {
-            document.querySelector('header').classList.remove('d-none')
+            const bodyItems = document.querySelectorAll('body > *')
+            bodyItems.forEach(e => {
+                e.classList.remove('d-none')
+            });
         })
     </script>
     <script src="assets/scripts/nav.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const about = new SplitType('.header__about')
-        gsap.to('.char', {
-            y: 0,
-            x: 0,
-            stagger: .02,
+        const timeline = gsap.timeline()
+        const headerAbout = new SplitType('.header__about')
+        
+        timeline.to('.header__about .line span', {
+            delay: .8,
+            duration: .8,
             opacity: 1,
-            duration: .4,
+            stagger: .2,
+            x: 0,
+            y: 0,
         })
     </script>
+
 </body>
 </html>

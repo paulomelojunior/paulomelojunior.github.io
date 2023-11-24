@@ -7,6 +7,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     animation: footerEntry 1200ms var(--ease-in-out) both;
+    animation-delay: 400ms;
 }
 
 @keyframes footerEntry {

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
 :root {
   --100: hsl(200deg, 10%, 89%);
   --100-90: rgba(224, 228, 230, 0.9);
@@ -130,6 +129,16 @@
   --red-30: rgba(244, 37, 54, 0.3);
   --red-20: rgba(244, 37, 54, 0.2);
   --red-10: rgba(244, 37, 54, 0.1);
+  --yellow: hsl(60deg, 85%, 55%);
+  --yellow-90: rgba(238, 238, 43, 0.9);
+  --yellow-80: rgba(238, 238, 43, 0.8);
+  --yellow-70: rgba(238, 238, 43, 0.7);
+  --yellow-60: rgba(238, 238, 43, 0.6);
+  --yellow-50: rgba(238, 238, 43, 0.5);
+  --yellow-40: rgba(238, 238, 43, 0.4);
+  --yellow-30: rgba(238, 238, 43, 0.3);
+  --yellow-20: rgba(238, 238, 43, 0.2);
+  --yellow-10: rgba(238, 238, 43, 0.1);
 }
 
 .color-100 {
@@ -184,6 +193,10 @@
   color: hsl(355deg, 90%, 55%) !important;
 }
 
+.color-yellow {
+  color: hsl(60deg, 85%, 55%) !important;
+}
+
 .background-100 {
   background: hsl(200deg, 10%, 89%) !important;
 }
@@ -236,6 +249,10 @@
   background: hsl(355deg, 90%, 55%) !important;
 }
 
+.background-yellow {
+  background: hsl(60deg, 85%, 55%) !important;
+}
+
 :root {
   --base: 8px;
   --default-radius: 0.125rem;
@@ -266,9 +283,13 @@
   --ease-in-out: cubic-bezier(0.75, 0, 0.25, 1);
 }
 
+@font-face {
+  font-family: "Carbon";
+  src: url("../font/carbon.ttf") format("ttf"), url("../font/carbon.woff") format("woff");
+}
 :root {
-  --accent-font: "Chakra Petch", sans-serif;
-  --complement-font: "Chakra Petch", sans-serif;
+  --accent-font: "Carbon", sans-serif;
+  --complement-font: "Carbon", sans-serif;
   font-size: calc(var(--base) * 2);
 }
 
@@ -285,10 +306,11 @@ h6 {
 
 small,
 .small {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.125rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 ::-moz-selection {
@@ -365,10 +387,9 @@ body {
   color: var(--button-cl);
   display: block;
   font-family: var(--accent-font);
-  font-size: var(--sizing-md);
+  font-size: var(--sizing-lg);
   font-weight: 700;
-  letter-spacing: 1px;
-  line-height: var(--sizing-sm);
+  line-height: var(--sizing-md);
   padding: var(--sizing-md);
   text-decoration: none;
   text-transform: uppercase;
@@ -377,10 +398,11 @@ body {
   white-space: nowrap;
   cursor: pointer;
 }
-.button:hover {
+.button:hover, .button:focus-visible, .button:focus {
   --button-bg: var(--600);
   --button-cl: var(--iris);
   color: var(--button-cl);
+  outline: none;
 }
 .button.active {
   --button-cl: var(--iris);
@@ -405,6 +427,7 @@ footer {
   width: 100%;
   box-sizing: border-box;
   animation: footerEntry 1200ms var(--ease-in-out) both;
+  animation-delay: 400ms;
 }
 
 @keyframes footerEntry {
@@ -427,19 +450,19 @@ footer {
   gap: var(--default-global-spacing);
   padding: var(--default-global-spacing);
   width: 100%;
-  animation: headerEntry 200ms var(--ease-in-out) both;
+  animation: headerEntry 1200ms var(--ease-in-out) both;
   overflow: hidden;
 }
 .header__about {
-  line-height: 2;
+  line-height: 1.5;
 }
 .header__about .line {
   display: grid !important;
 }
-.header__about .char {
+.header__about .line > span {
   opacity: 0;
-  transform: translate(1rem, 0);
-  transition: 100ms var(--ease-out);
+  transform: translate(0, 1rem);
+  transition: 800ms var(--ease-out);
 }
 
 @keyframes headerEntry {
@@ -462,8 +485,13 @@ footer {
   }
 }
 main {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
   padding: var(--default-global-spacing);
-  padding-top: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .menu {
@@ -535,7 +563,7 @@ main {
   flex: 1;
 }
 .nav__separator:before {
-  background-color: var(--500);
+  background-color: var(--600);
   content: "";
   height: 1px;
   width: 100%;
@@ -545,6 +573,7 @@ main {
   content: "";
   height: 3px;
   width: 1.5rem;
+  border-inline: 3px solid var(--black);
 }
 
 @media (max-width: 1382px) {
@@ -573,6 +602,17 @@ main {
     display: flex;
   }
 }
+#playground {
+  display: flex;
+  align-items: center;
+  gap: var(--sizing-lg);
+}
+#playground > small .char {
+  opacity: 0;
+  transform: translate(1rem, 0);
+  transition: var(--speed-super-fast) var(--ease-in-out);
+}
+
 @keyframes workoutEntry {
   from {
     opacity: 0;
