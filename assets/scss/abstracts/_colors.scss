@@ -17,6 +17,7 @@ $colors: (
 	iris:  hsl( 240deg, 100%, 75% ),
 	green: hsl( 120deg,  85%, 55% ),
 	red:   hsl( 355deg,  90%, 55% ),
+	yellow: hsl( 60deg,  85%, 55% ),
 );
 
 @mixin alphaVariables($name, $value) {
