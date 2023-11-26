@@ -1,3 +1,11 @@
+@mixin corner($color) {
+    background: url('../images/corner/#{$color}/1.svg'),
+                url('../images/corner/#{$color}/2.svg'),
+                url('../images/corner/#{$color}/3.svg'),
+                url('../images/corner/#{$color}/4.svg'),
+                var(--#{$color}-10);
+}
+
 .button {
     border: none;
     color: var(--100);
@@ -14,15 +22,15 @@
     white-space: nowrap;
     
     &:after {
-        opacity: 0;
-        content: '';
-        position: absolute;
-        inset: -.5rem;
-        background: url('../images/1.svg'), url('../images/2.svg'), url('../images/3.svg'), url('../images/4.svg'), var(--800);
+        @include corner(iris);
         background-position: top left, top right, bottom right, bottom left;
         background-repeat: no-repeat;
-        z-index: -1;
+        content: '';
+        inset: -.5rem;
+        opacity: 0;
+        position: absolute;
         transition: all var(--speed-super-fast) var(--ease-in-out);
+        z-index: -1;
     }
 
     &:hover,
