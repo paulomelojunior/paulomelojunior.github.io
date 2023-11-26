@@ -307,7 +307,6 @@ h6 {
 small,
 .small {
   font-size: 0.75rem;
-  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1;
@@ -385,7 +384,6 @@ body {
   display: block;
   font-family: var(--accent-font);
   font-size: var(--sizing-lg);
-  font-weight: 700;
   line-height: var(--sizing-md);
   padding: var(--sizing-md) var(--sizing-lg);
   position: relative;
@@ -555,7 +553,6 @@ svg rect:nth-child(4) {
   color: var(--100);
   display: flex;
   font-size: var(--sizing-lg);
-  font-weight: 700;
   letter-spacing: 1px;
   line-height: var(--sizing-md);
   text-decoration: none;
@@ -709,7 +706,6 @@ svg rect:nth-child(4) {
 .workout__title {
   color: var(--300);
   font-size: var(--sizing-lg);
-  font-weight: bold;
   white-space: nowrap;
 }
 .workout__cluster {
@@ -738,7 +734,6 @@ svg rect:nth-child(4) {
   justify-content: center;
   align-items: center;
   border-radius: var(--sizing-xxs);
-  font-weight: bold;
   font-size: var(--sizing-xl);
   color: var(--400);
   white-space: nowrap;
@@ -747,7 +742,6 @@ svg rect:nth-child(4) {
   display: flex;
   gap: var(--sizing-xs);
   font-size: var(--sizing-md);
-  font-weight: bold;
   color: var(--white);
   flex-direction: column;
 }
@@ -759,7 +753,6 @@ svg rect:nth-child(4) {
 }
 .workout__weight {
   font-size: var(--sizing-xl);
-  font-weight: bold;
   color: var(--iris);
 }
 .workout__wrapper {
