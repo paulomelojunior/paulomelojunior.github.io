@@ -8,41 +8,41 @@ main {
     box-sizing: border-box;
 }
 
-// svg {
-//     animation: pulse var(--speed-fast) infinite;
+svg {
+    animation: pulse var(--speed-fast) infinite;
     
-//     rect {
-//         animation: pulse var(--speed-slow) infinite;
+    rect {
+        animation: pulse var(--speed-slow) infinite;
         
-//         &:nth-child(odd) {
-//             animation-duration: var(--speed-super-slow);
-//             animation-direction: reverse;
-//         }
+        &:nth-child(odd) {
+            animation-duration: var(--speed-super-slow);
+            animation-direction: reverse;
+        }
 
-//         @for $i from 1 through 4 {
-//             &:nth-child(#{$i}) {
-//                 animation-delay: calc($i * var(--speed-super-fast));
-//             }
-//         }
-//     }
-// }
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: calc($i * var(--speed-super-fast));
+            }
+        }
+    }
+}
 
-// @keyframes pulse {
-// 	0% {
-// 		transform: scaleY(1);
-// 		transform-origin: 50% 50%;
-// 	}
+@keyframes pulse {
+	0% {
+		transform: scaleY(1);
+		transform-origin: 50% 50%;
+	}
 	
-// 	50% {
-// 		transform: scaleY(.75);
-// 		transform-origin: 50% 50%;
-// 	}
+	50% {
+		transform: scaleY(.75);
+		transform-origin: 50% 50%;
+	}
 	
-// 	100% {
-// 		transform: scaleY(1);
-// 		transform-origin: 50% 50%;
-// 	}
-// }
+	100% {
+		transform: scaleY(1);
+		transform-origin: 50% 50%;
+	}
+}
 
 @media (max-width: 768px) {
     main {
