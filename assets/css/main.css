@@ -334,6 +334,13 @@ body {
 
 @keyframes brandEntry {
   from {
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 143px), calc(100% - 143px) 100%, 0% 100%);
+    translate: 5rem 5rem;
+    opacity: 0;
+  }
+}
+@keyframes letterEntry {
+  from {
     opacity: 0;
     translate: 5rem 5rem;
   }
@@ -352,7 +359,7 @@ body {
   overflow: hidden;
 }
 .brand > img {
-  animation: brandEntry 800ms var(--ease-out) both;
+  animation: letterEntry 800ms var(--ease-out) both;
 }
 .brand > img:nth-child(1) {
   animation-delay: 200ms;
