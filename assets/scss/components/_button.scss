@@ -4,6 +4,8 @@
                 url('../images/corner/#{$color}/3.svg'),
                 url('../images/corner/#{$color}/4.svg'),
                 var(--#{$color}-10);
+    background-position: top left, top right, bottom right, bottom left;
+    background-repeat: no-repeat;
 }
 
 .button {
@@ -23,8 +25,7 @@
     
     &:after {
         @include corner(iris);
-        background-position: top left, top right, bottom right, bottom left;
-        background-repeat: no-repeat;
+
         content: '';
         inset: -.5rem;
         opacity: 0;

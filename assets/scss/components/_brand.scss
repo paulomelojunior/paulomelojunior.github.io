@@ -1,11 +1,14 @@
+@use '../mixins/' as m;
+
 @keyframes brandEntry {
     from {
         opacity: 0;
-        translate: 0 5rem;
+        translate: 5rem 5rem;
     }
 }
 
 .brand {
+    @include m.path(1, 43px);
     background-color: var(--white);
     border-radius: var(--sizing-xxs);
     display: flex;
@@ -18,7 +21,7 @@
 
     > img {
         animation: brandEntry 800ms var(--ease-out) both;
-        @for $i from 1 through 4 {
+        @for $i from 1 through 8 {
             &:nth-child(#{$i}) {
                 animation-delay: calc(200ms * $i);
             }
@@ -26,16 +29,17 @@
     }
 }
 
-@media (max-width: 768px) {
-    .brand {
-        gap: var(--sizing-xxs);
-        padding: 7px;
-        width: 3rem;
-        animation: none;
+// @media (max-width: 768px) {
+//     .brand {
+//         --cut-size: 1rem;
+//         gap: var(--sizing-xxs);
+//         padding: 7px;
+//         width: 3rem;
+//         animation: none;
 
-        img {
-            height: 1rem;
-            animation: none;
-        }
-    }
-}
+//         img {
+//             height: 1rem;
+//             animation: none;
+//         }
+//     }
+// }

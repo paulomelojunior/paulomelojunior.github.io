@@ -25,10 +25,10 @@
         <div class="brand"></div>
         <script>
             const brand = document.querySelector('.brand')
-            const brandLetters = ['h', 'a', 'c', 'k']
+            const brandLetters = 'hcky'.split('')
             
             brandLetters.forEach(letter => {
-                const createLetter = `<img src="../assets/images/${letter}.png">`
+                const createLetter = `<img src="../assets/images/brand/${letter}.png">`
                 brand.insertAdjacentHTML('beforeend', createLetter)
             });
         </script>
