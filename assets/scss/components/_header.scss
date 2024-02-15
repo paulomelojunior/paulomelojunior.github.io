@@ -7,6 +7,7 @@
     width: 100%;
     animation: headerEntry 1200ms var(--ease-in-out) both;
     overflow: hidden;
+    isolation: isolate;
 
     &__about {
         line-height: 1.5;

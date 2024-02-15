@@ -31,7 +31,7 @@ const navValues = Object.values(navItems)
 navValues.forEach(element => {
     const navItem = `
         <div class="nav__listItem">
-            <a target="_blank" class="button" href="${element.url}">
+            <a target="_blank" class="button" rel="noopener noreferrer" href="${element.url}">
                 ${element.label}
             </a>
         </div>`

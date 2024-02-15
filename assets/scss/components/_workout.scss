@@ -14,7 +14,7 @@
     letter-spacing: 1px;
     line-height: 1;
     text-transform: uppercase;
-    animation: workoutEntry var(--speed-super-slow) var(--ease-out) both;
+    animation: workoutEntry var(--speed-super-slow) var(--ease-out);
 
     @for $i from 1 through 10 {
         &:nth-child(#{$i}) {

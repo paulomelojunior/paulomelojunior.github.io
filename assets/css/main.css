@@ -1,84 +1,84 @@
 :root {
-  --100: hsl(200deg, 10%, 89%);
-  --100-90: rgba(224, 228, 230, 0.9);
-  --100-80: rgba(224, 228, 230, 0.8);
-  --100-70: rgba(224, 228, 230, 0.7);
-  --100-60: rgba(224, 228, 230, 0.6);
-  --100-50: rgba(224, 228, 230, 0.5);
-  --100-40: rgba(224, 228, 230, 0.4);
-  --100-30: rgba(224, 228, 230, 0.3);
-  --100-20: rgba(224, 228, 230, 0.2);
-  --100-10: rgba(224, 228, 230, 0.1);
-  --200: hsl(200deg, 10%, 55%);
-  --200-90: rgba(129, 144, 152, 0.9);
-  --200-80: rgba(129, 144, 152, 0.8);
-  --200-70: rgba(129, 144, 152, 0.7);
-  --200-60: rgba(129, 144, 152, 0.6);
-  --200-50: rgba(129, 144, 152, 0.5);
-  --200-40: rgba(129, 144, 152, 0.4);
-  --200-30: rgba(129, 144, 152, 0.3);
-  --200-20: rgba(129, 144, 152, 0.2);
-  --200-10: rgba(129, 144, 152, 0.1);
-  --300: hsl(200deg, 10%, 34%);
-  --300-90: rgba(78, 90, 95, 0.9);
-  --300-80: rgba(78, 90, 95, 0.8);
-  --300-70: rgba(78, 90, 95, 0.7);
-  --300-60: rgba(78, 90, 95, 0.6);
-  --300-50: rgba(78, 90, 95, 0.5);
-  --300-40: rgba(78, 90, 95, 0.4);
-  --300-30: rgba(78, 90, 95, 0.3);
-  --300-20: rgba(78, 90, 95, 0.2);
-  --300-10: rgba(78, 90, 95, 0.1);
-  --400: hsl(200deg, 10%, 21%);
-  --400-90: rgba(48, 55, 59, 0.9);
-  --400-80: rgba(48, 55, 59, 0.8);
-  --400-70: rgba(48, 55, 59, 0.7);
-  --400-60: rgba(48, 55, 59, 0.6);
-  --400-50: rgba(48, 55, 59, 0.5);
-  --400-40: rgba(48, 55, 59, 0.4);
-  --400-30: rgba(48, 55, 59, 0.3);
-  --400-20: rgba(48, 55, 59, 0.2);
-  --400-10: rgba(48, 55, 59, 0.1);
-  --500: hsl(200deg, 10%, 13%);
-  --500-90: rgba(30, 34, 36, 0.9);
-  --500-80: rgba(30, 34, 36, 0.8);
-  --500-70: rgba(30, 34, 36, 0.7);
-  --500-60: rgba(30, 34, 36, 0.6);
-  --500-50: rgba(30, 34, 36, 0.5);
-  --500-40: rgba(30, 34, 36, 0.4);
-  --500-30: rgba(30, 34, 36, 0.3);
-  --500-20: rgba(30, 34, 36, 0.2);
-  --500-10: rgba(30, 34, 36, 0.1);
-  --600: hsl(200deg, 10%, 8%);
-  --600-90: rgba(18, 21, 22, 0.9);
-  --600-80: rgba(18, 21, 22, 0.8);
-  --600-70: rgba(18, 21, 22, 0.7);
-  --600-60: rgba(18, 21, 22, 0.6);
-  --600-50: rgba(18, 21, 22, 0.5);
-  --600-40: rgba(18, 21, 22, 0.4);
-  --600-30: rgba(18, 21, 22, 0.3);
-  --600-20: rgba(18, 21, 22, 0.2);
-  --600-10: rgba(18, 21, 22, 0.1);
-  --700: hsl(200deg, 10%, 5%);
-  --700-90: rgba(11, 13, 14, 0.9);
-  --700-80: rgba(11, 13, 14, 0.8);
-  --700-70: rgba(11, 13, 14, 0.7);
-  --700-60: rgba(11, 13, 14, 0.6);
-  --700-50: rgba(11, 13, 14, 0.5);
-  --700-40: rgba(11, 13, 14, 0.4);
-  --700-30: rgba(11, 13, 14, 0.3);
-  --700-20: rgba(11, 13, 14, 0.2);
-  --700-10: rgba(11, 13, 14, 0.1);
-  --800: hsl(200deg, 10%, 3%);
-  --800-90: rgba(7, 8, 8, 0.9);
-  --800-80: rgba(7, 8, 8, 0.8);
-  --800-70: rgba(7, 8, 8, 0.7);
-  --800-60: rgba(7, 8, 8, 0.6);
-  --800-50: rgba(7, 8, 8, 0.5);
-  --800-40: rgba(7, 8, 8, 0.4);
-  --800-30: rgba(7, 8, 8, 0.3);
-  --800-20: rgba(7, 8, 8, 0.2);
-  --800-10: rgba(7, 8, 8, 0.1);
+  --100: hsl(50deg, 10%, 89%);
+  --100-90: rgba(230, 229, 224, 0.9);
+  --100-80: rgba(230, 229, 224, 0.8);
+  --100-70: rgba(230, 229, 224, 0.7);
+  --100-60: rgba(230, 229, 224, 0.6);
+  --100-50: rgba(230, 229, 224, 0.5);
+  --100-40: rgba(230, 229, 224, 0.4);
+  --100-30: rgba(230, 229, 224, 0.3);
+  --100-20: rgba(230, 229, 224, 0.2);
+  --100-10: rgba(230, 229, 224, 0.1);
+  --200: hsl(50deg, 10%, 55%);
+  --200-90: rgba(152, 148, 129, 0.9);
+  --200-80: rgba(152, 148, 129, 0.8);
+  --200-70: rgba(152, 148, 129, 0.7);
+  --200-60: rgba(152, 148, 129, 0.6);
+  --200-50: rgba(152, 148, 129, 0.5);
+  --200-40: rgba(152, 148, 129, 0.4);
+  --200-30: rgba(152, 148, 129, 0.3);
+  --200-20: rgba(152, 148, 129, 0.2);
+  --200-10: rgba(152, 148, 129, 0.1);
+  --300: hsl(50deg, 10%, 34%);
+  --300-90: rgba(95, 92, 78, 0.9);
+  --300-80: rgba(95, 92, 78, 0.8);
+  --300-70: rgba(95, 92, 78, 0.7);
+  --300-60: rgba(95, 92, 78, 0.6);
+  --300-50: rgba(95, 92, 78, 0.5);
+  --300-40: rgba(95, 92, 78, 0.4);
+  --300-30: rgba(95, 92, 78, 0.3);
+  --300-20: rgba(95, 92, 78, 0.2);
+  --300-10: rgba(95, 92, 78, 0.1);
+  --400: hsl(50deg, 10%, 21%);
+  --400-90: rgba(59, 57, 48, 0.9);
+  --400-80: rgba(59, 57, 48, 0.8);
+  --400-70: rgba(59, 57, 48, 0.7);
+  --400-60: rgba(59, 57, 48, 0.6);
+  --400-50: rgba(59, 57, 48, 0.5);
+  --400-40: rgba(59, 57, 48, 0.4);
+  --400-30: rgba(59, 57, 48, 0.3);
+  --400-20: rgba(59, 57, 48, 0.2);
+  --400-10: rgba(59, 57, 48, 0.1);
+  --500: hsl(50deg, 10%, 13%);
+  --500-90: rgba(36, 35, 30, 0.9);
+  --500-80: rgba(36, 35, 30, 0.8);
+  --500-70: rgba(36, 35, 30, 0.7);
+  --500-60: rgba(36, 35, 30, 0.6);
+  --500-50: rgba(36, 35, 30, 0.5);
+  --500-40: rgba(36, 35, 30, 0.4);
+  --500-30: rgba(36, 35, 30, 0.3);
+  --500-20: rgba(36, 35, 30, 0.2);
+  --500-10: rgba(36, 35, 30, 0.1);
+  --600: hsl(50deg, 10%, 8%);
+  --600-90: rgba(22, 22, 18, 0.9);
+  --600-80: rgba(22, 22, 18, 0.8);
+  --600-70: rgba(22, 22, 18, 0.7);
+  --600-60: rgba(22, 22, 18, 0.6);
+  --600-50: rgba(22, 22, 18, 0.5);
+  --600-40: rgba(22, 22, 18, 0.4);
+  --600-30: rgba(22, 22, 18, 0.3);
+  --600-20: rgba(22, 22, 18, 0.2);
+  --600-10: rgba(22, 22, 18, 0.1);
+  --700: hsl(50deg, 10%, 5%);
+  --700-90: rgba(14, 14, 11, 0.9);
+  --700-80: rgba(14, 14, 11, 0.8);
+  --700-70: rgba(14, 14, 11, 0.7);
+  --700-60: rgba(14, 14, 11, 0.6);
+  --700-50: rgba(14, 14, 11, 0.5);
+  --700-40: rgba(14, 14, 11, 0.4);
+  --700-30: rgba(14, 14, 11, 0.3);
+  --700-20: rgba(14, 14, 11, 0.2);
+  --700-10: rgba(14, 14, 11, 0.1);
+  --800: hsl(50deg, 10%, 3%);
+  --800-90: rgba(8, 8, 7, 0.9);
+  --800-80: rgba(8, 8, 7, 0.8);
+  --800-70: rgba(8, 8, 7, 0.7);
+  --800-60: rgba(8, 8, 7, 0.6);
+  --800-50: rgba(8, 8, 7, 0.5);
+  --800-40: rgba(8, 8, 7, 0.4);
+  --800-30: rgba(8, 8, 7, 0.3);
+  --800-20: rgba(8, 8, 7, 0.2);
+  --800-10: rgba(8, 8, 7, 0.1);
   --white: white;
   --white-90: rgba(255, 255, 255, 0.9);
   --white-80: rgba(255, 255, 255, 0.8);
@@ -129,48 +129,48 @@
   --red-30: rgba(244, 37, 54, 0.3);
   --red-20: rgba(244, 37, 54, 0.2);
   --red-10: rgba(244, 37, 54, 0.1);
-  --yellow: hsl(60deg, 85%, 55%);
-  --yellow-90: rgba(238, 238, 43, 0.9);
-  --yellow-80: rgba(238, 238, 43, 0.8);
-  --yellow-70: rgba(238, 238, 43, 0.7);
-  --yellow-60: rgba(238, 238, 43, 0.6);
-  --yellow-50: rgba(238, 238, 43, 0.5);
-  --yellow-40: rgba(238, 238, 43, 0.4);
-  --yellow-30: rgba(238, 238, 43, 0.3);
-  --yellow-20: rgba(238, 238, 43, 0.2);
-  --yellow-10: rgba(238, 238, 43, 0.1);
+  --yellow: hsl(50deg, 85%, 55%);
+  --yellow-90: rgba(238, 205, 43, 0.9);
+  --yellow-80: rgba(238, 205, 43, 0.8);
+  --yellow-70: rgba(238, 205, 43, 0.7);
+  --yellow-60: rgba(238, 205, 43, 0.6);
+  --yellow-50: rgba(238, 205, 43, 0.5);
+  --yellow-40: rgba(238, 205, 43, 0.4);
+  --yellow-30: rgba(238, 205, 43, 0.3);
+  --yellow-20: rgba(238, 205, 43, 0.2);
+  --yellow-10: rgba(238, 205, 43, 0.1);
 }
 
 .color-100 {
-  color: hsl(200deg, 10%, 89%) !important;
+  color: hsl(50deg, 10%, 89%) !important;
 }
 
 .color-200 {
-  color: hsl(200deg, 10%, 55%) !important;
+  color: hsl(50deg, 10%, 55%) !important;
 }
 
 .color-300 {
-  color: hsl(200deg, 10%, 34%) !important;
+  color: hsl(50deg, 10%, 34%) !important;
 }
 
 .color-400 {
-  color: hsl(200deg, 10%, 21%) !important;
+  color: hsl(50deg, 10%, 21%) !important;
 }
 
 .color-500 {
-  color: hsl(200deg, 10%, 13%) !important;
+  color: hsl(50deg, 10%, 13%) !important;
 }
 
 .color-600 {
-  color: hsl(200deg, 10%, 8%) !important;
+  color: hsl(50deg, 10%, 8%) !important;
 }
 
 .color-700 {
-  color: hsl(200deg, 10%, 5%) !important;
+  color: hsl(50deg, 10%, 5%) !important;
 }
 
 .color-800 {
-  color: hsl(200deg, 10%, 3%) !important;
+  color: hsl(50deg, 10%, 3%) !important;
 }
 
 .color-white {
@@ -194,39 +194,39 @@
 }
 
 .color-yellow {
-  color: hsl(60deg, 85%, 55%) !important;
+  color: hsl(50deg, 85%, 55%) !important;
 }
 
 .background-100 {
-  background: hsl(200deg, 10%, 89%) !important;
+  background: hsl(50deg, 10%, 89%) !important;
 }
 
 .background-200 {
-  background: hsl(200deg, 10%, 55%) !important;
+  background: hsl(50deg, 10%, 55%) !important;
 }
 
 .background-300 {
-  background: hsl(200deg, 10%, 34%) !important;
+  background: hsl(50deg, 10%, 34%) !important;
 }
 
 .background-400 {
-  background: hsl(200deg, 10%, 21%) !important;
+  background: hsl(50deg, 10%, 21%) !important;
 }
 
 .background-500 {
-  background: hsl(200deg, 10%, 13%) !important;
+  background: hsl(50deg, 10%, 13%) !important;
 }
 
 .background-600 {
-  background: hsl(200deg, 10%, 8%) !important;
+  background: hsl(50deg, 10%, 8%) !important;
 }
 
 .background-700 {
-  background: hsl(200deg, 10%, 5%) !important;
+  background: hsl(50deg, 10%, 5%) !important;
 }
 
 .background-800 {
-  background: hsl(200deg, 10%, 3%) !important;
+  background: hsl(50deg, 10%, 3%) !important;
 }
 
 .background-white {
@@ -250,7 +250,7 @@
 }
 
 .background-yellow {
-  background: hsl(60deg, 85%, 55%) !important;
+  background: hsl(50deg, 85%, 55%) !important;
 }
 
 :root {
@@ -331,6 +331,14 @@ body {
   flex-direction: column;
   font-family: var(--accent-font);
 }
+body:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, black 20dvh, hsl(40deg, 100%, 20%), black 80dvh);
+  backdrop-filter: blur(1px);
+  mix-blend-mode: multiply;
+}
 
 @keyframes brandEntry {
   from {
@@ -387,6 +395,7 @@ body {
 }
 
 .button {
+  background: none;
   border: none;
   color: var(--100);
   cursor: pointer;
@@ -402,11 +411,11 @@ body {
   white-space: nowrap;
 }
 .button:after {
-  background: url("../images/corner/iris/1.svg"), url("../images/corner/iris/2.svg"), url("../images/corner/iris/3.svg"), url("../images/corner/iris/4.svg"), var(--iris-10);
+  background: url("../images/corner/yellow/1.svg"), url("../images/corner/yellow/2.svg"), url("../images/corner/yellow/3.svg"), url("../images/corner/yellow/4.svg"), var(--yellow-10);
   background-position: top left, top right, bottom right, bottom left;
   background-repeat: no-repeat;
   content: "";
-  inset: -0.5rem;
+  inset: -0.25rem;
   opacity: 0;
   position: absolute;
   transition: all var(--speed-super-fast) var(--ease-in-out);
@@ -468,6 +477,7 @@ footer {
   width: 100%;
   animation: headerEntry 1200ms var(--ease-in-out) both;
   overflow: hidden;
+  isolation: isolate;
 }
 .header__about {
   line-height: 1.5;
@@ -501,6 +511,11 @@ footer {
   }
 }
 main {
+  padding: var(--default-global-spacing);
+  padding-top: 0;
+}
+
+main:not(:has(.workout)) {
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -680,7 +695,7 @@ svg rect:nth-child(4) {
   letter-spacing: 1px;
   line-height: 1;
   text-transform: uppercase;
-  animation: workoutEntry var(--speed-super-slow) var(--ease-out) both;
+  animation: workoutEntry var(--speed-super-slow) var(--ease-out);
 }
 .workout:nth-child(1) {
   animation-delay: calc(1 * var(--speed-super-fast));

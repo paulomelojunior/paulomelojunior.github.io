@@ -9,6 +9,7 @@
 }
 
 .button {
+    background: none;
     border: none;
     color: var(--100);
     cursor: pointer;
@@ -24,10 +25,10 @@
     white-space: nowrap;
     
     &:after {
-        @include corner(iris);
+        @include corner(yellow);
 
         content: '';
-        inset: -.5rem;
+        inset: -.25rem;
         opacity: 0;
         position: absolute;
         transition: all var(--speed-super-fast) var(--ease-in-out);

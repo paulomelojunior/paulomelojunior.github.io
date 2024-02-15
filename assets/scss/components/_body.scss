@@ -6,4 +6,13 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--accent-font);
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, black 20dvh, hsl(40 100% 20% / 1), black 80dvh);
+        backdrop-filter: blur(1px);
+        mix-blend-mode: multiply;
+    }
 }

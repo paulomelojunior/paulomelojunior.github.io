@@ -1,4 +1,9 @@
 main {
+    padding: var(--default-global-spacing);
+    padding-top: 0;
+}
+
+main:not(:has(.workout)) {
     display: flex;
     justify-content: space-between;
     position: fixed;
