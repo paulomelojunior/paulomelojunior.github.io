@@ -29,6 +29,7 @@
 
     > img {
         animation: letterEntry 800ms var(--ease-out) both;
+        width: 1.5rem;
         @for $i from 1 through 8 {
             &:nth-child(#{$i}) {
                 animation-delay: calc(200ms * $i);

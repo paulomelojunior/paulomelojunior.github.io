@@ -368,6 +368,7 @@ body:before {
 }
 .brand > img {
   animation: letterEntry 800ms var(--ease-out) both;
+  width: 1.5rem;
 }
 .brand > img:nth-child(1) {
   animation-delay: 200ms;
@@ -410,8 +411,8 @@ body:before {
   transition: all var(--speed-super-fast) var(--ease-in-out);
   white-space: nowrap;
 }
-.button:after {
-  background: url("../images/corner/yellow/1.svg"), url("../images/corner/yellow/2.svg"), url("../images/corner/yellow/3.svg"), url("../images/corner/yellow/4.svg"), var(--yellow-10);
+.button:before {
+  background: url("../images/corner/iris/1.svg"), url("../images/corner/iris/2.svg"), url("../images/corner/iris/3.svg"), url("../images/corner/iris/4.svg"), var(--iris-10);
   background-position: top left, top right, bottom right, bottom left;
   background-repeat: no-repeat;
   content: "";
@@ -420,13 +421,14 @@ body:before {
   position: absolute;
   transition: all var(--speed-super-fast) var(--ease-in-out);
   z-index: -1;
+  pointer-events: none;
 }
 .button:hover, .button:focus-visible, .button:focus {
   color: var(--white);
   outline: none;
 }
-.button:hover:after, .button:focus-visible:after, .button:focus:after {
-  inset: 1px;
+.button:hover:before, .button:focus-visible:before, .button:focus:before {
+  inset: 0;
   opacity: 1;
 }
 .button.active {

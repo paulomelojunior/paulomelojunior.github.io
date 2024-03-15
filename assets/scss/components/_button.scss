@@ -24,15 +24,15 @@
     transition: all var(--speed-super-fast) var(--ease-in-out);
     white-space: nowrap;
     
-    &:after {
-        @include corner(yellow);
-
+    &:before {
+        @include corner(iris);
         content: '';
         inset: -.25rem;
         opacity: 0;
         position: absolute;
         transition: all var(--speed-super-fast) var(--ease-in-out);
         z-index: -1;
+        pointer-events: none;
     }
 
     &:hover,
@@ -41,8 +41,8 @@
         color: var(--white);
         outline: none;
 
-        &:after {
-            inset: 1px;
+        &:before {
+            inset: 0;
             opacity: 1;
         }
     }
