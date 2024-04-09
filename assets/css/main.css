@@ -331,14 +331,6 @@ body {
   flex-direction: column;
   font-family: var(--accent-font);
 }
-body:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, black 20dvh, hsl(40deg, 100%, 20%), black 80dvh);
-  backdrop-filter: blur(1px);
-  mix-blend-mode: multiply;
-}
 
 @keyframes brandEntry {
   from {
@@ -423,11 +415,16 @@ body:before {
   z-index: -1;
   pointer-events: none;
 }
-.button:hover, .button:focus-visible, .button:focus {
+.button.green:before {
+  background: url("../images/corner/green/1.svg"), url("../images/corner/green/2.svg"), url("../images/corner/green/3.svg"), url("../images/corner/green/4.svg"), var(--green-10);
+  background-position: top left, top right, bottom right, bottom left;
+  background-repeat: no-repeat;
+}
+.button:hover, .button:focus-visible, .button:focus, .button.focus {
   color: var(--white);
   outline: none;
 }
-.button:hover:before, .button:focus-visible:before, .button:focus:before {
+.button:hover:before, .button:focus-visible:before, .button:focus:before, .button.focus:before {
   inset: 0;
   opacity: 1;
 }
