@@ -18,6 +18,7 @@ $colors: (
 	green: hsl( 120deg,  85%, 55% ),
 	red:   hsl( 355deg,  90%, 55% ),
 	yellow: hsl( 50deg,  85%, 55% ),
+	blue: hsl( 235deg,  100%, 30% ),
 );
 
 @mixin alphaVariables($name, $value) {

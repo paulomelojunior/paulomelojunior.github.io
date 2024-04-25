@@ -25,7 +25,7 @@
     white-space: nowrap;
     
     &:before {
-        @include corner(iris);
+        @include corner(blue);
         content: '';
         inset: -.25rem;
         opacity: 0;
