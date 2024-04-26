@@ -1,5 +1,5 @@
 :root {
-  --100: #e0e1e6;
+  --100: hsl(235, 10%, 89%);
   --100-90: rgba(224, 225, 230, 0.9);
   --100-80: rgba(224, 225, 230, 0.8);
   --100-70: rgba(224, 225, 230, 0.7);
@@ -9,7 +9,7 @@
   --100-30: rgba(224, 225, 230, 0.3);
   --100-20: rgba(224, 225, 230, 0.2);
   --100-10: rgba(224, 225, 230, 0.1);
-  --200: #818398;
+  --200: hsl(235, 10%, 55%);
   --200-90: rgba(129, 131, 152, 0.9);
   --200-80: rgba(129, 131, 152, 0.8);
   --200-70: rgba(129, 131, 152, 0.7);
@@ -19,7 +19,7 @@
   --200-30: rgba(129, 131, 152, 0.3);
   --200-20: rgba(129, 131, 152, 0.2);
   --200-10: rgba(129, 131, 152, 0.1);
-  --300: #4e4f5f;
+  --300: hsl(235, 10%, 34%);
   --300-90: rgba(78, 79, 95, 0.9);
   --300-80: rgba(78, 79, 95, 0.8);
   --300-70: rgba(78, 79, 95, 0.7);
@@ -29,7 +29,7 @@
   --300-30: rgba(78, 79, 95, 0.3);
   --300-20: rgba(78, 79, 95, 0.2);
   --300-10: rgba(78, 79, 95, 0.1);
-  --400: #30313b;
+  --400: hsl(235, 10%, 21%);
   --400-90: rgba(48, 49, 59, 0.9);
   --400-80: rgba(48, 49, 59, 0.8);
   --400-70: rgba(48, 49, 59, 0.7);
@@ -39,7 +39,7 @@
   --400-30: rgba(48, 49, 59, 0.3);
   --400-20: rgba(48, 49, 59, 0.2);
   --400-10: rgba(48, 49, 59, 0.1);
-  --500: #1e1e24;
+  --500: hsl(235, 10%, 13%);
   --500-90: rgba(30, 30, 36, 0.9);
   --500-80: rgba(30, 30, 36, 0.8);
   --500-70: rgba(30, 30, 36, 0.7);
@@ -49,7 +49,7 @@
   --500-30: rgba(30, 30, 36, 0.3);
   --500-20: rgba(30, 30, 36, 0.2);
   --500-10: rgba(30, 30, 36, 0.1);
-  --600: #121316;
+  --600: hsl(235, 10%, 8%);
   --600-90: rgba(18, 19, 22, 0.9);
   --600-80: rgba(18, 19, 22, 0.8);
   --600-70: rgba(18, 19, 22, 0.7);
@@ -59,7 +59,7 @@
   --600-30: rgba(18, 19, 22, 0.3);
   --600-20: rgba(18, 19, 22, 0.2);
   --600-10: rgba(18, 19, 22, 0.1);
-  --700: #0b0c0e;
+  --700: hsl(235, 10%, 5%);
   --700-90: rgba(11, 12, 14, 0.9);
   --700-80: rgba(11, 12, 14, 0.8);
   --700-70: rgba(11, 12, 14, 0.7);
@@ -69,7 +69,7 @@
   --700-30: rgba(11, 12, 14, 0.3);
   --700-20: rgba(11, 12, 14, 0.2);
   --700-10: rgba(11, 12, 14, 0.1);
-  --800: #070708;
+  --800: hsl(235, 10%, 3%);
   --800-90: rgba(7, 7, 8, 0.9);
   --800-80: rgba(7, 7, 8, 0.8);
   --800-70: rgba(7, 7, 8, 0.7);
@@ -99,7 +99,7 @@
   --black-30: rgba(0, 0, 0, 0.3);
   --black-20: rgba(0, 0, 0, 0.2);
   --black-10: rgba(0, 0, 0, 0.1);
-  --red: #b3001e;
+  --red: hsl(350, 100%, 35%);
   --red-90: rgba(179, 0, 30, 0.9);
   --red-80: rgba(179, 0, 30, 0.8);
   --red-70: rgba(179, 0, 30, 0.7);
@@ -109,7 +109,7 @@
   --red-30: rgba(179, 0, 30, 0.3);
   --red-20: rgba(179, 0, 30, 0.2);
   --red-10: rgba(179, 0, 30, 0.1);
-  --accent: #000fb3;
+  --accent: hsl(235, 100%, 35%);
   --accent-90: rgba(0, 15, 179, 0.9);
   --accent-80: rgba(0, 15, 179, 0.8);
   --accent-70: rgba(0, 15, 179, 0.7);
@@ -122,35 +122,35 @@
 }
 
 .color-100 {
-  color: #e0e1e6 !important;
+  color: hsl(235, 10%, 89%) !important;
 }
 
 .color-200 {
-  color: #818398 !important;
+  color: hsl(235, 10%, 55%) !important;
 }
 
 .color-300 {
-  color: #4e4f5f !important;
+  color: hsl(235, 10%, 34%) !important;
 }
 
 .color-400 {
-  color: #30313b !important;
+  color: hsl(235, 10%, 21%) !important;
 }
 
 .color-500 {
-  color: #1e1e24 !important;
+  color: hsl(235, 10%, 13%) !important;
 }
 
 .color-600 {
-  color: #121316 !important;
+  color: hsl(235, 10%, 8%) !important;
 }
 
 .color-700 {
-  color: #0b0c0e !important;
+  color: hsl(235, 10%, 5%) !important;
 }
 
 .color-800 {
-  color: #070708 !important;
+  color: hsl(235, 10%, 3%) !important;
 }
 
 .color-white {
@@ -162,43 +162,43 @@
 }
 
 .color-red {
-  color: #b3001e !important;
+  color: hsl(350, 100%, 35%) !important;
 }
 
 .color-accent {
-  color: #000fb3 !important;
+  color: hsl(235, 100%, 35%) !important;
 }
 
 .background-100 {
-  background: #e0e1e6 !important;
+  background: hsl(235, 10%, 89%) !important;
 }
 
 .background-200 {
-  background: #818398 !important;
+  background: hsl(235, 10%, 55%) !important;
 }
 
 .background-300 {
-  background: #4e4f5f !important;
+  background: hsl(235, 10%, 34%) !important;
 }
 
 .background-400 {
-  background: #30313b !important;
+  background: hsl(235, 10%, 21%) !important;
 }
 
 .background-500 {
-  background: #1e1e24 !important;
+  background: hsl(235, 10%, 13%) !important;
 }
 
 .background-600 {
-  background: #121316 !important;
+  background: hsl(235, 10%, 8%) !important;
 }
 
 .background-700 {
-  background: #0b0c0e !important;
+  background: hsl(235, 10%, 5%) !important;
 }
 
 .background-800 {
-  background: #070708 !important;
+  background: hsl(235, 10%, 3%) !important;
 }
 
 .background-white {
@@ -210,23 +210,18 @@
 }
 
 .background-red {
-  background: #b3001e !important;
+  background: hsl(350, 100%, 35%) !important;
 }
 
 .background-accent {
-  background: #000fb3 !important;
+  background: hsl(235, 100%, 35%) !important;
 }
 
 @font-face {
   font-family: "Space";
   src: url("../font/space.ttf") format("ttf"), url("../font/space.woff2") format("woff2");
 }
-@font-face {
-  font-family: "Montagu";
-  src: url("../font/montagu.ttf") format("ttf"), url("../font/montagu.woff2") format("woff2");
-}
 :root {
-  --serif: "Montagu", serif;
   --sans: "Space", sans-serif;
   font-size: var(--base);
 }
@@ -256,25 +251,25 @@ h6 {
 
 .background {
   --background-offset: var(--background-offset-value, 0px);
+  pointer-events: none;
+  overflow: hidden;
   position: absolute;
   inset: 0;
   top: var(--background-offset);
-  overflow: hidden;
-  pointer-events: none;
+  font-family: var(--sans);
+  font-size: 12rem;
+  font-weight: 700;
+  letter-spacing: -1rem;
+  line-height: 10rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 .background:before {
   content: attr(data-content);
   display: block;
-  font-family: var(--sans);
-  font-size: var(--size-xl);
-  font-weight: 700;
-  line-height: 1;
+  translate: calc(50vw - 50%) calc(50vh - 50% - var(--background-offset));
   rotate: -21deg;
   scale: 2;
-  text-align: center;
-  text-transform: uppercase;
-  translate: calc(50vw - 50%) calc(50vh - 50% - var(--background-offset));
-  white-space: pre;
 }
 
 body {
@@ -307,20 +302,20 @@ body {
 }
 
 header {
-  padding: var(--globe, var(--size-xl));
+  padding: 0 var(--globe, var(--size-xl));
   background-color: var(--accent);
   font-weight: 700;
   font-family: var(--sans);
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 }
 
 .hero {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: end;
-  padding: var(--globe, var(--size-xl));
+  padding: 0 var(--globe, var(--size-xl));
   --background-offset-value: 50vh;
 }
 

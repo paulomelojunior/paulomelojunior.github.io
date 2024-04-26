@@ -4,14 +4,7 @@
          url("../font/space.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: "Montagu";
-    src: url("../font/montagu.ttf") format("ttf"),
-         url("../font/montagu.woff2") format("woff2");
-}
-
 :root {
-    --serif: 'Montagu', serif;
     --sans: 'Space', sans-serif;
     font-size: var(--base);
 }

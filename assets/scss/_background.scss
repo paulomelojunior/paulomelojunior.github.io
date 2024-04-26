@@ -1,23 +1,25 @@
 .background {
     --background-offset: var(--background-offset-value, 0px);
+    pointer-events: none;
+    overflow: hidden;
     position: absolute;
     inset: 0;
     top: var(--background-offset);
-    overflow: hidden;
-    pointer-events: none;
-
+    
+    font-family: var(--sans);
+    font-size: 12rem;
+    font-weight: 700;
+    letter-spacing: -1rem;
+    line-height: 10rem;
+    text-align: center;
+    text-transform: uppercase;
+    
     &:before {
         content: attr(data-content);
         display: block;
-        font-family: var(--sans);
-        font-size: var(--size-xl);
-        font-weight: 700;
-        line-height: 1;
+        
+        translate: calc(50vw - 50%) calc(50vh - 50% - var(--background-offset));
         rotate: -21deg;
         scale: 2;
-        text-align: center;
-        text-transform: uppercase;
-        translate: calc(50vw - 50%) calc(50vh - 50% - var(--background-offset));
-        white-space: pre;
     }
 }
