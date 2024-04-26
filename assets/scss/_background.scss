@@ -1,0 +1,23 @@
+.background {
+    --background-offset: var(--background-offset-value, 0px);
+    position: absolute;
+    inset: 0;
+    top: var(--background-offset);
+    overflow: hidden;
+    pointer-events: none;
+
+    &:before {
+        content: attr(data-content);
+        display: block;
+        font-family: var(--sans);
+        font-size: var(--size-xl);
+        font-weight: 700;
+        line-height: 1;
+        rotate: -21deg;
+        scale: 2;
+        text-align: center;
+        text-transform: uppercase;
+        translate: calc(50vw - 50%) calc(50vh - 50% - var(--background-offset));
+        white-space: pre;
+    }
+}

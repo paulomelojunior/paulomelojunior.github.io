@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Space";
+    src: url("../font/space.ttf") format("ttf"),
+         url("../font/space.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montagu";
+    src: url("../font/montagu.ttf") format("ttf"),
+         url("../font/montagu.woff2") format("woff2");
+}
+
+:root {
+    --serif: 'Montagu', serif;
+    --sans: 'Space', sans-serif;
+    font-size: var(--base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white);
+    font-family: var(--serif);
+    text-transform: uppercase;
+    margin: 0;
+}

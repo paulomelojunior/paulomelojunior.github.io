@@ -1,5 +1,19 @@
-@use 'vendors';
-@use 'abstracts';
-@use 'base';
-@use 'mixins';
-@use 'components';
+// Abstracts
+@import 'colors';
+@import 'fonts';
+@import 'sizes';
+
+// Components
+@import
+'background',
+'body',
+'brand',
+'header',
+'hero',
+'menu';
+
+@media (max-width: 996px) {
+    :root {
+        --globe: 10vw;
+    }
+}

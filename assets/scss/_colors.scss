@@ -1,0 +1,40 @@
+$hue: 235;
+$sat: 10%;
+
+$colors: (
+	100: hsl( $hue, $sat, 89% ),
+	200: hsl( $hue, $sat, 55% ),
+	300: hsl( $hue, $sat, 34% ),
+	400: hsl( $hue, $sat, 21% ),
+	500: hsl( $hue, $sat, 13% ),
+	600: hsl( $hue, $sat, 8%  ),
+	700: hsl( $hue, $sat, 5%  ),
+	800: hsl( $hue, $sat, 3%  ),
+	
+	white: white,
+	black: black,
+	
+    red: hsl(350, 100%, 35%),
+    accent: hsl( $hue, 100%, 35% )
+);
+
+@mixin alphaVariables($name, $value) {
+	@for $shade from 1 to 10 {
+		#{'--' + $name + "-" + calc(100 - $shade * 10)}: #{ fade-out( $value, calc($shade / 10) ) };
+	}
+}
+
+:root {
+	@each $color, $value in $colors {
+		#{"--" + $color}: #{$value};
+		@include alphaVariables($color, $value);
+	}
+}
+
+@each $prop in (color, background) {
+	@each $color, $value in $colors {
+		#{"." + $prop + "-" + $color} {
+			#{$prop}: #{$value} !important;
+		}
+	}
+}

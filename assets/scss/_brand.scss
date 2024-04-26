@@ -1,0 +1,20 @@
+.brand {
+    color: var(--white);
+    display: grid;
+    gap: var(--size-md);
+    font-family: var(--sans);
+    font-weight: 700;
+
+    &_title {
+        font-size: var(--size-md);
+        line-height: var(--size-md);
+        font-feature-settings: "ss03", "ss01"
+    }
+
+    &_description {
+        font-size: var(--size-sm);
+        line-height: var(--size-md);
+        text-transform: uppercase;
+        font-feature-settings: 'ss04', 'ss03';
+    }
+}
