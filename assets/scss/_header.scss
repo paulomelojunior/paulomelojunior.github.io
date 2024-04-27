@@ -1,9 +1,9 @@
 header {
-    padding: var(--globe, var(--size-xl));
+    padding: 0 var(--globe, var(--size-xl));
     background-color: var(--accent);
     font-weight: 700;
     font-family: var(--sans);
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
