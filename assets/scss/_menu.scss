@@ -1,33 +1,30 @@
 .menu {
+    @include fontAccent;
     display: flex;
-    font-family: var(--sans);
-    font-weight: 700;
+    align-items: end;
     gap: calc(var(--size-md) * 2);
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
 
     &_link {
-        color: var(--white);
-        text-decoration: none;
+        display: flex;
         position: relative;
         padding: var(--size-xs) 0;
-        display: flex;
-        align-items: center;
-        justify-content: end;
+        color: var(--white);
         font-size: var(--size-md);
-        line-height: .75;
+        text-decoration: none;
+        line-height: 1;
 
         &:before {
             content: "";
             position: absolute;
-            opacity: 0;
             inset: 0;
-            top: calc(100% - .25rem);
+            top: calc(100% - .5rem);
+            background-color: var(--accent);
+            opacity: 0;
             pointer-events: none;
             z-index: -1;
-            background-color: var(--accent);
         }
 
         &:hover {

@@ -1,9 +1,24 @@
 header {
+    $bg: url(../imgs/bg.svg);
+    $cl: var(--accent);
+
     padding: 0 var(--globe, var(--size-xl));
-    background-color: var(--accent);
-    font-weight: 700;
-    font-family: var(--sans);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #{$bg}, #{$cl};
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+        content: '';
+        inset: 0;
+        mask-image: #{$bg};
+        mask-position: center;
+        background-color: #{$cl};
+        position: fixed;
+        mask-size: cover;
+        z-index: -1;
+    }
 }

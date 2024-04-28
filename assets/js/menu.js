@@ -9,8 +9,8 @@ export function menu() {
             label: 'Instagram',
             url: 'https://www.instagram.com/paulomelojunior',
         },
-        xCorp: {
-            label: 'X Corp.',
+        twitter: {
+            label: 'Twitter',
             url: 'https://www.x.com/hackyoto',
         },
     }

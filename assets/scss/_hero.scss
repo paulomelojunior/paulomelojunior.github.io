@@ -1,7 +1,6 @@
 .hero {
+    padding: 0 var(--globe, var(--size-xl));
     display: flex;
     align-items: center;
     justify-content: end;
-    padding: 0 var(--globe, var(--size-xl));
-    --background-offset-value: 50vh;
 }
