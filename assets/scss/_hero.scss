@@ -1,6 +1,8 @@
 .hero {
-    padding: 0 var(--globe, var(--size-xl));
     display: flex;
     align-items: center;
     justify-content: end;
+    min-height: 50vh;
+    padding: 0 var(--globe, var(--size-xl));
+    background-color: black;
 }
