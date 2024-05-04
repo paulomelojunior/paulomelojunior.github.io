@@ -1,20 +1,22 @@
-// Abstracts
-@import 'reset';
-@import 'colors';
-@import 'fonts';
-@import 'sizes';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-// Components
-@import
-'bg',
-'body',
-'brand',
-'header',
-'hero',
-'menu';
+::selection {
+    @apply
+    bg-white
+    text-black
+}
 
-@media (max-width: 996px) {
-    :root {
-        --globe: 10vw;
-    }
+@layer base {
+    @import
+    'base/fonts.scss';
+}
+
+@layer components {
+    @import
+    'components/body',
+    'components/header',
+    'components/footer',
+    'components/menu';
 }

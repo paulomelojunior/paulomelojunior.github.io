@@ -1,5 +1,5 @@
 export function menu() {
-    const navList = document.querySelector('.menu')
+    const navList = document.querySelector('#menu')
     const navItems = {
         github: {
             label: 'GitHub',
@@ -19,12 +19,15 @@ export function menu() {
 
     navValues.forEach(element => {
         const navItem = `
-            <li class="menu_item">
+            <li>
                 <a target="_blank" class="menu_link" rel="noopener noreferrer" href="${element.url}">
-                    ${element.label}
+                ${element.label}
                 </a>
-            </div>`      
-        navList.insertAdjacentHTML('beforeend', navItem)
-    })
-}
+                </li>`      
+                navList.insertAdjacentHTML('beforeend', navItem)
+            })
+        }
 
+// <img class="md:hidden size-6" src="assets/imgs/${element.label}.svg" alt="${element.label}">
+// <span class="hidden md:flex">
+// </span>

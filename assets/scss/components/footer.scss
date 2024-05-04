@@ -1,0 +1,11 @@
+footer {
+    @apply
+    flex
+    flex-col
+    items-center
+    absolute
+    bottom-0
+    pb-[10vw]
+    md:pb-[5vw]
+    inset-x-0;
+}

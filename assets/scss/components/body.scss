@@ -1,0 +1,16 @@
+body {
+    @apply
+    bg-neutral-950
+    text-neutral-400
+    bg-fixed
+    bg-center;
+    background-image:
+        linear-gradient(90deg,
+            theme('colors.neutral.950'),
+            transparent, 
+            theme('colors.neutral.950')
+        ),
+        url(../imgs/grid.svg),
+        url(../imgs/dots.svg),
+        linear-gradient(transparent 75%, theme('colors.zinc.800') 150%);
+}
