@@ -3,4 +3,4 @@
                 <a target="_blank" class="menu_link" rel="noopener noreferrer" href="${o.url}">
                 ${o.label}
                 </a>
-                </li>`;n.insertAdjacentHTML("beforeend",e)})}function c(){let n="%c Hi, dev. 💙",r=["font-size: 12px","color: #e4e4e7","font-family: monospace","background: #020617","display: inline-block","padding: 1rem","border: 2px solid #e4e4e7","border-radius: 8px;"].join(";");console.log(n,r)}c();l();
+                </li>`;n.insertAdjacentHTML("beforeend",e)})}function a(){let n="%c Hi, dev. 💙",r=["font-size: 12px","color: #e4e4e7","font-family: monospace","background: #0a0a0a","display: inline-block","padding: 1rem","border: 2px solid #e4e4e7","border-radius: 8px;"].join(";");console.log(n,r)}a();l();

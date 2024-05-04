@@ -7,7 +7,7 @@ function hiDev() {
         'font-size: 12px',
         'color: #e4e4e7',
         'font-family: monospace',
-        'background: #020617',
+        'background: #0a0a0a',
         'display: inline-block',
         'padding: 1rem',
         'border: 2px solid #e4e4e7',
