@@ -1,21 +1,5 @@
-@font-face {
-    font-family: 'Jakarta';
-    font-style: normal;
-    font-weight: 200 800;
-    src: url('../fonts/jakarta.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-body {
-    @apply
-    font-sans;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @apply
-    font-serif;
+.font-case {
+    font-feature-settings: 'case', 'zero';
 }

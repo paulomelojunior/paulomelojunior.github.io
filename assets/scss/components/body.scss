@@ -1,16 +1,44 @@
+::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-neutral-950;
+    border-radius: 100vw;
+    margin-block: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-neutral-800;
+    border: 0.25rem solid theme('colors.neutral.950');
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-600;
+}
+
 body {
     @apply
     bg-neutral-950
     text-neutral-400
     bg-fixed
-    bg-center;
-    background-image:
-        linear-gradient(90deg,
-            theme('colors.neutral.950'),
-            transparent, 
-            theme('colors.neutral.950')
-        ),
-        url(../imgs/grid.svg),
-        url(../imgs/dots.svg),
-        linear-gradient(transparent 75%, theme('colors.zinc.800') 150%);
+    font-sans;
+    font-feature-settings: 'ss03', 'ss04', 'zero';
+
+    background-image: linear-gradient(
+        theme('colors.neutral.950') 50%,
+        theme('colors.brand.400') 150%
+    );
+
+    @media (min-width: 768px) {
+        background-image: linear-gradient(
+                to right,
+                theme('colors.neutral.950'),
+                transparent,
+                theme('colors.neutral.950')
+            ),
+            linear-gradient(transparent 50%, theme('colors.brand.400') 150%);
+    }
 }

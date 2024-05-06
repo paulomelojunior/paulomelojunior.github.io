@@ -1,0 +1,13 @@
+.hero {
+    @apply
+    h-[calc(100dvh-100dvw)]
+    flex
+    flex-col
+    justify-end
+    p-8
+
+    sm:h-auto
+    sm:p-10
+
+    lg:p-40;
+}

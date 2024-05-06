@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-    @apply
-    bg-white
-    text-black
-}
-
 @layer base {
-    @import
-    'base/fonts.scss';
+    ::selection {
+        @apply 
+        bg-white
+        text-black;
+    }
+    @import 'base/fonts.scss';
 }
 
 @layer components {
     @import
     'components/body',
+    'components/button',
     'components/header',
-    'components/footer',
-    'components/menu';
+    'components/hero',
+    'components/lenis',
+    'components/marquee',
+    'components/title';
 }

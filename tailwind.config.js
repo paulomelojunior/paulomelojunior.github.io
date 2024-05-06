@@ -1,30 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./assets/js/*.js",
-  ],
-  theme: {
-    fontFamily: {
-      sans: ['"Jakarta", sans-serif'],
-      serif: [
-        '"Jakarta", serif',
-        {
-          fontFeatureSettings: '"ss01"',
+    content: ['./*.html', './assets/js/*.js'],
+    theme: {
+        fontFamily: {
+            sans: ['"Space Grotesk", sans-serif'],
         },
-      ],
+        extend: {
+            colors: {
+                brand: {
+                    400: 'hsl(235 100% 35%)',
+                },
+            },
+        },
     },
-    extend: {
-      spacing: {
-        'default': '5vw'
-      },
-      colors: {
-        brand: {
-          400: '#000FB3'
-        }
-      }
-    },
-  },
-  plugins: [],
+    plugins: [],
 }
-

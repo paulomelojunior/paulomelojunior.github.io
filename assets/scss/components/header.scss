@@ -1,29 +1,20 @@
 header {
-    @apply
-    flex
-    flex-col
-    items-center
-    justify-center
-    absolute
-    top-0
+    @apply fixed
     inset-x-0
-    p-[10vw]
-    md:p-[5vw];
+    z-10
+    flex
+    items-baseline
+    justify-between
+    p-6
+    text-sm
+    mix-blend-difference
 
-    &:before {
-        @apply
-        content-['']
-        size-full
-        absolute
-        inset-0
-        pointer-events-none;
+    sm:sticky
+    sm:-top-2
+    sm:px-8
+    sm:py-10
 
-        background-image:
-            linear-gradient(
-                #0a0a0a,
-                ease-in-out,
-                transparent
-            )
-        ;
-    }
+    lg:px-[4.5rem]
+    lg:pt-20
+    lg:text-base;
 }

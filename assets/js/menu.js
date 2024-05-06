@@ -10,24 +10,20 @@ export function menu() {
             url: 'https://www.instagram.com/paulomelojunior',
         },
         twitter: {
-            label: 'Twitter',
-            url: 'https://www.x.com/hackyoto',
+            label: 'X Corp.',
+            url: 'https://www.twitter.com/hackyoto',
         },
     }
 
     const navValues = Object.values(navItems)
 
-    navValues.forEach(element => {
+    navValues.forEach((element) => {
         const navItem = `
             <li>
-                <a target="_blank" class="menu_link" rel="noopener noreferrer" href="${element.url}">
-                ${element.label}
+                <a target="_blank" class="hover:text-white" rel="noopener noreferrer" href="${element.url}">
+                    ${element.label}
                 </a>
-                </li>`      
-                navList.insertAdjacentHTML('beforeend', navItem)
-            })
-        }
-
-// <img class="md:hidden size-6" src="assets/imgs/${element.label}.svg" alt="${element.label}">
-// <span class="hidden md:flex">
-// </span>
+            </li>`
+        navList.insertAdjacentHTML('beforeend', navItem)
+    })
+}
