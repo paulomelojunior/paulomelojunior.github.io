@@ -3,7 +3,12 @@ export default {
     content: ['./*.html', './assets/js/*.js'],
     theme: {
         fontFamily: {
-            sans: ['"Space Grotesk", sans-serif'],
+            sans: [
+                '"Space Grotesk", sans-serif',
+                {
+                    fontFeatureSettings: '"ss03", "ss04", "case", "zero"',
+                },
+            ],
         },
         extend: {
             colors: {

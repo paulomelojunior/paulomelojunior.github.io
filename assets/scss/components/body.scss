@@ -20,12 +20,9 @@
 }
 
 body {
-    @apply
-    bg-neutral-950
-    text-neutral-400
+    @apply bg-neutral-950
     bg-fixed
-    font-sans;
-    font-feature-settings: 'ss03', 'ss04', 'zero';
+    text-neutral-400;
 
     background-image: linear-gradient(
         theme('colors.neutral.950') 50%,

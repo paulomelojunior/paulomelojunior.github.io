@@ -1,7 +1,6 @@
 .hero {
-    @apply
+    @apply flex
     h-[calc(100dvh-100dvw)]
-    flex
     flex-col
     justify-end
     p-8

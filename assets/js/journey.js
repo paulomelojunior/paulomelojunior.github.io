@@ -34,7 +34,7 @@ export function journey() {
     journeyValues.forEach((element) => {
         const journeyItem = `
             <div class="flex flex-col gap-8 md:gap-10">
-                <span class="text-sm md:text-base font-case text-neutral-600">
+                <span class="text-sm md:text-base  text-neutral-600">
                     ${element.start} &rightarrow; ${element.end}
                 </span>
                 <h3 class="title-xs">
