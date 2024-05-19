@@ -31,9 +31,9 @@
             content="Enthusiast of decentralized technologies, Hackyoto is a designer and coder from Brazil. Here you can find links to stay in touch with him."
         />
 
-        <link rel="icon" href="favicon.png" />
-      <script type="module" crossorigin src="/assets/main-_NAxUs8n.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/main-D300wdUq.css">
+        <link rel="icon" href="favicon.png" />
+      <script type="module" crossorigin src="/assets/main-DtKdd4MY.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-BjSYUAV5.css">
     </head>
     <body>
         <header>
@@ -65,12 +65,16 @@
                 <div
                     class="grid gap-px overflow-hidden rounded-xl text-lg leading-loose sm:grid-cols-3 lg:text-2xl lg:leading-loose"
                 >
-                    <div class="overflow-hidden">
+                    <picture class="overflow-hidden bg-neutral-900">
                         <img
+                            alt="An image of Hackyoto, a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white."
                             class="h-full w-full object-cover transition-all hover:scale-100 hover:blur-0 lg:scale-125 lg:blur-xl"
-                            src="/assets/profile-B8tV7Wiv.webp"
+                            loading="lazy"
+                            src="/assets/profile-3x-B8tV7Wiv.webp"
+                            srcset="/assets/profile-1x-D4rRCyze.webp 480w, /assets/profile-2x-BC4s6Bkg.webp 720w, /assets/profile-3x-B8tV7Wiv.webp 1440w"
+                            sizes="(max-width: 480px) 480px, (max-width: 720px) 720px, 1440px"
                         />
-                    </div>
+                    </picture>
                     <div
                         class="flex flex-col justify-center gap-4 bg-neutral-200 px-8 py-16 tracking-tight text-neutral-800 sm:col-span-2 sm:p-16 lg:gap-10 lg:p-40"
                     >
@@ -91,21 +95,22 @@
             <section class="bg-neutral-950 sm:pt-5 lg:pt-10">
                 <div class="marquee">
                     <ul class="marquee__content">
-                        <li aria-hidden="true">+</li>
+                        <li aria-hidden="true" class="hidden md:block">+</li>
                         <li class="uppercase">Product Design</li>
-                        <li aria-hidden="true">+</li>
+                        <li aria-hidden="true"> + </li>
                         <li class="uppercase">User Interface</li>
-                        <li aria-hidden="true">+</li>
+                        <li aria-hidden="true"> + </li>
                         <li class="uppercase">Front-end dev</li>
-                        <li aria-hidden="true">+</li>
+                        <li aria-hidden="true"> + </li>
                     </ul>
                     <ul class="marquee__content" aria-hidden="true">
+                        <li aria-hidden="true" class="hidden md:block">+</li>
                         <li class="uppercase">Product Design</li>
-                        <li>+</li>
+                        <li> + </li>
                         <li class="uppercase">User Interface</li>
-                        <li>+</li>
+                        <li> + </li>
                         <li class="uppercase">Front-end dev</li>
-                        <li>+</li>
+                        <li> + </li>
                     </ul>
                 </div>
             </section>
@@ -193,4 +198,4 @@
             </footer>
         </main>
     </body>
-</html>
+</html>

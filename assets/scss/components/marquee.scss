@@ -9,7 +9,7 @@
 }
 
 .marquee {
-    --gap: 2rem;
+    --gap: 1rem;
     display: flex;
     overflow: hidden;
     user-select: none;
@@ -17,7 +17,7 @@
 }
 
 .marquee__content {
-    @apply flex shrink-0 items-center justify-around overflow-hidden whitespace-nowrap py-8 text-center text-lg leading-none text-neutral-700 sm:text-2xl sm:leading-none;
+    @apply flex shrink-0 items-center justify-around overflow-hidden whitespace-nowrap py-8 px-0 md:px-8 text-center text-lg leading-none text-neutral-600 sm:text-2xl sm:leading-none;
     min-width: 100%;
     gap: var(--gap);
 }

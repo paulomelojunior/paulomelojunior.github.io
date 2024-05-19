@@ -64,12 +64,16 @@
                 <div
                     class="grid gap-px overflow-hidden rounded-xl text-lg leading-loose sm:grid-cols-3 lg:text-2xl lg:leading-loose"
                 >
-                    <div class="overflow-hidden">
+                    <picture class="overflow-hidden bg-neutral-900">
                         <img
+                            alt="An image of Hackyoto, a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white."
                             class="h-full w-full object-cover transition-all hover:scale-100 hover:blur-0 lg:scale-125 lg:blur-xl"
-                            src="assets/imgs/profile.webp"
+                            loading="lazy"
+                            src="assets/imgs/profile-3x.webp"
+                            srcset="assets/imgs/profile-1x.webp 480w, assets/imgs/profile-2x.webp 720w, assets/imgs/profile-3x.webp 1440w"
+                            sizes="(max-width: 480px) 480px, (max-width: 720px) 720px, 1440px"
                         />
-                    </div>
+                    </picture>
                     <div
                         class="flex flex-col justify-center gap-4 bg-neutral-200 px-8 py-16 tracking-tight text-neutral-800 sm:col-span-2 sm:p-16 lg:gap-10 lg:p-40"
                     >
@@ -87,24 +91,25 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-neutral-950 sm:pt-5 lg:pt-10">
+            <section class="bg-neutral-950 sm:pt-5 lg:pt-10" aria-hidden="true">
                 <div class="marquee">
                     <ul class="marquee__content">
-                        <li aria-hidden="true">+</li>
+                        <li class="hidden md:block">+</li>
                         <li class="uppercase">Product Design</li>
-                        <li aria-hidden="true">+</li>
+                        <li> + </li>
                         <li class="uppercase">User Interface</li>
-                        <li aria-hidden="true">+</li>
+                        <li> + </li>
                         <li class="uppercase">Front-end dev</li>
-                        <li aria-hidden="true">+</li>
+                        <li> + </li>
                     </ul>
-                    <ul class="marquee__content" aria-hidden="true">
+                    <ul class="marquee__content">
+                        <li class="hidden md:block">+</li>
                         <li class="uppercase">Product Design</li>
-                        <li>+</li>
+                        <li> + </li>
                         <li class="uppercase">User Interface</li>
-                        <li>+</li>
+                        <li> + </li>
                         <li class="uppercase">Front-end dev</li>
-                        <li>+</li>
+                        <li> + </li>
                     </ul>
                 </div>
             </section>
@@ -123,18 +128,19 @@
                     ></div>
                 </div>
             </section>
-            <section class="bg-neutral-950 sm:px-10 sm:pb-5 lg:px-20 lg:pb-10">
+            <section class="bg-neutral-950 sm:px-10 sm:pb-5 lg:px-20 lg:pb-10" aria-hidden="true">
                 <div class="marquee">
                     <ul class="marquee__content">
-                        <li aria-hidden="true">+</li>
+                        <li class="hidden md:block">+</li>
                         <li class="uppercase">Foundation</li>
-                        <li aria-hidden="true">+</li>
+                        <li>+</li>
                         <li class="uppercase">Fav Tools</li>
-                        <li aria-hidden="true">+</li>
+                        <li>+</li>
                         <li class="uppercase">Frameworks</li>
-                        <li aria-hidden="true">+</li>
+                        <li>+</li>
                     </ul>
-                    <ul class="marquee__content" aria-hidden="true">
+                    <ul class="marquee__content">
+                        <li class="hidden md:block">+</li>
                         <li class="uppercase">Foundation</li>
                         <li>+</li>
                         <li class="uppercase">Fav Tools</li>
@@ -149,6 +155,7 @@
             >
                 <div
                     id="tools"
+                    aria-label="Favorite tools and frameworks"
                     class="grid grid-cols-2 items-center gap-px overflow-hidden rounded-xl text-neutral-800 *:bg-neutral-200 sm:grid-cols-3 lg:grid-cols-6"
                 ></div>
             </section>
@@ -174,7 +181,7 @@
                     ></ul>
                 </nav>
                 <div
-                    aria-hidden="true"
+                
                     class="absolute inset-x-10 bottom-10 flex justify-between lg:inset-x-20 lg:bottom-20"
                 >
                     <span
