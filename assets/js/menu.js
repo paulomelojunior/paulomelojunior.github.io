@@ -7,11 +7,11 @@ export function menu() {
         },
         instagram: {
             label: 'Instagram',
-            url: 'https://www.instagram.com/paulomelojunior',
+            url: 'https://www.instagram.com/hackyoto',
         },
-        twitter: {
-            label: 'X Corp.',
-            url: 'https://www.twitter.com/hackyoto',
+        x: {
+            label: 'X / Twitter',
+            url: 'https://www.x.com/hackyoto',
         },
     }
 
