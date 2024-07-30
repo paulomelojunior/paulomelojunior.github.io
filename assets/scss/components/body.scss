@@ -21,21 +21,28 @@
 
 body {
     @apply bg-neutral-950
-    bg-fixed
     text-neutral-400;
 
-    background-image: linear-gradient(
-        theme('colors.neutral.950') 50%,
-        theme('colors.brand.400') 150%
-    );
-
-    @media (min-width: 768px) {
+    &:before {
+        content: '';
+        inset: 0;
         background-image: linear-gradient(
-                to right,
-                theme('colors.neutral.950'),
-                transparent,
-                theme('colors.neutral.950')
-            ),
-            linear-gradient(transparent 50%, theme('colors.brand.400') 150%);
+            theme('colors.neutral.950') 50%,
+            theme('colors.brand.400') 150%
+        );
+        position: fixed;
+        z-index: -1;
+
+        @media (min-width: 768px) {
+            background-image:
+                linear-gradient(
+                    to right,
+                    theme('colors.neutral.950'),
+                    transparent,
+                    theme('colors.neutral.950')
+                ),
+                linear-gradient(transparent 50%, theme('colors.brand.400') 150%);
+        }
     }
+
 }

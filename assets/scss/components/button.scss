@@ -1,12 +1,11 @@
 .button {
     @apply block
+    font-bold
     rounded
     bg-opacity-0
-    px-2
-    py-2
+    p-2
     uppercase
     leading-none
     transition
-    text-neutral-400
-    hover:text-neutral-200;
+    hover:text-white;
 }

@@ -17,7 +17,7 @@
 }
 
 .marquee__content {
-    @apply flex shrink-0 items-center justify-around overflow-hidden whitespace-nowrap px-0 py-8 text-center text-lg leading-none sm:text-2xl sm:leading-none;
+    @apply flex uppercase shrink-0 items-center justify-around overflow-hidden whitespace-nowrap px-0 py-8 text-center text-lg leading-none sm:text-2xl sm:leading-none;
     min-width: 100%;
     gap: var(--gap);
 }

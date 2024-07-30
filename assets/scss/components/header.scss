@@ -1,13 +1,15 @@
 header {
-    @apply fixed
+    @apply
+    fixed
     inset-x-0
     z-10
     flex
-    items-baseline
+    items-center
     justify-between
     p-6
     text-sm
-    mix-blend-difference
+    bg-gradient-to-b
+    from-gray-950
 
     sm:px-8
     sm:py-10

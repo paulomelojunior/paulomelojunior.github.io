@@ -9,11 +9,18 @@ export default {
                     fontFeatureSettings: '"ss03", "ss04", "case", "zero"',
                 },
             ],
+            aspekta: [
+                '"Aspekta", sans-serif',
+                {
+                    fontFeatureSettings: '"ss04"',
+                },
+            ]
         },
         extend: {
             colors: {
                 brand: {
                     400: 'hsl(235 100% 35%)',
+                    200: 'hsl(235 100% 60%)',
                 },
             },
         },
