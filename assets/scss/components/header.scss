@@ -9,7 +9,9 @@ header {
     p-6
     text-sm
     bg-gradient-to-b
-    from-gray-950
+    from-neutral-950
+    md:bg-none
+    md:mix-blend-difference
 
     sm:px-8
     sm:py-10
