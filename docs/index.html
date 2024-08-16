@@ -34,13 +34,13 @@
         />
 
         <link rel="icon" href="favicon.png" />
-      <script type="module" crossorigin src="/assets/main-BudKLvj8.js"></script>
-      <script type="module" crossorigin src="/assets/main-BE12bXzb.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/main-BoMawrhf.css">
+      <script type="module" crossorigin src="/assets/main-CREMssi8.js"></script>
+      <script type="module" crossorigin src="/assets/main-qykkX6RJ.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-BVtpOBCJ.css">
       <link rel="stylesheet" crossorigin href="/assets/font-BoopgfGA.css">
     </head>
-    <body class="*:opacity-0 *:duration-500 *:ease-out">
-        <header>
+    <body class="overflow-hidden">
+        <header class="duration-1000 ease-out opacity-0">
             <span class="p-2 uppercase text-white font-bold leading-none">hac</span>
             <nav>
                 <ul id="anchors" class="flex gap-2">
@@ -59,13 +59,13 @@
         <main>
             <section class="hero">
                 <h1
-                    class="text-4xl font-bold uppercase tracking-tight text-neutral-200 sm:text-5xl lg:text-7xl"
+                    class="text-4xl font-bold uppercase tracking-tight text-neutral-200 sm:text-5xl lg:text-7xl duration-1000 ease-out opacity-0"
                 >
                     Digital Designer & User Interface <br class="hidden sm:block" />
                     Developer / based in Brazil
                 </h1>
             </section>
-            <section class="bg-neutral-950 sm:pt-5 lg:pt-10" aria-hidden="true">
+            <section id="heroFooter" class="bg-neutral-950 sm:pt-5 lg:pt-10 translate-y-[calc(100%+2.5rem)] duration-1000 ease-out" aria-hidden="true">
                 <div class="marquee">
                     <ul class="marquee__content">
                         <li>Integrative Teamwork</li>
@@ -89,7 +89,7 @@
                     </ul>
                 </div>
             </section>
-            <section id="who" class="bg-neutral-950 sm:px-5 sm:pt-5 lg:px-10 lg:pt-10">
+            <section id="who" class="sm:px-5 sm:pt-5 lg:px-10 lg:pt-10 delay-200">
                 <div
                     class="grid gap-px overflow-hidden rounded-3xl sm:grid-cols-3"
                 >
@@ -106,20 +106,20 @@
                         />
                     </picture>
                     <div
-                        class="flex flex-col justify-center gap-4 bg-neutral-300 px-8 py-16 text-neutral-800 sm:col-span-2 sm:p-16 lg:gap-10 lg:p-40"
+                        class="flex flex-col justify-center gap-4 bg-neutral-900 px-8 py-16 sm:col-span-2 sm:p-16 lg:gap-10 lg:p-40"
                     >
                         <p class="text-lg leading-loose lg:text-3xl lg:leading-loose">
-                            Enthusiast of decentralized technologies, driven by the open-source movement and other geeky stuff. Currently working with an interactive marketing company focused on lead generation from Denver, CO.
+                            Enthusiast of <span class="text-neutral-100">decentralized</span> technologies, driven by the <span class="text-neutral-100">open-source</span> movement and other <span class="text-neutral-100">geeky</span> stuff. Currently working with an interactive marketing company focused on lead generation from Denver, CO.
                         </p>
                     </div>
                 </div>
             </section>
             <section id="job" class="bg-neutral-950 sm:p-5 lg:p-10">
                 <div
-                    class="flex w-full flex-col gap-24 rounded-3xl bg-neutral-900 px-8 py-24 sm:px-16 sm:py-32 lg:gap-40 lg:p-40"
+                    class="flex w-full flex-col gap-24 rounded-3xl px-8 py-24 sm:px-16 sm:py-32 lg:gap-40 lg:p-40"
                 >
                     <h2
-                        class="text-3xl font-bold uppercase lg:text-center lg:text-5xl"
+                        class="text-3xl font-bold uppercase lg:text-center lg:text-5xl text-neutral-100  animate-in-out [animation-timeline:view(block_10%_10%)]"
                     >
                         Career Journey
                     </h2>
@@ -155,7 +155,7 @@
                 <div
                     id="tools"
                     aria-label="Favorite tools and frameworks"
-                    class="grid grid-cols-2 items-center gap-px overflow-hidden rounded-3xl text-neutral-800 *:bg-neutral-200 sm:grid-cols-3 lg:grid-cols-6"
+                    class="grid grid-cols-2 items-center gap-px overflow-hidden rounded-3xl text-neutral-100 *:bg-brand-400 sm:grid-cols-3 lg:grid-cols-6"
                 ></div>
             </section>
             <section class="px-8 py-40 sm:px-40 h-dvh">
@@ -172,7 +172,7 @@
             </section>
             <footer id="hey" class="relative h-dvh lg:p-10">
                 <nav
-                    class="flex h-full flex-1 items-center rounded-3xl bg-black p-10 lg:p-40"
+                    class="flex h-full flex-1 items-center rounded-t-3xl sm:rounded-3xl bg-black p-10 lg:p-40"
                 >
                     <ul
                         id="menu"
@@ -186,7 +186,7 @@
                         title="Grayscale"
                         class="text-xs font-bold uppercase leading-none tracking-widest text-neutral-800"
                     >
-                        V 1.0.2
+                        V 1.0.3
                     </span>
                     <span
                         class="text-xs font-bold uppercase leading-none tracking-widest text-neutral-800"
@@ -197,10 +197,17 @@
             </footer>
         </main>
     </body>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         window.onload = function load() {
-            document.querySelector('body').classList.remove('*:opacity-0');
-            document.querySelector('main').classList.remove('*:translate-y-16');
+            document.querySelector('body').classList.remove('overflow-hidden');
+            document.querySelector('header').classList.remove('opacity-0');
+            document.querySelector('.hero h1').classList.remove('opacity-0');
+            document.querySelector('#who').classList.add('bg-neutral-950');
+            document.querySelector('#heroFooter').classList.remove('translate-y-[calc(100%+2.5rem)]')
+            document.querySelector('main').classList.remove('*:translate-y-16')
         }
+
+        lucide.createIcons()
     </script>
 </html>

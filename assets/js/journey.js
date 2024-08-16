@@ -33,14 +33,14 @@ export function journey() {
 
     journeyValues.forEach((element) => {
         const journeyItem = `
-            <div class="flex flex-col gap-8 md:gap-10">
-                <span class="text-sm md:text-base">
+            <div class="flex flex-col gap-8 md:gap-10 ">
+                <span class="text-sm md:text-base animate-in-out [animation-timeline:view(block_10%_10%)]">
                     ${element.start} &rightarrow; ${element.end}
                 </span>
-                <h3 class="title-xs">
+                <h3 class="title-xs text-neutral-200 animate-in-out [animation-timeline:view(block_10%_10%)]">
                     ${element.title}
                 </h3>
-                <p class="md:leading-loose leading-loose text-sm md:text-base">
+                <p class="md:leading-loose leading-loose text-sm md:text-base animate-in-out [animation-timeline:view(block_10%_10%)]">
                     ${element.description}
                 </p>
             </div>

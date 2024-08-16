@@ -23,6 +23,15 @@ export default {
                     200: 'hsl(235 100% 60%)',
                 },
             },
+            keyframes: {
+                fader: {
+                    '0%, 100%': { opacity: '0' },
+                    '25%, 75%': { opacity: '1' },
+                }
+            },
+            animation: {
+                'in-out': 'fader 1ms ease-in-out both'
+            }
         },
     },
     plugins: [],
