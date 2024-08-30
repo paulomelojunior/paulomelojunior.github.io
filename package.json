@@ -18,6 +18,8 @@
         "vite": "^5.2.0"
     },
     "dependencies": {
-        "lenis": "^1.0.45"
+        "gsap": "^3.12.5",
+        "lenis": "^1.0.45",
+        "split-type": "^0.3.4"
     }
 }

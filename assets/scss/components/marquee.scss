@@ -2,7 +2,7 @@
     from {
         transform: translateX(0);
     }
-
+    
     to {
         transform: translateX(calc(-100% - var(--gap)));
     }
@@ -20,6 +20,7 @@
     @apply flex uppercase shrink-0 items-center justify-around overflow-hidden whitespace-nowrap px-0 py-8 text-center text-lg leading-none sm:text-2xl sm:leading-none;
     min-width: 100%;
     gap: var(--gap);
+    animation: marquee 80s linear infinite;
 }
 
 .marquee {
@@ -30,8 +31,4 @@
         black,
         transparent
     );
-}
-
-.marquee__content {
-    animation: marquee 42s linear infinite;
 }

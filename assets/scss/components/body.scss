@@ -22,14 +22,14 @@
 body {
     @apply 
     bg-neutral-950
-    text-neutral-400;
+    text-neutral-500;
 
     &:not(.grid):before {
         content: '';
         inset: 0;
         background-image: linear-gradient(
             theme('colors.neutral.950') 50%,
-            theme('colors.brand.400') 150%
+            theme('colors.brand.900') 150%
         );
         background-color: theme('colors.neutral.950');
         position: fixed;
@@ -43,7 +43,7 @@ body {
                     transparent,
                     theme('colors.neutral.950')
                 ),
-                linear-gradient(transparent 50%, theme('colors.brand.400') 150%);
+                linear-gradient(transparent 50%, theme('colors.brand.900') 150%);
         }
     }
 

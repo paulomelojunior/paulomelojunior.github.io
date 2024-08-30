@@ -10,7 +10,14 @@
 }
 
 @layer components {
-    @import 'components/body', 'components/button', 'components/paragraph.scss', 'components/header',
-        'components/hero', 'components/lenis', 'components/marquee',
-        'components/title', 'components/lucide';
+    @import
+    'components/body',
+    'components/button',
+    'components/header',
+    'components/hero',
+    'components/lenis',
+    'components/lucide',
+    'components/marquee',
+    'components/paragraph',
+    'components/title';
 }

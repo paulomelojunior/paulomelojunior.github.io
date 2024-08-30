@@ -4,33 +4,30 @@ export default {
     theme: {
         fontFamily: {
             sans: [
-                '"Space Grotesk", sans-serif',
-                {
-                    fontFeatureSettings: '"ss03", "ss04", "case", "zero"',
-                },
+                '"Funnel", sans-serif',
             ],
-            aspekta: [
-                '"Aspekta", sans-serif',
+            inter: [
+                '"Inter", sans-serif',
                 {
-                    fontFeatureSettings: '"ss04"',
+                    fontFeatureSettings: '"case", "ss01", "zero", "tnum"',
                 },
             ]
         },
         extend: {
             colors: {
-                brand: {
-                    400: 'hsl(235 100% 35%)',
-                    200: 'hsl(235 100% 60%)',
+                'brand': {
+                    '50': '#e5f0ff',
+                    '100': '#cfe4ff',
+                    '200': '#a9caff',
+                    '300': '#75a5ff',
+                    '400': '#3f6dff',
+                    '500': '#1437ff',
+                    '600': '#001eff',
+                    '700': '#001fff',
+                    '800': '#001be3',
+                    '900': '#000fb3',
+                    '950': '#000566',
                 },
-            },
-            keyframes: {
-                fader: {
-                    '0%, 100%': { opacity: '0' },
-                    '25%, 75%': { opacity: '1' },
-                }
-            },
-            animation: {
-                'in-out': 'fader 1ms ease-in-out both'
             }
         },
     },
