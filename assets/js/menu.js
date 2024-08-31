@@ -1,11 +1,11 @@
 export function menu() {
     const navList = document.querySelector('#menu')
     const navItems = {
-        // nostr: {
-        //     label: 'nostr',
-        //     url: 'https://primal.net/p/npub1c7vp7kfh3lslrxwah4p4g2ty4v8wv4frtuxgq6565k8se4kj97ksqshw7m',
-        //     extra: 'NIP-05 boss@hac.wtf'
-        // },
+        nostr: {
+            label: 'nostr',
+            url: 'https://primal.net/p/npub1c7vp7kfh3lslrxwah4p4g2ty4v8wv4frtuxgq6565k8se4kj97ksqshw7m',
+            extra: 'NIP-05 boss@hac.wtf'
+        },
         github: {
             label: 'GitHub',
             url: 'https://www.github.com/paulomelojunior',
