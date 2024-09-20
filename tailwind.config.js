@@ -5,6 +5,9 @@ export default {
         fontFamily: {
             sans: [
                 '"Funnel", sans-serif',
+                {
+                    fontFeatureSettings: '"krnl"'
+                }
             ],
             inter: [
                 '"Inter", sans-serif',

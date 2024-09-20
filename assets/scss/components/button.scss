@@ -3,11 +3,13 @@
     items-center
     gap-2
     font-bold
-    rounded
-    bg-opacity-0
-    p-2
+    rounded-full
+    py-2
+    px-3
     uppercase
     transition
-    text-white
+    text-sm
+    leading-none
+    hover:bg-white/20
     hover:text-white;
 }
