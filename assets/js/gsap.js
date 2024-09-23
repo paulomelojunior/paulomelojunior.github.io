@@ -16,19 +16,26 @@ window.onload = function load() {
         i.classList.remove('invisible')
     })
 
-    gsap.from('#heroFooter', {
-        height: 0
-    })
-    gsap.from('#heroFooter > *', {
-        opacity: 0,
-        translateY: '50%',
-    })
-    gsap.from('#heroTitle > span', {
-        height: 0,
-    })
     gsap.from('header', {
         translateY: '-50%',
         opacity: 0
+    })
+
+    gsap.from('#heroTitle > span', {
+        height: 0,
+        delay: .25,
+        stagger: .25
+    })
+
+    gsap.from('#heroFooter', {
+        height: 0,
+        delay: .5
+    })
+
+    gsap.from('#heroFooter > *', {
+        opacity: 0,
+        translateY: '50%',
+        delay: .5
     })
 
     gsap.to('#heroTitle', {
