@@ -46,7 +46,7 @@ window.onload = function load() {
             scrub: true
         },
         filter: "blur(.125rem)",
-        yPercent: 50,
+        y: '10rem',
         opacity: 0,
         ease: 'none'
     })
