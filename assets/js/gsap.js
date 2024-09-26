@@ -23,19 +23,19 @@ window.onload = function load() {
 
     gsap.from('#heroTitle > span', {
         height: 0,
-        delay: .25,
-        stagger: .25
+        delay: .5,
+        stagger: .5
     })
 
     gsap.from('#heroFooter', {
         height: 0,
-        delay: .5
+        delay: 1
     })
 
     gsap.from('#heroFooter > *', {
         opacity: 0,
         translateY: '50%',
-        delay: .5
+        delay: 1
     })
 
     gsap.to('#heroTitle', {
@@ -46,7 +46,7 @@ window.onload = function load() {
             scrub: true
         },
         filter: "blur(.125rem)",
-        y: '10rem',
+        yPercent: 100,
         opacity: 0,
         ease: 'none'
     })
