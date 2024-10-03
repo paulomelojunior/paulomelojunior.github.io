@@ -1,11 +1,11 @@
 export function menu() {
     const navList = document.querySelector('#menu')
     const navItems = {
-        nostr: {
-            label: 'nostr',
-            url: 'https://primal.net/p/npub1c7vp7kfh3lslrxwah4p4g2ty4v8wv4frtuxgq6565k8se4kj97ksqshw7m',
-            extra: 'NIP-05 boss@hac.wtf'
-        },
+        // nostr: {
+        //     label: 'nostr',
+        //     url: 'https://primal.net/p/npub1c7vp7kfh3lslrxwah4p4g2ty4v8wv4frtuxgq6565k8se4kj97ksqshw7m',
+        //     extra: 'NIP-05 boss@hac.wtf'
+        // },
         github: {
             label: 'GitHub',
             url: 'https://www.github.com/paulomelojunior',
@@ -16,11 +16,16 @@ export function menu() {
             url: 'https://www.instagram.com/paulomelojunior',
             extra: '/paulomelojunior',
         },
-        x: {
-            label: 'X / Twitter',
-            url: 'https://www.x.com/hackyoto',
-            extra: '/hackyoto',
+        linkedin: {
+            label: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/paulomelojunior/',
+            extra: '/paulomelojunior',
         },
+        // x: {
+        //     label: 'X / Twitter',
+        //     url: 'https://www.x.com/hackyoto',
+        //     extra: '/hackyoto',
+        // },
     }
 
     const navValues = Object.values(navItems)
