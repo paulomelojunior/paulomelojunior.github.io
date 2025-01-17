@@ -17,7 +17,7 @@ export function journey() {
         },
         3: {
             start: '2019',
-            end: '2024',
+            end: '2025',
             title: 'Lead Designer / UI Dev',
             description: `Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability.`,
         },

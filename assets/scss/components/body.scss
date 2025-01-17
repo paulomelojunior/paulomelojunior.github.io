@@ -29,22 +29,11 @@ body {
         inset: 0;
         background-image: linear-gradient(
             theme('colors.neutral.950') 50%,
-            theme('colors.brand.900') 150%
+            theme('colors.brand.900') 200%
         );
         background-color: theme('colors.neutral.950');
         position: fixed;
         z-index: -1;
-
-        @media (min-width: 768px) {
-            background-image:
-                linear-gradient(
-                    to right,
-                    theme('colors.neutral.950'),
-                    transparent,
-                    theme('colors.neutral.950')
-                ),
-                linear-gradient(transparent 50%, theme('colors.brand.900') 150%);
-        }
     }
 
 
@@ -73,22 +62,22 @@ body {
             background-color: var(--mm);
         }
 
-        @apply
-        bg-zinc-950
-        bg-fixed;
-        background-image:
-            linear-gradient(
-                to left,
-                theme('colors.zinc.950'),
-                transparent
-            ),
-            linear-gradient(0deg,
-                theme('colors.zinc.950'),
-                transparent, 
-                theme('colors.zinc.950')
-            ),
-            url(../imgs/grid.svg),
-            url(../imgs/dots.svg),
-            linear-gradient(to left, transparent 50%, var(--bg) 200%);
+        // @apply
+        // bg-zinc-950
+        // bg-fixed;
+        // background-image:
+        //     linear-gradient(
+        //         to left,
+        //         theme('colors.zinc.950'),
+        //         transparent
+        //     ),
+        //     linear-gradient(0deg,
+        //         theme('colors.zinc.950'),
+        //         transparent, 
+        //         theme('colors.zinc.950')
+        //     ),
+        //     url(../imgs/grid.svg),
+        //     url(../imgs/dots.svg),
+        //     linear-gradient(to left, transparent 50%, var(--bg) 200%);
     }
 }

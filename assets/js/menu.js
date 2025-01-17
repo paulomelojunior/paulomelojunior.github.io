@@ -36,7 +36,7 @@ export function menu() {
                 <a target="_blank" class="group/item flex items-end text-gray-200 relative" rel="noopener noreferrer" href="${e.url}">
                     ${e.label}
                     ${e.extra ?
-                        `<span class="text-sm grid w-full tracking-wider text-brand-300 duration-200 group-hover/item:translate-y-full absolute opacity-0 group-hover/item:opacity-100">
+                        `<span class="text-sm grid w-full tracking-wider text-brand-400 duration-200 group-hover/item:translate-y-full absolute opacity-0 group-hover/item:opacity-100">
                             ${e.extra}
                          </span>` : ``} 
                 </a>
