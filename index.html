@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+      content="width=device-width initial-scale=1 user-scalable=0 viewport-fit=cover"
     />
 
     <meta property="og:image" content="https://pmjr.cc/profile.webp" />
@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="assets/scss/main.scss" />
   </head>
 
-  <body>
+  <body class="">
     <header class="invisible">
       <div class="progressive-blur absolute inset-0">
         <div></div>
@@ -45,46 +45,48 @@
         <div></div>
         <div></div>
       </div>
-      <span class="font-medium tracking-wide text-neutral-200 uppercase p-2 leading-none text-sm relative">
-        Paul M.<br>
-      </span>
-      <nav class="relative">
-        <ul id="anchors" class="flex flex-col items-end">
-          <li>
-            <a class="button" href="#who">
-              <span> About </span>
-              <!-- <i data-lucide="user"></i> -->
-            </a>
-          </li>
-          <li>
-            <a class="button" href="#job">
-              <span> Journey </span>
-              <!-- <i data-lucide="history"></i> -->
-            </a>
-          </li>
-          <li>
-            <a class="button" href="#hey">
-              <span> Social </span>
-              <!-- <i data-lucide="at-sign"></i> -->
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container flex justify-between">
+        <span class="font-medium tracking-wide text-neutral-200 uppercase p-2 sm:p-4 leading-none text-sm relative">
+          <span class="sm:inline hidden">
+            Hello, I'm
+          </span>
+          Paul M.
+        </span>
+        <nav class="relative">
+          <ul id="anchors" class="flex flex-col sm:flex-row items-end">
+            <li>
+              <a class="button" href="#who">
+                <span> About </span>
+              </a>
+            </li>
+            <li>
+              <a class="button" href="#job">
+                <span> Journey </span>
+              </a>
+            </li>
+            <li>
+              <a class="button" href="#hey">
+                <span> Social </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="invisible">
       <section
-        class="flex h-[calc(100lvh-100vw)] md:h-vh flex-col justify-end p-6 sm:p-10 lg:p-40"
+        class="container font-medium flex h-[calc(100lvh-100vw)] flex-col justify-end p-6 sm:p-0 sm:h-[calc(50dvh-4rem)]"
       >
         <h1
           id="heroTitle"
-          class="text-[2.125rem] text-neutral-200 mb-[4rem] leading-none "
+          class="text-[2.125rem] sm:text-7xl text-neutral-200 mb-[4rem] leading-none"
           >
-          <div class="hidden sm:block">
-            <span class="block text-pretty hero-letters">
-              Product Designer
+          <div class="hidden sm:flex flex-col">
+            <span class="block hero-letters">
+              Designer & UI Developer
             </span>
             <span  class="block hero-letters">
-              & UI Dev Based in Brazil
+              Working from Brazil
             </span>
           </div>
           <div class="sm:hidden">
@@ -99,7 +101,7 @@
       </section>
       <section
         id="heroFooter"
-        class="bg-neutral-950 font-medium items-center absolute w-full flex -translate-y-full top-[100lvh-100vw] md:bottom-0 overflow-hidden"
+        class="bg-neutral-950 font-medium items-center absolute sm:relative w-full flex -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden"
         aria-hidden="true"
       >
         <div class="marquee">
@@ -126,14 +128,14 @@
         </div>
       </section>
       <section
-        class="bg-neutral-950 sm:bg-none sm:px-5 lg:px-10 relative"
+        class="bg-neutral-950 relative"
       >
-        <div id="who" class="absolute sm:-top-10 top-0"></div>
-        <div class="grid overflow-hidden rounded-lg sm:grid-cols-3">
-          <picture class="h-[100vw] overflow-hidden bg-neutral-900 sm:h-auto">
+        <div id="who" class="absolute sm:-top-16 top-0"></div>
+        <div id="about" class="container flex flex-col sm:flex-row overflow-hidden rounded-lg">
+          <picture class="h-[100vw] aspect-square overflow-hidden sm:h-[50dvh] sm:w-[50dvh]">
             <img
               alt="An image of Paulo, a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white."
-              class="h-full w-full object-cover"
+              class="h-full object-cover"
               loading="lazy"
               src="assets/imgs/profile-3x.webp"
               srcset="
@@ -145,41 +147,41 @@
             />
           </picture>
           <div
-            class="flex flex-col justify-center gap-4 px-6 py-12 leading-loose sm:col-span-2 sm:p-16 lg:gap-10 lg:p-40 lg:text-2xl lg:leading-loose split"
+            class="flex flex-col flex-1 justify-center gap-4 sm:gap-8 px-6 py-12 leading-loose font-medium sm:px-32 sm:text-2xl sm:bg-neutral-900"
           >
             <p>
-              Enthusiast of <mark class="bg-transparent text-orange-500">decentralized technologies</mark>, driven by the <mark class="bg-transparent text-orange-500">open-source movement</mark> and other geeky stuff. Currently working with an interactive marketing company focused on lead generation from Denver, CO.
+              Enthusiast of <mark class="bg-transparent text-orange-500 sm:text-neutral-200">decentralized technologies</mark>, driven by the <mark class="bg-transparent text-orange-500 sm:text-neutral-200">open-source movement</mark> and other geeky stuff. Currently working with an interactive marketing company focused on lead generation from Denver, CO.
             </p>
             <p>
-              Commit to continuous learning and professional development, I am stay abreast of emerging <mark class="bg-transparent text-orange-500">design trends</mark>, technological advancements, and industry best practices to deliver cutting-edge solutions.
+              Commit to continuous learning and professional development, I am stay abreast of emerging <mark class="inline-block bg-transparent text-orange-500 sm:text-neutral-200">design trends</mark>, technological advancements, and industry best practices to deliver cutting-edge solutions.
             </p>
           </div>
         </div>
       </section>
       <section class="flex items-center bg-neutral-950 sm:p-5 lg:p-10 relative">
-        <div id="job" class="absolute sm:-top-40 -top-20"></div>
+        <div id="job" class="absolute sm:-top-28 -top-20"></div>
         <div
           id="journey"
-          class="grid gap-px overflow-hidden rounded-lg sm:py-0 lg:grid-cols-3"
+          class="container grid overflow-hidden sm:gap-24 sm:grid-cols-3"
         ></div>
       </section>
-      <section class="bg-neutral-950 font-medium sm:pb-5 lg:pb-10" aria-hidden="true">
+      <section class="bg-neutral-950 font-medium" aria-hidden="true">
         <div class="marquee">
           <ul class="marquee__content">
-            <li>Stack</li>
-            <li>✦</li>
+            <li>Favorites</li>
+            <li>★</li>
             <li>Tools</li>
-            <li>✦</li>
+            <li>★</li>
             <li>Frameworks</li>
-            <li>✦</li>
+            <li>★</li>
           </ul>
           <ul class="marquee__content">
-            <li>Stack</li>
-            <li>✦</li>
+            <li>Favorites</li>
+            <li>★</li>
             <li>Tools</li>
-            <li>✦</li>
+            <li>★</li>
             <li>Frameworks</li>
-            <li>✦</li>
+            <li>★</li>
           </ul>
         </div>
       </section>
@@ -189,38 +191,38 @@
         <div
           id="tools"
           aria-label="Favorite tools and frameworks"
-          class="grid items-center gap-px overflow-hidden rounded-lg text-neutral-200 *:bg-black grid-cols-3 *:sm:bg-neutral-900 lg:grid-cols-6"
+          class="container grid items-center gap-px overflow-hidden rounded-lg text-neutral-400 *:bg-black grid-cols-3 *:sm:bg-neutral-900 sm:grid-cols-9"
         ></div>
       </section>
-      <footer id="hey" class="relative h-lvh lg:p-10">
+      <footer id="hey" class="relative container h-lvh">
         <nav
-          class="flex h-full flex-1 items-center p-6 sm:rounded-lg sm:bg-black lg:p-40"
+          class="flex h-full flex-1 items-center p-6 sm:rounded-lg"
         >
           <ul
             id="menu"
-            class="flex flex-1 font-medium flex-col flex-wrap gap-10 text-3xl"
+            class="flex flex-1 font-medium flex-col sm:flex-row sm:justify-center flex-wrap gap-8 sm:gap-24 text-3xl sm:text-4xl"
           ></ul>
         </nav>
         <div
-          class="absolute inset-x-6 bottom-6 p-0 lg:p-10 flex justify-between text-[11px] uppercase leading-none tracking-[2px] text-brand-200/50 lg:text-brand-200/25 duration-200 hover:text-brand-200/50"
+          class="absolute bottom-0 w-full p-6 z-50 flex justify-between text-sm leading-none font-medium text-orange-300/25 duration-200 hover:text-brand-200/50"
         >
-          <span class="text-orange-200 opacity-50 relative z-50"> more soon, or never. </span>
+          <span class="text-orange-500/80"> More soon, or never. </span>
           <div class="hidden md:block">
             <span> BTC Price </span>
-            /
+            ✦
             <span id="current-price"> 00,00 USD </span>
           </div>
           <div class="hidden md:block">
             <span> 200 DMA </span>
-            /
+            ✦
             <span id="moving-average"> 00,00 USD </span>
           </div>
           <div class="hidden md:block">
             <span> Mayer Multiple </span>
-            /
+            ✦
             <span id="mayer-multiple"> 0.0 </span>
           </div>
-          <span class="text-orange-200 opacity-50 relative z-50"> &copy; 2025 </span>
+          <span class="text-orange-500/80"> &copy; 2025 </span>
         </div>
       </footer>
     </main>
@@ -231,7 +233,7 @@
       <div></div>
       <div></div>
     </div>
-    <div id="noise" class="invisible transition-opacity  duration-250 opacity-0 delay-500"></div>
+    <div id="noise" class="invisible transition-opacity duration-250 opacity-0 delay-500"></div>
   </body>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script type="module" src="assets/js/btc.js"></script>

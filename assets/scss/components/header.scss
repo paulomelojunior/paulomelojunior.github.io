@@ -3,19 +3,12 @@ header {
     fixed
     inset-x-0
     z-10
-    flex
-    justify-between
     p-4
     pb-16
 
     bg-gradient-to-b
     from-[-50%]
     from-black
-
-    sm:px-8
-    sm:py-10
-
-    lg:px-20
-    lg:py-20
-    lg:text-base;
+    sm:px-0
+    sm:py-16;
 }

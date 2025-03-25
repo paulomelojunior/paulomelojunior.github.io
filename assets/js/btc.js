@@ -12,13 +12,6 @@ async function fetchBitcoinCurrentPrice() {
     return data.bitcoin.usd;
 }
 
-async function fetchBitcoinCurrentPriceBRL() {
-    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=brl'; // Valor atual
-    const response = await fetch(url);
-    const data = await response.json();
-    return data.bitcoin.brl;
-}
-
 function calculate200DMA(prices) {
     const sum = prices.reduce((acc, price) => acc + price[1], 0);
     const average = sum / prices.length;
@@ -30,12 +23,10 @@ async function main() {
     const prices = await fetchBitcoinData();
     const movingAverage = calculate200DMA(prices);
     const currentPrice = await fetchBitcoinCurrentPrice();
-    const currentPriceBrl = await fetchBitcoinCurrentPriceBRL();
     const mayerMultiple = currentPrice / movingAverage;
 
     document.querySelector('#moving-average').textContent = movingAverage.toFixed(2) + ' USD';
     document.querySelector('#current-price').textContent = currentPrice.toFixed(2) + ' USD';
-    document.querySelector('#current-price-brl').textContent = currentPriceBrl.toFixed(2) + ' BRL';
     document.querySelector('#mayer-multiple').textContent = mayerMultiple.toFixed(2);
 
     if (mayerMultiple > 1) {
