@@ -1,10 +1,10 @@
 export function tools() {
-    const toolValues = ['Figma', 'HTML5', 'CSS3', 'JS', 'GSAP', 'Tailwind']
+    const toolValues = ['Figma', 'Framer', 'HTML', 'CSS', 'JS', 'GSAP', 'Tailwind', 'Bootstrap']
     const toolList = document.querySelector('#tools')
 
     toolValues.forEach((element) => {
         const tool = `
-            <div class="title-sm flex aspect-square items-center justify-center tool">
+            <div class="flex text-xl font-medium aspect-square items-center justify-center tool">
                 ${element}
             </div>
             `

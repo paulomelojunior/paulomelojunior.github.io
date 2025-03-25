@@ -1,8 +1,8 @@
 import { menu } from './menu.js'
 import { journey } from './journey.js'
 import { tools } from './tools.js'
-import './devs.js'
 import './lenis.js'
+import './devs.js'
 import './gsap.js'
 
 menu()

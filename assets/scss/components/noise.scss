@@ -1,0 +1,22 @@
+#noise {
+    @apply
+    z-20
+    inset-x-0
+    top-0
+    h-lvh
+    overflow-hidden
+    pointer-events-none
+    fixed
+    before:content-['']
+    after:content-[''];
+    
+    &:before, &:after {
+        @apply
+        absolute
+        inset-0
+        bg-repeat
+        bg-left-top;
+        background-image: url(https://framerusercontent.com/images/9ErWmXn2IIfOUCaXNwDeuxqJXM.png);
+        background-size: 216px auto;
+    }
+}

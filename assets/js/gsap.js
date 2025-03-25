@@ -11,21 +11,49 @@ gsap.defaults({
     ease: CustomEase.create('custom', '.75,0,0.5,1'),
 })
 
+const btn = document.querySelectorAll('.button')
+const pic = document.querySelector('picture')
+const noise = document.querySelector('#noise')
 window.onload = function load() {
+    
     document.querySelectorAll('.invisible').forEach((i) => {
         i.classList.remove('invisible')
     })
+    
+    noise.classList.remove('opacity-0')
+    noise.classList.add('opacity-20')
 
     gsap.from('header', {
         translateY: '-50%',
         opacity: 0
     })
 
-    gsap.from('#heroTitle > span', {
-        height: 0,
-        delay: .5,
-        stagger: .5
+    btn.forEach((x) => {
+        gsap.to(x, {
+            scrollTrigger: {
+                trigger: pic,
+                start: `-${x.getBoundingClientRect().top} 0%`,
+                end: `${pic.getBoundingClientRect().bottom - x.getBoundingClientRect().top} ${pic.getBoundingClientRect().top}`,
+                toggleActions: 'play reverse play reverse',
+            },
+            y: '0',
+            color: `black`,
+            duration: 0.125
+        })
+    });
+
+    const heroLetters = document.querySelectorAll('.hero-letters')
+
+    heroLetters.forEach((chars) => {
+        const txt = new SplitType(chars, {types: 'chars'})    
+        gsap.from(txt.chars, {
+            y: '200%',
+            opacity: 0,
+            delay: .5,
+            stagger: 0.02
+        })
     })
+
 
     gsap.from('#heroFooter', {
         height: 0,
@@ -34,36 +62,30 @@ window.onload = function load() {
 
     gsap.from('#heroFooter > *', {
         opacity: 0,
-        translateY: '50%',
+        translateY: '100%',
+        delay: 1.5
+    })
+
+    gsap.from('picture', {
+        opacity: 0,
+        yPercent: 20,
+        filter: "blur(.25rem)",
         delay: 1
     })
 
-    gsap.to('#heroTitle', {
-        scrollTrigger: {
-            trigger: '#heroTitle',
-            start: 'center center',
-            end: 'center -25%',
-            scrub: true
-        },
-        filter: "blur(.125rem)",
-        yPercent: 100,
-        opacity: 0,
-        ease: 'none'
-    })
+    const mark = document.querySelectorAll('mark')
 
-    const split = document.querySelectorAll('.split-chars')
-
-    split.forEach((chars) => {
-        const txt = new SplitType(chars, {types: 'chars, words'})
-        gsap.to(txt.chars, {
+    mark.forEach((char) => {
+        const tex = new SplitType(char, {types: 'chars'})
+        gsap.from(tex.chars, {
             scrollTrigger: {
-                trigger: '#who',
-                start: '50% bottom',
-                toggleActions: 'play none none reverse',
-                scrub: true,
+            trigger: char,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
             },
-            color: '#fff',
-            stagger: 0.01
+            color: window.getComputedStyle(document.body).color,
+            stagger: 0.01,
+            duration: .25
         })
     });
 
@@ -71,6 +93,20 @@ window.onload = function load() {
     mm.add()
 
     mm.add("(min-width: 1024px)", () => {
+    
+        gsap.to('#heroTitle', {
+            scrollTrigger: {
+                trigger: '#heroTitle',
+                start: 'center center',
+                end: 'center -25%',
+                scrub: true
+            },
+            filter: "blur(.125rem)",
+            yPercent: 100,
+            opacity: 0,
+            ease: 'none'
+        })    
+
         gsap.from('.job', {
             scrollTrigger: {
                 trigger: '.job',

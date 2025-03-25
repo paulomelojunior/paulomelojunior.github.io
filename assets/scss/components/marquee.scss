@@ -9,6 +9,10 @@
 }
 
 .marquee {
+    @apply
+    border-t
+    border-neutral-800;
+
     --gap: 1rem;
     display: flex;
     overflow: hidden;
@@ -17,14 +21,38 @@
 }
 
 .marquee__content {
-    @apply flex uppercase shrink-0 items-center justify-around overflow-hidden whitespace-nowrap px-0 py-8 text-center text-lg leading-none sm:text-2xl sm:leading-none;
+    @apply
+    flex
+    uppercase
+    shrink-0
+    items-center
+    justify-around
+    overflow-hidden
+    whitespace-nowrap
+    px-0
+    py-6
+    text-center
+    text-lg
+    leading-none
+    sm:text-2xl
+    sm:leading-none;
+    
     min-width: 100%;
     gap: var(--gap);
-    animation: marquee 64s linear infinite;
+    animation: marquee 32s linear infinite;
+
+    > *:nth-child(even) {
+        @apply 
+        text-orange-500
+        h-3
+        leading-3
+        flex
+        font-normal;
+    }
 }
 
 .marquee {
-    mask-image: linear-gradient(
+    mask: linear-gradient(
         90deg,
         transparent,
         black,

@@ -24,60 +24,17 @@ body {
     bg-neutral-950
     text-neutral-500;
 
-    &:not(.grid):before {
+    &:after {
         content: '';
-        inset: 0;
+        height: 100lvh;
+        top: 0;
+        inset-inline: 0;
         background-image: linear-gradient(
             theme('colors.neutral.950') 50%,
-            theme('colors.brand.900') 200%
+            theme('colors.orange.900') 200%
         );
         background-color: theme('colors.neutral.950');
         position: fixed;
         z-index: -1;
-    }
-
-
-    &.grid {
-        --bg: theme('colors.zinc.950');
-        --cl: theme('colors.zinc.700');
-        --mm: theme('colors.zinc.400');
-
-        &.green {
-            --bg: theme('colors.green.950');
-            --cl: theme('colors.green.700');
-            --mm: theme('colors.green.400');
-        }
-        
-        &.violet {
-            --bg: theme('colors.violet.950');
-            --cl: theme('colors.violet.700');
-            --mm: theme('colors.violet.500');
-        }
-
-        .text-state {
-            color: var(--cl);
-        }
-
-        .bg-state {
-            background-color: var(--mm);
-        }
-
-        // @apply
-        // bg-zinc-950
-        // bg-fixed;
-        // background-image:
-        //     linear-gradient(
-        //         to left,
-        //         theme('colors.zinc.950'),
-        //         transparent
-        //     ),
-        //     linear-gradient(0deg,
-        //         theme('colors.zinc.950'),
-        //         transparent, 
-        //         theme('colors.zinc.950')
-        //     ),
-        //     url(../imgs/grid.svg),
-        //     url(../imgs/dots.svg),
-        //     linear-gradient(to left, transparent 50%, var(--bg) 200%);
     }
 }

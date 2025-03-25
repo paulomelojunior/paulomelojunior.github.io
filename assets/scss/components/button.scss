@@ -1,15 +1,11 @@
 .button {
     @apply flex
     items-center
-    gap-2
-    font-bold
-    rounded-full
-    py-2
-    px-3
+    font-semibold
+    p-2
     uppercase
     transition
     text-sm
     leading-none
-    hover:bg-white/10
-    hover:text-white;
+    hover:text-neutral-200;
 }

@@ -11,12 +11,12 @@
 
 @layer components {
     @import
+    'components/blur',
     'components/body',
     'components/button',
     'components/header',
     'components/lenis',
     'components/lucide',
     'components/marquee',
-    'components/paragraph',
-    'components/title';
+    'components/noise';
 }

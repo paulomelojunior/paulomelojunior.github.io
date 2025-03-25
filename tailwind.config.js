@@ -4,16 +4,16 @@ export default {
     theme: {
         fontFamily: {
             sans: [
-                '"Funnel", sans-serif',
+                '"General", sans-serif',
                 {
                     fontFeatureSettings: '"krnl"'
                 }
             ],
-            inter: [
-                '"Inter", sans-serif',
+            general: [
+                '"General", sans-serif',
                 {
-                    fontFeatureSettings: '"case", "ss01", "zero", "tnum"',
-                },
+                    fontFeatureSettings: '"krnl"'
+                }
             ]
         },
         extend: {
