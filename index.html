@@ -3,14 +3,14 @@
   <head>
     <title>Paulo M. ✦ Creative Coder</title>
     <meta
-      name="description"
-      content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him."
+    name="description"
+    content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him."
     />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
-      name="viewport"
-      content="width=device-width initial-scale=1 user-scalable=0 viewport-fit=cover"
+    name="viewport"
+    content="width=device-width initial-scale=1 user-scalable=0 viewport-fit=cover"
     />
 
     <meta property="og:image" content="https://pmjr.cc/profile.webp" />
@@ -18,8 +18,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pmjr.cc" />
     <meta
-      property="og:description"
-      content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him."
+    property="og:description"
+    content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him."
     />
 
     <meta name="twitter:card" value="summary" />
@@ -27,16 +27,12 @@
     <meta name="twitter:site" content="@hackyoto" />
     <meta name="twitter:title" content="Hackyoto" />
     <meta
-      name="twitter:description"
-      content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him."
+    name="twitter:description"
+    content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him."
     />
-
     <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" type="text/css" href="assets/scss/font.scss" />
-    <link rel="stylesheet" type="text/css" href="assets/scss/main.scss" />
   </head>
-
-  <body class="">
+  <body>
     <header class="invisible">
       <div class="progressive-blur absolute inset-0">
         <div></div>
@@ -54,21 +50,9 @@
         </span>
         <nav class="relative">
           <ul id="anchors" class="flex flex-col sm:flex-row items-end">
-            <li>
-              <a class="button" href="#who">
-                <span> About </span>
-              </a>
-            </li>
-            <li>
-              <a class="button" href="#job">
-                <span> Journey </span>
-              </a>
-            </li>
-            <li>
-              <a class="button" href="#hey">
-                <span> Social </span>
-              </a>
-            </li>
+            <menu-item href="#who" label="About"></menu-item>
+            <menu-item href="#job" label="Journey"></menu-item>
+            <menu-item href="#hey" label="Social"></menu-item>
           </ul>
         </nav>
       </div>
@@ -240,5 +224,6 @@
   <script>
     lucide.createIcons()
   </script>
+  <script type="module" src="src/main.ts"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </html>
-<script type="module" src="assets/js/main.js"></script>

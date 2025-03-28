@@ -2,6 +2,10 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+    esbuild: {
+        loader: 'ts',
+        include: /\.ts$/,
+    },
     build: {
         outDir: './docs',
         rollupOptions: {

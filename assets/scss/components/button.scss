@@ -1,5 +1,6 @@
 .button {
-    @apply flex
+    @apply
+    flex
     items-center
     font-semibold
     p-2
@@ -8,6 +9,5 @@
     text-sm
     leading-none
     hover:text-neutral-200
-    
     sm:p-4;
 }
