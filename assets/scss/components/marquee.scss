@@ -10,7 +10,7 @@
 
 .marquee {
     @apply
-    border-t
+    border-y
     border-neutral-800;
 
     --gap: 1rem;
@@ -43,7 +43,7 @@
 
     > *:nth-child(even) {
         @apply 
-        text-orange-500
+        text-brand-400
         h-3
         leading-3
         flex

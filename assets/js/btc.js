@@ -19,7 +19,7 @@ function calculate200DMA(prices) {
 }
 
 async function main() {
-    const bodyColor = document.querySelector('body');
+    // const bodyColor = document.querySelector('body');
     const prices = await fetchBitcoinData();
     const movingAverage = calculate200DMA(prices);
     const currentPrice = await fetchBitcoinCurrentPrice();
@@ -29,17 +29,13 @@ async function main() {
     document.querySelector('#current-price').textContent = currentPrice.toFixed(2) + ' USD';
     document.querySelector('#mayer-multiple').textContent = mayerMultiple.toFixed(2);
 
-    if (mayerMultiple > 1) {
-        bodyColor.classList.add('violet');
-        bodyColor.classList.remove('green');
-    } else {
-        bodyColor.classList.add('green');
-        bodyColor.classList.remove('violet');
-    }
-}
-
-function update() {
-    document.querySelector('button').addEventListener('click', );
+    // if (mayerMultiple > 1) {
+    //     bodyColor.classList.add('violet');
+    //     bodyColor.classList.remove('green');
+    // } else {
+    //     bodyColor.classList.add('green');
+    //     bodyColor.classList.remove('violet');
+    // }
 }
 
 main();

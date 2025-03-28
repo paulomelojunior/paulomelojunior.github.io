@@ -1,22 +1,13 @@
 #noise {
     @apply
     z-20
-    inset-x-0
-    top-0
-    h-lvh
-    overflow-hidden
+    h-full
+    w-full
     pointer-events-none
-    fixed
-    before:content-['']
-    after:content-[''];
-    
-    &:before, &:after {
-        @apply
-        absolute
-        inset-0
-        bg-repeat
-        bg-left-top;
-        background-image: url(../imgs/noise.avif);
-        background-size: 216px auto;
-    }
+    absolute
+    sm:fixed
+    bg-repeat
+    bg-left-top
+    bg-[url('../imgs/noise.avif')]
+    bg-[length:216px_auto];
 }

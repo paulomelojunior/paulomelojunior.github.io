@@ -27,11 +27,11 @@ body {
     &:after {
         content: '';
         height: 100lvh;
-        top: 0;
+        bottom: 0;
         inset-inline: 0;
         background-image: linear-gradient(
             theme('colors.neutral.950') 50%,
-            theme('colors.orange.900') 200%
+            theme('colors.brand.900') 200%
         );
         background-color: theme('colors.neutral.950');
         position: fixed;

@@ -6,11 +6,11 @@ export function menu() {
             url: 'https://cosmos.so/hackyoto',
             extra: '✦',
         },
-        // nostr: {
-        //     label: 'Nostr',
-        //     url: 'https://primal.net/p/npub1c7vp7kfh3lslrxwah4p4g2ty4v8wv4frtuxgq6565k8se4kj97ksqshw7m',
-        //     extra: '✦ NIP-05 boss@hac.wtf'
-        // },
+        nostr: {
+            label: 'Nostr',
+            url: 'https://primal.net/p/npub1c7vp7kfh3lslrxwah4p4g2ty4v8wv4frtuxgq6565k8se4kj97ksqshw7m',
+            extra: '✦'
+        },
         github: {
             label: 'GitHub',
             url: 'https://github.com/paulomelojunior',
@@ -19,12 +19,12 @@ export function menu() {
         instagram: {
             label: 'Instagram',
             url: 'https://instagram.com/paulomelojunior',
-            extra: '✦ ',
+            extra: '✦',
         },
         linkedin: {
             label: 'LinkedIn',
             url: 'https://linkedin.com/in/paulomelojunior/',
-            extra: '✦ ',
+            extra: '✦',
         },
 
     }
@@ -36,7 +36,7 @@ export function menu() {
             <li>
                 <a target="_blank" class="group/item flex items-center text-gray-200 relative" rel="noopener noreferrer" href="${e.url}">
                     ${e.extra ?
-                        `<span class="text-lg font-medium tracking-[2px] absolute text-orange-500 duration-200 -translate-x-[2rem] group-hover/item:-translate-x-[1.125rem] opacity-0 group-hover/item:opacity-100">
+                        `<span class="text-lg font-medium tracking-[2px] absolute text-brand-400 duration-200 -translate-x-[2rem] group-hover/item:-translate-x-[1.125rem] opacity-0 group-hover/item:opacity-100">
                             ${e.extra}
                         </span>` : ``} 
                     ${e.label}
