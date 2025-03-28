@@ -90,7 +90,7 @@ window.onload = function load() {
         });
     })
 
-    .add("(min-width: 1024px)", () => {
+    mm.add("(min-width: 1024px)", () => {
         gsap.from('.job', {
             scrollTrigger: {
                 trigger: '.job',

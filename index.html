@@ -36,7 +36,8 @@
     <link rel="stylesheet" type="text/css" href="assets/scss/main.scss" />
   </head>
 
-  <body class="">
+  <body class="relative">
+    <div id="noise" class="transition-opacity duration-250 opacity-0"></div>
     <header class="invisible">
       <div class="progressive-blur absolute inset-0">
         <div></div>
@@ -53,20 +54,20 @@
           Paul M.
         </span>
         <nav class="relative">
-          <ul id="anchors" class="flex flex-col sm:flex-row items-end">
+          <ul id="anchors" class="flex items-end">
             <li>
               <a class="button" href="#who">
-                <span> About </span>
+                Who
               </a>
             </li>
             <li>
               <a class="button" href="#job">
-                <span> Journey </span>
+                Job
               </a>
             </li>
             <li>
               <a class="button" href="#hey">
-                <span> Social </span>
+                Hey
               </a>
             </li>
           </ul>
@@ -81,20 +82,12 @@
           id="heroTitle"
           class="text-[2.125rem] sm:text-7xl text-neutral-200 mb-[4rem] leading-none"
           >
-          <div class="hidden sm:flex flex-col">
+          <div class="flex flex-col">
             <span class="block hero-letters">
-              Designer & UI Developer
+              Creative Coder
             </span>
             <span  class="block hero-letters">
               Working from Brazil
-            </span>
-          </div>
-          <div class="sm:hidden">
-            <span class="block hero-letters">
-              Product Designer 
-            </span>
-            <span  class="block hero-letters">
-              & UI Dev from Brazil
             </span>
           </div>
         </h1>
@@ -106,23 +99,19 @@
       >
         <div class="marquee">
           <ul class="marquee__content">
-            <li>Integrative Teamwork</li>
+            <li>Design Engineer</li>
             <li>✦</li>
             <li>Product Design</li>
             <li>✦</li>
             <li>User Interface</li>
-            <li>✦</li>
-            <li>Front-end dev</li>
             <li>✦</li>
           </ul>
           <ul class="marquee__content">
-            <li>Integrative Teamwork</li>
+            <li>Design Engineer</li>
             <li>✦</li>
             <li>Product Design</li>
             <li>✦</li>
             <li>User Interface</li>
-            <li>✦</li>
-            <li>Front-end dev</li>
             <li>✦</li>
           </ul>
         </div>
@@ -226,14 +215,13 @@
         </div>
       </footer>
     </main>
-    <div class="progressive-blur fixed inset-x-0 h-32 -translate-y-full top-[100lvh] rotate-180">
+    <div class="progressive-blur fixed inset-x-0 h-32 bottom-0 rotate-180">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div id="noise" class="invisible transition-opacity duration-250 opacity-0 delay-500"></div>
   </body>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script type="module" src="assets/js/btc.js"></script>
