@@ -9,16 +9,7 @@ export default {
         fontFamily: {
             sans: [
                 '"General", sans-serif',
-                {
-                    fontFeatureSettings: '"krnl"'
-                }
             ],
-            general: [
-                '"General", sans-serif',
-                {
-                    fontFeatureSettings: '"krnl"'
-                }
-            ]
         },
         container: {
             center: true

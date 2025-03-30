@@ -61,10 +61,10 @@ window.onload = function load() {
         mark.forEach((char) => {
             const tex = new SplitType(char, {types: 'chars'})
             gsap.from(tex.chars, {
-                scrollTrigger: {
-                trigger: char,
-                start: 'top 75%',
-                toggleActions: 'play none none reverse',
+                    scrollTrigger: {
+                    trigger: char,
+                    start: 'top 75%',
+                    toggleActions: 'play none none reverse',
                 },
                 color: window.getComputedStyle(document.body).color,
                 stagger: 0.01,
@@ -72,7 +72,7 @@ window.onload = function load() {
             })
         });
 
-        const btn = document.querySelectorAll('.button')
+        const btn = document.querySelectorAll('.menu-item')
         const pic = document.querySelector('picture')
         
         btn.forEach((x) => {
