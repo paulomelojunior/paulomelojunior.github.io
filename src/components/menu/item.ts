@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 @customElement('menu-item')
 export class MenuItem extends LitElement {
-	@property({ type: String }) href: string = '#';
+	@property({ type: String }) href: string = '';
 	@property({ type: String }) label: string = '';
 
 	render() {

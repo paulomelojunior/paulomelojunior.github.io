@@ -59,4 +59,10 @@
         black,
         transparent
     );
+
+    &.reverse {
+        .marquee__content {
+            animation-direction: reverse;
+        }
+    }
 }
