@@ -10,7 +10,10 @@
     "who": "Who",
     "job": "Job",
     "hey": "Hey",
-    "changeLang": "Change language"
+    "languages": {
+      "en": "English",
+      "pt": "Portuguese"
+    }
   },
   "about": {
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white.",

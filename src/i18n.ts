@@ -3,7 +3,7 @@ import en from './language/en.json';
 import pt from './language/pt.json';
 
 i18next.init({
-  lng: 'pt',
+  lng: 'en',
   fallbackLng: 'en',
   resources: {
     en: { translation: en },

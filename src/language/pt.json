@@ -5,12 +5,15 @@
       "afternoon": "Boa tarde",
       "night": "Boa noite"
     },
-    "hello": "chefe.",
+    "hello": "Oi,",
     "name": "Paulo aqui",
     "who": "Sobre",
     "job": "Jornada",
     "hey": "Contato",
-    "changeLang": "Mudar idioma"
+    "languages": {
+      "en": "Inglês",
+      "pt": "Português"
+    }
   },
   "about": {
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
