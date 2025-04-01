@@ -21,6 +21,7 @@
     "dependencies": {
         "classnames": "^2.5.1",
         "gsap": "^3.12.5",
+        "i18next": "^24.2.3",
         "lenis": "^1.0.45",
         "lit": "^3.2.1",
         "split-type": "^0.3.4"

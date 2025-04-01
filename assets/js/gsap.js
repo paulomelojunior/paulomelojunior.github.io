@@ -39,7 +39,7 @@ window.onload = function load() {
         })
     })
     
-    gsap.from('#heroFooter > *', {
+    gsap.from('#heroFooter .marquee', {
         opacity: 0,
         yPercent: 100,
         delay: .5,
