@@ -5,14 +5,15 @@
       "afternoon": "Good afternoon",
       "night": "Good night"
     },
-    "hello": "Hello, I'm",
-    "name": "Paul M.",
-    "who": "Who",
-    "job": "Job",
-    "hey": "Hey",
+    "hello": "/ hello",
+    "name": "pmjr.cc",
+    "who": "About",
+    "job": "Works",
+    "hey": "Social",
+    "more": "More",
     "languages": {
-      "en": "English",
-      "pt": "Portuguese"
+      "en": "EN",
+      "pt": "PT"
     }
   },
   "about": {

@@ -34,7 +34,7 @@ export function menu() {
     navValues.forEach((e) => {
         const navItem = `
             <li>
-                <a target="_blank" class="group/item flex items-center text-gray-200 relative" rel="noopener noreferrer" href="${e.url}">
+                <a target="_blank" class="group/item flex items-center text-zinc-200 relative" rel="noopener noreferrer" href="${e.url}">
                     ${e.extra ?
                         `<span class="text-lg font-medium tracking-[2px] absolute text-brand-400 duration-200 -translate-x-[2rem] group-hover/item:-translate-x-[1.125rem] opacity-0 group-hover/item:opacity-100">
                             ${e.extra}

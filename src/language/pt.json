@@ -5,14 +5,15 @@
       "afternoon": "Boa tarde",
       "night": "Boa noite"
     },
-    "hello": "Oi,",
-    "name": "Paulo aqui",
+    "hello": "oi",
+    "name": "@pmjr.cc",
     "who": "Sobre",
     "job": "Jornada",
     "hey": "Contato",
+    "more": "Mais",
     "languages": {
-      "en": "Inglês",
-      "pt": "Português"
+      "en": "EN",
+      "pt": "PT"
     }
   },
   "about": {

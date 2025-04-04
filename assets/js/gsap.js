@@ -32,7 +32,6 @@ window.onload = function load() {
     heroLetters.forEach((chars) => {
         const txt = new SplitType(chars, {types: 'chars'})    
         gsap.from(txt.chars, {
-            y: '200%',
             opacity: 0,
             delay: 1,
             stagger: 0.02
@@ -72,22 +71,22 @@ window.onload = function load() {
             })
         });
 
-        const btn = document.querySelectorAll('.menu-item')
-        const pic = document.querySelector('picture')
+        // const btn = document.querySelectorAll('.menu-item')
+        // const pic = document.querySelector('picture')
         
-        btn.forEach((x) => {
-            gsap.to(x, {
-                scrollTrigger: {
-                    trigger: pic,
-                    start: `-${x.getBoundingClientRect().top} 0%`,
-                    end: `${pic.getBoundingClientRect().bottom - x.getBoundingClientRect().top} ${pic.getBoundingClientRect().top}`,
-                    toggleActions: 'play reverse play reverse',
-                },
-                y: '0',
-                color: `black`,
-                duration: 0.125
-            })
-        });
+        // btn.forEach((x) => {
+        //     gsap.to(x, {
+        //         scrollTrigger: {
+        //             trigger: pic,
+        //             start: `-${x.getBoundingClientRect().top} 0%`,
+        //             end: `${pic.getBoundingClientRect().bottom - x.getBoundingClientRect().top} ${pic.getBoundingClientRect().top}`,
+        //             toggleActions: 'play reverse play reverse',
+        //         },
+        //         y: '0',
+        //         color: `black`,
+        //         duration: 0.125
+        //     })
+        // });
     })
 
     mm.add("(min-width: 1024px)", () => {

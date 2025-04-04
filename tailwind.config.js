@@ -8,7 +8,10 @@ export default {
     theme: {
         fontFamily: {
             sans: [
-                '"General", sans-serif',
+                '"Aspekta", sans-serif',
+                {
+                    fontFeatureSettings: '"ss02", "ss04", "ss07", "ss08", "ss11"'
+                }
             ],
         },
         container: {
@@ -28,6 +31,19 @@ export default {
                     '800': '#001be3',
                     '900': '#000fb3',
                     '950': '#000566',
+                },
+                'canary': {
+                    '50': '#fdffe5',
+                    '100': '#f9ffc7',
+                    '200': '#f2ff95',
+                    '300': '#e6ff64',
+                    '400': '#d2f625',
+                    '500': '#b3dd05',
+                    '600': '#8bb100',
+                    '700': '#688605',
+                    '800': '#53690b',
+                    '900': '#45590e',
+                    '950': '#243201',
                 },
             }
         },
