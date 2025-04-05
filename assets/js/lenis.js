@@ -2,6 +2,8 @@ import Lenis from 'lenis'
 
 const lenis = new Lenis()
 
+window.lenis = lenis;
+
 function raf(time) {
     lenis.raf(time)
     requestAnimationFrame(raf)
@@ -9,19 +11,13 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
-function lenisAnchor(target) {
-    return lenis.scrollTo(target)
-}
-
-function handleAnchor() {
-    const anchors = document.querySelectorAll('#anchors a')
-
-    anchors.forEach((a) => {
-        const ref = a.getAttribute('href')
-        a.addEventListener('click', () => {
-            lenisAnchor(ref)
-        })
-    })
-}
-
-handleAnchor()
+document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]')
+    if (anchor) {
+        e.preventDefault()
+        const target = document.querySelector(anchor.getAttribute('href'))
+        if (target) {
+            lenis.scrollTo(target)
+        }
+    }
+})

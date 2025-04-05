@@ -20,7 +20,7 @@ window.onload = function load() {
     })
     
     noise.classList.remove('opacity-0')
-    noise.classList.add('opacity-20')
+    noise.classList.add('opacity-15')
 
     gsap.from('header', {
         translateY: '-50%',
@@ -32,24 +32,38 @@ window.onload = function load() {
     heroLetters.forEach((chars) => {
         const txt = new SplitType(chars, {types: 'chars'})    
         gsap.from(txt.chars, {
+            color: window.getComputedStyle(document.querySelector('.text-brand-400\\/80')).color,
+            delay: 0,
             opacity: 0,
-            delay: 1,
+            yPercent: -200,
             stagger: 0.02
         })
     })
     
-    gsap.from('#heroFooter .marquee', {
+    gsap.from('#heroFooter .marquee__content li', {
         opacity: 0,
-        yPercent: 100,
+        yPercent: 200,
         delay: .5,
+        stagger: 0.1
     })
 
-    gsap.from('#about', {
+    gsap.from('#about > div', {
+        delay: .5,
         opacity: 0,
-        yPercent: 20,
+        y: '10%',
     })
 
+    gsap.from('#about > picture', {
+        delay: .5,
+        opacity: 0,
+    })
     
+    gsap.from('#about img', {
+        delay: .5,
+        opacity: 0,
+        scale: 1.2,
+        filter: 'blur(1rem)',
+    })
     
     let mm = gsap.matchMedia();
     

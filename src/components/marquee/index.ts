@@ -6,11 +6,12 @@ import './styles.scss';
 @customElement('marquee-element')
 export class MarqueeElement extends LitElement {
   @property({ type: String }) items: string = '';
+  @property({ type: String }) glyph: string = '✦';
   @property({ type: Boolean }) reverse: boolean = false;
   
   render() {
     const list = this.items.split(',').map(item => item.trim());
-    const items = list.map((item) => html`<li>${item}</li><li>✦</li>`);
+    const items = list.map((item) => html`<li>${item}</li><li>${this.glyph}</li>`);
     const reverse = this.reverse;
     const classList = classNames('marquee', { reverse });
 

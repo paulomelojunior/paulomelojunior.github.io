@@ -1,0 +1,24 @@
+#hero {
+    @apply
+    bg-none
+    sm:bg-[url('../imgs/dots.svg'),_url('../imgs/grid.svg')]
+    sm:bg-[length:auto]
+    sm:bg-bottom
+    relative;
+    &:before {
+        content: '';
+        height: 100lvh;
+        bottom: 0;
+        inset-inline: 0;
+        background-position: fixed;
+        background-image:
+        linear-gradient(to top, theme('colors.transparent') 0%, theme('colors.zinc.950') 50%),
+        linear-gradient(to right,
+        theme('colors.zinc.950') 0%,
+        theme('colors.transparent') 40%, 
+        theme('colors.transparent') 60%, 
+        theme('colors.zinc.950') 100%);
+        position: absolute;
+        z-index: 0;
+    }
+}
