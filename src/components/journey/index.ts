@@ -8,8 +8,18 @@ export class JourneySection extends I18nElement {
 
   constructor() {
     super()
+    this.updateJourneyData()
+  }
+
+  private updateJourneyData() {
     const journeyData = this.t('journey', { returnObjects: true })
     this.items = typeof journeyData === 'object' ? journeyData as Record<string, any> : {}
+  }
+
+  updated(changedProperties: Map<string, any>) {
+    if (changedProperties.has('lang')) {
+      this.updateJourneyData()
+    }
   }
 
   private renderJobItem(item: any) {
