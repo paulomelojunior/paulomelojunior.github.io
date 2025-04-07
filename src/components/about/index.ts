@@ -1,9 +1,7 @@
 import i18next from '../../i18n';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import profile1x from '../../assets/imgs/profile-1x.webp';
-import profile2x from '../../assets/imgs/profile-2x.webp';
-import profile3x from '../../assets/imgs/profile-3x.webp';
+import pic from '../../assets/imgs/pic-1x.webp';
 
 @customElement('about-section')
 export class AboutSection extends LitElement {
@@ -28,18 +26,13 @@ export class AboutSection extends LitElement {
       <section class="bg-zinc-950 relative">
         <div id="who" class="absolute sm:-top-16 top-0"></div>
         <div id="about" class="container flex flex-col sm:flex-row overflow-hidden rounded-lg bg-zinc-900">
-          <picture class="h-[100vw] aspect-square overflow-hidden sm:h-[50dvh] sm:w-[50dvh] from-zinc-500 to-zinc-400 bg-gradient-to-t">
+          <div id="noise" class="transition-opacity duration-250 opacity-0"></div>
+          <picture class="h-[100vw] relative invert-[0.05] saturate-[0.8] contrast-[1.05] hue-rotate-[-10deg] aspect-square overflow-hidden sm:h-[50dvh] sm:w-[50dvh]">
             <img 
-              alt="${i18next.t('about.picDescription')}"
-              class="h-full object-cover mix-blend-multiply" 
-              loading="lazy" 
-              src="${profile3x}" 
-              srcset="
-                ${profile1x}  480w,
-                ${profile2x}  720w,
-                ${profile3x} 1440w
-              " 
-              sizes="(max-width: 480px) 480px, (max-width: 720px) 720px, 1440px" 
+            alt="${i18next.t('about.picDescription')}"
+            class="h-full object-cover" 
+            loading="lazy" 
+            src="${pic}" 
             />
           </picture>
           <div class="flex flex-col flex-1 justify-center gap-4 sm:gap-8 px-6 py-12 leading-loose font-normal sm:px-32 sm:text-2xl">

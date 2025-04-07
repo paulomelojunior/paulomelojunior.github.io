@@ -5,6 +5,7 @@
     sm:bg-[length:auto]
     sm:bg-bottom
     relative;
+    
     &:before {
         content: '';
         height: 100lvh;
@@ -12,12 +13,12 @@
         inset-inline: 0;
         background-position: fixed;
         background-image:
-        linear-gradient(to top, theme('colors.transparent') 0%, theme('colors.zinc.950') 50%),
+        linear-gradient(to top, theme('colors.transparent') 0%, theme('colors.black') 50%),
         linear-gradient(to right,
-        theme('colors.zinc.950') 0%,
+        theme('colors.black') 0%,
         theme('colors.transparent') 40%, 
         theme('colors.transparent') 60%, 
-        theme('colors.zinc.950') 100%);
+        theme('colors.black') 100%);
         position: absolute;
         z-index: 0;
     }

@@ -12,7 +12,6 @@
 ::-webkit-scrollbar-thumb {
     @apply bg-zinc-800;
     border: 0 solid theme('colors.zinc.900');
-    // border-radius: 100vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -30,7 +29,7 @@ body {
         bottom: 0;
         inset-inline: 0;
         background-position: fixed;
-        background-image: linear-gradient(theme('colors.zinc.950') 50%, theme('colors.brand.950') 200%);
+        background-image: linear-gradient(theme('colors.black') 50%, theme('colors.brand.950') 200%);
         background-color: theme('colors.zinc.950');
         position: fixed;
         z-index: -1;
