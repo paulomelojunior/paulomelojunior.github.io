@@ -46,10 +46,10 @@ export class MenuContainer extends I18nElement {
             <menu-item href="#hey" label="${i18next.t('menu.hey')}"></menu-item>
           </ul>
         </nav>
-        <!-- <div class="flex items-center">
+        <div class="flex items-center">
           <menu-button @click=${() => this.changeLanguage('en')} label="${i18next.t('menu.languages.en')}" ?active=${this.lang === 'en'}></menu-button>
           <menu-button @click=${() => this.changeLanguage('pt')} label="${i18next.t('menu.languages.pt')}" ?active=${this.lang === 'pt'}></menu-button>
-        </div> -->
+        </div>
         <!-- ${this.more ? html`
           <div class="absolute top-full right-0 bg-zinc-900 rounded-lg">
           </div>
