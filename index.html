@@ -46,30 +46,14 @@
 		<menu-container></menu-container>
 	</header>
 	<main class="invisible">
-		<section
-			id="hero"
-			class="container font-medium flex h-[calc(100lvh-100vw)] flex-col justify-end p-6 sm:p-0 sm:h-[calc(50dvh-4rem)]">
-			<h1 id="heroTitle" class="text-[2.125rem] sm:text-7xl text-neutral-200 mb-[4rem] tracking-[-0.02em] leading-none">
-				<div class="flex flex-col">
-					<span class="block hero-letters">
-						Product Designer
-					</span>
-					<span class="block hero-letters">
-						And UI Engineer
-					</span>
-				</div>
-			</h1>
-		</section>
+		<hero-section></hero-section>
 		<section id="heroFooter" class="bg-zinc-950 font-medium items-center absolute sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
 			<div class="container">
 				<marquee-element items="Design Engineering, Product Design, User Interface"></marquee-element>
 			</div>
 		</section>
 		<about-section></about-section>
-		<section class="flex items-center bg-zinc-950 sm:p-5 lg:p-10 relative">
-			<div id="job" class="absolute sm:-top-28 -top-20"></div>
-			<div id="journey" class="container grid overflow-hidden sm:gap-24 sm:grid-cols-3"></div>
-		</section>
+		<journey-section></journey-section>
 		<section class="bg-zinc-950 font-medium" aria-hidden="true">
 			<div class="container">
 				<marquee-element items="Favorites, Tools, Frameworks"></marquee-element>

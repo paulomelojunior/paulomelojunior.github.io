@@ -16,6 +16,12 @@
       "pt": "PT"
     }
   },
+  "hero": {
+    "roles": {
+      "designer": "Product Designer",
+      "engineer": "And UI Engineer"
+    }
+  },
   "about": {
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white.",
     "content": {
@@ -28,6 +34,35 @@
       "p4": "I commit to continuous learning and professional development, staying abreast of emerging",
       "h5": "design trends",
       "p5": "technological advancements, and industry best practices to deliver cutting-edge solutions."
+    }
+  },
+  "journey": {
+    "1": {
+        "start": "2016",
+        "end": "2018",
+        "title": "Designer,\nFront-end Dev",
+        "description": "In multifaceted collaboration with managers and the development team, we successfully redesigned the interfaces and features of company's software.",
+        "more": "Also played a key role in co-creating a platform that facilitates connecting individuals facing legal issues with specialized professionals."
+    },
+    "2": {
+        "start": "2018",
+        "end": "2019",
+        "title": "Visual and\nProduct Designer",
+        "description": "Early 2018, I held the role of a generalist designer, tasked with developing and managing all aspects of design and creative outputs for their product project.",
+        "more": "Second half of the year, I collaborated with another company to design an open-source library of interface components."
+    },
+    "3": {
+        "start": "2019",
+        "end": "2025",
+        "title": "Lead Designer,\nUI Developer",
+        "description": "Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability."
+    },
+    "4": {
+        "custom": "hidden",
+        "start": "2015",
+        "end": "2016",
+        "title": "Design Intern",
+        "description": "During my internship, I had the opportunity to refine and develop skills across various functions. HTML and CSS development, marketing initiatives, visual design, branding, and UX/UI design."
     }
   }
 }

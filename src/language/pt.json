@@ -16,9 +16,15 @@
       "pt": "PT"
     }
   },
+  "hero": {
+    "roles": {
+      "designer": "Designer de Produtos",
+      "engineer": "e Desenvolvedor de Interfaces"
+    }
+  },
   "about": {
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
-  "content": {
+    "content": {
       "p1": "Entusiasta de",
       "h1": "tecnologias descentralizadas",
       "p2": "impulsionado pelo",
@@ -28,6 +34,35 @@
       "p4": "me comprometo com o aprendizado contínuo e desenvolvimento profissional, mantendo-me atualizado sobre",
       "h5": "tendências de design",
       "p5": "avanços tecnológicos e melhores práticas da indústria para entregar soluções de ponta."
+    }
+  },
+  "journey": {
+    "1": {
+        "start": "2016",
+        "end": "2018",
+        "title": "Designer,\nDesenvolvedor Front-end",
+        "description": "Em colaboração multifacetada com gerentes e a equipe de desenvolvimento, redesenhamos com sucesso as interfaces e funcionalidades do software da empresa.",
+        "more": "Também tive um papel fundamental na cocriação de uma plataforma que facilita a conexão entre indivíduos com questões legais e profissionais especializados."
+    },
+    "2": {
+        "start": "2018",
+        "end": "2019",
+        "title": "Designer Visual e\nde Produto",
+        "description": "No início de 2018, atuei como designer generalista, responsável por desenvolver e gerenciar todos os aspectos do design e produções criativas para o projeto do produto.",
+        "more": "No segundo semestre do ano, colaborei com outra empresa para projetar uma biblioteca de componentes de interface open-source."
+    },
+    "3": {
+        "start": "2019",
+        "end": "2025",
+        "title": "Designer Líder,\nDesenvolvedor UI",
+        "description": "Atualmente responsável pelo redesenho da plataforma avançada de gestão de leads da empresa, utilizando componentes React para melhorar a performance e escalabilidade."
+    },
+    "4": {
+        "custom": "hidden",
+        "start": "2015",
+        "end": "2016",
+        "title": "Estagiário de Design",
+        "description": "Durante meu estágio, tive a oportunidade de refinar e desenvolver habilidades em várias funções. Desenvolvimento HTML e CSS, iniciativas de marketing, design visual, branding e design UX/UI."
     }
   }
 }

@@ -1,11 +1,11 @@
 import i18next from '../../i18n';
-import { html, LitElement } from 'lit';
+import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { I18nElement } from '../../base/i18n-element';
 
 @customElement('menu-container')
-export class MenuContainer extends LitElement {
+export class MenuContainer extends I18nElement {
   @property({ type: Boolean }) more = false;
-  @property({ type: String }) lang = i18next.language;
 
   constructor() {
     super();

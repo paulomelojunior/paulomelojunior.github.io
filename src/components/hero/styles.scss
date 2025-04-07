@@ -1,11 +1,4 @@
 #hero {
-    @apply
-    bg-none
-    sm:bg-[url('../imgs/dots.svg'),_url('../imgs/grid.svg')]
-    sm:bg-[length:auto]
-    sm:bg-bottom
-    relative;
-    
     &:before {
         content: '';
         height: 100lvh;
