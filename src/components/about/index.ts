@@ -31,7 +31,7 @@ export class AboutSection extends LitElement {
             <img 
             alt="${i18next.t('about.picDescription')}"
             class="h-full object-cover" 
-            loading="lazy" 
+            loading="eager"
             src="${pic}" 
             />
           </picture>

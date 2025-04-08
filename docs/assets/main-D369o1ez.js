@@ -33,7 +33,7 @@ var tf=Object.defineProperty;var rf=(s,e,t)=>e in s?tf(s,e,{enumerable:!0,config
             <img 
             alt="${q.t("about.picDescription")}"
             class="h-full object-cover" 
-            loading="lazy" 
+            loading="eager"
             src="${Kf}" 
             />
           </picture>
