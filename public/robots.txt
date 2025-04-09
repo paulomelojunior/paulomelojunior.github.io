@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hac.wtf/sitemap.xml
+Sitemap: https://pmjr.cc/sitemap.xml
