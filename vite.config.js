@@ -12,7 +12,10 @@ export default defineConfig({
                 main: 'index.html',
                 404: '404.html'
             }
-        },
-        cssCodeSplit: false
-    }
+        }
+    },
+    server: {
+        port: 2025,
+        open: true,
+    },
 })

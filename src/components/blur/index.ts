@@ -15,7 +15,7 @@ export class ProgressiveBlur extends LitElement {
 
     return html`
       <div class=${classList}>
-        ${Array.from({ length: 5 }, () => html`<div></div>`)}
+        ${Array.from({ length: 6 }, () => html`<div></div>`)}
       </div>
     `;
   }

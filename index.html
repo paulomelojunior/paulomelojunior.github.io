@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
 	<title>Paulo M. ✦ Creative Coder</title>
@@ -34,86 +34,79 @@
 		type="text/css"
 		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
 	/>
-	<link rel="stylesheet" href="./assets/scss/font.scss">
-	<link rel="stylesheet" href="./assets/scss/main.scss">
+	<link rel="stylesheet" href="src/assets/scss/font.scss">
+	<link rel="stylesheet" href="src/assets/scss/main.scss">
 	<script type="module" src="src/main.ts"></script>
 </head>
 
 <body class="relative">
 	<div id="noise" class="transition-opacity duration-250 opacity-0"></div>
-	<header class="invisible">
-		<progressive-blur custom="absolute inset-0"></progressive-blur>
+	<header class="grid items-center w-full absolute inset-x-0 z-10 invisible">
 		<menu-container></menu-container>
 	</header>
 	<main class="invisible">
 		<section
 			id="hero"
-			class="container font-medium flex h-[calc(100lvh-100vw)] flex-col justify-end p-6 sm:p-0 sm:h-[calc(50dvh-4rem)]">
-			<h1 id="heroTitle" class="text-[2.125rem] sm:text-7xl text-neutral-200 mb-[4rem] tracking-[-0.02em] leading-none">
-				<div class="flex flex-col">
-					<span class="block hero-letters">
-						Product Designer
-					</span>
-					<span class="block hero-letters">
-						And UI Engineer
-					</span>
+			class="container flex h-[calc(100lvh-100vw)] flex-col justify-end sm:h-[calc(50dvh-4rem)]">
+			<h1 id="heroTitle">
+				<div class="flex flex-col items-start px-5 xl:items-center">
+					<div id="logo" class="flex gap-1.5 items-center pt-5 mb-2 top-0 z-10">
+						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
+						<span class="uppercase font-[550] text-sm text-zinc-500 dark:text-brand-400">
+							pmjr.cc
+						</span>
+					</div>
+					<div class="text-[2.5rem] mb-14 pb-12 text-neutral-800 tracking-[-0.02em] leading-none font-[450] xl:text-center xl:text-[4rem] xl:tracking-[-0.04em] dark:text-neutral-200">
+						<span class="block hero-letters">
+							Product Designer
+						</span>
+						<span class="block hero-letters">
+							And UI Engineer
+						</span>
+					</div>
 				</div>
 			</h1>
 		</section>
-		<section id="heroFooter" class="bg-zinc-950 font-medium items-center absolute sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
+		<section id="heroFooter" class="items-center absolute sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
 			<div class="container">
 				<marquee-element items="Design Engineering, Product Design, User Interface"></marquee-element>
 			</div>
 		</section>
 		<about-section></about-section>
-		<section class="flex items-center bg-zinc-950 sm:p-5 lg:p-10 relative">
+		<section class="flex items-center  sm:p-5 lg:p-10 relative">
 			<div id="job" class="absolute sm:-top-28 -top-20"></div>
 			<div id="journey" class="container grid overflow-hidden sm:gap-24 sm:grid-cols-3"></div>
 		</section>
-		<section class="bg-zinc-950 font-medium" aria-hidden="true">
+		<section class="font-medium" aria-hidden="true">
 			<div class="container">
 				<marquee-element items="Favorites, Tools, Frameworks"></marquee-element>
 			</div>
 		</section>
-		<section class="items-center bg-gradient-to-b from-zinc-950 from-50% *:flex-1 sm:px-5 lg:px-10">
+		<section class="items-center bg-gradient-to-b from-50% *:flex-1 sm:px-5 lg:px-10">
 			<div id="tools" aria-label="Favorite tools and frameworks"
-				class="container grid items-center gap-px overflow-hidden rounded-lg text-zinc-400 *:bg-black grid-cols-3 *:sm:bg-zinc-900 sm:grid-cols-9">
+				class="container grid items-center gap-px overflow-hidden rounded-lg text-zinc-800 *:bg-zinc-300 *:rounded-full grid-cols-3 sm:grid-cols-9">
 			</div>
 		</section>
 		<footer id="hey" class="relative container h-lvh">
-			<nav class="flex h-full flex-1 items-center p-6 sm:rounded-lg">
-				<ul id="menu"
-					class="flex flex-1 font-medium flex-col sm:flex-row sm:justify-center flex-wrap gap-8 sm:gap-24 text-3xl sm:text-4xl">
+			<nav class="flex h-full flex-1 items-center p-5 sm:rounded-lg">
+				<ul id="menu" class="flex flex-1 flex-col flex-wrap font-[450] gap-8 items-start leading-none text-[1.5rem] xl:items-baseline xl:flex-row xl:gap-10 xl:justify-center xl:text-[2.5rem]">
+					<li class="text-zinc-600">
+						Stay in touch
+					</li>
+					<li class="hidden xl:block">
+						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
+					</li>
 				</ul>
 			</nav>
 			<div
-				class="absolute bottom-0 w-full p-6 z-50 flex justify-between text-sm leading-none font-medium text-brand-300/25 duration-200 hover:text-brand-200/50">
-				<span class="text-brand-400/80"> More soon, or never. </span>
-				<div class="hidden md:block">
-					<span> BTC Price </span>
-					✦
-					<span id="current-price"> 00,00 USD </span>
-				</div>
-				<div class="hidden md:block">
-					<span> 200 DMA </span>
-					✦
-					<span id="moving-average"> 00,00 USD </span>
-				</div>
-				<div class="hidden md:block">
-					<span> Mayer Multiple </span>
-					✦
-					<span id="mayer-multiple"> 0.0 </span>
-				</div>
+				class="absolute bottom-0 w-full p-5 z-50 flex justify-between text-xs leading-none">
 				<span class="text-brand-400/80 text-right"> &copy; 2025 </span>
 			</div>
 		</footer>
 	</main>
-	<progressive-blur custom="fixed inset-x-0 h-32 bottom-0 rotate-180"></progressive-blur>
+	<progressive-blur custom="fixed inset-x-0 h-40 top-0"></progressive-blur>
+	<progressive-blur custom="fixed inset-x-0 h-40 bottom-0 rotate-180"></progressive-blur>
 </body>
-<!-- <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-	lucide.createIcons()
-</script> -->
-<script type="module" src="assets/js/main.js"></script>
-<script type="module" src="assets/js/btc.js"></script>
+<script type="module" src="src/assets/js/main.js"></script>
+<script type="module" src="src/assets/js/btc.js"></script>
 </html>

@@ -23,19 +23,29 @@ export class AboutSection extends LitElement {
 
   render() {
     return html`
-      <section class="bg-zinc-950 relative">
+      <section class="relative">
         <div id="who" class="absolute sm:-top-16 top-0"></div>
-        <div id="about" class="container flex flex-col sm:flex-row overflow-hidden rounded-lg bg-zinc-900">
-          <div id="noise" class="transition-opacity duration-250 opacity-0"></div>
-          <picture class="h-[100vw] relative invert-[0.05] saturate-[0.8] contrast-[1.05] hue-rotate-[-10deg] aspect-square overflow-hidden sm:h-[50dvh] sm:w-[50dvh]">
+        <div id="about" class="container flex flex-col sm:grid sm:grid-cols-3 overflow-hidden rounded-[2rem] bg-zinc-800">
+          <picture class="
+            contrast-[1.05]
+            invert-[0.05]
+            saturate-[0.8]
+            hue-rotate-[-10deg]
+            overflow-hidden
+            h-[100vw]
+            aspect-square
+            relative
+            xl:h-auto
+          ">
+            
             <img 
-            alt="${i18next.t('about.picDescription')}"
-            class="h-full object-cover" 
-            loading="eager"
-            src="${pic}" 
+              alt="${i18next.t('about.picDescription')}"
+              class="h-full object-cover" 
+              loading="eager"
+              src="${pic}" 
             />
           </picture>
-          <div class="flex flex-col flex-1 justify-center gap-4 sm:gap-8 px-6 py-12 leading-loose font-normal sm:px-32 sm:text-2xl">
+          <div class="flex flex-col col-span-2 gap-4 xl:gap-0 justify-between px-5 py-14 leading-loose font-normal xl:p-32 xl:text-xl xl:leading-loose text-zinc-400">
             <p class="text-pretty">
               ${i18next.t('about.content.p1')} <mark class="bg-transparent text-brand-400 sm:text-zinc-200 inline-block">${i18next.t('about.content.h1')}</mark>, ${i18next.t('about.content.p2')} <mark class="bg-transparent text-brand-400 sm:text-zinc-200"><span class="inline-block">${i18next.t('about.content.h3.s1')}</span> <span class="inline-block">${i18next.t('about.content.h3.s2')}</span></mark> ${i18next.t('about.content.p3')}
             </p>

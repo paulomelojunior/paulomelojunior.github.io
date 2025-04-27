@@ -1,17 +1,17 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import classNames from 'classnames';
+import star from './star.svg';
 import './styles.scss';
 
 @customElement('marquee-element')
 export class MarqueeElement extends LitElement {
   @property({ type: String }) items: string = '';
-  @property({ type: String }) glyph: string = '✦';
   @property({ type: Boolean }) reverse: boolean = false;
   
   render() {
     const list = this.items.split(',').map(item => item.trim());
-    const items = list.map((item) => html`<li>${item}</li><li>${this.glyph}</li>`);
+    const items = list.map((item) => html`<li>${item}</li><li><img class="xl:h-6" src="${star}" /></li>`);
     const reverse = this.reverse;
     const classList = classNames('marquee', { reverse });
 

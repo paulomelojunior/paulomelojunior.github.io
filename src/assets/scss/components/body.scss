@@ -1,0 +1,26 @@
+::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-zinc-900;
+    margin-block: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800;
+    border: 0 solid theme('colors.zinc.900');
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-700;
+}
+
+body {
+    @apply 
+    bg-zinc-200
+    dark:bg-zinc-900
+    dark:text-zinc-400
+    text-zinc-600;
+}

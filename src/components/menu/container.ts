@@ -35,15 +35,13 @@ export class MenuContainer extends LitElement {
 
   render() {
     return html`
-      <div class="container flex justify-between items-center relative">
-        <span class="font-medium tracking-wide text-zinc-200 uppercase p-2 sm:p-4 leading-none text-sm me-auto">
-          ${i18next.t('menu.name')}<span class="sm:inline hidden opacity-50"> ${i18next.t('menu.hello')}</span>
-        </span>
+      <div class="container">
         <nav>
-          <ul id="anchors" class="flex items-center">
-            <menu-item href="#who" label="${i18next.t('menu.who')}"></menu-item>
-            <menu-item href="#job" label="${i18next.t('menu.job')}"></menu-item>
-            <menu-item href="#hey" label="${i18next.t('menu.hey')}"></menu-item>
+          <ul id="anchors" class="flex *:flex-1">
+            <menu-item href="#who" label="${i18next.t('menu.about')}"></menu-item>
+            <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
+            <menu-item href="#hey" label="${i18next.t('menu.praxis')}"></menu-item>
+            <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
           </ul>
         </nav>
         <!-- <div class="flex items-center">

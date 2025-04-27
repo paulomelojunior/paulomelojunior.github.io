@@ -40,7 +40,7 @@ export function journey() {
                     <span class="text-sm font-semibold md:text-sm">
                         ${element.end}
                     </span>
-                    <h3 class="font-medium text-2xl text-zinc-200">
+                    <h3 class="font-medium text-2xl text-zinc-800">
                         ${element.title}
                     </h3>
                 </div>

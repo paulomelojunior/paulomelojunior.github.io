@@ -9,10 +9,6 @@
 }
 
 .marquee {
-    @apply
-    border-y
-    border-zinc-800;
-
     --gap: 1rem;
     display: flex;
     overflow: hidden;
@@ -30,25 +26,14 @@
     overflow-hidden
     whitespace-nowrap
     px-0
-    py-6
+    py-5
     text-center
-    text-lg
     leading-none
-    sm:text-2xl
-    sm:leading-none;
+    xl:text-[1.5rem];
     
     min-width: 100%;
     gap: var(--gap);
     animation: marquee 32s linear infinite;
-
-    > *:nth-child(even) {
-        @apply 
-        text-brand-400
-        h-3
-        leading-3
-        flex
-        font-normal;
-    }
 }
 
 .marquee {
