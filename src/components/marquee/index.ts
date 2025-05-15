@@ -11,7 +11,7 @@ export class MarqueeElement extends LitElement {
   
   render() {
     const list = this.items.split(',').map(item => item.trim());
-    const items = list.map((item) => html`<li>${item}</li><li><img class="xl:h-6" src="${star}" /></li>`);
+    const items = list.map((item) => html`<li>${item}</li><li><img class="size-3" src="${star}" /></li>`);
     const reverse = this.reverse;
     const classList = classNames('marquee', { reverse });
 

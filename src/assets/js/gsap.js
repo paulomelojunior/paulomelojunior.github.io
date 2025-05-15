@@ -1,11 +1,11 @@
 import { gsap } from 'gsap'
 import { CustomEase } from 'gsap/CustomEase'
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SplitType from 'split-type'
-import { transform } from 'typescript'
 
-gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(CustomEase)
+import SplitType from 'split-type'
+
+gsap.registerPlugin(CustomEase, DrawSVGPlugin, ScrollTrigger)
 
 gsap.defaults({
     duration: 1,
@@ -13,115 +13,68 @@ gsap.defaults({
 })
 
 const noise = document.querySelector('#noise')
-const header = document.querySelector('header')
+let mm = gsap.matchMedia()
 
 window.onload = function load() {
     document.querySelectorAll('.invisible').forEach((i) => {
         i.classList.remove('invisible')
     })
 
-    ScrollTrigger.create({
-        trigger: '#logo',
-        start: 'top top',
-        end: 'bottom top',
-        onEnter: () => {
-            document.querySelector('#logo').classList.add('fixed')
-        },
-        onLeaveBack: () => {
-            document.querySelector('#logo').classList.remove('fixed')
-        },
-    })
-
-    function toggleHeaderState(addClasses, removeClasses, animationProps) {
-        header.classList.add(...addClasses);
-        header.classList.remove(...removeClasses);
-        gsap.from(header, animationProps);
-    }
-
-    ScrollTrigger.create({
-        trigger: '#logo',
-        start: 'top top',
-        onLeave: () => {
-            toggleHeaderState(
-                ['fixed', 'bottom-0'],
-                ['absolute'],
-                { yPercent: 50, opacity: 0, duration: 0.25 }
-            );
-        },
-        onEnterBack: () => {
-            gsap.to(header, {
-                yPercent: 50,
-                opacity: 0,
-                duration: .25,
-                onComplete: () => {
-                    header.classList.remove('fixed', 'bottom-0');
-                    header.classList.add('absolute');
-                    header.removeAttribute('style');
-                },
-            });
-        },
-    })
-
-    document.querySelectorAll('.menu-item').forEach((item) => {
-        item.addEventListener('mouseenter', (e) => {
-            const target = e.currentTarget;
-            gsap.to(target, {
-            });
-        });
-        item.addEventListener('mouseleave', (e) => {
-            const target = e.currentTarget;
-            gsap.to(target, {
-            });
-        });
-    });
-
-    noise.classList.remove('opacity-0')
-    noise.classList.add('opacity-30')
-
-    gsap.from('header', {
-        translateY: '-50%',
-        opacity: 0,
-    })
-
-    const heroLetters = document.querySelectorAll('.hero-letters')
-
-    heroLetters.forEach((chars) => {
-        const txt = new SplitType(chars, { types: 'chars' })
-        gsap.from(txt.chars, {
-            color: window.getComputedStyle(
-                document.querySelector('.text-brand-400')
-            ).color,
-            clipPath: 'inset(100% 100% 0 0)',
-            xPercent: 100,
-            stagger: 0.04,
-        })
-    })
-
-    gsap.from('#heroFooter .marquee__content li', {
-        opacity: 0,
-        yPercent: 200,
-        delay: 0.5,
-        stagger: 0.1,
-    })
-
-    gsap.from('#about > div', {
-        opacity: 0,
-        y: '10%',
-    })
-
-    gsap.from('#about > picture', {
-        opacity: 0,
-    })
-
-    gsap.from('#about img', {
-        opacity: 0,
-        scale: 1.2,
-        filter: 'blur(1rem)',
-    })
-
-    let mm = gsap.matchMedia()
-
     mm.add('(max-width: 1024px)', () => {
+        ScrollTrigger.create({
+            trigger: '#logo',
+            start: '0% top',
+            end: '0% 0%',
+            markers: true,
+            onEnter: () => {
+                document.querySelector('#logo').classList.add('fixed')
+            },
+            onLeaveBack: () => {
+                document.querySelector('#logo').classList.remove('fixed')
+            },
+        })
+
+        const header = document.querySelector('header')
+        ScrollTrigger.create({
+            trigger: '#logo',
+            start: 'top top',
+            onLeave: () => {
+                header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
+                header.classList.remove('absolute')
+                gsap.to(header, {
+                    yPercent: 0,
+                    opacity: 1,
+                    duration: 0.25,
+                })
+            },
+            onEnterBack: () => {
+                gsap.to(header, {
+                    yPercent: 50,
+                    opacity: 0,
+                    duration: 0.25,
+                    onComplete: () => {
+                        header.classList.remove('fixed', 'bottom-[env(safe-area-inset-bottom)]')
+                        header.classList.add('absolute')
+                        header.removeAttribute('style')
+                    },
+                })
+            },
+        })
+
+        const subFooter = document.querySelector('footer > div').clientHeight
+
+        gsap.to('header', {
+            scrollTrigger: {
+                trigger: 'footer nav',
+                start: 'bottom bottom',
+                end: `${subFooter} top`,
+                toggleActions: 'play none none reverse',
+                scrub: true,
+            },
+            ease: 'none',
+            yPercent: -100,
+        })
+
         const mark = document.querySelectorAll('mark')
 
         mark.forEach((char) => {
@@ -140,39 +93,156 @@ window.onload = function load() {
     })
 
     mm.add('(min-width: 1024px)', () => {
-        gsap.from('.job', {
+        gsap.from('#job > * > *', {
             scrollTrigger: {
                 trigger: '.job',
-                start: '-50% bottom',
-                toggleActions: 'play none none reverse',
+                start: 'top 100%',
+                toggleActions: 'play none none reset',
             },
-            yPercent: 100,
-            stagger: 0.1,
-        })
-
-        gsap.from('.tool', {
-            scrollTrigger: {
-                trigger: '.tool',
-                start: '50% bottom',
-                toggleActions: 'play none none reverse',
-            },
-            yPercent: -100,
-            delay: 1,
-            stagger: 0.1,
-        })
-
-        gsap.from('#menu > li', {
-            scrollTrigger: {
-                trigger: menu,
-                start: 'top bottom',
-                end: 'top 50%',
-                toggleActions: 'play none none reverse',
-                scrub: true,
-            },
-            y: '-25lvh',
             opacity: 0,
-            filter: 'blur(.125rem)',
+            clipPath: 'inset(0% 0% 100% 0%)',
+            stagger: 0.05,
+        })
+
+        gsap.from('.cases', {
+            scrollTrigger: {
+                trigger: '#cases',
+                start: 'top bottom',
+                end: '50% 100%',
+                toggleActions: 'play none none reverse',
+                scrub: 0.5,
+            },
             ease: 'none',
+            opacity: 0,
+            stagger: -0.25,
+            y: '10rem',
+        })
+
+    })
+
+    const navItems = document.querySelectorAll('.menu-item')
+
+    navItems.forEach((item) => {
+        const target = item.firstElementChild
+        gsap.set(target, {
+            clipPath: 'inset(0% 0% 100% 0%)',
         })
     })
+
+    navItems.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+            const target = item.firstElementChild
+            gsap.to(target, {
+                duration: 0.25,
+                clipPath: 'inset(0% 0% 0% 0%)',
+            })
+        })
+        item.addEventListener('mouseleave', () => {
+            const target = item.firstElementChild
+            gsap.to(target, {
+                duration: 0.25,
+                clipPath: 'inset(100% 0 0 0)',
+                onComplete: () => {
+                    gsap.set(target, {
+                        clipPath: 'inset(0% 0% 100%)',
+                    })
+                },
+            })
+        })
+    })
+
+    noise.classList.remove('opacity-0')
+    noise.classList.add('opacity-15')
+
+    gsap.from('header', {
+        translateY: '-50%',
+        opacity: 0,
+    })
+
+    const heroLetters = document.querySelectorAll('.hero-letters')
+
+    heroLetters.forEach((chars) => {
+        const txt = new SplitType(chars, { types: 'chars' })
+        gsap.from(txt.chars, {
+            clipPath: 'inset(100% 100% 0 0)',
+            xPercent: 100,
+            stagger: 0.04,
+        })
+    })
+
+    gsap.from('#logo', {
+        yPercent: 50,
+        opacity: 0,
+        filter: 'blur(.5rem)',
+        delay: 0.75,
+    })
+
+    gsap.from('#heroFooter .marquee__content li', {
+        opacity: 0,
+        yPercent: 200,
+        stagger: 0.1,
+    })
+
+    gsap.from('#who > div > *', {
+        opacity: 0,
+        y: '20%',
+    })
+
+    gsap.from('#who > picture', {
+        opacity: 0,
+    })
+
+    gsap.from('#who img', {
+        opacity: 0,
+        scale: 1.2,
+        filter: 'blur(.75rem)',
+    })
+
+    const praxisPath = document.querySelectorAll('.praxis svg')
+    praxisPath.forEach((i) => {
+        const p = i.querySelectorAll('path')
+        gsap.from(p, {
+            scrollTrigger: {
+                trigger: i,
+                start: '0% 50%',
+                toggleActions: 'play none none reverse',
+            },
+            stagger: 0.1,
+            stroke: '#000',
+            opacity: 0,
+            fill: '#b74f06',
+            drawSVG: false,
+        })
+    })
+    
+    const praxisItem = document.querySelectorAll('.praxis')
+    praxisItem.forEach((i) => {
+        gsap.from(i.children, {
+            scrollTrigger: {
+                trigger: i.children,
+                start: '0% 50%',
+                toggleActions: 'play none none reverse',
+            },
+            duration: .8,
+            stagger: 0.1,
+            x: '5rem',
+            filter: 'blur(.5rem)',
+            opacity: (i) => (i === 0 ? 1 : 0),
+        })
+    })
+
+    gsap.from('#menu > *', {
+        scrollTrigger: {
+            trigger: 'footer',
+            start: 'top 50%',
+            end: 'top 0%',
+            toggleActions: 'play none none reverse',
+            scrub: true,
+        },
+        stagger: .1,
+        y: '5rem',
+        clipPath: 'inset(0% 0% 100% 0%)',
+    })
 }
+
+

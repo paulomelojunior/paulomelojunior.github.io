@@ -6,16 +6,31 @@ import classNames from 'classnames';
 export class MenuButton extends LitElement {
 	@property({ type: String }) href: string = '';
 	@property({ type: String }) label: string = '';
+	@property({ type: String }) hover: string = '';
 	@property({ type: String }) icon: string = '';
 	@property({ type: Boolean }) active: boolean = false;
 
 	render() {
 		const classList = classNames(
-			'menu-item flex items-center font-semibold p-2 uppercase transition text-sm leading-none hover:text-zinc-600 sm:p-4',
+			'flex gap-2 text-sm uppercase items-center h-8 leading-none rounded-full whitespace-nowrap',
+			{
+				'px-4': !this.icon,
+				'ps-1.5 pe-4': this.icon,
+			}
 		);
 
-		return html`<button class="${classList} ${this.active ? 'text-zinc-500' : 'text-zinc-600'}">
-			${this.icon ? html`<i class="flex text-lg leading-none ph ph-${this.icon}"></i>` : ''}
+		return html`<button class="menu-item group/item relative ${classList}">
+			<div class="${classList} absolute pointer-events-none inset-0 dark:bg-zinc-900" aria-hidden="true">
+				<span>
+					Theme
+				</span>
+				<span>
+					${this.hover ? this.hover : this.label}
+				</span>
+			</div>
+			${this.icon ? html`
+				<i class="leading-none transition-all rounded-full group-hover/item:rotate-180 duration-500 group-hover/item:bg-brand-400 group-hover/item:text-zinc-900 ph-fill text-[1.25rem] ph-${this.icon}"></i>
+			` : ''}
 			${this.label}
 		</button>`;
 	}

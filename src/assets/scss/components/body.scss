@@ -20,7 +20,8 @@
 body {
     @apply 
     bg-zinc-200
+    text-zinc-600
     dark:bg-zinc-900
     dark:text-zinc-400
-    text-zinc-600;
+    pt-[env(safe-area-inset-top)];
 }

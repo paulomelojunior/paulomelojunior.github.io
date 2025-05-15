@@ -8,7 +8,13 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width initial-scale=1 user-scalable=0 viewport-fit=cover" />
+	<meta name="theme-color" content="#000" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-title" content="pmjr.cc" />
+	<meta name="mobile-web-app-capable" content="yes" />
 
+	
 	<meta property="og:image" content="https://pmjr.cc/profile.webp" />
 	<meta property="og:title" content="Paulo Melo Júnior" />
 	<meta property="og:type" content="website" />
@@ -34,6 +40,11 @@
 		type="text/css"
 		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
 	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css"
+	/>
 	<link rel="stylesheet" href="src/assets/scss/font.scss">
 	<link rel="stylesheet" href="src/assets/scss/main.scss">
 	<script type="module" src="src/main.ts"></script>
@@ -41,72 +52,127 @@
 
 <body class="relative">
 	<div id="noise" class="transition-opacity duration-250 opacity-0"></div>
-	<header class="grid items-center w-full absolute inset-x-0 z-10 invisible">
-		<menu-container></menu-container>
-	</header>
+	<menu-container></menu-container>
 	<main class="invisible">
 		<section
 			id="hero"
-			class="container flex h-[calc(100lvh-100vw)] flex-col justify-end sm:h-[calc(50dvh-4rem)]">
+			class="container relative flex min-h-[calc(100vh-100vw)] flex-col justify-end xl:h-[calc(50dvh-4rem)]">
 			<h1 id="heroTitle">
-				<div class="flex flex-col items-start px-5 xl:items-center">
-					<div id="logo" class="flex gap-1.5 items-center pt-5 mb-2 top-0 z-10">
+				<div class="flex flex-col items-start px-5 xl:items-center ">
+					<div id="logo" class="flex gap-1.5 items-center pt-5 top-0 z-50">
 						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
-						<span class="uppercase font-[550] text-sm text-zinc-500 dark:text-brand-400">
+						<span class="uppercase text-sm text-zinc-500 dark:text-zinc-500">
 							pmjr.cc
 						</span>
 					</div>
-					<div class="text-[2.5rem] mb-14 pb-12 text-neutral-800 tracking-[-0.02em] leading-none font-[450] xl:text-center xl:text-[4rem] xl:tracking-[-0.04em] dark:text-neutral-200">
+					<h1 class="text-[2.5rem] mb-14  *:-mb-3 *:xl:-mb-8 pb-12 tracking-[-0.02em] xl:text-center xl:text-[4rem] dark:text-zinc-200 text-zinc-800">
 						<span class="block hero-letters">
-							Product Designer
+							Product designer
 						</span>
 						<span class="block hero-letters">
-							And UI Engineer
+							and creative coder
 						</span>
-					</div>
+					</h1>
 				</div>
 			</h1>
 		</section>
 		<section id="heroFooter" class="items-center absolute sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
 			<div class="container">
-				<marquee-element items="Design Engineering, Product Design, User Interface"></marquee-element>
+				<marquee-element items="Design Engineering, Product Design, UX and UI"></marquee-element>
 			</div>
 		</section>
 		<about-section></about-section>
-		<section class="flex items-center  sm:p-5 lg:p-10 relative">
-			<div id="job" class="absolute sm:-top-28 -top-20"></div>
-			<div id="journey" class="container grid overflow-hidden sm:gap-24 sm:grid-cols-3"></div>
+		<hr class="border-zinc-300 dark:border-zinc-900 mx-5">
+		<section>
+			<div id="job" class="container pt-14 pb-16 grid gap-16 xl:gap-1 overflow-hidden 2xl:grid-cols-3 2xl:my-16 *:2xl:h-[512px]">
+				<div class="2xl:p-32 px-9 flex xl:justify-center xl:items-center xl:bg-zinc-900 rounded-[2rem]">
+					<h2 class="text-[2.5rem] text-zinc-200 xl:text-[4rem] tracking-[-0.02em] leading-none">
+						Journey
+					</h2>
+				</div>
+			</div>
 		</section>
-		<section class="font-medium" aria-hidden="true">
+		<section class="xl:hidden py-16">
 			<div class="container">
-				<marquee-element items="Favorites, Tools, Frameworks"></marquee-element>
+				<marquee-element items="Figma, Framer, HTML, CSS, JS, Tailwind, React, GSAP"></marquee-element>
 			</div>
 		</section>
-		<section class="items-center bg-gradient-to-b from-50% *:flex-1 sm:px-5 lg:px-10">
-			<div id="tools" aria-label="Favorite tools and frameworks"
-				class="container grid items-center gap-px overflow-hidden rounded-lg text-zinc-800 *:bg-zinc-300 *:rounded-full grid-cols-3 sm:grid-cols-9">
+		<section>
+			<div class="container">
+				<praxis-section></praxis-section>
 			</div>
 		</section>
-		<footer id="hey" class="relative container h-lvh">
-			<nav class="flex h-full flex-1 items-center p-5 sm:rounded-lg">
-				<ul id="menu" class="flex flex-1 flex-col flex-wrap font-[450] gap-8 items-start leading-none text-[1.5rem] xl:items-baseline xl:flex-row xl:gap-10 xl:justify-center xl:text-[2.5rem]">
-					<li class="text-zinc-600">
+		<section id="cases" class="hidden">
+			<div class="container">
+				<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+				<div class="flex relative h-[512px] rounded-2xl bg-black">
+					<div class="flex justify-center w-2/3">
+						<img class="cases absolute bottom-0 saturate-0" src="src/assets/imgs/mockup-1.png" alt="">
+						<img class="cases absolute bottom-0 saturate-0" src="src/assets/imgs/mockup-2.png" alt="">
+						<span class="absolute flex gap-2 leading-none font-medium tracking-[1px] bottom-0 left-0 p-5 text-sm text-zinc-600 uppercase font-mono">
+							<span class="text-brand-400">
+								2025
+							</span>
+							<span>
+								Twyne.io 
+							</span>
+						</span>
+					</div>
+					<div class="flex-1 flex flex-col p-28 justify-between items-center relative bg-zinc-400/10  rounded-r-2xl backdrop-blur-lg">
+						<h2 class="cases text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
+							Selected <br>
+							cases
+						</h2>
+						<span class="cases text-brand-400 pt-3 pb-4 px-8 rounded-full border-dashed border-2 border-zinc-700 text-2xl">
+							Maybe soon
+						</span>
+					</div>
+				</div>
+				<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+			</div>
+		</section>
+		<footer id="hey" class="relative h-lvh z-10 rounded-t-[2rem]">
+			<nav class="relative flex h-full flex-1 items-center bg-black z-10">
+				<ul id="menu" class="flex flex-1 flex-col tracking-[-0.02em] flex-wrap gap-0 text-[2rem] xl:items-baseline xl:flex-row xl:gap-4 xl:justify-center xl:text-[2.5rem]">
+					<span class="px-5 h-20 flex items-center xl:p-0 text-zinc-600">
 						Stay in touch
-					</li>
-					<li class="hidden xl:block">
+					</span>
+					<span class="hidden xl:block ml-5">
 						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
-					</li>
+					</span>
 				</ul>
 			</nav>
-			<div
-				class="absolute bottom-0 w-full p-5 z-50 flex justify-between text-xs leading-none">
-				<span class="text-brand-400/80 text-right"> &copy; 2025 </span>
+			<div class="sticky bg-brand-400 bottom-0">
+				<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-between text-xs leading-none text-black">
+					<span>
+						More soon, or never.
+					</span>
+					<div class="hidden md:block">
+						<span> BTC Price </span>
+						<span class="text-brand-700">✦</span>
+						<span id="current-price"> 00,00 USD </span>
+					</div>
+					<div class="hidden md:block">
+						<span> 200 DMA </span>
+						<span class="text-brand-700">✦</span>
+						<span id="moving-average"> 00,00 USD </span>
+					</div>
+					<div class="hidden md:block">
+						<span> Mayer Multiple </span>
+						<span class="text-brand-700">✦</span>
+						<span id="mayer-multiple"> 0.0 </span>
+					</div>
+				<span class="text-right"> 
+					Copyright 2025
+				</div>
 			</div>
 		</footer>
 	</main>
-	<progressive-blur custom="fixed inset-x-0 h-40 top-0"></progressive-blur>
+	<div class="xl:h-16 h-40 fixed inset-x-0 z-30 top-0 overflow-hidden bg-gradient-to-b  xl:from-inherit xl:dark:bg-zinc-950/80 xl:bg-zinc-200/80 xl:border-b border-zinc-300 dark:border-zinc-900">
+		<progressive-blur custom="relative h-40 inset-x-0 top-0"></progressive-blur>
+	</div>
 	<progressive-blur custom="fixed inset-x-0 h-40 bottom-0 rotate-180"></progressive-blur>
 </body>
 <script type="module" src="src/assets/js/main.js"></script>
-<script type="module" src="src/assets/js/btc.js"></script>
+<!-- <script type="module" src="src/assets/js/btc.js"></script> -->
 </html>

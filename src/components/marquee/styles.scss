@@ -9,34 +9,12 @@
 }
 
 .marquee {
-    --gap: 1rem;
+    --gap: 2rem;
     display: flex;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
-}
 
-.marquee__content {
-    @apply
-    flex
-    uppercase
-    shrink-0
-    items-center
-    justify-around
-    overflow-hidden
-    whitespace-nowrap
-    px-0
-    py-5
-    text-center
-    leading-none
-    xl:text-[1.5rem];
-    
-    min-width: 100%;
-    gap: var(--gap);
-    animation: marquee 32s linear infinite;
-}
-
-.marquee {
     mask: linear-gradient(
         90deg,
         transparent,
@@ -50,4 +28,25 @@
             animation-direction: reverse;
         }
     }
+}
+
+.marquee__content {
+    @apply
+    flex
+    uppercase
+    shrink-0
+    items-center
+    justify-around
+    overflow-hidden
+    whitespace-nowrap
+    px-0
+    h-16
+    text-center
+    text-zinc-500
+    leading-none
+    text-[1.25rem];
+    
+    min-width: 100%;
+    gap: var(--gap);
+    animation: marquee 32s linear infinite;
 }

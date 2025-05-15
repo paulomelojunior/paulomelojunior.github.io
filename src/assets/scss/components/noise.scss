@@ -1,12 +1,12 @@
 #noise {
     @apply
-    opacity-0
+    top-0
     z-20
     h-full
     w-full
     pointer-events-none
     absolute
-    sm:fixed
+    xl:fixed
     bg-repeat
     bg-left-top
     bg-[url('../imgs/noise.avif')]

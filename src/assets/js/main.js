@@ -5,6 +5,7 @@ import './lenis.js'
 import './devs.js'
 import './gsap.js'
 
+
 menu()
 journey()
 tools()

@@ -1,0 +1,15 @@
+.menu-item > div {
+    background-image: linear-gradient(to bottom, theme('colors.zinc.200') 50%, theme('colors.brand.400') 50%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    transition: background-position .25s cubic-bezier(.75,0,0.5,1);
+    transition-delay: .25s;
+}
+
+.menu-item:hover > div {
+    background-position: 0% 0%;
+}
+
+.menu-item:active > div {
+    filter: brightness(1.25);
+}

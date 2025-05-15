@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: 'selector',
     content: [
         './*.html',
         './src/**/*.ts',
@@ -13,6 +14,12 @@ export default {
                     fontFeatureSettings: '"ss02", "ss04", "ss07", "ss08", "ss11"'
                 }
             ],
+            mono: [
+                '"Geist Mono", monospace',
+                {
+                    fontFeatureSettings: '"ss01"'
+                }
+            ]
         },
         container: {
             center: true

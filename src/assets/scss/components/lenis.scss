@@ -18,12 +18,10 @@ html.lenis {
     pointer-events: none;
 }
 
-/* Garante que o scroll suave funcione em todos os navegadores */
 html {
     scroll-behavior: smooth;
 }
 
-/* Previne o scroll nativo em dispositivos touch */
 @media (hover: none) and (pointer: coarse) {
     html {
         scroll-behavior: auto;
