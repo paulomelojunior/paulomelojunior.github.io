@@ -35,6 +35,16 @@ window.onload = function load() {
             },
         })
 
+        // gsap.to('#who .progressive-blur', {
+        //     scrollTrigger: {
+        //         trigger: '#who .progressive-blur',
+        //         start: 'bottom 50%',
+        //         toggleActions: 'play none none reverse',
+        //         markers:true,
+        //         scrub: true
+        //     },
+        // })
+
         const header = document.querySelector('header')
         const copyright = document.querySelector('#copy')
 
