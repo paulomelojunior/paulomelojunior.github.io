@@ -1,4 +1,4 @@
-import { menu } from './menu.js'
+import { menu } from './links.js'
 import { journey } from './journey.js'
 import { tools } from './tools.js'
 import './lenis.js'

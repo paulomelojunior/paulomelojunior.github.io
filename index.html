@@ -28,7 +28,6 @@
 	<meta name="twitter:title" content="Hackyoto" />
 	<meta name="twitter:description"
 		content="Enthusiast of decentralized technologies, Paulo Melo Júnior is a designer and coder from Brazil. Here you can find links to stay in touch with him." />
-
 	<link rel="icon" href="favicon.png" />
 	<link
 		rel="stylesheet"
@@ -51,21 +50,21 @@
 </head>
 
 <body class="relative">
-	<div id="noise" class="transition-opacity duration-250 opacity-0"></div>
+	<div id="noise" class="transition-opacity duration-250 opacity-0 relative"></div>
 	<menu-container></menu-container>
 	<main class="invisible">
 		<section
 			id="hero"
-			class="container relative flex min-h-[calc(100vh-100vw)] flex-col justify-end xl:h-[calc(50dvh-4rem)]">
+			class="container relative flex min-h-[calc(100vh-100vw)] xl:min-h-[calc(100vh-4rem)] 2xl:min-h-0 flex-col justify-end 2xl:h-[calc(50dvh-4rem)]">
 			<h1 id="heroTitle">
-				<div class="flex flex-col items-start px-5 xl:items-center ">
-					<div id="logo" class="flex gap-1.5 items-center pt-5 top-0 z-50">
+				<div class="flex flex-col px-5 items-center">
+					<div id="logo" class="flex flex-col xl:flex-row gap-1.5 items-center pt-5 top-0 z-10 xl:z-auto">
 						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
-						<span class="uppercase text-sm text-zinc-500 dark:text-zinc-500">
+						<span class="uppercase text-sm text-zinc-200/50">
 							pmjr.cc
 						</span>
 					</div>
-					<h1 class="text-[2.5rem] mb-14  *:-mb-3 *:xl:-mb-8 pb-12 tracking-[-0.02em] xl:text-center xl:text-[4rem] dark:text-zinc-200 text-zinc-800">
+					<h1 class="text-[2.5rem] mb-14 *:-mb-3 pb-12 *:xl:-mb-8 xl:pb-24 2xl:pb-12 tracking-[-0.02em] text-center xl:text-[4rem] dark:text-zinc-200 text-zinc-800">
 						<span class="block hero-letters">
 							Product designer
 						</span>
@@ -76,16 +75,16 @@
 				</div>
 			</h1>
 		</section>
-		<section id="heroFooter" class="items-center absolute sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
+		<section id="heroFooter" class="items-center absolute z-50 sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
 			<div class="container">
 				<marquee-element items="Design Engineering, Product Design, UX and UI"></marquee-element>
 			</div>
 		</section>
 		<about-section></about-section>
-		<hr class="border-zinc-300 dark:border-zinc-900 mx-5">
+		<hr class="xl:hidden border-zinc-300 dark:border-zinc-900 mx-5">
 		<section>
-			<div id="job" class="container pt-14 pb-16 grid gap-16 xl:gap-1 overflow-hidden 2xl:grid-cols-3 2xl:my-16 *:2xl:h-[512px]">
-				<div class="2xl:p-32 px-9 flex xl:justify-center xl:items-center xl:bg-zinc-900 rounded-[2rem]">
+			<div id="job" class="container pt-14 pb-16 grid gap-16 xl:gap-1 overflow-hidden xl:grid-cols-3 xl:py-16 *:2xl:h-[512px]">
+				<div class="2xl:p-32 xl:p-20 px-9 flex xl:justify-center xl:items-center xl:bg-zinc-900 rounded-[2rem]">
 					<h2 class="text-[2.5rem] text-zinc-200 xl:text-[4rem] tracking-[-0.02em] leading-none">
 						Journey
 					</h2>
@@ -102,37 +101,13 @@
 				<praxis-section></praxis-section>
 			</div>
 		</section>
-		<section id="cases" class="hidden">
-			<div class="container">
-				<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-				<div class="flex relative h-[512px] rounded-2xl bg-black">
-					<div class="flex justify-center w-2/3">
-						<img class="cases absolute bottom-0 saturate-0" src="src/assets/imgs/mockup-1.png" alt="">
-						<img class="cases absolute bottom-0 saturate-0" src="src/assets/imgs/mockup-2.png" alt="">
-						<span class="absolute flex gap-2 leading-none font-medium tracking-[1px] bottom-0 left-0 p-5 text-sm text-zinc-600 uppercase font-mono">
-							<span class="text-brand-400">
-								2025
-							</span>
-							<span>
-								Twyne.io 
-							</span>
-						</span>
-					</div>
-					<div class="flex-1 flex flex-col p-28 justify-between items-center relative bg-zinc-400/10  rounded-r-2xl backdrop-blur-lg">
-						<h2 class="cases text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
-							Selected <br>
-							cases
-						</h2>
-						<span class="cases text-brand-400 pt-3 pb-4 px-8 rounded-full border-dashed border-2 border-zinc-700 text-2xl">
-							Maybe soon
-						</span>
-					</div>
-				</div>
-				<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+		<section id="cases">
+			<div class="container py-16">
+				<cases-section></cases-section>
 			</div>
 		</section>
-		<footer id="hey" class="relative h-lvh z-10 rounded-t-[2rem]">
-			<nav class="relative flex h-full flex-1 items-center bg-black z-10">
+		<footer id="hey" class="relative h-lvh z-10 rounded-t-[2rem] overflow-hidden">
+			<nav class="relative flex h-full flex-1 items-center z-10">
 				<ul id="menu" class="flex flex-1 flex-col tracking-[-0.02em] flex-wrap gap-0 text-[2rem] xl:items-baseline xl:flex-row xl:gap-4 xl:justify-center xl:text-[2.5rem]">
 					<span class="px-5 h-20 flex items-center xl:p-0 text-zinc-600">
 						Stay in touch
@@ -142,37 +117,39 @@
 					</span>
 				</ul>
 			</nav>
-			<div class="sticky bg-brand-400 bottom-0">
-				<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-between text-xs leading-none text-black">
+			<div class="absolute inset-x-0 bottom-0 hidden xl:block bg-zinc-900">
+				<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-between text-xs leading-none">
 					<span>
 						More soon, or never.
 					</span>
 					<div class="hidden md:block">
 						<span> BTC Price </span>
-						<span class="text-brand-700">✦</span>
+						<span class="text-zinc-600">✦</span>
 						<span id="current-price"> 00,00 USD </span>
 					</div>
 					<div class="hidden md:block">
 						<span> 200 DMA </span>
-						<span class="text-brand-700">✦</span>
+						<span class="text-zinc-600">✦</span>
 						<span id="moving-average"> 00,00 USD </span>
 					</div>
 					<div class="hidden md:block">
 						<span> Mayer Multiple </span>
-						<span class="text-brand-700">✦</span>
+						<span class="text-zinc-600">✦</span>
 						<span id="mayer-multiple"> 0.0 </span>
 					</div>
 				<span class="text-right"> 
-					Copyright 2025
+					[c] 2025
 				</div>
 			</div>
 		</footer>
 	</main>
-	<div class="xl:h-16 h-40 fixed inset-x-0 z-30 top-0 overflow-hidden bg-gradient-to-b  xl:from-inherit xl:dark:bg-zinc-950/80 xl:bg-zinc-200/80 xl:border-b border-zinc-300 dark:border-zinc-900">
+	<div class="xl:h-16 h-40 fixed inset-x-0 top-0 overflow-hidden bg-gradient-to-b  xl:from-inherit xl:dark:bg-zinc-950/80 xl:bg-zinc-200/80 xl:border-b border-zinc-300 dark:border-zinc-900">
 		<progressive-blur custom="relative h-40 inset-x-0 top-0"></progressive-blur>
 	</div>
-	<progressive-blur custom="fixed inset-x-0 h-40 bottom-0 rotate-180"></progressive-blur>
+	<div class="xl:block hidden">
+		<progressive-blur custom="fixed inset-x-0 h-40 bottom-0 rotate-180"></progressive-blur>
+	</div>
 </body>
 <script type="module" src="src/assets/js/main.js"></script>
-<!-- <script type="module" src="src/assets/js/btc.js"></script> -->
+<script type="module" src="src/assets/js/btc.js"></script>
 </html>

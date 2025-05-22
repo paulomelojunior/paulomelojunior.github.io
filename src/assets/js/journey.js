@@ -35,11 +35,11 @@ export function journey() {
     const journeyValues = Object.values(journeyItems)
     journeyValues.forEach((element) => {
         const journeyItem = `
-            <div class="${element.hide ? 'hidden xl:flex' : 'flex'} job relative justify-between flex-col gap-6 px-10 xl:p-24 xl:rounded-[2rem] xl:bg-black">
-                <span class="font-mono top-0 right-0 xl:grid xl:left-0 xl:p-5 xl:absolute text-sm text-zinc-500">
-                    ${element.start} &bull; <span${element.custom ? ` class="${element.custom}"` : ''}>${element.end}</span>
+            <div class="${element.hide ? 'hidden xl:flex' : 'flex'} job relative justify-between flex-col gap-6 px-10 xl:p-20 2xl:p-24 xl:rounded-[2rem] xl:bg-black">
+                <span class="font-mono top-0 right-0 xl:grid xl:left-0 xl:p-8 xl:absolute text-sm text-zinc-500">
+                    ${element.start} <span class="xl:hidden">&bull;</span> <span${element.custom ? ` class="${element.custom}"` : ''}>${element.end}</span>
                 </span>
-                <h2 class="text-[1.5rem] xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-zinc-800">
+                <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-zinc-800">
                     ${element.title}
                 </h2>
                 <p class="leading-loose text-pretty">
@@ -50,6 +50,6 @@ export function journey() {
         journey.insertAdjacentHTML('beforeend', journeyItem)
     })
 
-    const toolBox = `<div id="tools" class="hidden xl:grid grid-cols-3 gap-px *:uppercase *:bg-zinc-900 rounded-2xl aspect-square overflow-hidden"></div>`
+    const toolBox = `<div id="tools" class="hidden font-mono xl:grid grid-cols-3 gap-px *:uppercase *:bg-zinc-900 rounded-[2rem] aspect-square overflow-hidden"></div>`
     journey.insertAdjacentHTML('beforeend', toolBox)
 }

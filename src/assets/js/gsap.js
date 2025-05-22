@@ -2,6 +2,7 @@ import { gsap } from 'gsap'
 import { CustomEase } from 'gsap/CustomEase'
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { doc } from 'prettier'
 
 import SplitType from 'split-type'
 
@@ -13,19 +14,19 @@ gsap.defaults({
 })
 
 const noise = document.querySelector('#noise')
-let mm = gsap.matchMedia()
 
 window.onload = function load() {
     document.querySelectorAll('.invisible').forEach((i) => {
         i.classList.remove('invisible')
     })
 
+    let mm = gsap.matchMedia()
+    
     mm.add('(max-width: 1024px)', () => {
         ScrollTrigger.create({
             trigger: '#logo',
             start: '0% top',
             end: '0% 0%',
-            markers: true,
             onEnter: () => {
                 document.querySelector('#logo').classList.add('fixed')
             },
@@ -35,8 +36,14 @@ window.onload = function load() {
         })
 
         const header = document.querySelector('header')
+        const copyright = document.querySelector('#copy')
+
+        gsap.set(copyright, {
+            opacity: 0
+        })
+
         ScrollTrigger.create({
-            trigger: '#logo',
+            trigger: '#heroFooter',
             start: 'top top',
             onLeave: () => {
                 header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
@@ -45,6 +52,9 @@ window.onload = function load() {
                     yPercent: 0,
                     opacity: 1,
                     duration: 0.25,
+                })
+                gsap.to(copyright, {
+                    opacity: 1
                 })
             },
             onEnterBack: () => {
@@ -58,18 +68,22 @@ window.onload = function load() {
                         header.removeAttribute('style')
                     },
                 })
+                gsap.to(copyright, {
+                    opacity: 0,
+                    duration: 0.2
+                })
             },
         })
-
-        const subFooter = document.querySelector('footer > div').clientHeight
-
-        gsap.to('header', {
+        
+        const headerHeight = document.querySelector('header').clientHeight
+        const footerHeight = document.querySelector('footer nav').clientHeight
+        gsap.to(header, {
             scrollTrigger: {
                 trigger: 'footer nav',
-                start: 'bottom bottom',
-                end: `${subFooter} top`,
+                start: `${footerHeight - headerHeight} bottom`,
+                end: `top top`,
                 toggleActions: 'play none none reverse',
-                scrub: true,
+                scrub: 0,
             },
             ease: 'none',
             yPercent: -100,
@@ -155,7 +169,6 @@ window.onload = function load() {
     noise.classList.add('opacity-15')
 
     gsap.from('header', {
-        translateY: '-50%',
         opacity: 0,
     })
 
@@ -237,12 +250,10 @@ window.onload = function load() {
             start: 'top 50%',
             end: 'top 0%',
             toggleActions: 'play none none reverse',
-            scrub: true,
+            // scrub: true,
         },
+        opacity: 0,
         stagger: .1,
-        y: '5rem',
-        clipPath: 'inset(0% 0% 100% 0%)',
+        x: '5rem',
     })
 }
-
-

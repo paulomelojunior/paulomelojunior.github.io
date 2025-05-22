@@ -67,7 +67,7 @@ export class MenuContainer extends LitElement {
 
   render() {
     return html`
-      <header class="container grid xl:grid-cols-2 items-center w-full absolute inset-x-0 z-50 invisible xl:fixed">
+      <header class="container grid xl:grid-cols-2 items-center w-full absolute inset-x-0 z-40 invisible xl:fixed backdrop-blur-xl bg-zinc-950/50 xl:bg-transparent xl:backdrop-blur-0">
           <theme-button
           @click=${() => this.copyEmail()}
           @mouseleave=${() => this.copyEmailReset()}
@@ -81,6 +81,14 @@ export class MenuContainer extends LitElement {
             <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
             <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
           </ul>
+          <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-between px-5 bg-zinc-900 font-mono uppercase text-[.625rem] tracking-widest h-12 w-full">
+            <span>
+              More soon, or never.
+            </span>
+            <span>
+              2025 [c]
+            </span>
+          </div>
         </nav>
       </header>
     `;
