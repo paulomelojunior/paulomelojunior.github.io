@@ -261,7 +261,6 @@ window.onload = function load() {
             start: 'top 50%',
             end: 'top 0%',
             toggleActions: 'play none none reverse',
-            // scrub: true,
         },
         opacity: 0,
         stagger: .1,
