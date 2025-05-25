@@ -1,0 +1,10 @@
+.cases-content {
+	background-image:
+    linear-gradient(to bottom, theme('colors.zinc.950') -50%, transparent),
+    linear-gradient(to left, theme('colors.zinc.900'), transparent),
+    linear-gradient(135deg, theme('colors.brand.900') -200%, transparent 50%),
+    url('./dots.svg'),
+    url('./grid.svg');
+    background-position: bottom left;
+	background-repeat: repeat;
+}

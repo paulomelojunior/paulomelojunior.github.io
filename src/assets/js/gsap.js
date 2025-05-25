@@ -135,12 +135,12 @@ window.onload = function load() {
                 start: 'top bottom',
                 end: '50% 100%',
                 toggleActions: 'play none none reverse',
-                scrub: 0.5,
+                scrub: 2,
             },
             ease: 'none',
-            opacity: 0,
-            stagger: -0.25,
-            y: '10rem',
+            // opacity: 0,
+            stagger: 0.25,
+            x: '10rem',
         })
 
     })
@@ -177,7 +177,7 @@ window.onload = function load() {
     })
 
     noise.classList.remove('opacity-0')
-    noise.classList.add('opacity-15')
+    noise.classList.add('opacity-10')
 
     gsap.from('header', {
         opacity: 0,
@@ -234,7 +234,7 @@ window.onload = function load() {
             stagger: 0.1,
             stroke: '#000',
             opacity: 0,
-            fill: '#b74f06',
+            fill: '#ff6666',
             drawSVG: false,
         })
     })

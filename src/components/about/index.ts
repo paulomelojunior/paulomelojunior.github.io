@@ -25,7 +25,7 @@ export class AboutSection extends LitElement {
   render() {
     return html`
       <section class="relative">
-        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+        <div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
         <div id="who" class="container flex flex-col xl:grid xl:grid-cols-3 rounded-[2rem] overflow-hidden">
           <picture class="h-[100vw] overflow-hidden relative aspect-square xl:h-auto contrast-[1.05] invert-[0.05] saturate-[0.8] hue-rotate-[-10deg]">
             <img class="h-full object-cover" alt="${i18next.t('about.picDescription')}" loading="eager" src="${pic}" />
@@ -40,7 +40,7 @@ export class AboutSection extends LitElement {
             </p>
           </div>
         </div>
-      <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+      <div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
       </section>
     `;
   }
