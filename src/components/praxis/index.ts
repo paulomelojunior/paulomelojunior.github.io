@@ -23,7 +23,7 @@ export class PraxisSection extends LitElement {
   
   render() {
     return html`
-      <div id="how" class="grid xl:grid-cols-2 overflow-hidden gap-32 xl:gap-0 *:2xl:p-32 *:flex *:flex-col *:items-start *:justify-center *:gap-8 py-16">
+      <div id="how" class="grid xl:grid-cols-2 overflow-hidden gap-16 xl:gap-0 *:2xl:p-32 *:flex *:flex-col *:items-start *:justify-center *:gap-8 py-32">
         <div class="praxis xl:aspect-square px-10">
           <svg class="size-20 xl:size-24" width="82" height="81" viewBox="0 0 82 81" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 23C31.1503 23 41 13.1503 41 1C28.8497 1 19 10.8497 19 23Z" stroke="#FF6464"/>

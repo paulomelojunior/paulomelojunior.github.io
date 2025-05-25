@@ -117,15 +117,16 @@ window.onload = function load() {
     })
 
     mm.add('(min-width: 1024px)', () => {
-        gsap.from('#job > * > *', {
+        gsap.from('#job > *', {
             scrollTrigger: {
                 trigger: '.job',
                 start: 'top 100%',
                 toggleActions: 'play none none reset',
             },
             opacity: 0,
-            clipPath: 'inset(0% 0% 100% 0%)',
-            stagger: 0.05,
+            x: '10rem',
+            // clipPath: 'inset(0% 0% 100% 0%)',
+            stagger: 0.1,
         })
 
         gsap.from('.cases', {
@@ -264,6 +265,6 @@ window.onload = function load() {
         },
         opacity: 0,
         stagger: .1,
-        x: '5rem',
+        y: '5rem',
     })
 }

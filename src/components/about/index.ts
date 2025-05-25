@@ -25,12 +25,13 @@ export class AboutSection extends LitElement {
   render() {
     return html`
       <section class="relative">
-        <div id="who" class="container flex flex-col xl:grid xl:grid-cols-3 gap-1">
-          <picture class="h-[100vw] overflow-hidden rounded-[2rem] relative aspect-square xl:h-auto contrast-[1.05] invert-[0.05] saturate-[0.8] hue-rotate-[-10deg]">
-          <img class="h-full object-cover" alt="${i18next.t('about.picDescription')}" loading="eager" src="${pic}" />
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+        <div id="who" class="container flex flex-col xl:grid xl:grid-cols-3 rounded-[2rem] overflow-hidden">
+          <picture class="h-[100vw] overflow-hidden relative aspect-square xl:h-auto contrast-[1.05] invert-[0.05] saturate-[0.8] hue-rotate-[-10deg]">
+            <img class="h-full object-cover" alt="${i18next.t('about.picDescription')}" loading="eager" src="${pic}" />
           </picture>
           <progressive-blur class="xl:hidden" custom="absolute overflow-hidden z-10 inset-x-0 h-40 top-[100vw] -translate-y-full rotate-180"></progressive-blur>
-          <div class="2xl:gap-0 2xl:p-32 2xl:text-[1.25rem] xl:text-[1.125rem] col-span-2 flex flex-col font-normal gap-4 justify-between leading-loose px-5 py-16 rounded-[2rem] text-zinc-400 xl:bg-zinc-900 xl:p-20">
+          <div class="2xl:gap-0 2xl:p-32 2xl:text-[1.25rem] xl:text-[1.125rem] col-span-2 flex flex-col font-normal gap-4 justify-between leading-loose px-5 py-16 text-zinc-400 xl:bg-zinc-900 xl:p-20">
             <p class="text-pretty">
               <mark class="bg-transparent text-zinc-100 inline-block">${i18next.t('about.content.h1')}</mark>, ${i18next.t('about.content.p1')}
             </p>
@@ -39,6 +40,7 @@ export class AboutSection extends LitElement {
             </p>
           </div>
         </div>
+      <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
       </section>
     `;
   }
