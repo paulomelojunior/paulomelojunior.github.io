@@ -1,7 +1,6 @@
 import i18next from '../../i18n';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import './styles.scss';
 import m1 from './mockup-1.png';
 import m2 from './mockup-2.png';
 
@@ -40,7 +39,7 @@ export class CasesSection extends LitElement {
 					</span>
 				</span>
 			</div>
-			<div class="cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:p-28 justify-between items-center relative bg-zinc-400/10  xl:rounded-r-[2rem] backdrop-blur-lg">
+			<div class="mob-cases-content xl:cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:p-28 justify-between items-center relative xl:rounded-r-[2rem] backdrop-blur-lg">
 				<h2 class="text-[2.5rem] xl:text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
 					Selected <br class="hidden xl:block">
 					cases

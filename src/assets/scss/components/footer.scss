@@ -1,0 +1,10 @@
+.footer {
+	background:
+    linear-gradient(0deg, transparent ,theme('colors.zinc.950') 50%),
+    url('../imgs/dots.svg'),
+    url('../imgs/grid.svg'),
+    black;
+    background-attachment: local, fixed, fixed;
+    background-position: center, center 2rem, center 2rem;
+	background-repeat: repeat;
+}

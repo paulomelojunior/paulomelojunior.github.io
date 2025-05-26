@@ -1,0 +1,20 @@
+.cases-content {
+	background:
+    linear-gradient(-135deg, theme('colors.zinc.900'), transparent),
+    linear-gradient(-45deg, theme('colors.zinc.900'), transparent),
+    url('../imgs/dots.svg'),
+    url('../imgs/grid.svg');
+    background-position: center left;
+	background-repeat: repeat;
+}
+
+.mob-cases-content {
+	background:
+    linear-gradient(0deg, theme('colors.black'), transparent, theme('colors.black')),
+    url('../imgs/dots.svg'),
+    url('../imgs/grid.svg'),
+    black;
+    background-attachment: local, fixed, fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
