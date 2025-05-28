@@ -177,7 +177,7 @@ window.onload = function load() {
     })
 
     noise.classList.remove('opacity-0')
-    noise.classList.add('opacity-10')
+    noise.classList.add('opacity-15')
 
     gsap.from('header', {
         opacity: 0,
