@@ -50,38 +50,9 @@
 </head>
 
 <body class="relative">
-	<div id="noise" class="transition-opacity duration-250 opacity-0 relative"></div>
 	<menu-container></menu-container>
 	<main class="invisible">
-		<section
-			id="hero"
-			class="container relative flex min-h-[calc(100vh-100vw)] xl:min-h-[calc(100vh-4rem)] 2xl:min-h-0 flex-col justify-end 2xl:h-[calc(50dvh-4rem)]">
-			<h1 id="heroTitle">
-				<div class="flex flex-col px-5 items-center">
-					<div id="logo" class="flex flex-col xl:flex-row gap-1.5 items-center pt-5 top-0 z-10 xl:z-auto">
-						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
-						<span class="uppercase text-sm text-zinc-200/50">
-							pmjr.cc
-						</span>
-					</div>
-					<h1 class="text-[2.5rem] mb-14 *:-mb-3 pb-12 *:xl:-mb-8 xl:pb-24 2xl:pb-12 tracking-[-0.02em] text-center xl:text-[4rem] dark:text-zinc-200 text-zinc-800">
-						<span class="block hero-letters">
-							Product designer
-						</span>
-						<span class="block hero-letters">
-							and creative coder
-						</span>
-					</h1>
-				</div>
-			</h1>
-		</section>
-		<section id="heroFooter" class="items-center absolute z-50 sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
-			<div class="container">
-				<marquee-element items="Design Engineering, Product Design, UX and UI"></marquee-element>
-			</div>
-		</section>
-		<about-section></about-section>
-		<hr class="xl:hidden border-zinc-300 dark:border-zinc-900 mx-5">
+		<hero-section></hero-section>
 		<section>
 			<div id="job" class="container pt-14 pb-16 grid gap-16 xl:gap-1 overflow-hidden xl:grid-cols-3 xl:py-16 *:2xl:h-[512px]">
 				<div class="2xl:p-32 xl:p-20 px-9 flex xl:justify-center xl:items-center xl:bg-zinc-900 rounded-[2rem]">
@@ -143,13 +114,11 @@
 			</div>
 		</footer>
 	</main>
-	<div class="xl:h-16 h-40 fixed inset-x-0 top-0 overflow-hidden bg-gradient-to-b  xl:from-inherit xl:dark:bg-zinc-950/80 xl:bg-zinc-200/80 xl:border-b border-zinc-300 dark:border-zinc-900">
+	<!-- <progressive-blur custom="fixed h-40 inset-x-0 top-0 bg-gradient-to-b from-black"></progressive-blur> -->
+	<!-- <div class="xl:h-16 h-40 fixed inset-x-0 top-0 overflow-hidden bg-gradient-to-b  xl:from-inherit xl:dark:bg-zinc-950/80 xl:bg-zinc-200/80 dark:border-zinc-900">
 		<progressive-blur custom="relative h-40 inset-x-0 top-0"></progressive-blur>
-	</div>
-	<div class="xl:block hidden">
-		<progressive-blur custom="fixed inset-x-0 h-40 bottom-0 rotate-180"></progressive-blur>
-	</div>
+	</div> -->
 </body>
 <script type="module" src="src/assets/js/main.js"></script>
-<script type="module" src="src/assets/js/btc.js"></script>
+<!-- <script type="module" src="src/assets/js/btc.js"></script> -->
 </html>

@@ -1,0 +1,7 @@
+.hero {
+    background-image:
+        radial-gradient(circle at top, transparent, theme('colors.black') 50%),
+        url(../../assets/imgs/pattern.svg);
+    background-attachment: fixed, fixed;
+    background-position: center;
+}

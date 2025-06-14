@@ -2,7 +2,6 @@ import { gsap } from 'gsap'
 import { CustomEase } from 'gsap/CustomEase'
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { doc } from 'prettier'
 
 import SplitType from 'split-type'
 
@@ -12,8 +11,6 @@ gsap.defaults({
     duration: 1,
     ease: CustomEase.create('custom', '.75,0,0.5,1'),
 })
-
-const noise = document.querySelector('#noise')
 
 window.onload = function load() {
     document.querySelectorAll('.invisible').forEach((i) => {
@@ -42,38 +39,38 @@ window.onload = function load() {
             opacity: 0
         })
 
-        ScrollTrigger.create({
-            trigger: '#heroFooter',
-            start: 'top top',
-            onLeave: () => {
-                header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
-                header.classList.remove('absolute')
-                gsap.to(header, {
-                    yPercent: 0,
-                    opacity: 1,
-                    duration: 0.25,
-                })
-                gsap.to(copyright, {
-                    opacity: 1
-                })
-            },
-            onEnterBack: () => {
-                gsap.to(header, {
-                    yPercent: 50,
-                    opacity: 0,
-                    duration: 0.25,
-                    onComplete: () => {
-                        header.classList.remove('fixed', 'bottom-[env(safe-area-inset-bottom)]')
-                        header.classList.add('absolute')
-                        header.removeAttribute('style')
-                    },
-                })
-                gsap.to(copyright, {
-                    opacity: 0,
-                    duration: 0.2
-                })
-            },
-        })
+        // ScrollTrigger.create({
+        //     trigger: '#heroFooter',
+        //     start: 'top top',
+        //     onLeave: () => {
+        //         header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
+        //         header.classList.remove('absolute')
+        //         gsap.to(header, {
+        //             yPercent: 0,
+        //             opacity: 1,
+        //             duration: 0.25,
+        //         })
+        //         gsap.to(copyright, {
+        //             opacity: 1
+        //         })
+        //     },
+        //     onEnterBack: () => {
+        //         gsap.to(header, {
+        //             yPercent: 50,
+        //             opacity: 0,
+        //             duration: 0.25,
+        //             onComplete: () => {
+        //                 header.classList.remove('fixed', 'bottom-[env(safe-area-inset-bottom)]')
+        //                 header.classList.add('absolute')
+        //                 header.removeAttribute('style')
+        //             },
+        //         })
+        //         gsap.to(copyright, {
+        //             opacity: 0,
+        //             duration: 0.2
+        //         })
+        //     },
+        // })
         
         const headerHeight = document.querySelector('header').clientHeight
         const footerHeight = document.querySelector('footer nav').clientHeight
@@ -165,51 +162,20 @@ window.onload = function load() {
         })
     })
 
-    noise.classList.remove('opacity-0')
-    noise.classList.add('opacity-15')
-
     gsap.from('header', {
         opacity: 0,
     })
 
-    const heroLetters = document.querySelectorAll('.hero-letters')
+    // const heroLetters = document.querySelectorAll('.hero-letters')
 
-    heroLetters.forEach((chars) => {
-        const txt = new SplitType(chars, { types: 'chars' })
-        gsap.from(txt.chars, {
-            clipPath: 'inset(100% 100% 0 0)',
-            xPercent: 100,
-            stagger: 0.04,
-        })
-    })
-
-    gsap.from('#logo', {
-        yPercent: 50,
-        opacity: 0,
-        filter: 'blur(.5rem)',
-        delay: 0.75,
-    })
-
-    gsap.from('#heroFooter .marquee__content li', {
-        opacity: 0,
-        yPercent: 200,
-        stagger: 0.1,
-    })
-
-    gsap.from('#who > div > *', {
-        opacity: 0,
-        y: '20%',
-    })
-
-    gsap.from('#who > picture', {
-        opacity: 0,
-    })
-
-    gsap.from('#who img', {
-        opacity: 0,
-        scale: 1.2,
-        filter: 'blur(.75rem)',
-    })
+    // heroLetters.forEach((chars) => {
+    //     const txt = new SplitType(chars, { types: 'chars' })
+    //     gsap.from(txt.chars, {
+    //         clipPath: 'inset(100% 100% 0 0)',
+    //         xPercent: 100,
+    //         stagger: 0.04,
+    //     })
+    // })
 
     const praxisPath = document.querySelectorAll('.praxis svg')
     praxisPath.forEach((i) => {

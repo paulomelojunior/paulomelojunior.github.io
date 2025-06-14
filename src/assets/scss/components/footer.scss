@@ -1,0 +1,18 @@
+// .footer {
+// 	background:
+//     linear-gradient(0deg, transparent, theme('colors.zinc.950') 50%),
+//     url('../imgs/dots.svg'),
+//     url('../imgs/grid.svg'),
+//     theme('colors.zinc.900');
+//     background-attachment: local, fixed, fixed;
+//     background-position: center, center 3rem, center 3rem;
+// 	background-repeat: repeat;
+// }
+
+.footer {
+    background-image:
+    radial-gradient(circle at bottom, transparent, theme('colors.zinc.950') 50%),
+    url(../../assets/imgs/pattern.svg);
+    background-attachment: local, fixed;
+    background-position: center;
+}
