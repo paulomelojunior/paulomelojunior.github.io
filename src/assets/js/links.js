@@ -17,6 +17,10 @@ export function menu() {
             label: 'LinkedIn',
             url: 'https://linkedin.com/in/paulomelojunior/',
         },
+        email: {
+            label: 'Email',
+            url: 'mailto:hello@pmjr.cc',
+        },
 
     }
 
@@ -32,7 +36,7 @@ export function menu() {
                     ${e.label}
                     </div>
                     <span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem]">
-                        ${indexStr}
+                        ${indexStr === '05' ? 'hello@pmjr.cc' : indexStr}
                     </span>
                 </a>
             </li>`

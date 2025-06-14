@@ -1,7 +1,6 @@
 import i18next from '../../i18n';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { ThemeButton } from './theme';
 
 @customElement('menu-container')
 export class MenuContainer extends LitElement {

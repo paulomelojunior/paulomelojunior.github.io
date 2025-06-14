@@ -19,6 +19,12 @@ export default {
                 {
                     fontFeatureSettings: '"ss01"'
                 }
+            ],
+            inter: [
+                '"Inter", sans-serif',
+                {
+                    fontFeatureSettings: '"liga" 1, "calt" 1'
+                }
             ]
         },
         container: {

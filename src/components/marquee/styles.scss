@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes marquee-hover {
+    from {
+        transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX(calc(-50% - var(--gap)));
+    }
+}
+
 .marquee {
     --gap: 2rem;
     display: flex;
@@ -45,7 +55,6 @@
     leading-none
     text-[1rem]
     xl:text-[1.25rem];
-    
     min-width: 100%;
     gap: var(--gap);
     animation: marquee 32s linear infinite;

@@ -32,6 +32,16 @@ window.onload = function load() {
             },
         })
 
+        // gsap.to('#who .progressive-blur', {
+        //     scrollTrigger: {
+        //         trigger: '#who .progressive-blur',
+        //         start: 'bottom 50%',
+        //         toggleActions: 'play none none reverse',
+        //         markers:true,
+        //         scrub: true
+        //     },
+        // })
+
         const header = document.querySelector('header')
         const copyright = document.querySelector('#copy')
 
@@ -104,15 +114,16 @@ window.onload = function load() {
     })
 
     mm.add('(min-width: 1024px)', () => {
-        gsap.from('#job > * > *', {
+        gsap.from('#job > *', {
             scrollTrigger: {
                 trigger: '.job',
                 start: 'top 100%',
                 toggleActions: 'play none none reset',
             },
             opacity: 0,
-            clipPath: 'inset(0% 0% 100% 0%)',
-            stagger: 0.05,
+            x: '10rem',
+            // clipPath: 'inset(0% 0% 100% 0%)',
+            stagger: 0.1,
         })
 
         gsap.from('.cases', {
@@ -121,12 +132,12 @@ window.onload = function load() {
                 start: 'top bottom',
                 end: '50% 100%',
                 toggleActions: 'play none none reverse',
-                scrub: 0.5,
+                scrub: 2,
             },
             ease: 'none',
-            opacity: 0,
-            stagger: -0.25,
-            y: '10rem',
+            // opacity: 0,
+            stagger: 0.25,
+            x: '10rem',
         })
 
     })
@@ -189,7 +200,7 @@ window.onload = function load() {
             stagger: 0.1,
             stroke: '#000',
             opacity: 0,
-            fill: '#b74f06',
+            fill: '#ff6666',
             drawSVG: false,
         })
     })
@@ -216,10 +227,9 @@ window.onload = function load() {
             start: 'top 50%',
             end: 'top 0%',
             toggleActions: 'play none none reverse',
-            // scrub: true,
         },
         opacity: 0,
         stagger: .1,
-        x: '5rem',
+        y: '5rem',
     })
 }
