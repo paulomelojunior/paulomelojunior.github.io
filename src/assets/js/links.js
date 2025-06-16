@@ -35,7 +35,7 @@ export function menu() {
                     <div class="absolute flex items-center pb-1 px-5 inset-0 xl:rounded-full text-zinc-800">
                     ${e.label}
                     </div>
-                    <span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem]">
+                    <span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono tracking-[1px] text-[.75rem]">
                         ${indexStr === '05' ? 'hello@pmjr.cc' : indexStr}
                     </span>
                 </a>

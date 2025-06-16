@@ -17,30 +17,40 @@ window.onload = function load() {
         i.classList.remove('invisible')
     })
 
+    const navItems = document.querySelectorAll('.menu-item')
+
+    navItems.forEach((item) => {
+        const target = item.firstElementChild
+        gsap.set(target, {
+            clipPath: 'inset(0% 0% 100% 0%)',
+        })
+    })
+
+    navItems.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+            const target = item.firstElementChild
+            gsap.to(target, {
+                duration: 0.25,
+                clipPath: 'inset(0% 0% 0% 0%)',
+            })
+        })
+        item.addEventListener('mouseleave', () => {
+            const target = item.firstElementChild
+            gsap.to(target, {
+                duration: 0.25,
+                clipPath: 'inset(100% 0 0 0)',
+                onComplete: () => {
+                    gsap.set(target, {
+                        clipPath: 'inset(0% 0% 100%)',
+                    })
+                },
+            })
+        })
+    })
+
     let mm = gsap.matchMedia()
     
     mm.add('(max-width: 1024px)', () => {
-        ScrollTrigger.create({
-            trigger: '#logo',
-            start: '0% top',
-            end: '0% 0%',
-            onEnter: () => {
-                document.querySelector('#logo').classList.add('fixed')
-            },
-            onLeaveBack: () => {
-                document.querySelector('#logo').classList.remove('fixed')
-            },
-        })
-
-        // gsap.to('#who .progressive-blur', {
-        //     scrollTrigger: {
-        //         trigger: '#who .progressive-blur',
-        //         start: 'bottom 50%',
-        //         toggleActions: 'play none none reverse',
-        //         markers:true,
-        //         scrub: true
-        //     },
-        // })
 
         const header = document.querySelector('header')
         const copyright = document.querySelector('#copy')
@@ -49,38 +59,38 @@ window.onload = function load() {
             opacity: 0
         })
 
-        // ScrollTrigger.create({
-        //     trigger: '#heroFooter',
-        //     start: 'top top',
-        //     onLeave: () => {
-        //         header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
-        //         header.classList.remove('absolute')
-        //         gsap.to(header, {
-        //             yPercent: 0,
-        //             opacity: 1,
-        //             duration: 0.25,
-        //         })
-        //         gsap.to(copyright, {
-        //             opacity: 1
-        //         })
-        //     },
-        //     onEnterBack: () => {
-        //         gsap.to(header, {
-        //             yPercent: 50,
-        //             opacity: 0,
-        //             duration: 0.25,
-        //             onComplete: () => {
-        //                 header.classList.remove('fixed', 'bottom-[env(safe-area-inset-bottom)]')
-        //                 header.classList.add('absolute')
-        //                 header.removeAttribute('style')
-        //             },
-        //         })
-        //         gsap.to(copyright, {
-        //             opacity: 0,
-        //             duration: 0.2
-        //         })
-        //     },
-        // })
+        ScrollTrigger.create({
+            trigger: '#hero-marquee',
+            start: 'top top',
+            onLeave: () => {
+                header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
+                header.classList.remove('absolute')
+                gsap.to(header, {
+                    yPercent: 0,
+                    opacity: 1,
+                    duration: 0.25,
+                })
+                gsap.to(copyright, {
+                    opacity: 1
+                })
+            },
+            onEnterBack: () => {
+                gsap.to(header, {
+                    yPercent: 50,
+                    opacity: 0,
+                    duration: 0.25,
+                    onComplete: () => {
+                        header.classList.remove('fixed', 'bottom-[env(safe-area-inset-bottom)]')
+                        header.classList.add('absolute')
+                        header.removeAttribute('style')
+                    },
+                })
+                gsap.to(copyright, {
+                    opacity: 0,
+                    duration: 0.2
+                })
+            },
+        })
         
         const headerHeight = document.querySelector('header').clientHeight
         const footerHeight = document.querySelector('footer nav').clientHeight
@@ -122,7 +132,6 @@ window.onload = function load() {
             },
             opacity: 0,
             x: '10rem',
-            // clipPath: 'inset(0% 0% 100% 0%)',
             stagger: 0.1,
         })
 
@@ -135,46 +144,10 @@ window.onload = function load() {
                 scrub: 2,
             },
             ease: 'none',
-            // opacity: 0,
             stagger: 0.25,
             x: '10rem',
         })
 
-    })
-
-    const navItems = document.querySelectorAll('.menu-item')
-
-    navItems.forEach((item) => {
-        const target = item.firstElementChild
-        gsap.set(target, {
-            clipPath: 'inset(0% 0% 100% 0%)',
-        })
-    })
-
-    navItems.forEach((item) => {
-        item.addEventListener('mouseenter', () => {
-            const target = item.firstElementChild
-            gsap.to(target, {
-                duration: 0.25,
-                clipPath: 'inset(0% 0% 0% 0%)',
-            })
-        })
-        item.addEventListener('mouseleave', () => {
-            const target = item.firstElementChild
-            gsap.to(target, {
-                duration: 0.25,
-                clipPath: 'inset(100% 0 0 0)',
-                onComplete: () => {
-                    gsap.set(target, {
-                        clipPath: 'inset(0% 0% 100%)',
-                    })
-                },
-            })
-        })
-    })
-
-    gsap.from('header', {
-        opacity: 0,
     })
 
     // const heroLetters = document.querySelectorAll('.hero-letters')
@@ -200,7 +173,7 @@ window.onload = function load() {
             stagger: 0.1,
             stroke: '#000',
             opacity: 0,
-            fill: '#ff6666',
+            fill: '#ff6464',
             drawSVG: false,
         })
     })

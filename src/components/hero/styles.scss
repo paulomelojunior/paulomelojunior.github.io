@@ -1,7 +1,15 @@
 .hero {
-    background-image:
-        radial-gradient(circle at top, transparent, theme('colors.black') 50%),
-        url(../../assets/imgs/pattern.svg);
-    background-attachment: fixed, fixed;
-    background-position: center;
+    position: relative;
+    
+    &:before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-image: url(../../assets/imgs/pattern.svg);
+        background-attachment: fixed;
+        mask-image: radial-gradient(circle at top left, white, black 50%);
+        mask-mode: luminance;
+        pointer-events: none;
+        z-index: -1;
+    }   
 }

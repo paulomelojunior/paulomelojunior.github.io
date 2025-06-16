@@ -1,20 +1,32 @@
 .cases-content {
-	background:
-    linear-gradient(-135deg, theme('colors.zinc.900'), transparent),
-    linear-gradient(-45deg, theme('colors.zinc.900'), transparent),
-    url('../imgs/dots.svg'),
-    url('../imgs/grid.svg');
-    background-position: center left;
-	background-repeat: repeat;
+    position: relative;
+    overflow: hidden;
+	&:before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+        url('../imgs/pattern.svg'),
+        theme('colors.zinc.900');
+        background-repeat: repeat;
+        mask-image: radial-gradient(circle at top, black, transparent);
+    }
 }
 
 .mob-cases-content {
-	background:
-    linear-gradient(0deg, theme('colors.black'), transparent, theme('colors.black')),
-    url('../imgs/dots.svg'),
-    url('../imgs/grid.svg'),
-    black;
-    background-attachment: local, fixed, fixed;
-    background-position: center;
-    background-repeat: repeat;
+    position: relative;
+    overflow: hidden;
+	&:before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+        url('../imgs/pattern.svg'),
+        theme('colors.zinc.950');
+        background-repeat: repeat;
+        background-position: center;
+        mask-image: radial-gradient(circle at top, theme('colors.black'), transparent);
+    }
 }

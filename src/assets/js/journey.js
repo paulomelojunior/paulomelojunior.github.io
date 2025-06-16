@@ -26,7 +26,7 @@ export function journey() {
         4: {
             custom: 'text-brand-400',
             start: '2019',
-            end: 'and beyond',
+            end: '2025',
             title: 'Lead Designer, <br class="block xl:hidden"> UI Developer',
             description: `Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability.`,
         },

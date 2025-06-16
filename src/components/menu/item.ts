@@ -14,7 +14,7 @@ export class MenuItem extends LitElement {
 		);
 
 		const classList = classNames(
-			'menu-item relative flex items-center justify-center h-12 xl:h-16 px-4 text-[.75rem] xl:text-sm leading-none uppercase',
+			'menu-item relative tracking-[0.05em] flex items-center justify-center h-12 xl:h-16 px-4 text-[.75rem] xl:text-sm leading-none uppercase',
 		);
 
 		return html`<a class="${classList}" href="${this.href}">

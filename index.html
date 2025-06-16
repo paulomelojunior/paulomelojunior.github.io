@@ -37,48 +37,13 @@
 </head>
 
 <body class="relative">
+	<div id="noise" class="relative opacity-10"></div>
 	<menu-container></menu-container>
 	<main class="invisible">
-		<section
-			id="hero"
-			class="
-				relative
-				flex
-				min-h-[calc(100vh-100vw)]
-				xl:min-h-[calc(100vh-4rem)]
-				2xl:min-h-0
-				flex-col
-				justify-end
-				2xl:h-[calc(50dvh-4rem)]
-			">
-			<h1 id="heroTitle">
-				<div class="flex flex-col px-5 items-center">
-					<div id="logo" class="flex gap-1.5 items-center pt-5 top-0 z-[11] xl:z-auto">
-						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
-						<span class="uppercase text-sm text-zinc-200/50">
-							pmjr.cc
-						</span>
-					</div>
-					<h1 class="text-[2.5rem] mb-14 *:-mb-3 pb-12 *:xl:-mb-8 xl:pb-24 2xl:pb-12 tracking-[-0.02em] text-center xl:text-[4rem] dark:text-zinc-200 text-zinc-800">
-						<span class="block hero-letters">
-							Product designer
-						</span>
-						<span class="block hero-letters">
-							and creative coder
-						</span>
-					</h1>
-				</div>
-			</h1>
-		</section>
-		<section id="heroFooter" class="items-center absolute xl:z-50 2xl:z-auto sm:relative w-full -translate-y-full sm:translate-y-0 top-[100lvh-100vw] sm:top-auto overflow-hidden" aria-hidden="true">
-			<div class="container">
-				<marquee-element items="Design Engineering, Product Design, UX and UI"></marquee-element>
-			</div>
-		</section>
-		<about-section></about-section>
-		<hr class="xl:hidden border-zinc-300 dark:border-zinc-900 mx-5">
+		<hero-section></hero-section>
 		<section>
-			<div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-32">
+			<div class="container">
+				<praxis-section></praxis-section>
 			</div>
 		</section>
 		<section>
@@ -86,9 +51,11 @@
 				<marquee-element items="Figma, Framer, HTML, CSS, JS, Tailwind, GSAP"></marquee-element>
 			</div>
 		</section>
+		<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
 		<section>
-			<div class="container">
-				<praxis-section></praxis-section>
+			<div class="bg-[linear-gradient(black,transparent_40%)]">
+				<div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-32">
+				</div>
 			</div>
 		</section>
 		<section id="cases">
@@ -102,42 +69,35 @@
 					<span class="px-5 h-20 flex items-center xl:p-0 text-zinc-600">
 						Stay in touch
 					</span>
-					<span class="hidden xl:block ml-5">
+					<span class="absolute xl:relative h-20 xl:h-auto flex items-center right-5 xl:right-auto ml-5">
 						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
 					</span>
 				</ul>
 			</nav>
 			<div class="absolute inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-500">
-				<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-				<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-between text-xs leading-none">
-					<span class="text-brand-400">
-						More soon, or never.
-					</span>
-					<div class="hidden md:block">
+				<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-center text-xs leading-none">
+					<div class="hidden">
 						<span> BTC Price </span>
 						<span class="text-zinc-600">✦</span>
 						<span id="current-price"> 00,00 USD </span>
 					</div>
-					<div class="hidden md:block">
+					<div class="hidden">
 						<span> 200 DMA </span>
 						<span class="text-zinc-600">✦</span>
 						<span id="moving-average"> 00,00 USD </span>
 					</div>
-					<div class="hidden md:block">
+					<div class="hidden">
 						<span> Mayer Multiple </span>
 						<span class="text-zinc-600">✦</span>
 						<span id="mayer-multiple"> 0.0 </span>
 					</div>
-				<span class="text-right text-brand-400"> 
-					[c] 2025
+					<span class="text-right"> 
+						Copyright 2025. Get off zero.
+					</span>
 				</div>
 			</div>
 		</footer>
 	</main>
-	<!-- <progressive-blur custom="fixed h-40 inset-x-0 top-0 bg-gradient-to-b from-black"></progressive-blur> -->
-	<!-- <div class="xl:h-16 h-40 fixed inset-x-0 top-0 overflow-hidden bg-gradient-to-b  xl:from-inherit xl:dark:bg-zinc-950/80 xl:bg-zinc-200/80 dark:border-zinc-900">
-		<progressive-blur custom="relative h-40 inset-x-0 top-0"></progressive-blur>
-	</div> -->
 </body>
 <script type="module" src="src/assets/js/main.js"></script>
 <!-- <script type="module" src="src/assets/js/btc.js"></script> -->

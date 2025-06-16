@@ -66,29 +66,28 @@ export class MenuContainer extends LitElement {
 
   render() {
     return html`
-      <header class="container grid xl:grid-cols-2 items-center w-full absolute inset-x-0 z-40 invisible xl:fixed backdrop-blur-xl bg-zinc-950/50 xl:bg-transparent xl:backdrop-blur-0">
-          <theme-button
-          @click=${() => this.copyEmail()}
-          @mouseleave=${() => this.copyEmailReset()}
-          label="hello@pmjr.cc"
-          hover="Click to copy"
-          ></theme-button>
-        <nav>
-          <ul id="anchors" class="flex *:flex-1 *:xl:flex-none justify-end">
-            <menu-item href="#who" label="${i18next.t('menu.about')}" icon="user-circle"></menu-item>
-            <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
-            <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
-            <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
-          </ul>
-          <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-between px-5 bg-zinc-900 font-mono uppercase text-[.625rem] tracking-widest h-12 w-full">
-            <span>
-              More soon, or never.
-            </span>
-            <span>
-              2025 [c]
-            </span>
-          </div>
-        </nav>
+      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b from-zinc-950 bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
+        <div class="container grid xl:grid-cols-2 items-center">
+          <mail-button
+            @click=${() => this.copyEmail()}
+            @mouseleave=${() => this.copyEmailReset()}
+            label="hello@pmjr.cc"
+            hover="Click to copy"
+            ></mail-button>
+          <nav>
+            <ul id="anchors" class="flex *:flex-1 *:xl:flex-none justify-end">
+              <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
+              <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
+              <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
+            </ul>
+            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
+              <span>
+                Copyright 2025 Paulo Melo Jr.
+              </span>
+            </div>
+          </nav>
+        </div>
+        <div class="hidden xl:block h-px inset-x-0 bg-gradient-to-l via-transparent from-zinc-700"></div>
       </header>
     `;
   }
