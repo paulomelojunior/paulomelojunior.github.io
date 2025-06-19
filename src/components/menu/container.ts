@@ -37,7 +37,7 @@ export class MenuContainer extends LitElement {
   }
 
   updateText(text: string, delay: number) {
-    const element = document.querySelector('theme-button span');
+    const element = document.querySelector('mail-button span');
     if (element) {
       setTimeout(() => {
         element.textContent = text;
