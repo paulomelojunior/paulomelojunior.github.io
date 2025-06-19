@@ -25,25 +25,25 @@ export class HeroSection extends LitElement {
   render() {
     return html`
       <section class="hero">
-        <div class="min-h-[calc(100dvh-4rem)] flex flex-col justify-center container">
-          <div class="p-5 xl:p-24 2xl:p-32 xl:pt-48 flex flex-col justify-end items-start gap-1 2xl:gap-0">
+        <div class="min-h-[calc(100dvh-4rem)] flex flex-col justify-end container">
+          <div class="p-5 xl:p-24 2xl:p-32 xl:pt-48 flex flex-col justify-end items-start gap-5">
             <div class="flex items-center rounded-full overflow-hidden bg-brand-400">
               <img src="${logo}" alt="Logo" class="h-6" />
               <span class="uppercase ps-3 pe-4 text-sm font-semibold text-black">
                 Paulo Melo Jr.
               </span>
             </div>
-            <h1 class="text-[2.5rem] -mb-3 xl:-mb-8 xl:text-[4.5rem] tracking-[-0.04em] text-transparent bg-gradient-to-r from-white via-slate-200 to-zinc-100 bg-clip-text">
-              <span class="block md:hidden -mb-3 xl:-mb-8">
+            <h1 class="text-[2.5rem] leading-none xl:text-[4.5rem] tracking-[-0.04em] text-zinc-200">
+              <span class="block xl:hidden">
                 Product designer
               </span>
-              <span class="block md:hidden">
+              <span class="block xl:hidden">
                 and creative coder
               </span>
-              <span class="hidden md:block hero-letters -mb-3 xl:-mb-8">
+              <span class="hidden xl:inline-block">
                 Designer and creative coder crafting
               </span>
-              <span class="hidden md:block hero-letters">
+              <span class="hidden xl:inline-block">
                 future-ready digital interactions.
               </span>
             </h1>

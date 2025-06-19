@@ -3,14 +3,17 @@
     "greetings": {
       "morning": "Bom dia",
       "afternoon": "Boa tarde",
-      "night": "Boa noite"
+      "night": "Boa noite",
+      "boss": "chefe"
     },
-    "hello": "oi",
-    "name": "@pmjr.cc",
-    "who": "Sobre",
-    "job": "Jornada",
-    "hey": "Contato",
-    "more": "Mais",
+    "theme": {
+      "night": "Noite",
+      "day": "Dia"
+    },
+    "about": "Sobre",
+    "journey": "Jornada",
+    "praxis": "Praxis",
+    "connect": "Contato",
     "languages": {
       "en": "EN",
       "pt": "PT"
@@ -19,15 +22,10 @@
   "about": {
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
   "content": {
-      "p1": "Entusiasta de",
-      "h1": "tecnologias descentralizadas",
-      "p2": "impulsionado pelo",
-      "h3": { "s1": "movimento", "s2": "open-source" },
-      "p3": "e outras coisas geeks. Atualmente trabalhando com uma empresa de marketing interativo focada em geração de leads em Denver, CO.",
-      "h4": "Dedicado à qualidade",
-      "p4": "me comprometo com o aprendizado contínuo e desenvolvimento profissional, mantendo-me atualizado sobre",
-      "h5": "tendências de design",
-      "p5": "avanços tecnológicos e melhores práticas da indústria para entregar soluções de ponta."
+      "h1": "Entusiasta de tecnologias descentralizadas",
+      "p1": "impulsionado pelo movimento open-source e outras coisas geeks. Atualmente trabalhando com uma empresa de marketing interativo focada em geração de leads em Denver, CO.",
+      "h2": "Dedicado à qualidade",
+      "p2": "me comprometo com o aprendizado contínuo e desenvolvimento profissional, mantendo-me atualizado sobre tendências de design avanços tecnológicos e melhores práticas da indústria para entregar soluções de ponta."
     }
   }
 }
