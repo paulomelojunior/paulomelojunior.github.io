@@ -6,7 +6,6 @@ import classNames from 'classnames';
 export class MenuItem extends LitElement {
 	@property({ type: String }) href: string = '';
 	@property({ type: String }) label: string = '';
-	@property({ type: String }) icon: string = '';
 
 	render() {
 		const beforeClassList = classNames(
@@ -19,18 +18,15 @@ export class MenuItem extends LitElement {
 
 		return html`<a class="${classList}" href="${this.href}">
 			<div class="${beforeClassList}" aria-hidden="true">
-				<i class="absolute hidden text-7xl leading-none ph ph-${this.icon}"></i>
 				<span class="text-zinc-800 font-semibold relative">
 					${this.label}
 				</span>
 			</div>
 			${this.label}
-			</a>`;
+		</a>`;
 	}
 	
 	createRenderRoot() {
 		return this;
 	}
 }
-
-// ${this.icon ? html`<i class="flex text-2xl leading-none ph ph-${this.icon}"></i>` : ''}

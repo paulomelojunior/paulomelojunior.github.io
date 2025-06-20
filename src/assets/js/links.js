@@ -1,4 +1,4 @@
-export function menu() {
+export function links() {
     const navList = document.querySelector('#menu')
     const navItems = {
         cosmos: {
