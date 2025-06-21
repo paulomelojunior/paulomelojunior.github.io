@@ -1,10 +1,10 @@
 export function links() {
     const navList = document.querySelector('#menu')
     const navItems = {
-        cosmos: {
-            label: 'Cosmos',
-            url: 'https://cosmos.so/hackyoto',
-        },
+        // cosmos: {
+        //     label: 'Cosmos',
+        //     url: 'https://cosmos.so/hackyoto',
+        // },
         github: {
             label: 'GitHub',
             url: 'https://github.com/paulomelojunior',
@@ -16,6 +16,10 @@ export function links() {
         linkedin: {
             label: 'LinkedIn',
             url: 'https://linkedin.com/in/paulomelojunior/',
+        },
+        twitch: {
+            label: 'Twitch',
+            url: 'https://twitch.tv/hackyoto/',
         },
         email: {
             label: 'Email',
