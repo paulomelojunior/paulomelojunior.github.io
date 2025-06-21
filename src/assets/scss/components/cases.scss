@@ -18,15 +18,13 @@
     position: relative;
     overflow: hidden;
 	&:before {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-        url('../imgs/pattern.svg'),
-        theme('colors.zinc.950');
-        background-repeat: repeat;
+        background: url('../imgs/pattern.svg'), theme('colors.zinc.950');
         background-position: center;
+        background-repeat: repeat;
+        content: "";
+        inset: 0;
         mask-image: radial-gradient(circle at top, theme('colors.black'), transparent);
+        position: absolute;
+        z-index: -1;
     }
 }

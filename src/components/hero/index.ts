@@ -25,7 +25,7 @@ export class HeroSection extends LitElement {
   render() {
     return html`
       <section class="hero">
-        <div class="min-h-[calc(100dvh-4rem)] flex flex-col justify-end container">
+        <div class="min-h-[calc(100svh-4rem)] pt-16 xl:pt-0 flex flex-col justify-center xl:justify-end container">
           <div class="p-5 xl:p-24 2xl:p-32 xl:pt-48 flex flex-col justify-end items-start gap-5">
             <div class="flex items-center rounded-full overflow-hidden bg-brand-400">
               <img src="${logo}" alt="Logo" class="h-6" />

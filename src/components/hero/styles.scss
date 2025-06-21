@@ -1,13 +1,12 @@
 .hero {
     position: relative;
-    
     &:before {
         position: absolute;
-        inset: 0;
+        background: url('../../assets/imgs/pattern.svg');
         content: "";
-        background-image: url(../../assets/imgs/pattern.svg);
-        mask-image: radial-gradient(circle at top left, white, black 50%);
-        mask-mode: luminance;
+        height: 100vh;
+        inset-inline: 0;
+        mask-image: radial-gradient(circle at top left, theme('colors.black'), transparent 50%);
         pointer-events: none;
         z-index: -1;
 
