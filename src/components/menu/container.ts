@@ -76,9 +76,15 @@ export class MenuContainer extends LitElement {
             ></mail-button>
           <nav>
             <ul id="anchors" class="flex *:flex-1 *:xl:flex-none justify-end">
-              <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
-              <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
-              <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
+              <li>
+                <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
+              </li>
+              <li>
+                <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
+              </li>
+              <li>
+                <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
+              </li>
             </ul>
             <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
               <span>

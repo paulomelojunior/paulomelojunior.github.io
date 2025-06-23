@@ -134,16 +134,14 @@
           ${e}
         </ul>
       </div>
-    `}createRenderRoot(){return this}};Be([b({type:String})],Se.prototype,"items",2);Be([b({type:Boolean})],Se.prototype,"reverse",2);Se=Be([k("marquee-element")],Se);var Vs=Object.defineProperty,Bs=Object.getOwnPropertyDescriptor,Ke=(a,e,t,s)=>{for(var n=s>1?void 0:s?Bs(e,t):e,i=a.length-1,r;i>=0;i--)(r=a[i])&&(n=(s?r(e,t,n):r(n))||n);return s&&n&&Vs(e,t,n),n};let we=class extends C{constructor(){super(...arguments),this.href="",this.label=""}render(){const a=G("absolute pointer-events-none flex items-center justify-center inset-0"),e=G("menu-item relative tracking-[0.05em] flex items-center justify-center h-12 xl:h-16 px-4 text-[.75rem] xl:text-sm leading-none uppercase");return _`<li>
-			<a class="${e}" href="${this.href}">
-				<div class="${a}" aria-hidden="true">
-					<span class="text-zinc-800 font-semibold relative">
-						${this.label}
-					</span>
-				</div>
-				${this.label}
-			</a>
-		</li>`}createRenderRoot(){return this}};Ke([b({type:String})],we.prototype,"href",2);Ke([b({type:String})],we.prototype,"label",2);we=Ke([k("menu-item")],we);var Ks=Object.defineProperty,qs=Object.getOwnPropertyDescriptor,Ae=(a,e,t,s)=>{for(var n=s>1?void 0:s?qs(e,t):e,i=a.length-1,r;i>=0;i--)(r=a[i])&&(n=(s?r(e,t,n):r(n))||n);return s&&n&&Ks(e,t,n),n};let he=class extends C{constructor(){super(),this.more=!1,this.lang=f.language,this.night=!0;const a=localStorage.getItem("lang");a&&(this.lang=a,f.changeLanguage(a))}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText("Copied!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText("Click to copy",300)}updateText(a,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=a},e)}render(){return _`
+    `}createRenderRoot(){return this}};Be([b({type:String})],Se.prototype,"items",2);Be([b({type:Boolean})],Se.prototype,"reverse",2);Se=Be([k("marquee-element")],Se);var Vs=Object.defineProperty,Bs=Object.getOwnPropertyDescriptor,Ke=(a,e,t,s)=>{for(var n=s>1?void 0:s?Bs(e,t):e,i=a.length-1,r;i>=0;i--)(r=a[i])&&(n=(s?r(e,t,n):r(n))||n);return s&&n&&Vs(e,t,n),n};let we=class extends C{constructor(){super(...arguments),this.href="",this.label=""}render(){const a=G("absolute pointer-events-none flex items-center justify-center inset-0"),e=G("menu-item relative tracking-[0.05em] flex items-center justify-center h-12 xl:h-16 px-4 text-[.75rem] xl:text-sm leading-none uppercase");return _`<a class="${e}" href="${this.href}">
+			<div class="${a}" aria-hidden="true">
+				<span class="text-zinc-800 font-semibold relative">
+					${this.label}
+				</span>
+			</div>
+			${this.label}
+		</a>`}createRenderRoot(){return this}};Ke([b({type:String})],we.prototype,"href",2);Ke([b({type:String})],we.prototype,"label",2);we=Ke([k("menu-item")],we);var Ks=Object.defineProperty,qs=Object.getOwnPropertyDescriptor,Ae=(a,e,t,s)=>{for(var n=s>1?void 0:s?qs(e,t):e,i=a.length-1,r;i>=0;i--)(r=a[i])&&(n=(s?r(e,t,n):r(n))||n);return s&&n&&Ks(e,t,n),n};let he=class extends C{constructor(){super(),this.more=!1,this.lang=f.language,this.night=!0;const a=localStorage.getItem("lang");a&&(this.lang=a,f.changeLanguage(a))}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText("Copied!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText("Click to copy",300)}updateText(a,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=a},e)}render(){return _`
       <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b from-zinc-950 bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-2 items-center">
           <mail-button
@@ -154,9 +152,15 @@
             ></mail-button>
           <nav>
             <ul id="anchors" class="flex *:flex-1 *:xl:flex-none justify-end">
-              <menu-item href="#how" label="${f.t("menu.praxis")}"></menu-item>
-              <menu-item href="#job" label="${f.t("menu.journey")}"></menu-item>
-              <menu-item href="#hey" label="${f.t("menu.connect")}"></menu-item>
+              <li>
+                <menu-item href="#how" label="${f.t("menu.praxis")}"></menu-item>
+              </li>
+              <li>
+                <menu-item href="#job" label="${f.t("menu.journey")}"></menu-item>
+              </li>
+              <li>
+                <menu-item href="#hey" label="${f.t("menu.connect")}"></menu-item>
+              </li>
             </ul>
             <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
               <span>
