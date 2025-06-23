@@ -42,24 +42,26 @@
 <body class="relative">
 	<div id="noise" class="relative opacity-10"></div>
 	<menu-container></menu-container>
-	<main class="invisible">
-		<hero-section></hero-section>
-		<praxis-section></praxis-section>
-		<section>
-			<div class="container">
-				<marquee-element items="Figma, Framer, HTML, CSS, JS, Tailwind, GSAP"></marquee-element>
-			</div>
-		</section>
-		<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-		<section>
-			<div class="bg-[linear-gradient(black,transparent_40%)]">
-				<div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-32">
+	<div class="invisible">
+		<main>
+			<hero-section></hero-section>
+			<praxis-section></praxis-section>
+			<section>
+				<div class="container">
+					<marquee-element items="Figma, Framer, HTML, CSS, JS, Tailwind, GSAP"></marquee-element>
 				</div>
-			</div>
-		</section>
-		<cases-section></cases-section>
+			</section>
+			<div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
+			<section>
+				<div class="bg-[linear-gradient(black,transparent_40%)]">
+					<div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-32">
+					</div>
+				</div>
+			</section>
+			<cases-section></cases-section>
+		</main>
 		<footer id="hey" class="xl:footer relative h-lvh z-10 rounded-t-[2rem] overflow-hidden">
-			<nav class="relative flex h-full flex-1 items-center pb-24 xl:pb-0 z-10">
+			<div class="relative flex h-full flex-1 items-center pb-24 xl:pb-0 z-10">
 				<ul id="menu" class="flex flex-1 flex-col tracking-[-0.02em] flex-wrap gap-0 text-[2rem] xl:items-baseline xl:flex-row xl:gap-4 xl:justify-center xl:text-[2.5rem]">
 					<span class="px-5 h-20 flex items-center xl:p-0 text-zinc-600">
 						Stay in touch
@@ -68,7 +70,7 @@
 						<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
 					</span>
 				</ul>
-			</nav>
+			</div>
 			<div class="absolute inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-500">
 				<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-center text-xs leading-none">
 					<span> 
@@ -77,7 +79,7 @@
 				</div>
 			</div>
 		</footer>
-	</main>
+	</div>
 </body>
 <script type="module" src="src/assets/js/main.js"></script>
 </html>
