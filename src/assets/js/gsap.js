@@ -93,10 +93,10 @@ window.onload = function load() {
         })
         
         const headerHeight = document.querySelector('header').clientHeight
-        const footerHeight = document.querySelector('footer nav').clientHeight
+        const footerHeight = document.querySelector('#footerLinks').clientHeight
         gsap.to(header, {
             scrollTrigger: {
-                trigger: 'footer nav',
+                trigger: '#footerLinks',
                 start: `${footerHeight - headerHeight} bottom`,
                 end: `top top`,
                 toggleActions: 'play none none reverse',
