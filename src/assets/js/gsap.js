@@ -150,17 +150,6 @@ window.onload = function load() {
 
     })
 
-    // const heroLetters = document.querySelectorAll('.hero-letters')
-
-    // heroLetters.forEach((chars) => {
-    //     const txt = new SplitType(chars, { types: 'chars' })
-    //     gsap.from(txt.chars, {
-    //         clipPath: 'inset(100% 100% 0 0)',
-    //         xPercent: 100,
-    //         stagger: 0.04,
-    //     })
-    // })
-
     const praxisPath = document.querySelectorAll('.praxis svg')
     praxisPath.forEach((i) => {
         const p = i.querySelectorAll('path')

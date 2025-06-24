@@ -12,6 +12,12 @@ export default defineConfig({
                 main: 'index.html',
                 glyphs: 'glyphs.html',
                 404: '404.html',
+            },
+            output: {
+                hashCharacters: 'hex',
+                assetFileNames: 'src/[hash:6].[ext]',
+                chunkFileNames: 'src/[hash:6].js',
+                entryFileNames: 'src/[hash:6].js',
             }
         }
     },

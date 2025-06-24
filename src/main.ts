@@ -1,5 +1,4 @@
 // Components
-import './components/about';
 import './components/blur';
 import './components/cases';
 import './components/hero';
