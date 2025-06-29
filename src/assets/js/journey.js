@@ -39,7 +39,7 @@ export function journey() {
                 <span class="font-mono text-sm text-zinc-500">
                     ${element.start} &bull; <span${element.custom ? ` class="${element.custom}"` : ''}>${element.end}</span>
                 </span>
-                <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-zinc-800">
+                <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-stone-900">
                     ${element.title}
                 </h2>
                 <p class="leading-loose text-pretty">

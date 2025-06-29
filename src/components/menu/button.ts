@@ -2,37 +2,20 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import classNames from 'classnames';
 
-@customElement('menu-button')
-export class MenuButton extends LitElement {
-	@property({ type: String }) href: string = '';
-	@property({ type: String }) label: string = '';
-	@property({ type: String }) hover: string = '';
-	@property({ type: String }) icon: string = '';
-	@property({ type: Boolean }) active: boolean = false;
+@customElement('theme-button')
+export class ThemeButton extends LitElement {
+	@property({ type: String }) classNames = '';
+	@property({ type: String }) icon = '';
 
 	render() {
-		const classList = classNames(
-			'flex gap-2 text-sm uppercase items-center h-8 leading-none rounded-full whitespace-nowrap',
-			{
-				'px-4': !this.icon,
-				'ps-1.5 pe-4': this.icon,
-			}
-		);
+		const baseClasses = 'relative tracking-[0.05em] flex items-center transition-all justify-center size-8 hover:size-10 rounded-full hover:bg-stone-950 dark:hover:bg-zinc-200 hover:text-stone-950 dark:hover:text-zinc-200';
+		const buttonClasses = classNames(baseClasses, this.classNames);
 
-		return html`<button class="menu-item group/item relative ${classList}">
-			<div class="${classList} absolute pointer-events-none inset-0 dark:bg-zinc-900" aria-hidden="true">
-				<span>
-					Theme
-				</span>
-				<span>
-					${this.hover ? this.hover : this.label}
-				</span>
-			</div>
-			${this.icon ? html`
-				<i class="leading-none transition-all rounded-full group-hover/item:rotate-180 duration-500 group-hover/item:bg-brand-400 group-hover/item:text-zinc-900 ph-fill text-[1.25rem] ph-${this.icon}"></i>
-			` : ''}
-			${this.label}
-		</button>`;
+		return html`
+			<button class="${buttonClasses}">
+				<i class="ph-fill ph-${this.icon} bg-stone-200 dark:bg-zinc-950 rounded-full text-[1.25rem]"></i>
+			</button>
+		`;
 	}
 
 	createRenderRoot() {

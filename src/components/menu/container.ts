@@ -1,12 +1,12 @@
 import i18next from '../../i18n';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { ThemeMixin } from '../../store/theme';
 
 @customElement('menu-container')
-export class MenuContainer extends LitElement {
+export class MenuContainer extends ThemeMixin(LitElement) {
   @property({ type: Boolean }) more = false;
   @property({ type: String }) lang = i18next.language;
-  @property({ type: Boolean }) night = true;
 
   constructor() {
     super();
@@ -17,11 +17,9 @@ export class MenuContainer extends LitElement {
     }
   }
 
-  // changeTheme() {
-  //   this.night = !this.night;
-  //   document.documentElement.classList.toggle('dark', this.night);
-  //   localStorage.setItem('theme', this.night ? 'dark' : 'light');
-  // }
+  changeTheme() {
+    this.toggleTheme();
+  }
 
   copyEmail() {
     const email = "hello@pmjr.cc";
@@ -45,28 +43,9 @@ export class MenuContainer extends LitElement {
     }
   }
 
-  // toggleMore() {
-  //   this.more = !this.more;
-  // }
-  
-  // <div class="hidden flex items-center">
-  //   <menu-button @click=${() => this.changeLanguage('en')} label="${i18next.t('menu.languages.en')}" ?active=${this.lang === 'en'}></menu-button>
-  //   <menu-button @click=${() => this.changeLanguage('pt')} label="${i18next.t('menu.languages.pt')}" ?active=${this.lang === 'pt'}></menu-button>
-  // </div>
-          // <theme-button
-          // @click=${() => this.changeTheme()}
-          // label="${(() => {
-          //   const hour = new Date().getHours();
-          //   if (hour >= 5 && hour < 12) return i18next.t('menu.greetings.morning');
-          //   if (hour >= 12 && hour < 18) return i18next.t('menu.greetings.afternoon');
-          //   return i18next.t('menu.greetings.night');
-          // })()}, ${i18next.t('menu.greetings.boss')}"
-          // hover="${this.night ? i18next.t('menu.theme.night') : i18next.t('menu.theme.day')}"	
-          // ></theme-button>
-
   render() {
     return html`
-      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b from-zinc-950 bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
+      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b from-stone-200 bg-stone-200/60 dark:from-zinc-950 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-2 items-center">
           <mail-button
             @click=${() => this.copyEmail()}
@@ -75,25 +54,32 @@ export class MenuContainer extends LitElement {
             hover="Click to copy"
             ></mail-button>
           <nav>
-            <ul id="anchors" class="flex *:flex-1 *:xl:flex-none justify-end">
-              <li>
+            <ul id="anchors" class="flex justify-end">
+              <li class="flex-1 xl:flex-none">
                 <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
               </li>
-              <li>
+              <li class="flex-1 xl:flex-none">
                 <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
               </li>
-              <li>
+              <li class="flex-1 xl:flex-none">
                 <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
+                </li>
+              <li class="hidden items-center justify-center size-12 xl:size-16">
+                <theme-button
+                  @click=${() => this.changeTheme()}  
+                  icon="circle-half-tilt"
+                  classNames=${this.dark ? '' : 'rotate-180'}
+                ></theme-button>
               </li>
             </ul>
-            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
+            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
               <span>
                 Copyright 2025 Paulo Melo Jr.
               </span>
             </div>
           </nav>
         </div>
-        <div class="hidden xl:block h-px inset-x-0 bg-gradient-to-l via-transparent from-zinc-700"></div>
+        <div class="hidden xl:block h-px inset-x-0 bg-gradient-to-l via-transparent from-stone-300 dark:from-zinc-900"></div>
       </header>
     `;
   }

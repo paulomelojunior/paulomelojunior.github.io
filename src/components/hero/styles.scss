@@ -2,7 +2,7 @@
     position: relative;
     &:before {
         position: absolute;
-        background: url('../../assets/imgs/pattern.svg');
+        background: url('../../assets/imgs/pattern-light.svg');
         content: "";
         height: 100vh;
         inset-inline: 0;
@@ -12,6 +12,7 @@
 
         @apply
         bg-local
-        xl:bg-fixed;
+        xl:bg-fixed
+        dark:bg-[url('../../assets/imgs/pattern.svg')];
     }
 }

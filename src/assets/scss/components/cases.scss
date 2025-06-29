@@ -6,9 +6,8 @@
         content: "";
         position: absolute;
         inset: 0;
-        background:
-        url('../imgs/pattern.svg'),
-        theme('colors.zinc.900');
+        background-image:
+        url('../imgs/pattern.svg');
         background-repeat: repeat;
         mask-image: radial-gradient(circle at top, black, transparent);
     }
@@ -18,7 +17,7 @@
     position: relative;
     overflow: hidden;
 	&:before {
-        background: url('../imgs/pattern.svg'), theme('colors.zinc.950');
+        background-image: url('../imgs/pattern.svg');
         background-position: center;
         background-repeat: repeat;
         content: "";

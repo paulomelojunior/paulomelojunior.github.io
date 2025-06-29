@@ -1,4 +1,14 @@
 .praxis path {
     stroke-width: 2;
     vector-effect: non-scaling-stroke;
+
+    @apply
+    stroke-[#DE6868]
+    dark:stroke-brand-400;
+}
+
+.praxis svg {
+    @apply
+    fill-[#DE686800]
+    dark:fill-brand-400/0;
 }

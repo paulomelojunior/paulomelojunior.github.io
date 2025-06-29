@@ -1,11 +1,7 @@
 import { gsap } from 'gsap'
 import { CustomEase } from 'gsap/CustomEase'
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-import SplitType from 'split-type'
-
-gsap.registerPlugin(CustomEase, DrawSVGPlugin, ScrollTrigger)
+gsap.registerPlugin(CustomEase, ScrollTrigger)
 
 gsap.defaults({
     duration: 1,
@@ -105,22 +101,6 @@ window.onload = function load() {
             ease: 'none',
             yPercent: -100,
         })
-
-        const mark = document.querySelectorAll('mark')
-
-        mark.forEach((char) => {
-            const tex = new SplitType(char, { types: 'chars' })
-            gsap.from(tex.chars, {
-                scrollTrigger: {
-                    trigger: char,
-                    start: 'top 75%',
-                    toggleActions: 'play none none reverse',
-                },
-                color: window.getComputedStyle(document.body).color,
-                stagger: 0.01,
-                duration: 0.25,
-            })
-        })
     })
 
     mm.add('(min-width: 1024px)', () => {
@@ -148,39 +128,6 @@ window.onload = function load() {
             x: '10rem',
         })
 
-    })
-
-    const praxisPath = document.querySelectorAll('.praxis svg')
-    praxisPath.forEach((i) => {
-        const p = i.querySelectorAll('path')
-        gsap.from(p, {
-            scrollTrigger: {
-                trigger: i,
-                start: '0% 50%',
-                toggleActions: 'play none none reverse',
-            },
-            stagger: 0.1,
-            stroke: '#000',
-            opacity: 0,
-            fill: '#ff6464',
-            drawSVG: false,
-        })
-    })
-    
-    const praxisItem = document.querySelectorAll('.praxis')
-    praxisItem.forEach((i) => {
-        gsap.from(i.children, {
-            scrollTrigger: {
-                trigger: i.children,
-                start: '0% 50%',
-                toggleActions: 'play none none reverse',
-            },
-            duration: .8,
-            stagger: 0.1,
-            x: '5rem',
-            filter: 'blur(.5rem)',
-            opacity: (i) => (i === 0 ? 1 : 0),
-        })
     })
 
     gsap.from('#menu > *', {
