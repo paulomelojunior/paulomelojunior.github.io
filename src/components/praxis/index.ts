@@ -73,10 +73,10 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 <path d="M41 79.0966C37.4254 79.0966 33.8508 78.4978 30.4288 77.3001L1 67V57C1 50.3726 6.37258 45 13 45H41" stroke="#ff6666"/>
               </svg>
               <h2 class="text-[1.5rem] xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
-                Design to thinking.
+                ${i18next.t('praxis.t1')}
               </h2>
               <p class="xl:text-xl leading-loose xl:leading-10 text-pretty">
-                From insight to interface, I design with people in mind. Merging aesthetics, purpose, and cutting-edge tech through Design Thinking and Human-Centered Design.
+                ${i18next.t('praxis.p1')}
               </p>
             </div>
             <div class="praxis xl:aspect-square px-10">
@@ -89,10 +89,10 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 <path d="M41 65H71V57H53C48.5817 57 45 53.4183 45 49V45H41" stroke="#ff6666"/>
               </svg>
               <h2 class="text-[1.5rem] xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
-                Tech to delivery.
+                ${i18next.t('praxis.t2')}
               </h2>
               <p class="xl:text-xl leading-loose xl:leading-10 text-pretty">
-                Learning from tech experts early on made algorithms a core part of my toolkit, bridging design and engineering to craft seamless, refined digital experiences.
+                ${i18next.t('praxis.p2')}
               </p>
             </div>
           </div>

@@ -21,11 +21,21 @@
   },
   "about": {
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
-  "content": {
+    "content": {
+      "m1": "Designer de produtos",
+      "m2": "e coder criativo",
+      "d1": "Designer e coder criativo construindo",
+      "d2": "experiências digitais para o futuro",
       "h1": "Entusiasta de tecnologias descentralizadas",
-      "p1": "impulsionado pelo movimento open-source e outras coisas geeks. Atualmente trabalhando com uma empresa de marketing interativo focada em geração de leads em Denver, CO.",
-      "h2": "Dedicado à qualidade",
-      "p2": "me comprometo com o aprendizado contínuo e desenvolvimento profissional, mantendo-me atualizado sobre tendências de design avanços tecnológicos e melhores práticas da indústria para entregar soluções de ponta."
+      "p1": "e valorizando soluções open-source. Atualmente colaboro com uma empresa de marketing interativo, especializada em estratégias de geração de leads.",
+      "h2": "Comprometido com a qualidade",
+      "p2": "e o aprendizado contínuo, mantenho-me atualizado sobre tendências de design, avanços tecnológicos e as melhores práticas do setor para entregar soluções modernas e eficazes."
     }
+  },
+  "praxis": {
+    "t1": "Design no pensar.",
+    "p1": "Do insight à interface, projeto com foco nas pessoas. Unindo estética, propósito e tecnologia de ponta por meio do Design Thinking e Human-Centered Design.",
+    "t2": "Tecnologia para realizar.",
+    "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, unindo design e engenharia para criar experiências digitais refinadas."
   }
 }

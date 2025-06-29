@@ -22,10 +22,20 @@
   "about": {
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white.",
     "content": {
+      "m1": "Product designer",
+      "m2": "and creative coder",
+      "d1": "Designer and creative coder crafting",
+      "d2": "future-ready digital interactions.",
       "h1": "Enthusiast of decentralized technologies",
       "p1": "driven by the open-source movement and other geeky stuff. Currently working with an interactive marketing company focused on lead generation from Denver, CO.",
       "h2": "Devoted to quality",
       "p2": "I commit to continuous learning and professional development, staying abreast of emerging design trends technological advancements, and industry best practices to deliver cutting-edge solutions."
     }
+  },
+  "praxis": {
+    "t1": "Design in thinking.",
+    "p1": "From insight to interface, I design with people in mind. Merging aesthetics, purpose, and cutting-edge tech through Design Thinking and Human-Centered Design.",
+    "t2": "Technology to deliver.",
+    "p2": "Learning from tech experts early on made algorithms a core part of my toolkit, bridging design and engineering to craft seamless, refined digital experiences."
   }
 }

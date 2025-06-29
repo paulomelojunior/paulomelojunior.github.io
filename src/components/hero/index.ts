@@ -37,16 +37,16 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
             <h1 class="text-[2.5rem] leading-none xl:text-[4.5rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
               <span class="block xl:hidden">
-                Product designer
+                ${i18next.t('about.content.m1')}
               </span>
               <span class="block xl:hidden">
-                and creative coder
+                ${i18next.t('about.content.m2')}
               </span>
               <span class="hidden xl:inline-block">
-                Designer and creative coder crafting
+                ${i18next.t('about.content.d1')}
               </span>
               <span class="hidden xl:inline-block">
-                future-ready digital interactions.
+                ${i18next.t('about.content.d2')}
               </span>
             </h1>
           </div>
@@ -54,19 +54,19 @@ export class HeroSection extends ThemeMixin(LitElement) {
           <div class="grid xl:grid-cols-2">
             <div class="p-5 xl:p-24 2xl:p-32">
               <p class="2xl:text-[1.25rem] leading-loose">
-                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h1')}</mark>, ${i18next.t('about.content.p1')}
+                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h1')}</mark> ${i18next.t('about.content.p1')}
               </p>
             </div>
             <div class="hidden xl:block p-5 xl:p-24 2xl:p-32">
               <p class="2xl:text-[1.25rem] leading-loose">
-                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h2')}</mark>,
+                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h2')}</mark>
                 ${i18next.t('about.content.p2')}
               </p>
             </div>
           </div>
         </div>
         <div id="hero-marquee" class="container">
-          <marquee-element items="Design Engineering, Product Design, UX and UI"></marquee-element>
+          <marquee-element items="Design Engineering, Product Design, UX & UI"></marquee-element>
         </div>
       </section>
     `;
