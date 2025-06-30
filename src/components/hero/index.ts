@@ -54,13 +54,12 @@ export class HeroSection extends ThemeMixin(LitElement) {
           <div class="grid xl:grid-cols-2">
             <div class="p-5 xl:p-24 2xl:p-32">
               <p class="2xl:text-[1.25rem] leading-loose">
-                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h1')}</mark> ${i18next.t('about.content.p1')}
+                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h1')}</mark>${i18next.t('about.content.p1')}
               </p>
             </div>
             <div class="hidden xl:block p-5 xl:p-24 2xl:p-32">
               <p class="2xl:text-[1.25rem] leading-loose">
-                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h2')}</mark>
-                ${i18next.t('about.content.p2')}
+                <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h2')}</mark>${i18next.t('about.content.p2')}
               </p>
             </div>
           </div>
