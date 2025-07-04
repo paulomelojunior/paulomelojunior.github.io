@@ -28,14 +28,14 @@ export class HeroSection extends ThemeMixin(LitElement) {
     return html`
       <section class="hero">
         <div class="min-h-[calc(100svh-4rem)] pt-16 xl:pt-0 flex flex-col justify-center xl:justify-end container">
-          <div class="p-5 xl:p-24 2xl:p-32 xl:pt-48 flex flex-col justify-end items-start gap-5">
+          <div class="p-5 xl:p-24 2xl:p-32 2xl:pt-48 flex flex-col justify-end items-start gap-5">
             <div class="flex items-center rounded-full overflow-hidden dark:bg-brand-400 bg-[#DE6868] dark:saturate-100">
               <img src="${this.dark ? logo : logoLight}" alt="Logo" class="h-6" />
               <span class="uppercase ps-3 pe-4 text-sm font-normal tracking-[.5px] dark:tracking-normal dark:font-semibold dark:text-zinc-950 text-stone-200">
                 Paulo Melo Jr.
               </span>
             </div>
-            <h1 class="text-[2.5rem] leading-none xl:text-[4.5rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
+            <h1 class="text-[2.5rem] leading-none xl:text-[3.5rem] 2xl:text-[4.5rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}
               </span>

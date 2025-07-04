@@ -28,7 +28,7 @@ export class CasesSection extends LitElement {
 		<section id="cases">
 			<div class="container xl:py-16">
 			<div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
-			  <div class="flex relative xl:h-[512px] rounded-[2rem] xl:bg-black">
+			  <div class="flex relative 2xl:h-[512px] rounded-[2rem] xl:bg-black">
 				  <div class="xl:flex hidden justify-center w-2/3">
 					  <img class="cases absolute bottom-0" src="${m1}" alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen.">
 					  <img class="cases absolute bottom-0" src="${m2}" alt="Mobile screen in dark mode showcasing an organized campaign list view, with project names, dates, and quick actions.">
@@ -42,7 +42,7 @@ export class CasesSection extends LitElement {
 					  </span>
 				  </div>
 				  <div class="mob-cases-content  xl:cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:p-28 justify-between items-center relative xl:rounded-r-[2rem] xl:backdrop-blur-sm">
-					  <h2 class="text-[2.5rem] xl:text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
+					  <h2 class="text-[2.5rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
 						  Selected <br>
 						  cases
 					  </h2>

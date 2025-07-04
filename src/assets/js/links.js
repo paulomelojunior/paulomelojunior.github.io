@@ -17,10 +17,6 @@ export function links() {
             label: 'LinkedIn',
             url: 'https://linkedin.com/in/paulomelojunior/',
         },
-        // twitch: {
-        //     label: 'Twitch',
-        //     url: 'https://twitch.tv/hackyoto/',
-        // },
         email: {
             label: 'Email',
             url: 'mailto:hello@pmjr.cc',

@@ -56,8 +56,9 @@ window.onload = function load() {
         })
 
         ScrollTrigger.create({
-            trigger: '#hero-marquee',
+            trigger: '.hero h1',
             start: 'top top',
+            markers: true,
             onLeave: () => {
                 header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
                 header.classList.remove('absolute')

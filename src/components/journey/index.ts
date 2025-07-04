@@ -113,7 +113,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section>
         <div class="bg-[linear-gradient(theme('colors.stone.100'),transparent_40%)] dark:bg-[linear-gradient(black,transparent_40%)]">
-          <div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-32">
+          <div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-24 2xl:py-32">
           </div>
         </div>
       </section>
