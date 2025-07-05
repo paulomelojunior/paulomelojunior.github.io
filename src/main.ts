@@ -11,9 +11,9 @@ gsap.defaults({
     ease: CustomEase.create('custom', '.75,0,0.5,1'),
 })
 
-// Components
 import './components/blur';
 import './components/cases';
+import './components/footer';
 import './components/hero';
 import './components/journey';
 import './components/marquee';
@@ -21,6 +21,4 @@ import './components/menu';
 import './components/praxis';
 import { themeStore } from './store/theme';
 
-
-// Inicializar o store de tema
 themeStore.init();

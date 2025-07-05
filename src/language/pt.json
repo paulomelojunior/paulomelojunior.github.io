@@ -1,15 +1,5 @@
 {
   "menu": {
-    "greetings": {
-      "morning": "Bom dia",
-      "afternoon": "Boa tarde",
-      "night": "Boa noite",
-      "boss": "chefe"
-    },
-    "theme": {
-      "night": "Noite",
-      "day": "Dia"
-    },
     "about": "Sobre",
     "journey": "Jornada",
     "praxis": "Praxis",
@@ -20,16 +10,17 @@
     }
   },
   "about": {
+    "greeting": "Olá, sou o Paulo M.",
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
     "content": {
-      "m1": "Designer de produtos",
-      "m2": "e coder criativo",
-      "d1": "Designer e coder criativo construindo",
-      "d2": "experiências digitais para o futuro",
+      "m1": "Designer de produto",
+      "m2": "e desenvolvedor UI",
+      "d1": "Designer e desenvolvedor construindo",
+      "d2": "experiências digitais para o futuro.",
       "h1": "Entusiasta de tecnologias descentralizadas",
-      "p1": "e valorizando soluções open-source. Atualmente colaboro com uma empresa de marketing interativo, especializada em estratégias de geração de leads.",
+      "p1": " e valorizando soluções open-source. Atualmente colaboro com uma empresa de marketing interativo, especializada em estratégias de geração de leads.",
       "h2": "Comprometido com a qualidade",
-      "p2": "e o aprendizado contínuo, mantenho-me atualizado sobre tendências de design, avanços tecnológicos e as melhores práticas do setor para entregar soluções modernas e eficazes."
+      "p2": " e o aprendizado contínuo, mantenho-me atualizado sobre tendências de design, avanços tecnológicos e as melhores práticas do setor para entregar soluções modernas e eficazes."
     }
   },
   "praxis": {
@@ -39,13 +30,27 @@
     "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, unindo design e engenharia para criar experiências digitais refinadas."
   },
   "journey": {
-    "t1": "",
-    "p1": "",
-    "t2": "",
-    "p2": "",
-    "t3": "",
-    "p3": "",
-    "t4": "",
-    "p4": ""
+    "t1": "Estagiário de <br class='block xl:hidden'> design",
+    "p1": "Durante meu estágio, tive a oportunidade de refinar e desenvolver habilidades em várias funções. Desenvolvimento HTML e CSS, iniciativas de marketing, design visual, branding e design UX/UI.",
+    "m1": "",
+
+    "t2": "Designer e <br class='block xl:hidden'> dev front-end",
+    "p2": "Em colaboração multifacetada com gerentes e a equipe de desenvolvimento, redesenhamos com sucesso as interfaces e funcionalidades do software da empresa.",
+    "m2": "Também desempenhei um papel fundamental na co-criação de uma plataforma que facilita a conexão de pessoas enfrentando questões legais com profissionais especializados.",
+    
+    "t3": "Designer visual <br class='block xl:hidden'> e de produto",
+    "p3": "No início de 2018, exerci o papel de designer generalista, responsável por desenvolver e gerenciar todos os aspectos do design e saídas criativas para o projeto de produto.",
+    "m3": "Na segunda metade do ano, colaborei com outra empresa para projetar uma biblioteca open-source de componentes de interface.",
+    
+    "t4": "Designer líder, <br class='block xl:hidden'> desenvolvedor UI",
+    "p4": "Hoje responsável por redesenhar a plataforma avançada de gerenciamento de leads da empresa, usando componentes React para melhorar performance e escalabilidade."
+  },
+  "cases": {
+    "title": "Estudo <br class='block xl:hidden'> de casos",
+    "subtitle": "Em breve.",
+    "project": "twyne.io"
+  },
+  "connect": {
+    "title": "Entre em contato"
   }
 }

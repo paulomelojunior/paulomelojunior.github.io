@@ -1,15 +1,5 @@
 {
   "menu": {
-    "greetings": {
-      "morning": "Good morning",
-      "afternoon": "Good afternoon",
-      "night": "Good night",
-      "boss": "boss"
-    },
-    "theme": {
-      "night": "Dark",
-      "day": "Light"
-    },
     "about": "About",
     "journey": "Journey",
     "praxis": "Praxis",
@@ -20,6 +10,7 @@
     }
   },
   "about": {
+    "greeting": "Hi, I'm Paul M.",
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white.",
     "content": {
       "m1": "Product designer",
@@ -52,5 +43,13 @@
     
     "t4": "Lead Designer, <br class='block xl:hidden'> UI Developer",
     "p4": "Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability."
+  },
+  "cases": {
+    "title": "Selected <br class='block xl:hidden'> Cases",
+    "subtitle": "Maybe soon, I promise.",
+    "project": "twyne.io"
+  },
+  "connect": {
+    "title": "Get in touch"
   }
 }

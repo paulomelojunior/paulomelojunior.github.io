@@ -10,18 +10,29 @@ export class CasesSection extends LitElement {
 
 	connectedCallback() {
 		super.connectedCallback();
-		i18next.on('languageChanged', () => {
-			this.lang = i18next.language;
-		});
+		i18next.on('languageChanged', this.handleLanguageChange);
 	}
 
 	disconnectedCallback() {
 		super.disconnectedCallback();
-		i18next.off('languageChanged', () => {
-			this.lang = i18next.language;
-		});
+		i18next.off('languageChanged', this.handleLanguageChange);
 	}
 
+	private handleLanguageChange = () => {
+		this.lang = i18next.language;
+	};
+
+	private renderTitle(title: string) {
+		const parts = title.split('<br class=\'block xl:hidden\'>');
+		if (parts.length > 1) {
+			return html`
+				${parts[0]}
+				<br class="block xl:hidden">
+				${parts[1]}
+			`;
+		}
+		return title;
+	}
 
 	render() {
 		return html`
@@ -37,18 +48,17 @@ export class CasesSection extends LitElement {
 							  2025
 						  </span>
 						  <span>
-							  Twyne.io 
+							  ${i18next.t('cases.project')}
 						  </span>
 					  </span>
 				  </div>
 				  <div class="mob-cases-content  xl:cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:p-28 justify-between items-center relative xl:rounded-r-[2rem] xl:backdrop-blur-sm">
-					  <h2 class="text-[2.5rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
-						  Selected <br>
-						  cases
-					  </h2>
-					  <span class="text-brand-400 text-xl">
-						  Maybe soon, I promise.
-					  </span>
+					<h2 class="text-[2.5rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
+						${this.renderTitle(i18next.t('cases.title'))}
+					</h2>
+					<span class="text-brand-400 text-xl">
+						${i18next.t('cases.subtitle')}
+					</span>
 				  </div>
 			  </div>
 			  <div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>

@@ -17,6 +17,31 @@ export class MenuContainer extends ThemeMixin(LitElement) {
     }
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    i18next.on('languageChanged', this.handleLanguageChange);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    i18next.off('languageChanged', this.handleLanguageChange);
+  }
+
+  private handleLanguageChange = () => {
+    this.lang = i18next.language;
+  };
+
+  changeLang() {
+    const currentLang = i18next.language;
+    const newLang = currentLang === 'en' ? 'pt' : 'en';
+    
+    i18next.changeLanguage(newLang);
+    localStorage.setItem('lang', newLang);
+    
+    // Atualiza a propriedade lang
+    this.lang = newLang;
+  }
+
   changeTheme() {
     this.toggleTheme();
   }
@@ -24,14 +49,14 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   copyEmail() {
     const email = "hello@pmjr.cc";
     navigator.clipboard.writeText(email).then(() => {
-      this.updateText('Copied!', 0);
+      this.updateText(this.lang === 'en' ? 'Copied!' : 'Copiado!', 0);
     }).catch(error => {
       alert(`Failed to copy email: ${error}`);
     });
   }
 
   copyEmailReset() {
-    this.updateText('Click to copy', 300);
+    this.updateText(this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail', 300);
   }
 
   updateText(text: string, delay: number) {
@@ -51,7 +76,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
             label="hello@pmjr.cc"
-            hover="Click to copy"
+            hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
             ></mail-button>
           <nav>
             <ul id="anchors" class="flex justify-end">
@@ -63,6 +88,20 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
               <li class="flex-1 xl:flex-none">
                 <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
+              </li>
+              <li class="hidden items-center justify-center size-12 xl:size-16">
+                <theme-button
+                  @click=${() => this.changeTheme()}  
+                  icon="circle-half-tilt"
+                  classNames=${this.dark ? '' : 'rotate-180'}
+                ></theme-button>
+              </li>
+              <li class="flex items-center justify-center size-12 xl:size-16">
+                <lang-button
+                  @click=${() => this.changeLang()}  
+                  label=${this.lang === 'pt' ? 'EN' : 'PT'}
+                  title="${this.lang === 'en' ? 'Mudar para Português' : 'Change to English'}"
+                ></lang-button>
               </li>
             </ul>
             <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">

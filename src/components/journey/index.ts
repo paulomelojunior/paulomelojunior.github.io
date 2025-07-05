@@ -30,7 +30,32 @@ export class JourneySection extends ThemeMixin(LitElement) {
 
   private handleLanguageChange = () => {
     this.lang = i18next.language;
+    this.updateJourneyContent();
   };
+
+  /**
+   * Atualiza o conteúdo da seção journey quando o idioma muda
+   */
+  private updateJourneyContent() {
+    const journeyElement = this.querySelector('#job') as HTMLElement;
+    
+    if (!journeyElement) {
+      console.warn('Journey element not found');
+      return;
+    }
+
+    // Limpa o conteúdo existente
+    journeyElement.innerHTML = '';
+    
+    // Recria o conteúdo com o novo idioma
+    const journeyItems = this.getJourneyItems();
+    const journeyValues = Object.values(journeyItems);
+    
+    journeyValues.forEach((item) => {
+      const journeyItemHTML = this.createJourneyItemHTML(item);
+      journeyElement.insertAdjacentHTML('beforeend', journeyItemHTML);
+    });
+  }
 
   private getJourneyItems(): Record<string, JourneyItem> {
     return {

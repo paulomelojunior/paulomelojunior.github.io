@@ -32,7 +32,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="flex items-center rounded-full overflow-hidden dark:bg-brand-400 bg-[#DE6868] dark:saturate-100">
               <img src="${this.dark ? logo : logoLight}" alt="Logo" class="h-6" />
               <span class="uppercase ps-3 pe-4 text-sm font-normal tracking-[.5px] dark:tracking-normal dark:font-semibold dark:text-zinc-950 text-stone-200">
-                Paulo Melo Jr.
+                ${i18next.t('about.greeting')}
               </span>
             </div>
             <h1 class="text-[2.5rem] leading-none xl:text-[3.5rem] 2xl:text-[4.5rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
