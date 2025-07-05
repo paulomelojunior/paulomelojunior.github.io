@@ -89,13 +89,6 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               <li class="flex-1 xl:flex-none">
                 <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
               </li>
-              <li class="hidden items-center justify-center size-12 xl:size-16">
-                <theme-button
-                  @click=${() => this.changeTheme()}  
-                  icon="circle-half-tilt"
-                  classNames=${this.dark ? '' : 'rotate-180'}
-                ></theme-button>
-              </li>
               <li class="flex items-center justify-center size-12 xl:size-16">
                 <lang-button
                   @click=${() => this.changeLang()}  
