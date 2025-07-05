@@ -1,6 +1,7 @@
 import i18next from '../../i18n';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import logo from './logo.svg';
 
 @customElement('footer-section')
 export class FooterSection extends LitElement {
@@ -24,7 +25,7 @@ export class FooterSection extends LitElement {
 		const navList = document.querySelector('#menu')
 		
 		if (!navList) return;
-		
+
 		const navItems = {
 			cosmos: {
 				label: 'Cosmos',
@@ -78,7 +79,7 @@ export class FooterSection extends LitElement {
 							${i18next.t('connect.title')}
 						</span>
 						<span class="absolute xl:relative h-20 xl:h-auto flex items-center right-5 xl:right-auto ml-5">
-							<img src="src/assets/imgs/logo.svg" alt="Logo" class="h-6" />
+							<img src="${logo}" alt="Logo" class="h-6" />
 						</span>
 					</div>
 				</div>
