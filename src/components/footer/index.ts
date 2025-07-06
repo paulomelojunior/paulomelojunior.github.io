@@ -1,7 +1,12 @@
 import i18next from '../../i18n';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { gsap } from 'gsap';
+import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 import logo from './logo.svg';
+
+// Registra o plugin ScrambleTextPlugin
+gsap.registerPlugin(ScrambleTextPlugin);
 
 @customElement('footer-section')
 export class FooterSection extends LitElement {
@@ -23,7 +28,7 @@ export class FooterSection extends LitElement {
 
 	firstUpdated() {
 		const navList = document.querySelector('#menu')
-		
+
 		if (!navList) return;
 
 		const navItems = {
@@ -47,11 +52,11 @@ export class FooterSection extends LitElement {
 				label: 'Email',
 				url: 'mailto:hello@pmjr.cc',
 			},
-	
+
 		}
-	
+
 		const navValues = Object.values(navItems)
-	
+
 		navValues.forEach((e, i) => {
 			const indexStr = (i + 1).toString().padStart(2, '0');
 			const navItem = `
@@ -68,6 +73,42 @@ export class FooterSection extends LitElement {
 				</div>`
 			navList.insertAdjacentHTML('beforeend', navItem)
 		})
+
+		// Inicializa o efeito de scramble text
+		this.initScrambleText();
+	}
+
+	private initScrambleText() {
+		const copyrightElement = this.querySelector('#copyright');
+		const copyrightSpan = this.querySelector('.copyright span');
+		
+		if (copyrightElement && copyrightSpan) {
+			// Configura o estado inicial - texto vazio
+			gsap.set(copyrightSpan, { text: '' });
+			
+			// Event listeners para hover
+			copyrightElement.addEventListener('mouseenter', () => {
+				gsap.to(copyrightSpan, {
+					duration: 1,
+					scrambleText: {
+						text: 'opyright',
+						chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+						speed: 0.1
+					}
+				});
+			});
+			
+			copyrightElement.addEventListener('mouseleave', () => {
+				gsap.to(copyrightSpan, {
+					duration: .5,
+					scrambleText: {
+						text: '',
+						chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+						speed: 0.1
+					}
+				});
+			});
+		}
 	}
 
 	render() {
@@ -83,11 +124,11 @@ export class FooterSection extends LitElement {
 						</span>
 					</div>
 				</div>
-				<div class="absolute inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-500">
-					<div class="container px-5 font-medium tracking-[.5px] uppercase h-12 flex font-mono items-center justify-center text-xs leading-none">
-						<span> 
-							Copyright Paulo M. 2025
-						</span>
+				<div id="copyright" class="absolute xl:z-50 inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-600 hover:text-brand-400 duration-300">
+					<div class="container px-5 font-semibold tracking-[0.05em] uppercase h-12 flex font-mono items-center justify-center text-[.75rem] leading-none">
+            <span class="copyright"> 
+              [C<span></span>] 2025, pmjr.cc
+            </span>
 					</div>
 				</div>
 			</footer>
