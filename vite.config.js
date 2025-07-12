@@ -11,6 +11,7 @@ export default defineConfig({
             input: {
                 main: 'index.html',
                 glyphs: 'glyphs.html',
+                // cases: 'cases.html',
                 404: '404.html',
             },
             output: {

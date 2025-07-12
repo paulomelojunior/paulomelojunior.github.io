@@ -216,7 +216,7 @@
       </div>
     `}firstUpdated(){const o=this.querySelector("#job");if(!o){console.warn("Journey element not found");return}const e=this.getJourneyItems();Object.values(e).forEach(r=>{const n=this.createJourneyItemHTML(r);o.insertAdjacentHTML("beforeend",n)})}render(){return yt`
       <section>
-        <div class="bg-[linear-gradient(theme('colors.stone.100'),transparent_40%)] dark:bg-[linear-gradient(black,transparent_40%)]">
+        <div class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]">
           <div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-24 2xl:py-32">
           </div>
         </div>
@@ -238,7 +238,7 @@
 			</div>
 			${this.label}
 		</a>`}createRenderRoot(){return this}};ja([ke({type:String})],Ws.prototype,"href",2);ja([ke({type:String})],Ws.prototype,"label",2);Ws=ja([Xt("menu-item")],Ws);var S0=Object.defineProperty,F0=Object.getOwnPropertyDescriptor,Ha=(o,e,t,r)=>{for(var n=r>1?void 0:r?F0(e,t):e,i=o.length-1,s;i>=0;i--)(s=o[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&S0(e,t,n),n};let Gs=class extends no(ct){constructor(){super(),this.more=!1,this.lang=A.language,this.handleLanguageChange=()=>{this.lang=A.language};const o=localStorage.getItem("lang");o&&(this.lang=o,A.changeLanguage(o))}connectedCallback(){super.connectedCallback(),A.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),A.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=A.language==="en"?"pt":"en";A.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(o,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=o},e)}render(){return yt`
-      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b from-stone-200 bg-stone-200/60 dark:from-zinc-950 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
+      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-2 items-center">
           <mail-button
             @click=${()=>this.copyEmail()}

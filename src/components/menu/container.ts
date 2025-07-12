@@ -70,7 +70,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b from-stone-200 bg-stone-200/60 dark:from-zinc-950 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
+      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-2 items-center">
           <mail-button
             @click=${() => this.copyEmail()}

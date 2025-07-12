@@ -33,9 +33,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     this.updateJourneyContent();
   };
 
-  /**
-   * Atualiza o conteúdo da seção journey quando o idioma muda
-   */
+  // Atualiza o conteúdo da seção journey quando o idioma muda
   private updateJourneyContent() {
     const journeyElement = this.querySelector('#job') as HTMLElement;
     
@@ -137,7 +135,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section>
-        <div class="bg-[linear-gradient(theme('colors.stone.100'),transparent_40%)] dark:bg-[linear-gradient(black,transparent_40%)]">
+        <div class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]">
           <div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-24 2xl:py-32">
           </div>
         </div>
