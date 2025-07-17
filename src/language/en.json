@@ -51,5 +51,40 @@
   },
   "connect": {
     "title": "Get in touch"
+  },
+  "twyne": {
+    "t1": "Case Study / 01",
+    "t2": "twyne.io",
+    "whatIs": {
+      "t1": "What is it",
+      "p1": "Developed by Ifficient, <span class='dark:text-zinc-200'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span> Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization."
+    },
+    "goal": {
+      "t1": "Goal",
+      "p1": "Tackling one of the biggest challenges in digital design: creating a <span class='text-zinc-200'>modular</span>, <span class='text-zinc-200'>scalable</span>, and <span class='text-zinc-200'>adaptable</span> interface for highly complex software, with constant growth in features and requirements.",
+      "p2": "The visual approach needed to balance performance, readability, and continuous evolution, without requiring a restart for every new feature. Delivering clarity and control even in dense flows."
+    },
+    "solution": {
+      "t1": "Solution",
+      "p1": "<span class='text-zinc-200'>A robust, strategic, and flexible component library.</span> <br>Simplified UI that puts information first. <br>Designed to last, grow, and make developers' lives easier.",
+      "p2": "Each component carries decisions guided by performance, readability, and functional clarity, with special attention to business logic and the journey of corporate users."
+    },
+    "impact": {
+      "t1": "Impact",
+      "l1": [
+        "Reduced rework for the engineering team.",
+        "Faster onboarding for new users.",
+        "A foundation that supported the addition of new modules with minimal friction.",
+        "Strengthened product identity with a modern UI."
+      ]
+    },
+    "mobile": {
+      "t1": "Built on solid principles.<br>Ready for any platform."
+    },
+    "conclusion": {
+      "p1": "The modularity of the UI Kit enables smart reuse, reducing complexity and increasing development speed.",
+      "p2": "Decisions on layout, typography, contrast, and spacing were calibrated to support dense data environments without compromising readability.",
+      "p3": "The result is an interface that adapts to the usage context without losing visual coherence or functional integrity."
+    }
   }
 }

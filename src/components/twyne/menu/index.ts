@@ -1,7 +1,7 @@
-import i18next from '../../i18n';
+import i18next from '../../../i18n';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { ThemeMixin } from '../../store/theme';
+import { ThemeMixin } from '../../../store/theme';
 import goBack from './go-back.svg';
 
 @customElement('cases-menu')
@@ -79,13 +79,13 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           <nav>
             <ul id="anchors" class="flex justify-evenly">
               <li class="flex-1 border-r border-white/10">
-                <menu-item href="#goal" label="Objetivo"></menu-item>
+                <menu-item href="#goal" label="Goal"></menu-item>
               </li>
               <li class="flex-1 border-r border-white/10">
-                <menu-item href="#solution" label="Proposta"></menu-item>
+                <menu-item href="#proposal" label="Proposal"></menu-item>
               </li>
               <li class="flex-1 border-r border-white/10">
-                <menu-item href="#impact" label="Impacto"></menu-item>
+                <menu-item href="#impact" label="Impact"></menu-item>
               </li>
               <li class="flex-1 border-white/10">
                 <menu-item href="#mobile" label="Mobile"></menu-item>

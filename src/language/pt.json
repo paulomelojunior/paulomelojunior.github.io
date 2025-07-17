@@ -52,5 +52,41 @@
   },
   "connect": {
     "title": "Entre em contato"
+  },
+
+  "twyne": {
+    "t1": "Estudo de caso / 01",
+    "t2": "twyne.io",
+    "whatIs": {
+      "t1": "O que é",
+      "p1": "Desenvolvida pela Ifficient, <span class='dark:text-zinc-200'>o Twyne é um software robusto de gestão, otimização e distribuição de leads, com foco em monetização e análise em tempo real.</span> Voltada para o mercado B2B, atende poucos clientes<br>em volume, mas com alto ticket médio e exigências<br>elevadas de personalização."
+    },
+    "goal": {
+      "t1": "Objetivo",
+      "p1": "Resolver um dos grandes desafios do design digital: criar uma <span class='text-zinc-200'>interface modular</span>, <span class='text-zinc-200'>escalável</span> e <span class='text-zinc-200'>adaptável</span> para um software de alta complexidade técnica, com crescimento constante de features e demandas.",
+      "p2": "A proposta visual precisava equilibrar performance, legibilidade e evolução contínua, sem exigir recomeços a cada nova funcionalidade. Oferecendo clareza e controle mesmo em fluxos densos."
+    },
+    "solution": {
+      "t1": "Proposta",
+      "p1": "<span class='text-zinc-200'>Biblioteca de componentes robusta, estratégica e flexível.</span> <br>UI simplificada, que coloca as informações em primeiro plano. <br>Pensado para durar, crescer e facilitar a vida de quem desenvolve.",
+      "p2": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à lógica do negócio e à jornada dos usuários corporativos."
+    },
+    "impact": {
+      "t1": "Impactos",
+      "l1": [
+        "Redução de retrabalho no time de engenharia.",
+        "Aumento na velocidade de onboarding de novos usuários.",
+        "Base que suportou a adição de novos módulos com mínimo atrito.",
+        "Fortalecimento da identidade do produto com uma UI moderna."
+      ]
+    },
+    "mobile": {
+      "t1": "Feito com princípios sólidos.<br>Pronto para qualquer plataforma."
+    },
+    "conclusion": {
+      "p1": "A modularidade do UI Kit permite reuso inteligente, reduzindo complexidade e aumentando a velocidade de desenvolvimento.",
+      "p2": "As decisões de layout, tipografia, contraste e espaçamento foram calibradas para sustentar ambientes densos de dados sem comprometer a legibilidade.",
+      "p3": "O resultado é uma interface que se adapta ao contexto de uso sem perder coerência visual nem integridade funcional."
+    }
   }
 }
