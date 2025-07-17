@@ -155,7 +155,6 @@ window.onload = function load() {
             trigger: sign,
             start: '100% 100%',
             toggleActions: 'play none none reverse',
-            markers: true
         },
         duration: 1,
         stagger: .8,

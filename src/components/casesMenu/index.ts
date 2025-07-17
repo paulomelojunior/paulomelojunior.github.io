@@ -2,7 +2,7 @@ import i18next from '../../i18n';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { ThemeMixin } from '../../store/theme';
-import logo from './logo.svg';
+import goBack from './go-back.svg';
 
 @customElement('cases-menu')
 export class CasesMenu extends ThemeMixin(LitElement) {
@@ -73,8 +73,8 @@ export class CasesMenu extends ThemeMixin(LitElement) {
     return html`
       <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-black/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-3 items-center">
-          <a href="/">
-            <img src="${logo}" class="h-5 saturate-0 opacity-50 hover:saturate-100 hover:opacity-100 transition-all duration-500 cursor-pointer" title="Back to homepage">
+          <a href="/" class="size-12 *:opacity-50 *:hover:opacity-100 cursor-pointer flex items-center justify-center" title="Go back homepage">
+            <img src="${goBack}" class="transition-all duration-500" title="Back to homepage">
           </a>
           <nav>
             <ul id="anchors" class="flex justify-evenly">
