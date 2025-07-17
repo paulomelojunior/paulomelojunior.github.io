@@ -92,8 +92,8 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               <li class="flex items-center justify-center size-12">
                 <lang-button
                   @click=${() => this.changeLang()}  
-                  label=${this.lang === 'pt' ? 'EN' : 'PT'}
-                  title="${this.lang === 'en' ? 'Mudar para Português' : 'Change to English'}"
+                  label=${this.lang === 'pt' ? 'US' : 'BR'}
+                  title="${this.lang === 'en' ? 'Mudar para português' : 'Change to english'}"
                 ></lang-button>
               </li>
             </ul>
