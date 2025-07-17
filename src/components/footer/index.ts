@@ -126,9 +126,9 @@ export class FooterSection extends LitElement {
 				</div>
 				<div id="copyright" class="absolute xl:z-50 inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-600 hover:text-brand-400 duration-300">
 					<div class="container px-5 font-semibold tracking-[0.05em] uppercase h-12 flex font-mono items-center justify-center text-[.75rem] leading-none">
-            <span class="copyright"> 
-              [C<span></span>] 2025, pmjr.cc
-            </span>
+						<span class="copyright"> 
+							[C<span></span>] 2025, pmjr.cc
+						</span>
 					</div>
 				</div>
 			</footer>

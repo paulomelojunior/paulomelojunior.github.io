@@ -13,6 +13,7 @@ gsap.defaults({
 
 import './components/blur';
 import './components/cases';
+import './components/casesMenu';
 import './components/footer';
 import './components/hero';
 import './components/journey';
