@@ -13,7 +13,7 @@ export class MenuItem extends LitElement {
 		);
 
 		const classList = classNames(
-			'menu-item relative tracking-[0.05em] flex items-center justify-center h-12  px-4 text-stone-950 dark:text-zinc-50 text-[.75rem]  leading-none uppercase',
+			'menu-item relative tracking-[0.05em] flex items-center justify-center h-12 px-4 text-stone-950 dark:text-zinc-50 text-[.75rem] leading-none uppercase',
 		);
 
 		return html`<a class="${classList}" href="${this.href}">

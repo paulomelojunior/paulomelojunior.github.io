@@ -64,8 +64,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
           </div>
         </div>
-        <div id="hero-marquee" class="container">
-          <marquee-element items="Design Engineering, Product Design, UX & UI"></marquee-element>
+        <div id="hero-marquee" class="">
+          <div class="container">
+            <marquee-element items="Design Engineering, Product Design, UX & UI"></marquee-element>
+          </div>
         </div>
       </section>
     `;

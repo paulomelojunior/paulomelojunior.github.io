@@ -6,7 +6,7 @@ gsap.registerPlugin(CustomEase, ScrollTrigger)
 
 gsap.defaults({
     duration: 1,
-    ease: CustomEase.create('custom', '.75,0,0.5,1'),
+    ease: CustomEase.create('custom', '.625,0,0.5,1'),
 })
 
 window.onload = function load() {
@@ -112,21 +112,19 @@ window.onload = function load() {
                 toggleActions: 'play none none reset',
             },
             opacity: 0,
-            x: '10rem',
+            y: '10rem',
             stagger: 0.1,
         })
 
         gsap.from('.cases', {
             scrollTrigger: {
                 trigger: '#cases',
-                start: 'top bottom',
-                end: '50% 100%',
+                start: 'center bottom',
                 toggleActions: 'play none none reverse',
-                scrub: 2,
             },
-            ease: 'none',
-            stagger: 0.25,
-            x: '10rem',
+            opacity: 0,
+            stagger: -0.25,
+            y: '10rem',
         })
 
     })
