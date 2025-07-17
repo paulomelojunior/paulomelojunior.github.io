@@ -1,6 +1,6 @@
 import './item';
 import './container';
 import './buttonLang';
-import './mail';
+import './buttonMail';
 export { MenuItem } from './item';
 export { MenuContainer } from './container';

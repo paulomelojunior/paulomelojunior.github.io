@@ -1,6 +1,7 @@
 import { gsap } from 'gsap'
 import { CustomEase } from 'gsap/CustomEase'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 gsap.registerPlugin(CustomEase, ScrollTrigger)
 
 gsap.defaults({
@@ -141,4 +142,25 @@ window.onload = function load() {
         stagger: .1,
         y: '5rem',
     })
+
+    const sign = document.querySelectorAll('#sign');
+    
+    sign.forEach((i) => {
+
+        const signPath = i.querySelectorAll('path');
+        
+        gsap.from(signPath, {
+
+        scrollTrigger: {
+            trigger: sign,
+            start: '100% 100%',
+            toggleActions: 'play none none reverse',
+            markers: true
+        },
+        duration: 1,
+        stagger: .8,
+        opacity: .5,
+        drawSVG: false,
+        });
+    });
 }
