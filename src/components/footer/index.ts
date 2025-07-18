@@ -40,10 +40,10 @@ export class FooterSection extends LitElement {
 				label: 'GitHub',
 				url: 'https://github.com/paulomelojunior',
 			},
-			instagram: {
-				label: 'Instagram',
-				url: 'https://instagram.com/paulomelojunior',
-			},
+			// instagram: {
+			// 	label: 'Instagram',
+			// 	url: 'https://instagram.com/paulomelojunior',
+			// },
 			linkedin: {
 				label: 'LinkedIn',
 				url: 'https://linkedin.com/in/paulomelojunior/',

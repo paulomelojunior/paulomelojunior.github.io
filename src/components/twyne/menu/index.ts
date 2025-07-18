@@ -71,7 +71,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-black/60 backdrop-blur-md backdrop-saturate-200">
+      <header class="hidden xl:block invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-black/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-3 items-center">
           <a href="/" class="size-12 *:opacity-50 *:hover:opacity-100 cursor-pointer flex items-center justify-center" title="Go back homepage">
             <img src="${goBack}" class="transition-all duration-500" title="Back to homepage">
@@ -105,11 +105,13 @@ export class CasesMenu extends ThemeMixin(LitElement) {
                 label="hello@pmjr.cc"
                 hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
               ></mail-button>
-              <!-- <lang-button
-                @click=${() => this.changeLang()}  
-                label=${this.lang === 'pt' ? 'EN' : 'PT'}
-                title="${this.lang === 'en' ? 'Mudar para Português' : 'Change to English'}"
-              ></lang-button> -->
+              <div class="flex items-center justify-center size-12">
+                <lang-button
+                  @click=${() => this.changeLang()}  
+                  label=${this.lang === 'pt' ? 'US' : 'BR'}
+                  title="${this.lang === 'en' ? 'Mudar para Português' : 'Change to English'}"
+                ></lang-button>
+              </div>
             </div>
           </div>
         </div>

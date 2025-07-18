@@ -123,7 +123,7 @@ window.onload = function load() {
                 toggleActions: 'play none none reverse',
             },
             opacity: 0,
-            stagger: -0.25,
+            stagger: -.1,
             y: '10rem',
         })
 

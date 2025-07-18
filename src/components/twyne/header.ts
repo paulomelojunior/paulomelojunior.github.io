@@ -22,11 +22,11 @@ export class TwyneHeader extends LitElement {
 
   render() {
     return html`
-      <div class="py-16 px-14 flex flex-col">
-        <span class="uppercase leading-none tracking-wider xl:text-sm dark:text-zinc-500 font-medium">
+      <div class="pt-12 pb-16 px-14 flex flex-col">
+        <span class="uppercase leading-none tracking-[0.05em] text-[.75rem] dark:text-zinc-500 font-semibold">
           ${i18next.t('twyne.t1')}
         </span>
-        <h1 class="text-[4.5rem] leading-none dark:text-zinc-200 tracking-[-.02em]">
+        <h1 class="text-[2.5rem] leading-none xl:text-[3.5rem] 2xl:text-[4.5rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
           ${i18next.t('twyne.t2')}
         </h1>
       </div>

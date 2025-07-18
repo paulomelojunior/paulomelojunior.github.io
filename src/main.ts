@@ -21,7 +21,7 @@ import './components/marquee';
 import './components/menu';
 import './components/praxis';
 import './components/twyne/header';
-import './components/twyne/what-is';
+import './components/twyne/about';
 import './components/twyne/goal';
 import './components/twyne/proposal';
 import './components/twyne/impact';

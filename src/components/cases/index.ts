@@ -39,7 +39,7 @@ export class CasesSection extends LitElement {
 		<section id="cases">
 			<div class="container xl:py-16">
 			<div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-900 to-transparent"></div>
-			  <div class="flex relative 2xl:h-[512px] rounded-[2rem] bg-gradient-to-r from-zinc-950 to-black">
+			  <div class="flex relative 2xl:h-[512px] rounded-[2rem] xl:bg-gradient-to-r from-zinc-950 to-black">
 				  <div class="xl:flex hidden justify-center w-2/3">
 						<div class="absolute overflow-hidden bottom-0 saturate-0">
 							<img class="cases max-w-none absolute" src="${m1}" alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen.">
