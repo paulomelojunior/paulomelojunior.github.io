@@ -45,8 +45,8 @@
     "p4": "Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability."
   },
   "cases": {
-    "title": "Last <br class='block xl:hidden'> Project",
-    "subtitle": "Maybe soon, I promise.",
+    "title": "Recent project overview",
+    "cta": "See details",
     "project": "twyne.io"
   },
   "connect": {

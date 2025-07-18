@@ -54,13 +54,16 @@ export class CasesSection extends LitElement {
 							</span>
 					  	</span>
 				  </div>
-				  <div class="mob-cases-content  xl:cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:p-28 justify-between items-center relative xl:rounded-r-[2rem] xl:backdrop-blur-sm">
-					<h2 class="text-[2.5rem] xl:text-[3.5rem] 2xl:text-[4rem] text-center tracking-[-0.02em] leading-none text-zinc-200">
+				  <div class="mob-cases-content  xl:cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:py-28 justify-between items-center relative xl:rounded-r-[2rem] xl:backdrop-blur-sm">
+					<h2 class="text-[2.5rem] xl:text-[3em] text-center tracking-[-0.02em] leading-none text-zinc-200">
 						${this.renderTitle(i18next.t('cases.title'))}
 					</h2>
-					<span class="text-brand-400 text-xl">
-						${i18next.t('cases.subtitle')}
-					</span>
+					<a href="/twyne" class="flex items-center uppercase font-semibold text-[1rem] leading-none gap-4 py-4 pe-4 ps-6 rounded-full bg-zinc-200 hover:bg-brand-400 transition-colors duration-500 text-black">
+						${i18next.t('cases.cta')}
+						<svg width="14" height="14" class="rotate-180" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8 13L2 6.99999M2 6.99999L8 1M2 6.99999L14 6.99999" stroke="black" stroke-width="2"/>
+						</svg>
+					</a>
 				  </div>
 			  </div>
 			  <div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-900 to-transparent"></div>
