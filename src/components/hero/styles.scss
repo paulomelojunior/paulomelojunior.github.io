@@ -6,7 +6,7 @@
         content: "";
         height: 100vh;
         inset-inline: 0;
-        mask-image: radial-gradient(circle at top left, theme('colors.black'), transparent 50%);
+        mask-image: radial-gradient(circle at top center, theme('colors.black'), transparent 50%);
         pointer-events: none;
         z-index: -1;
 

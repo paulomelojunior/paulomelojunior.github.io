@@ -101,7 +101,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     const customClass = item.custom ? ` class="${item.custom}"` : '';
     
     return `
-      <div class="${hideClass} job relative justify-between flex-col gap-6 px-10 xl:p-20 2xl:px-32 2xl:py-16 xl:rounded-[2rem]">
+      <div class="${hideClass} job relative justify-between flex-col gap-6 px-10 xl:px-20 2xl:px-32 xl:rounded-[2rem]">
         <span class="font-mono text-sm text-zinc-500">
           ${item.start} &bull; <span${customClass}>${item.end}</span>
         </span>
@@ -136,7 +136,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section>
         <div class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]">
-          <div id="job" class="container py-16 grid gap-16 xl:gap-0 overflow-hidden xl:grid-cols-2 xl:py-24 2xl:py-32">
+          <div id="job" class="container py-16 grid gap-y-16 xl:gap-y-32 overflow-hidden xl:grid-cols-2 xl:py-24 2xl:py-32">
           </div>
         </div>
       </section>

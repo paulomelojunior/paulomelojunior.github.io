@@ -10,7 +10,7 @@
     }
   },
   "about": {
-    "greeting": "Hi, I'm Paul M.",
+    "status": "Open to new opportunities",
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white.",
     "content": {
       "m1": "Product designer",
@@ -53,11 +53,23 @@
     "title": "Get in touch"
   },
   "twyne": {
-    "t1": "Case Study / 01",
-    "t2": "twyne.io",
+    "t1": "Case study / 01",
+    "t2": "Twyne",
     "about": {
       "t1": "about",
-      "p1": "Developed by Ifficient, <span class='dark:text-zinc-200'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span> Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization."
+      "p1": "Developed by Ifficient, <span class='dark:text-zinc-200'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span> Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization.",
+      "details": {
+        "company": "Company",
+        "companyValue": "Ifficient",
+        "industry": "Industry", 
+        "industryValue": "AdTech",
+        "product": "Product",
+        "productValue": "Software as a Service",
+        "contributions": "Contributions",
+        "contribution1": "Product Design",
+        "contribution2": "Design System",
+        "contribution3": "UI Engineering"
+      }
     },
     "goal": {
       "t1": "Goal",
@@ -74,7 +86,7 @@
       "p1": "Each component carries decisions guided by performance, readability, and functional clarity, with special attention to business logic and the journey of corporate users."
     },
     "impact": {
-      "t1": "Impact",
+      "t1": "Results <br> that matter",
       "l1": [
         "Reduced rework for the engineering team.",
         "Faster onboarding for new users.",

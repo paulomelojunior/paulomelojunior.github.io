@@ -40,11 +40,11 @@ export class TwyneMobile extends LitElement {
 					}
 				</style>
 				<div class="flex gap-4 items-center justify-center overflow-hidden">
-					<img src="${e2}" class="hover:opacity-100 transition-opacity duration-500 opacity-20">
-					<img src="${e1}" class="hover:opacity-100 transition-opacity duration-500 opacity-40">
-					<img src="${e3}" class="hover:opacity-100 transition-opacity duration-500 opacity-80">
-					<img src="${e4}" class="hover:opacity-100 transition-opacity duration-500 opacity-40">
-					<img src="${e5}" class="hover:opacity-100 transition-opacity duration-500 opacity-20">
+					<img src="${e2}" class="transition-opacity duration-500 opacity-30">
+					<img src="${e1}" class="transition-opacity duration-500 opacity-60">
+					<img src="${e3}" class="transition-opacity duration-500">
+					<img src="${e4}" class="transition-opacity duration-500 opacity-60">
+					<img src="${e5}" class="transition-opacity duration-500 opacity-30">
 				</div>
 			</section>
     `;

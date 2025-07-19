@@ -1,8 +1,11 @@
-import { gsap } from 'gsap'
-import { CustomEase } from 'gsap/CustomEase'
+// GSAP
+import { gsap } from 'gsap';
+import { CustomEase } from 'gsap/CustomEase';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
+import { SplitText } from 'gsap/SplitText'
 
-gsap.registerPlugin(CustomEase, ScrollTrigger)
+gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger, SplitText)
 
 gsap.defaults({
     duration: 1,
@@ -51,6 +54,8 @@ window.onload = function load() {
 
         const header = document.querySelector('header')
         const copyright = document.querySelector('#copy')
+        const footerLinks = document.querySelector('#footerLinks')
+        if (!header || !copyright || !footerLinks) return;
 
         gsap.set(copyright, {
             opacity: 0
@@ -89,8 +94,8 @@ window.onload = function load() {
             },
         })
         
-        const headerHeight = document.querySelector('header').clientHeight
-        const footerHeight = document.querySelector('#footerLinks').clientHeight
+        const headerHeight = header.clientHeight
+        const footerHeight = footerLinks.clientHeight
         gsap.to(header, {
             scrollTrigger: {
                 trigger: '#footerLinks',
@@ -140,24 +145,4 @@ window.onload = function load() {
         stagger: .1,
         y: '5rem',
     })
-
-    const sign = document.querySelectorAll('#sign');
-    
-    sign.forEach((i) => {
-
-        const signPath = i.querySelectorAll('path');
-        
-        gsap.from(signPath, {
-
-        scrollTrigger: {
-            trigger: sign,
-            start: '100% 100%',
-            toggleActions: 'play none none reverse',
-        },
-        duration: 1,
-        stagger: .8,
-        opacity: .5,
-        drawSVG: false,
-        });
-    });
 }

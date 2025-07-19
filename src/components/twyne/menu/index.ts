@@ -71,7 +71,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <header class="hidden xl:block invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-black/60 backdrop-blur-md backdrop-saturate-200">
+      <header class="hidden xl:block invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
         <div class="container grid xl:grid-cols-3 items-center">
           <a href="/" class="size-12 *:opacity-50 *:hover:opacity-100 cursor-pointer flex items-center justify-center" title="Go back homepage">
             <img src="${goBack}" class="transition-all duration-500" title="Back to homepage">

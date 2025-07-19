@@ -56,8 +56,9 @@
     tracking-[0.05em]
     uppercase
     text-stone-950
+    
     dark:text-zinc-500;
     min-width: 100%;
     gap: var(--gap);
-    animation: marquee 32s linear infinite;
+    animation: marquee 64s linear infinite;
 }

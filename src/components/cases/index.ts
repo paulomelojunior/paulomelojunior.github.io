@@ -37,7 +37,7 @@ export class CasesSection extends LitElement {
 	render() {
 		return html`
 		<section id="cases">
-			<div class="container xl:py-16">
+			<div class="container">
 			<div class="hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-900 to-transparent"></div>
 			  <div class="flex relative 2xl:h-[512px] rounded-[2rem] xl:bg-gradient-to-r from-zinc-950 to-black">
 				  <div class="xl:flex hidden justify-center w-2/3">

@@ -10,7 +10,7 @@
     }
   },
   "about": {
-    "greeting": "Olá, sou o Paulo M.",
+    "status": "Aberto a novas oportunidades",
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
     "content": {
       "m1": "Designer de produto",
@@ -61,6 +61,18 @@
       "t1": "O que é",
       "p1": "Desenvolvida pela Ifficient, <span class='dark:text-zinc-200'>o Twyne é um software robusto de gestão, otimização e distribuição de leads, com foco em monetização e análise em tempo real.</span> Voltada para o mercado B2B, atende poucos clientes em volume, mas com alto ticket médio e exigências elevadas de personalização."
     },
+    "projectInfo": {
+      "company": "Empresa",
+      "companyValue": "Ifficient",
+      "industry": "Setor",
+      "industryValue": "AdTech",
+      "product": "Produto",
+      "productValue": "Software as a Service",
+      "contributions": "Contribuições",
+      "contribution1": "Design de Produto",
+      "contribution2": "Design System",
+      "contribution3": "UI Engineering"
+    },
     "goal": {
       "t1": "Objetivo",
       "p1": "Resolver um dos grandes desafios do design digital: criar uma <span class='text-zinc-200'>interface modular</span>, <span class='text-zinc-200'>escalável</span> e <span class='text-zinc-200'>adaptável</span> para um software de alta complexidade técnica, com crescimento constante de features e demandas.",
@@ -71,12 +83,12 @@
       "l1": [
         "Biblioteca de componentes robusta, estratégica e flexível.",
         "UI simplificada, que coloca as informações em primeiro plano.",
-        "Pensado para durar, crescer e facilitar a vida de quem desenvolve."
+        "Pensado para durar, escalar e facilitar o desenvolvimento."
       ],
       "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à lógica do negócio e à jornada dos usuários corporativos."
     },
     "impact": {
-      "t1": "Impactos",
+      "t1": "Resultados que importam",
       "l1": [
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",
