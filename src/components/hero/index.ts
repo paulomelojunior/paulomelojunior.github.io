@@ -48,7 +48,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 ${i18next.t('about.greeting')}
               </span>
             </div>
-            <h1 class="text-[2.5rem] leading-none xl:leading-tight 2xl:leading-none xl:text-[3rem] 2xl:text-[4rem] tracking-[-0.025em] dark:text-zinc-200 text-stone-950">
+            <h1 class="text-[2.5rem] leading-none xl:leading-tight 2xl:leading-none xl:text-[3rem] 2xl:text-[4rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}
               </span>
