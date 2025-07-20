@@ -11,7 +11,7 @@
   },
   "about": {
     "status": "Aberto a novas oportunidades",
-    "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camiseta simples e a foto está em preto e branco.",
+    "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camisa simples.",
     "content": {
       "m1": "Designer de produto",
       "m2": "e desenvolvedor UI",
@@ -51,12 +51,12 @@
     "project": "twyne.io"
   },
   "connect": {
-    "title": "Entre em contato"
+    "title": "Chama!"
   },
 
   "twyne": {
     "t1": "Estudo de caso / 01",
-    "t2": "twyne.io",
+    "t2": "Twyne",
     "about": {
       "t1": "O que é",
       "p1": "Desenvolvida pela Ifficient, <span class='dark:text-zinc-200'>o Twyne é um software robusto de gestão, otimização e distribuição de leads, com foco em monetização e análise em tempo real.</span> Voltada para o mercado B2B, atende poucos clientes em volume, mas com alto ticket médio e exigências elevadas de personalização."
@@ -88,7 +88,7 @@
       "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à lógica do negócio e à jornada dos usuários corporativos."
     },
     "impact": {
-      "t1": "Resultados que importam",
+      "t1": "Resultados <br> que importam",
       "l1": [
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",

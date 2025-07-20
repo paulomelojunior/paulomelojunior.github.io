@@ -52,11 +52,12 @@
     h-16
     text-center
     leading-none
-    text-[1rem]
-    tracking-[0.05em]
+    font-medium
+    text-[.75rem]
+    xl:text-[1rem]
+    tracking-[0.08em]
     uppercase
     text-stone-950
-    
     dark:text-zinc-500;
     min-width: 100%;
     gap: var(--gap);

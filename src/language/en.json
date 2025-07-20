@@ -11,7 +11,7 @@
   },
   "about": {
     "status": "Open to new opportunities",
-    "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt, and the photo is in black and white.",
+    "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt.",
     "content": {
       "m1": "Product designer",
       "m2": "and creative coder",
@@ -50,7 +50,7 @@
     "project": "twyne.io"
   },
   "connect": {
-    "title": "Get in touch"
+    "title": "Reach out"
   },
   "twyne": {
     "t1": "Case study / 01",

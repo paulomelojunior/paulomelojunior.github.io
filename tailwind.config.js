@@ -33,7 +33,7 @@ export default {
         extend: {
             colors: {
                 'brand': {
-                    '400': '#0044CC',
+                    '400': '#4dcb8c',
                 }
             }
         },

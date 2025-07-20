@@ -1,15 +1,12 @@
-// GSAP
-import { gsap } from 'gsap';
-import { CustomEase } from 'gsap/CustomEase';
+import { gsap } from 'gsap'
+import { CustomEase } from 'gsap/CustomEase'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
-import { SplitText } from 'gsap/SplitText'
 
-gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger, SplitText)
+gsap.registerPlugin(CustomEase, ScrollTrigger)
 
 gsap.defaults({
-    duration: 1,
-    ease: CustomEase.create('custom', '.625,0,0.5,1'),
+    duration: 2,
+    ease: CustomEase.create('custom', '.625,0.5,0,1'),
 })
 
 window.onload = function load() {
@@ -113,8 +110,8 @@ window.onload = function load() {
         gsap.from('#job > *', {
             scrollTrigger: {
                 trigger: '.job',
-                start: 'top 100%',
-                toggleActions: 'play none none reset',
+                start: '0% 100%',
+                toggleActions: 'play none none none',
             },
             opacity: 0,
             y: '10rem',
@@ -125,7 +122,7 @@ window.onload = function load() {
             scrollTrigger: {
                 trigger: '#cases',
                 start: 'center bottom',
-                toggleActions: 'play none none reverse',
+                toggleActions: 'play none none none',
             },
             opacity: 0,
             stagger: -.1,

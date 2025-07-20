@@ -1,3 +1,15 @@
+// GSAP
+import { gsap } from 'gsap';
+import { CustomEase } from 'gsap/CustomEase'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
+
+gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger)
+
+gsap.defaults({
+    duration: 1,
+    ease: CustomEase.create('custom', '.625,0.5,0,1'),
+})
 
 import './components/blur';
 import './components/cases';

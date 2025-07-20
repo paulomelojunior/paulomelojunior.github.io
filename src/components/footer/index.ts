@@ -67,7 +67,7 @@ export class FooterSection extends LitElement {
 							${e.label}
 						</div>
 						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono tracking-[1px] text-[.75rem]">
-							${indexStr === '05' ? 'hello@pmjr.cc' : indexStr}
+							${indexStr === '04' ? 'hello@pmjr.cc' : indexStr}
 						</span>
 					</a>
 				</div>`

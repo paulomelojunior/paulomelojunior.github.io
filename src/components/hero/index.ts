@@ -31,13 +31,13 @@ export class HeroSection extends ThemeMixin(LitElement) {
         <div class="min-h-[calc(100svh-4rem)] pt-16 xl:pt-0 flex flex-col justify-center xl:justify-end container">
           <div class="p-5 xl:py-24 2xl:py-32 flex flex-col justify-end items-start gap-8">
             <div class="flex items-center gap-4">
-              <img src="${profile}" alt="Logo" class="h-16 rounded-full" />
+              <img src="${profile}" alt="${i18next.t('about.picDescription')}" class="h-16 rounded-full" />
               <div class="grid gap-2 leading-none">
                 <span class="text-[1.25rem] tracking-[0.025em]  text-zinc-200">
                   Paulo Melo Jr.
                 </span>
                 <span class="flex items-center gap-2 text-[1rem]">
-                  <div class="size-2 bg-green-400 rounded-full"></div>
+                  <div class="size-2 bg-brand-400 rounded-full"></div>
                   ${i18next.t('about.status')}
                 </span>
               </div>

@@ -39,8 +39,9 @@ export class TwyneConclusion extends LitElement {
         start: '100% 100%',
         toggleActions: 'play none none reverse',
       },
-      duration: .5,
-      stagger: 1,
+      duration: 1,
+      stagger: .75,
+      delay: .5,
       drawSVG: false,
     });
   }
