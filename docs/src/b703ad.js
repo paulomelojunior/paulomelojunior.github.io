@@ -213,8 +213,8 @@
 			</footer>
 		`}createRenderRoot(){return this}};lf([ae({type:String})],ao.prototype,"lang",2);ao=lf([ze("footer-section")],ao);const Bp="/src/cdda51.png";var jp=Object.defineProperty,Np=Object.getOwnPropertyDescriptor,cf=(a,e,t,r)=>{for(var n=r>1?void 0:r?Np(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&jp(e,t,n),n};let oo=class extends Xi(_e){constructor(){super(...arguments),this.lang=C.language}connectedCallback(){super.connectedCallback(),C.on("languageChanged",()=>{this.lang=C.language})}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",()=>{this.lang=C.language})}render(){return ie`
       <section class="hero">
-        <div class="min-h-[calc(100svh-4rem)] pt-16 xl:pt-0 flex flex-col justify-center xl:justify-end container">
-          <div class="p-5 xl:py-24 2xl:py-32 flex flex-col justify-end items-start gap-8">
+        <div class="min-h-[calc(100svh-4rem)] pt-12 gap-10 xl:gap-0 xl:pt-0 flex flex-col justify-center xl:justify-end container">
+          <div class="px-10 xl:px-5 xl:py-24 2xl:py-32 flex flex-col justify-end items-start gap-8">
             <div class="flex items-center gap-4">
               <img src="${Bp}" alt="${C.t("about.picDescription")}" class="h-16 rounded-full" />
               <div class="grid gap-2 leading-none">
@@ -244,7 +244,7 @@
           </div>
           <div class="hidden xl:block mx-5 h-px bg-gradient-to-r from-zinc-900 via-zinc-950 to-zinc-900"></div>
           <div class="grid xl:grid-cols-2 xl:gap-24">
-            <div class="ps-5 xl:py-24 2xl:py-32">
+            <div class="px-10 xl:px-5 xl:py-24 2xl:py-32">
               <p class="2xl:text-[1.25rem] leading-loose">
                 <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${C.t("about.content.h1")}</mark>${C.t("about.content.p1")}
               </p>
@@ -348,42 +348,42 @@
 		</button>`}createRenderRoot(){return this}};sa([ae({type:String})],Vi.prototype,"href",2);sa([ae({type:String})],Vi.prototype,"label",2);sa([ae({type:String})],Vi.prototype,"hover",2);Vi=sa([ze("mail-button")],Vi);var eg=Object.defineProperty,tg=Object.getOwnPropertyDescriptor,hf=(a,e,t,r)=>{for(var n=r>1?void 0:r?tg(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&eg(e,t,n),n};let lo=class extends Xi(_e){constructor(){super(...arguments),this.lang=C.language}connectedCallback(){super.connectedCallback(),C.on("languageChanged",()=>{this.lang=C.language})}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",()=>{this.lang=C.language})}firstUpdated(){this.renderRoot.querySelectorAll(".praxis svg").forEach(t=>{const r=t.querySelectorAll("path");vt.from(r,{scrollTrigger:{trigger:t,start:"0% 75%",toggleActions:"play none none none"},stagger:.12,opacity:0,fill:(this.dark,"#4d88ff"),drawSVG:!1})}),this.renderRoot.querySelectorAll(".praxis").forEach(t=>{vt.from(t.children,{scrollTrigger:{trigger:t.children,start:"0% 75%",toggleActions:"play none none none"},duration:.8,stagger:.1,x:"5rem",filter:"blur(.5rem)",opacity:r=>r===0?1:0})})}render(){return ie`
       <section>
         <div class="container">
-          <div id="how" class="grid xl:grid-cols-2 overflow-hidden gap-16 xl:gap-32 *:2xl:py-32 *:xl:py-24 *:flex *:flex-col *:items-start *:justify-center *:gap-8 py-16 xl:p-24 2xl:p-32">
-            <div class="praxis">
-              <svg class="size-16 xl:size-24" width="82" height="81" viewBox="0 0 82 81" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 23C31.1503 23 41 13.1503 41 1C28.8497 1 19 10.8497 19 23Z" stroke="#ffffff"/>
-                <path d="M41 1C53.1503 1 63 10.8497 63 23C50.8497 23 41 13.1503 41 1Z" stroke="#ffffff"/>
-                <path d="M19 23C31.1503 23 41 32.8497 41 45C28.8497 45 19 35.1503 19 23Z" stroke="#ffffff"/>
-                <path d="M41 45C53.1503 45 63 35.1503 63 23C50.8497 23 41 32.8497 41 45Z" stroke="#ffffff"/>
-                <path d="M41 79.0966C44.5746 79.0966 48.1492 78.4978 51.5712 77.3001L81 67V57C81 50.3726 75.6274 45 69 45H41" stroke="#ffffff"/>
-                <path d="M41 79.0966C37.4254 79.0966 33.8508 78.4978 30.4288 77.3001L1 67V57C1 50.3726 6.37258 45 13 45H41" stroke="#ffffff"/>
-              </svg>
-              <h2 class="text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
-                ${C.t("praxis.t1")}
-              </h2>
-              <p class="2xl:text-[1.25rem] leading-loose">
-                ${C.t("praxis.p1")}
-              </p>
-            </div>
-            <div class="praxis">
-              <svg class="size-16 xl:size-24" width="82" height="66" viewBox="0 0 82 66" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 23C31.1503 23 41 13.1503 41 1H1V23H19Z" stroke="#ffffff"/>
-                <path d="M63 23C50.8497 23 41 13.1503 41 1H81V23H63Z" stroke="#ffffff"/>
-                <path d="M19 23C31.1503 23 41 32.8497 41 45H1V23H19Z" stroke="#ffffff"/>
-                <path d="M63 23C50.8497 23 41 32.8497 41 45H81V23H63Z" stroke="#ffffff"/>
-                <path d="M41 65H11V57H29C33.4183 57 37 53.4183 37 49V45H41" stroke="#ffffff"/>
-                <path d="M41 65H71V57H53C48.5817 57 45 53.4183 45 49V45H41" stroke="#ffffff"/>
-              </svg>
-              <h2 class="text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
-                ${C.t("praxis.t2")}
-              </h2>
-              <p class="2xl:text-[1.25rem] leading-loose">
-                ${C.t("praxis.p2")}
-              </p>
-            </div>
+        <div id="how" class="grid xl:grid-cols-2 overflow-hidden gap-16 xl:gap-0 *:2xl:p-32 *:xl:p-24 *:flex *:flex-col *:items-start *:justify-center *:gap-8 py-16 xl:py-24 2xl:py-32">
+          <div class="praxis px-10">
+            <svg class="size-16 xl:size-24" width="82" height="81" viewBox="0 0 82 81" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 23C31.1503 23 41 13.1503 41 1C28.8497 1 19 10.8497 19 23Z" stroke="#ffffff"/>
+              <path d="M41 1C53.1503 1 63 10.8497 63 23C50.8497 23 41 13.1503 41 1Z" stroke="#ffffff"/>
+              <path d="M19 23C31.1503 23 41 32.8497 41 45C28.8497 45 19 35.1503 19 23Z" stroke="#ffffff"/>
+              <path d="M41 45C53.1503 45 63 35.1503 63 23C50.8497 23 41 32.8497 41 45Z" stroke="#ffffff"/>
+              <path d="M41 79.0966C44.5746 79.0966 48.1492 78.4978 51.5712 77.3001L81 67V57C81 50.3726 75.6274 45 69 45H41" stroke="#ffffff"/>
+              <path d="M41 79.0966C37.4254 79.0966 33.8508 78.4978 30.4288 77.3001L1 67V57C1 50.3726 6.37258 45 13 45H41" stroke="#ffffff"/>
+            </svg>
+            <h2 class="text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
+              ${C.t("praxis.t1")}
+            </h2>
+            <p class="2xl:text-[1.25rem] leading-loose">
+              ${C.t("praxis.p1")}
+            </p>
+          </div>
+          <div class="praxis px-">
+            <svg class="size-16 xl:size-24" width="82" height="66" viewBox="0 0 82 66" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 23C31.1503 23 41 13.1503 41 1H1V23H19Z" stroke="#ffffff"/>
+              <path d="M63 23C50.8497 23 41 13.1503 41 1H81V23H63Z" stroke="#ffffff"/>
+              <path d="M19 23C31.1503 23 41 32.8497 41 45H1V23H19Z" stroke="#ffffff"/>
+              <path d="M63 23C50.8497 23 41 32.8497 41 45H81V23H63Z" stroke="#ffffff"/>
+              <path d="M41 65H11V57H29C33.4183 57 37 53.4183 37 49V45H41" stroke="#ffffff"/>
+              <path d="M41 65H71V57H53C48.5817 57 45 53.4183 45 49V45H41" stroke="#ffffff"/>
+            </svg>
+            <h2 class="text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
+              ${C.t("praxis.t2")}
+            </h2>
+            <p class="2xl:text-[1.25rem] leading-loose">
+              ${C.t("praxis.p2")}
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     `}createRenderRoot(){return this}};hf([ae({type:String})],lo.prototype,"lang",2);lo=hf([ze("praxis-section")],lo);const rg="/src/3d9806.svg";var ng=Object.defineProperty,ig=Object.getOwnPropertyDescriptor,df=(a,e,t,r)=>{for(var n=r>1?void 0:r?ig(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&ng(e,t,n),n};let co=class extends _e{constructor(){super(...arguments),this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language}}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange)}render(){return ie`
       <div class="pt-12 pb-16 px-14 flex flex-col items-start gap-2">
         <span class="hidden uppercase leading-none tracking-[0.05em] text-[.75rem] dark:text-zinc-500 rounded-full font-medium">
