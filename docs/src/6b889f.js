@@ -95,7 +95,7 @@
 							<img loading="lazy" class="cases max-w-none absolute" src="${Cp}" alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen.">
 							<img loading="lazy" class="cases max-w-none" src="${wp}" alt="Mobile screen in dark mode showcasing an organized campaign list view, with project names, dates, and quick actions.">
 						</div>
-						<span class="absolute flex gap-2 leading-none font-medium tracking-[.5px] bottom-0 left-0 p-8 text-sm text-zinc-600 uppercase font-mono">
+						<span class="absolute flex gap-2 leading-none font-medium bottom-0 left-0 p-8 text-sm text-zinc-600 uppercase font-mono">
 							<span>
 								2025
 							</span>
@@ -140,7 +140,7 @@
                 <menu-item href="#mobile" label="Mobile"></menu-item>
               </li>
             </ul>
-            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
+            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] h-12 w-full">
               <span>
                 Copyright 2025 Paulo Melo Jr.
               </span>
@@ -187,7 +187,7 @@
 						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-stone-200 dark:text-zinc-950">
 							${r.label}
 						</div>
-						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono tracking-[1px] text-[.75rem]">
+						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem]">
 							${i==="04"?"hello@pmjr.cc":i}
 						</span>
 					</a>
@@ -204,7 +204,7 @@
 					</div>
 				</div>
 				<div id="copyright" class="absolute xl:z-50 inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-600 hover:text-brand-400 duration-300">
-					<div class="container px-5 font-semibold tracking-[0.05em] uppercase h-12 flex font-mono items-center justify-center text-[.75rem] leading-none">
+					<div class="container px-5 font-semibold uppercase h-12 flex font-mono items-center justify-center text-[.75rem] leading-none">
 						<a href="https://github.com/paulomelojunior/pmjr.cc" target="_blank" rel="noopener noreferrer" class="copyright">
 							MIT License [<span>Copyright</span>] 2025, pmjr.cc
 						</a>
@@ -218,7 +218,7 @@
             <div class="flex items-center gap-4">
               <img src="${Bp}" alt="${C.t("about.picDescription")}" class="h-16 rounded-full" />
               <div class="grid gap-2 leading-none">
-                <span class="text-[1.25rem] tracking-[0.025em]  text-zinc-200">
+                <span class="text-[1.25rem] text-zinc-200">
                   Paulo Melo Jr.
                 </span>
                 <span class="flex items-center gap-2 text-[1rem]">
@@ -325,7 +325,7 @@
                 ></lang-button>
               </li>
             </ul>
-            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
+            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] h-12 w-full">
               <span>
                 Copyright 2025 Paulo Melo Jr.
               </span>
@@ -334,7 +334,7 @@
         </div>
         <div class="hidden xl:block h-px inset-x-0 bg-gradient-to-l via-transparent from-stone-300 dark:from-zinc-900"></div>
       </header>
-    `}createRenderRoot(){return this}};Qo([ae({type:Boolean})],Js.prototype,"more",2);Qo([ae({type:String})],Js.prototype,"lang",2);Js=Qo([ze("menu-container")],Js);var Kp=Object.defineProperty,Jp=Object.getOwnPropertyDescriptor,Gi=(a,e,t,r)=>{for(var n=r>1?void 0:r?Jp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Kp(e,t,n),n};let Kn=class extends _e{constructor(){super(...arguments),this.classNames="",this.icon="",this.label="",this.title=""}render(){const e=Wn("relative text-[.75rem] tracking-[0.05em] flex items-center transition-all justify-center size-6 hover:size-8 rounded-full hover:bg-stone-950 dark:hover:bg-zinc-200 hover:text-stone-950 dark:hover:text-zinc-950",this.classNames);return ie`
+    `}createRenderRoot(){return this}};Qo([ae({type:Boolean})],Js.prototype,"more",2);Qo([ae({type:String})],Js.prototype,"lang",2);Js=Qo([ze("menu-container")],Js);var Kp=Object.defineProperty,Jp=Object.getOwnPropertyDescriptor,Gi=(a,e,t,r)=>{for(var n=r>1?void 0:r?Jp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Kp(e,t,n),n};let Kn=class extends _e{constructor(){super(...arguments),this.classNames="",this.icon="",this.label="",this.title=""}render(){const e=Wn("relative text-[.75rem] tracking-[0.05em] flex items-center transition-all justify-center size-6 hover:size-8 rounded-full hover:bg-stone-950 dark:hover:bg-zinc-200 hover:text-stone-950 dark:hover:text-zinc-950 dark:font-semibold",this.classNames);return ie`
       <button class="${e}" title="${this.title}">
         ${this.label}
       </button>
