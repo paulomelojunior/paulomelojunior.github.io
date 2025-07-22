@@ -145,7 +145,7 @@ export class TwyneProposal extends LitElement {
 					</h2>
 					<div class="grid grid-cols-2 gap-24">
 						${this.renderProposalList()}
-						<p class="text-[1rem] 2xl:text-[1.25rem] leading-loose text-balance">
+						<p class="text-[1rem] 2xl:text-[1.25rem] leading-loose text-pretty">
 							${i18next.t('twyne.proposal.p1')}
 						</p>
 					</div>

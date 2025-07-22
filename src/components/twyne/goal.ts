@@ -29,10 +29,10 @@ export class TwyneGoal extends LitElement {
 						<h2 class="text-[2.5rem] 2xl:text-[3rem] tracking-[-.02em] dark:text-zinc-200 leading-none mb-10">
               ${i18next.t('twyne.goal.t1')}
 						</h2>
-						<p class="text-[1rem] 2xl:text-[1.25rem] leading-loose mb-8">
+						<p class="text-[1rem] 2xl:text-[1.25rem] leading-loose mb-8 text-pretty">
               ${unsafeHTML(i18next.t('twyne.goal.p1'))}
             </p>
-						<p class="text-[1rem] 2xl:text-[1.25rem] leading-loose">
+						<p class="text-[1rem] 2xl:text-[1.25rem] leading-loose text-pretty">
               ${i18next.t('twyne.goal.p2')}
             </p>
 					</div>

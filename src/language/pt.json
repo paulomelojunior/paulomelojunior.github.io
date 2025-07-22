@@ -82,17 +82,17 @@
       "t1": "Proposta",
       "l1": [
         "Biblioteca de componentes robusta, estratégica e flexível.",
-        "UI simplificada, que coloca as informações em primeiro plano.",
+        "UI simplificada e informações em primeiro plano.",
         "Pensado para durar, escalar e facilitar o desenvolvimento."
       ],
-      "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à lógica do negócio e à jornada dos usuários corporativos."
+      "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à jornada dos usuários corporativos."
     },
     "impact": {
       "t1": "Resultados <br> que importam",
       "l1": [
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",
-        "Base que suportou a adição de novos módulos com mínimo atrito.",
+        "Base que suportou a adição de novos módulos sem atrito.",
         "Fortalecimento da identidade do produto com uma UI moderna."
       ]
     },
