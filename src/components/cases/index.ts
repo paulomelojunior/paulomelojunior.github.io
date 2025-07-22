@@ -55,7 +55,7 @@ export class CasesSection extends LitElement {
 					  	</span>
 				  </div>
 				  <div class="mob-cases-content  xl:cases-content flex-1 flex flex-col xl:aspect-square gap-16 p-16 xl:py-28 justify-between items-center relative xl:rounded-r-[2rem] xl:backdrop-blur-sm">
-					<h2 class="text-[2.5rem] xl:text-[3em] text-center tracking-[-0.02em] leading-none text-zinc-200">
+					<h2 class="text-[2.5rem] xl:text-[3em] text-center tracking-[-0.04em] leading-none text-zinc-200">
 						${this.renderTitle(i18next.t('cases.title'))}
 					</h2>
 					<a href="/twyne" class="flex items-center uppercase font-semibold text-[1rem] leading-none gap-4 py-4 pe-4 ps-6 rounded-full bg-zinc-200 hover:bg-brand-400 transition-colors duration-500 text-black">

@@ -37,18 +37,18 @@ export class HeroSection extends ThemeMixin(LitElement) {
                   Paulo Melo Jr.
                 </span>
                 <span class="flex items-center gap-2 text-[1rem]">
-                  <div class="size-2 bg-brand-400 rounded-full"></div>
+                  <div class="size-2 bg-green-400 rounded-full"></div>
                   ${i18next.t('about.status')}
                 </span>
               </div>
             </div>
             <div class="hidden items-center rounded-full overflow-hidden dark:bg-brand-400 bg-[#DE6868] dark:saturate-100">
               <img src="${this.dark ? logo : logoLight}" alt="Logo" class="h-6" />
-              <span class="uppercase ps-3 pe-4 text-sm font-normal tracking-[.5px] dark:tracking-normal dark:font-semibold dark:text-black text-stone-200">
+              <span class="uppercase ps-3 pe-4 text-sm font-normal tracking-[0.025em] dark:tracking-normal dark:font-semibold dark:text-black text-stone-200">
                 ${i18next.t('about.greeting')}
               </span>
             </div>
-            <h1 class="text-[2.5rem] leading-none xl:leading-tight 2xl:leading-none xl:text-[3rem] 2xl:text-[4rem] tracking-[-0.04em] dark:text-zinc-200 text-stone-950">
+            <h1 class="text-[2.5rem] leading-none xl:text-[3rem] 2xl:text-[4rem] font-medium tracking-[-0.02em] dark:text-zinc-200 text-stone-950 text-pretty">
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}
               </span>
@@ -64,7 +64,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </h1>
           </div>
           <div class="hidden xl:block mx-5 h-px bg-gradient-to-r from-zinc-900 via-zinc-950 to-zinc-900"></div>
-          <div class="grid xl:grid-cols-2 2xl:gap-32 xl:gap-24">
+          <div class="grid xl:grid-cols-2 xl:gap-24">
             <div class="ps-5 xl:py-24 2xl:py-32">
               <p class="2xl:text-[1.25rem] leading-loose">
                 <mark class="bg-transparent dark:text-zinc-50 text-stone-950 inline-block">${i18next.t('about.content.h1')}</mark>${i18next.t('about.content.p1')}

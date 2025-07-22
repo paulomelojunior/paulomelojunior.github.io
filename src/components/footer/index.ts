@@ -40,10 +40,10 @@ export class FooterSection extends LitElement {
 				label: 'GitHub',
 				url: 'https://github.com/paulomelojunior',
 			},
-			// instagram: {
-			// 	label: 'Instagram',
-			// 	url: 'https://instagram.com/paulomelojunior',
-			// },
+			instagram: {
+				label: 'Instagram',
+				url: 'https://instagram.com/paulomelojunior',
+			},
 			linkedin: {
 				label: 'LinkedIn',
 				url: 'https://linkedin.com/in/paulomelojunior/',
@@ -61,9 +61,9 @@ export class FooterSection extends LitElement {
 			const indexStr = (i + 1).toString().padStart(2, '0');
 			const navItem = `
 				<div class="border-b border-stone-300 dark:border-zinc-900 xl:border-0">
-					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 pb-1 flex justify-center xl:flex flex-col text-stone-900 dark:text-zinc-200 relative" rel="noopener noreferrer" href="${e.url}">
+					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-stone-900 dark:text-zinc-200 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
-						<div class="absolute flex items-center pb-1 px-5 inset-0 xl:rounded-full text-stone-200 dark:text-zinc-950">
+						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-stone-200 dark:text-zinc-950">
 							${e.label}
 						</div>
 						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono tracking-[1px] text-[.75rem]">
@@ -115,7 +115,7 @@ export class FooterSection extends LitElement {
 		return html`
 			<footer id="hey" class="xl:footer relative h-lvh z-10 rounded-t-[2rem] overflow-hidden">
 				<div id="footerLinks" class="relative flex h-full flex-1 items-center pb-24 xl:pb-0 z-10">
-					<div id="menu" class="flex flex-1 flex-col tracking-[-0.02em] flex-wrap gap-0 text-[2rem] xl:items-baseline xl:flex-row xl:gap-4 xl:justify-center 2xl:text-[2.5rem]">
+					<div id="menu" class="flex flex-1 flex-col tracking-[-0.04em] flex-wrap gap-0 text-[2rem] xl:items-baseline xl:flex-row xl:gap-4 xl:justify-center 2xl:text-[2.5rem]">
 						<span class="px-5 h-20 flex items-center xl:p-0 text-stone-600 dark:text-zinc-600">
 							${i18next.t('connect.title')}
 						</span>

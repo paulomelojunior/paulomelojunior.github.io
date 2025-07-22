@@ -35,7 +35,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         },
         stagger: 0.12,
         opacity: 0,
-        fill: this.dark ? '#4dcb8c' : '#4dcb8c',
+        fill: this.dark ? '#4d88ff' : '#4d88ff',
         drawSVG: false,
       });
     });

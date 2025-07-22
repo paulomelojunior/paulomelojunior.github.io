@@ -140,7 +140,7 @@ export class TwyneProposal extends LitElement {
 			<section id="proposal">
 				<div class="container hidden xl:block h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
 				<div class="container rounded-t-[2rem] p-24 2xl:p-32">
-					<h2 class="text-[2.5rem] 2xl:text-[3rem] tracking-[-.04em] dark:text-zinc-200 leading-none mb-10">
+					<h2 class="text-[2.5rem] 2xl:text-[3rem] tracking-[-.02em] dark:text-zinc-200 leading-none mb-10">
 						${i18next.t('twyne.proposal.t1')}
 					</h2>
 					<div class="grid grid-cols-2 gap-24">

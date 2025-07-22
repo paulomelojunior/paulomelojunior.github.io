@@ -25,7 +25,7 @@ export class TwyneImpact extends LitElement {
     const items = i18next.t('twyne.impact.l1', { returnObjects: true }) as string[];
     return html`
       <div id="impact" class="container px-24 2xl:px-32 grid grid-cols-2 items-baseline rounded-b-[2rem]">
-        <h2 class="text-[2.5rem] 2xl:text-[3rem] tracking-[-.04em] dark:text-zinc-200 leading-none">
+        <h2 class="text-[2.5rem] 2xl:text-[3rem] tracking-[-.02em] dark:text-zinc-200 leading-none">
           ${unsafeHTML(i18next.t('twyne.impact.t1'))}
         </h2>
         <ul class="text-[1rem] 2xl:text-[1.25rem] leading-[2.25] dark:text-zinc-200">

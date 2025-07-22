@@ -9,9 +9,9 @@ export default {
     theme: {
         fontFamily: {
             sans: [
-                '"Aspekta", sans-serif',
+                '"Mona Sans", sans-serif',
                 {
-                    fontFeatureSettings: '"ss02", "ss04", "ss07", "ss08", "ss11"'
+                    fontFeatureSettings: '"ss01"'
                 }
             ],
             mono: [
@@ -33,7 +33,7 @@ export default {
         extend: {
             colors: {
                 'brand': {
-                    '400': '#4dcb8c',
+                    '400': '#4d88ff',
                 }
             }
         },
