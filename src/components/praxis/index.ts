@@ -61,8 +61,8 @@ export class PraxisSection extends ThemeMixin(LitElement) {
     return html`
       <section>
         <div class="container">
-          <div id="how" class="grid xl:grid-cols-2 overflow-hidden gap-16 xl:gap-0 *:2xl:p-32 *:xl:p-24 *:flex *:flex-col *:items-start *:justify-center *:gap-8 py-16 xl:py-24 2xl:py-32">
-            <div class="praxis px-10">
+          <div id="how" class="grid xl:grid-cols-2 overflow-hidden gap-16 xl:gap-32 *:2xl:py-32 *:xl:py-24 *:flex *:flex-col *:items-start *:justify-center *:gap-8 py-16 xl:p-24 2xl:p-32">
+            <div class="praxis">
               <svg class="size-16 xl:size-24" width="82" height="81" viewBox="0 0 82 81" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 23C31.1503 23 41 13.1503 41 1C28.8497 1 19 10.8497 19 23Z" stroke="#ffffff"/>
                 <path d="M41 1C53.1503 1 63 10.8497 63 23C50.8497 23 41 13.1503 41 1Z" stroke="#ffffff"/>
@@ -74,11 +74,11 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               <h2 class="text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
                 ${i18next.t('praxis.t1')}
               </h2>
-              <p class="2xl:text-xl leading-loose 2xl:leading-10 text-pretty">
+              <p class="2xl:text-[1.25rem] leading-loose">
                 ${i18next.t('praxis.p1')}
               </p>
             </div>
-            <div class="praxis px-10">
+            <div class="praxis">
               <svg class="size-16 xl:size-24" width="82" height="66" viewBox="0 0 82 66" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 23C31.1503 23 41 13.1503 41 1H1V23H19Z" stroke="#ffffff"/>
                 <path d="M63 23C50.8497 23 41 13.1503 41 1H81V23H63Z" stroke="#ffffff"/>
@@ -90,7 +90,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               <h2 class="text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] leading-none dark:text-zinc-200 text-stone-950">
                 ${i18next.t('praxis.t2')}
               </h2>
-              <p class="2xl:text-xl leading-loose 2xl:leading-10 text-pretty">
+              <p class="2xl:text-[1.25rem] leading-loose">
                 ${i18next.t('praxis.p2')}
               </p>
             </div>
