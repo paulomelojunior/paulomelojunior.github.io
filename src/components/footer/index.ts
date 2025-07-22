@@ -66,7 +66,7 @@ export class FooterSection extends LitElement {
 						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-stone-200 dark:text-zinc-950">
 							${e.label}
 						</div>
-						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono tracking-[1px] text-[.75rem]">
+						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem]">
 							${indexStr === '04' ? 'hello@pmjr.cc' : indexStr}
 						</span>
 					</a>
@@ -125,7 +125,7 @@ export class FooterSection extends LitElement {
 					</div>
 				</div>
 				<div id="copyright" class="absolute xl:z-50 inset-x-0 bottom-0 hidden xl:block bg-zinc-950 text-zinc-600 hover:text-brand-400 duration-300">
-					<div class="container px-5 font-semibold tracking-[0.05em] uppercase h-12 flex font-mono items-center justify-center text-[.75rem] leading-none">
+					<div class="container px-5 font-semibold uppercase h-12 flex font-mono items-center justify-center text-[.75rem] leading-none">
 						<a href="https://github.com/paulomelojunior/pmjr.cc" target="_blank" rel="noopener noreferrer" class="copyright">
 							MIT License [<span>Copyright</span>] 2025, pmjr.cc
 						</a>

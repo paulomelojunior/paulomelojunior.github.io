@@ -31,7 +31,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="flex items-center gap-4">
               <img src="${profile}" alt="${i18next.t('about.picDescription')}" class="h-16 rounded-full" />
               <div class="grid gap-2 leading-none">
-                <span class="text-[1.25rem] tracking-[0.025em]  text-zinc-200">
+                <span class="text-[1.25rem] text-zinc-200">
                   Paulo Melo Jr.
                 </span>
                 <span class="flex items-center gap-2 text-[1rem]">

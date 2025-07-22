@@ -97,7 +97,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
                 ></lang-button>
               </li>
             </ul>
-            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] tracking-[1px] h-12 w-full">
+            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] h-12 w-full">
               <span>
                 Copyright 2025 Paulo Melo Jr.
               </span>
