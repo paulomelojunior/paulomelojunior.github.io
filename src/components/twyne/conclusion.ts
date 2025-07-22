@@ -100,7 +100,7 @@ export class TwyneConclusion extends LitElement {
     return html`
       <section>
         <div class="grid grid-cols-4 container py-32">
-          <div class="flex flex-col relative justify-center items-center gap-8 aspect-square col-span-2 col-start-2 text-[1.25rem] 2xl:text-[1.5rem] leading-loose text-zinc-300 text-balance text-center font-light">
+          <div class="flex flex-col relative justify-center items-center gap-8 aspect-square col-span-2 col-start-2 text-[1.25rem] 2xl:text-[1.5rem] leading-loose text-zinc-300 text-balance text-center">
             ${this.renderContent()}
             ${this.renderSignature()}
           </div>

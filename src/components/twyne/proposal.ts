@@ -94,17 +94,17 @@ export class TwyneProposal extends LitElement {
 			<div class="flex flex-col gap-4">
 				<div class="flex gap-4">
 					<div class="flex flex-col gap-4">
-						<img src="${b1}" alt="Component B1">
-						<img src="${b3}" alt="Component B3">
+						<img src="${b1}" loading="lazy" alt="Component B1">
+						<img src="${b3}" loading="lazy" alt="Component B3">
 					</div>
-					<img src="${b2}" alt="Component B2">
+					<img src="${b2}" loading="lazy" alt="Component B2">
 				</div>
 				<div class="flex gap-4">
-					<img src="${b7}" alt="Component B7">
-					<img src="${b5}" alt="Component B5">
-					<img src="${b6}" alt="Component B6">
+					<img src="${b7}" loading="lazy" alt="Component B7">
+					<img src="${b5}" loading="lazy" alt="Component B5">
+					<img src="${b6}" loading="lazy" alt="Component B6">
 				</div>
-				<img src="${b4}" alt="Component B4">
+				<img src="${b4}" loading="lazy" alt="Component B4">
 			</div>
 		`;
 	}
@@ -112,10 +112,10 @@ export class TwyneProposal extends LitElement {
 	private renderComponentColumn(): unknown {
 		return html`
 			<div class="grid gap-4">
-				<img src="${a1}" alt="Component A1">
-				<img src="${a2}" alt="Component A2">
-				<img src="${a3}" alt="Component A3">
-				<img src="${a4}" alt="Component A4">
+				<img src="${a1}" loading="lazy" alt="Component A1">
+				<img src="${a2}" loading="lazy" alt="Component A2">
+				<img src="${a3}" loading="lazy" alt="Component A3">
+				<img src="${a4}" loading="lazy" alt="Component A4">
 			</div>
 		`;
 	}

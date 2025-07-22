@@ -42,8 +42,8 @@ export class CasesSection extends LitElement {
 			  <div class="flex relative 2xl:h-[512px] rounded-[2rem] xl:bg-gradient-to-r from-zinc-950 to-black">
 				  <div class="xl:flex hidden justify-center w-2/3">
 						<div class="absolute overflow-hidden bottom-0 saturate-0">
-							<img class="cases max-w-none absolute" src="${m1}" alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen.">
-							<img class="cases max-w-none" src="${m2}" alt="Mobile screen in dark mode showcasing an organized campaign list view, with project names, dates, and quick actions.">
+							<img loading="lazy" class="cases max-w-none absolute" src="${m1}" alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen.">
+							<img loading="lazy" class="cases max-w-none" src="${m2}" alt="Mobile screen in dark mode showcasing an organized campaign list view, with project names, dates, and quick actions.">
 						</div>
 						<span class="absolute flex gap-2 leading-none font-medium tracking-[.5px] bottom-0 left-0 p-8 text-sm text-zinc-600 uppercase font-mono">
 							<span>

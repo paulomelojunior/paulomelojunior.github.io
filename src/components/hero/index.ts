@@ -1,8 +1,6 @@
 import i18next from '../../i18n';
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import logo from './logo.svg';
-import logoLight from './logo-light.svg';
 import profile from './profile.png';
 import './styles.scss';
 import { ThemeMixin } from '../../store/theme';
@@ -41,12 +39,6 @@ export class HeroSection extends ThemeMixin(LitElement) {
                   ${i18next.t('about.status')}
                 </span>
               </div>
-            </div>
-            <div class="hidden items-center rounded-full overflow-hidden dark:bg-brand-400 bg-[#DE6868] dark:saturate-100">
-              <img src="${this.dark ? logo : logoLight}" alt="Logo" class="h-6" />
-              <span class="uppercase ps-3 pe-4 text-sm font-normal tracking-[0.025em] dark:tracking-normal dark:font-semibold dark:text-black text-stone-200">
-                ${i18next.t('about.greeting')}
-              </span>
             </div>
             <h1 class="text-[2.5rem] leading-none xl:text-[3rem] 2xl:text-[4rem] font-medium tracking-[-0.02em] dark:text-zinc-200 text-stone-950 text-pretty">
               <span class="block xl:hidden">
