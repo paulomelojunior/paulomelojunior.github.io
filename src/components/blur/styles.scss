@@ -1,20 +1,19 @@
 .progressive-blur > * {
-    @apply
-    absolute
+  @apply absolute
     inset-0
     backdrop-blur-[var(--progressive-blur)];
 }
 
 .progressive-blur {
-    @for $i from 1 through 6 {
-        > *:nth-child(#{$i}) {
-            --progressive-blur: #{pow(2, $i - 1) * 1px};
+  @for $i from 1 through 6 {
+    > *:nth-child(#{$i}) {
+      --progressive-blur: #{pow(2, $i - 1) * 1px};
 
-            mask: linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0) calc($i * 100% / 6 - 100% / 6),
-                rgb(0, 0, 0) calc($i * 100% / 6)
-                );
-        }
+      mask: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) calc($i * 100% / 6 - 100% / 6),
+        rgb(0, 0, 0) calc($i * 100% / 6)
+      );
     }
+  }
 }

@@ -1,18 +1,19 @@
-.menu-item > div {    
-    @apply
-    bg-[linear-gradient(to_bottom,_theme('colors.stone.900')_50%,_#DE6868_50%)]
+.menu-item > div {
+  @apply bg-[linear-gradient(to_bottom,_theme('colors.stone.900')_50%,_#DE6868_50%)]
     dark:bg-[linear-gradient(to_bottom,_theme('colors.zinc.200')_50%,_theme('colors.brand.400')_50%)];
 
-    background-size: 100% 200%;
-    background-position: 0% 100%;
-    transition: background-position .25s cubic-bezier(.75,0,0.5,1), filter .25s cubic-bezier(.75,0,0.5,1);
-    transition-delay: .25s, 0s;
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  transition:
+    background-position 0.25s cubic-bezier(0.75, 0, 0.5, 1),
+    filter 0.25s cubic-bezier(0.75, 0, 0.5, 1);
+  transition-delay: 0.25s, 0s;
 }
 
 .menu-item:hover > div {
-    background-position: 0% 0%;
+  background-position: 0% 0%;
 }
 
 .menu-item:active > div {
-    filter: brightness(0.9);
+  filter: brightness(0.9);
 }

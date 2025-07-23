@@ -1,18 +1,21 @@
 .hero {
-    position: relative;
-    &:before {
-        position: absolute;
-        background: url('../../assets/imgs/pattern-light.svg');
-        content: "";
-        height: 100vh;
-        inset-inline: 0;
-        mask-image: radial-gradient(circle at top center, theme('colors.black'), transparent 50%);
-        pointer-events: none;
-        z-index: -1;
+  position: relative;
+  &:before {
+    position: absolute;
+    background: url('../../assets/imgs/pattern-light.svg');
+    content: '';
+    height: 100vh;
+    inset-inline: 0;
+    mask-image: radial-gradient(
+      circle at top center,
+      theme('colors.black'),
+      transparent 50%
+    );
+    pointer-events: none;
+    z-index: -1;
 
-        @apply
-        bg-local
+    @apply bg-local
         xl:bg-fixed
         dark:bg-[url('../../assets/imgs/pattern.svg')];
-    }
+  }
 }

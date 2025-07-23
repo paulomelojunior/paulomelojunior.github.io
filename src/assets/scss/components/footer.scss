@@ -1,15 +1,15 @@
 .footer {
-    position: relative;
+  position: relative;
 
-    &:before {
-        position: absolute;
-        inset: 0;
-        content: "";
-        background-image: url(../../assets/imgs/pattern.svg);
-        background-attachment: fixed;
-        mask-image: radial-gradient(circle at bottom, white, black 50%);
-        mask-mode: luminance;
-        pointer-events: none;
-        z-index: -1;
-    }
+  &:before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background-image: url(../../assets/imgs/pattern.svg);
+    background-attachment: fixed;
+    mask-image: radial-gradient(circle at bottom, white, black 50%);
+    mask-mode: luminance;
+    pointer-events: none;
+    z-index: -1;
+  }
 }

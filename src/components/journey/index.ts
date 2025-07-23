@@ -1,58 +1,58 @@
-import i18next from '../../i18n';
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import './styles.scss';
-import { ThemeMixin } from '../../store/theme';
+import i18next from '../../i18n'
+import { LitElement, html } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
+import './styles.scss'
+import { ThemeMixin } from '../../store/theme'
 
 interface JourneyItem {
-  hide: boolean;
-  start: string;
-  end: string;
-  title: string;
-  description: string;
-  custom?: string;
-  more?: string;
+  hide: boolean
+  start: string
+  end: string
+  title: string
+  description: string
+  custom?: string
+  more?: string
 }
 
 @customElement('journey-section')
 export class JourneySection extends ThemeMixin(LitElement) {
-  @property({ type: String }) lang = i18next.language;
+  @property({ type: String }) lang = i18next.language
 
   connectedCallback() {
-    super.connectedCallback();
-    i18next.on('languageChanged', this.handleLanguageChange);
+    super.connectedCallback()
+    i18next.on('languageChanged', this.handleLanguageChange)
   }
 
   disconnectedCallback() {
-    super.disconnectedCallback();
-    i18next.off('languageChanged', this.handleLanguageChange);
+    super.disconnectedCallback()
+    i18next.off('languageChanged', this.handleLanguageChange)
   }
 
   private handleLanguageChange = () => {
-    this.lang = i18next.language;
-    this.updateJourneyContent();
-  };
+    this.lang = i18next.language
+    this.updateJourneyContent()
+  }
 
   // Atualiza o conteúdo da seção journey quando o idioma muda
   private updateJourneyContent() {
-    const journeyElement = this.querySelector('#job') as HTMLElement;
-    
+    const journeyElement = this.querySelector('#job') as HTMLElement
+
     if (!journeyElement) {
-      console.warn('Journey element not found');
-      return;
+      console.warn('Journey element not found')
+      return
     }
 
     // Limpa o conteúdo existente
-    journeyElement.innerHTML = '';
-    
+    journeyElement.innerHTML = ''
+
     // Recria o conteúdo com o novo idioma
-    const journeyItems = this.getJourneyItems();
-    const journeyValues = Object.values(journeyItems);
-    
+    const journeyItems = this.getJourneyItems()
+    const journeyValues = Object.values(journeyItems)
+
     journeyValues.forEach((item) => {
-      const journeyItemHTML = this.createJourneyItemHTML(item);
-      journeyElement.insertAdjacentHTML('beforeend', journeyItemHTML);
-    });
+      const journeyItemHTML = this.createJourneyItemHTML(item)
+      journeyElement.insertAdjacentHTML('beforeend', journeyItemHTML)
+    })
   }
 
   private getJourneyItems(): Record<string, JourneyItem> {
@@ -93,13 +93,13 @@ export class JourneySection extends ThemeMixin(LitElement) {
         description: i18next.t('journey.p4'),
         more: undefined,
       },
-    };
+    }
   }
 
   private createJourneyItemHTML(item: JourneyItem): string {
-    const hideClass = item.hide ? 'hidden xl:flex' : 'flex';
-    const customClass = item.custom ? ` class="${item.custom}"` : '';
-    
+    const hideClass = item.hide ? 'hidden xl:flex' : 'flex'
+    const customClass = item.custom ? ` class="${item.custom}"` : ''
+
     return `
       <div class="${hideClass} job relative justify-between flex-col gap-6 px-10 xl:px-20 2xl:px-32 xl:rounded-[2rem]">
         <span class="font-mono text-sm text-zinc-500">
@@ -112,39 +112,42 @@ export class JourneySection extends ThemeMixin(LitElement) {
           ${item.description}
         </p>
       </div>
-    `;
+    `
   }
 
   firstUpdated() {
-    const journeyElement = this.querySelector('#job') as HTMLElement;
-    
+    const journeyElement = this.querySelector('#job') as HTMLElement
+
     if (!journeyElement) {
-      console.warn('Journey element not found');
-      return;
+      console.warn('Journey element not found')
+      return
     }
-    
-    const journeyItems = this.getJourneyItems();
-    const journeyValues = Object.values(journeyItems);
-    
+
+    const journeyItems = this.getJourneyItems()
+    const journeyValues = Object.values(journeyItems)
+
     journeyValues.forEach((item) => {
-      const journeyItemHTML = this.createJourneyItemHTML(item);
-      journeyElement.insertAdjacentHTML('beforeend', journeyItemHTML);
-    });
+      const journeyItemHTML = this.createJourneyItemHTML(item)
+      journeyElement.insertAdjacentHTML('beforeend', journeyItemHTML)
+    })
   }
 
   render() {
     return html`
       <section>
-        <div class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]">
-          <div id="job" class="container py-16 grid gap-y-16 xl:gap-y-32 overflow-hidden xl:grid-cols-2 xl:py-24 2xl:py-32">
-          </div>
+        <div
+          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]"
+        >
+          <div
+            id="job"
+            class="container grid gap-y-16 overflow-hidden py-16 xl:grid-cols-2 xl:gap-y-32 xl:py-24 2xl:py-32"
+          ></div>
         </div>
       </section>
-    `;
+    `
   }
 
   createRenderRoot() {
-    return this;
+    return this
   }
 }
-

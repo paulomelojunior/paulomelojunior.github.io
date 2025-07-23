@@ -1,22 +1,28 @@
-import { LitElement, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import classNames from 'classnames';
-import star from './star.svg';
-import './styles.scss';
+import { LitElement, html } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
+import classNames from 'classnames'
+import star from './star.svg'
+import './styles.scss'
 
 @customElement('marquee-element')
 export class MarqueeElement extends LitElement {
-  @property({ type: String }) items: string = '';
-  @property({ type: Boolean }) reverse: boolean = false;
-  
+  @property({ type: String }) items: string = ''
+  @property({ type: Boolean }) reverse: boolean = false
+
   render() {
-    const list = this.items.split(',').map(item => item.trim());
-    const items = list.map((item) => html`<li>${item}</li><li><img aria-hidden="true" class="xl:size-3 size-2" src="${star}" /></li>`);
-    const reverse = this.reverse;
-    const classList = classNames('marquee', { reverse });
+    const list = this.items.split(',').map((item) => item.trim())
+    const items = list.map(
+      (item) =>
+        html`<li>${item}</li>
+          <li>
+            <img aria-hidden="true" class="size-2 xl:size-3" src="${star}" />
+          </li>`
+    )
+    const reverse = this.reverse
+    const classList = classNames('marquee', { reverse })
 
     return html`
-      <div class=${classList}>        
+      <div class=${classList}>
         <ul class="marquee__content" aria-hidden="true">
           ${items}
         </ul>
@@ -24,10 +30,10 @@ export class MarqueeElement extends LitElement {
           ${items}
         </ul>
       </div>
-    `;
+    `
   }
 
   createRenderRoot() {
-    return this;
+    return this
   }
 }

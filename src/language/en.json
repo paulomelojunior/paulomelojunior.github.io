@@ -36,11 +36,11 @@
     "t2": "Designer, <br class='block xl:hidden'> front-end dev",
     "p2": "In multifaceted collaboration with managers and the development team, we successfully redesigned the interfaces and features of company's software.",
     "m2": "Also played a key role in co-creating a platform that facilitates connecting individuals facing legal issues with specialized professionals.",
-    
+
     "t3": "Visual and <br class='block xl:hidden'> product designer",
     "p3": "Early 2018, I held the role of a generalist designer, tasked with developing and managing all aspects of design and creative outputs for their product project.",
     "m3": "Second half of the year, I collaborated with another company to design an open-source library of interface components.",
-    
+
     "t4": "Lead designer, <br class='block xl:hidden'> UI engineer",
     "p4": "Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability."
   },
@@ -61,7 +61,7 @@
       "details": {
         "company": "Company",
         "companyValue": "Ifficient",
-        "industry": "Industry", 
+        "industry": "Industry",
         "industryValue": "AdTech",
         "product": "Product",
         "productValue": "Software as a Service",

@@ -1,14 +1,13 @@
 #noise {
-    @apply
+  @apply pointer-events-none
+    absolute
     top-0
     z-50
     h-full
     w-full
-    pointer-events-none
-    absolute
-    xl:fixed
-    bg-repeat
-    bg-left-top
     bg-[url('../imgs/noise.avif')]
-    bg-[length:216px_auto];
+    bg-[length:216px_auto]
+    bg-left-top
+    bg-repeat
+    xl:fixed;
 }

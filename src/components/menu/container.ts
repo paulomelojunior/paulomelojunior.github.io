@@ -1,115 +1,134 @@
-import i18next from '../../i18n';
-import { html, LitElement } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { ThemeMixin } from '../../store/theme';
+import i18next from '../../i18n'
+import { html, LitElement } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
+import { ThemeMixin } from '../../store/theme'
 
 @customElement('menu-container')
 export class MenuContainer extends ThemeMixin(LitElement) {
-  @property({ type: Boolean }) more = false;
-  @property({ type: String }) lang = i18next.language;
+  @property({ type: Boolean }) more = false
+  @property({ type: String }) lang = i18next.language
 
   constructor() {
-    super();
-    const savedLang = localStorage.getItem('lang');
+    super()
+    const savedLang = localStorage.getItem('lang')
     if (savedLang) {
-      this.lang = savedLang;
-      i18next.changeLanguage(savedLang);
+      this.lang = savedLang
+      i18next.changeLanguage(savedLang)
     }
   }
 
   connectedCallback() {
-    super.connectedCallback();
-    i18next.on('languageChanged', this.handleLanguageChange);
+    super.connectedCallback()
+    i18next.on('languageChanged', this.handleLanguageChange)
   }
 
   disconnectedCallback() {
-    super.disconnectedCallback();
-    i18next.off('languageChanged', this.handleLanguageChange);
+    super.disconnectedCallback()
+    i18next.off('languageChanged', this.handleLanguageChange)
   }
 
   private handleLanguageChange = () => {
-    this.lang = i18next.language;
-  };
+    this.lang = i18next.language
+  }
 
   changeLang() {
-    const currentLang = i18next.language;
-    const newLang = currentLang === 'en' ? 'pt' : 'en';
-    
-    i18next.changeLanguage(newLang);
-    localStorage.setItem('lang', newLang);
-    
+    const currentLang = i18next.language
+    const newLang = currentLang === 'en' ? 'pt' : 'en'
+
+    i18next.changeLanguage(newLang)
+    localStorage.setItem('lang', newLang)
+
     // Atualiza a propriedade lang
-    this.lang = newLang;
+    this.lang = newLang
   }
 
   changeTheme() {
-    this.toggleTheme();
+    this.toggleTheme()
   }
 
   copyEmail() {
-    const email = "hello@pmjr.cc";
-    navigator.clipboard.writeText(email).then(() => {
-      this.updateText(this.lang === 'en' ? 'Copied!' : 'Copiado!', 0);
-    }).catch(error => {
-      alert(`Failed to copy email: ${error}`);
-    });
+    const email = 'hello@pmjr.cc'
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        this.updateText(this.lang === 'en' ? 'Copied!' : 'Copiado!', 0)
+      })
+      .catch((error) => {
+        alert(`Failed to copy email: ${error}`)
+      })
   }
 
   copyEmailReset() {
-    this.updateText(this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail', 300);
+    this.updateText(this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail', 300)
   }
 
   updateText(text: string, delay: number) {
-    const element = document.querySelector('mail-button span');
+    const element = document.querySelector('mail-button span')
     if (element) {
       setTimeout(() => {
-        element.textContent = text;
-      }, delay);
+        element.textContent = text
+      }, delay)
     }
   }
 
   render() {
     return html`
-      <header class="invisible w-full absolute inset-x-0 z-40 xl:fixed bg-gradient-to-b bg-stone-200/60 dark:bg-zinc-950/60 backdrop-blur-md backdrop-saturate-200">
-        <div class="container grid xl:grid-cols-2 items-center">
+      <header
+        class="invisible absolute inset-x-0 z-40 w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed dark:bg-zinc-950/60"
+      >
+        <div class="container grid items-center xl:grid-cols-2">
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
             label="hello@pmjr.cc"
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
-            ></mail-button>
+          ></mail-button>
           <nav>
             <ul id="anchors" class="flex justify-end">
               <li class="flex-1 xl:flex-none">
-                <menu-item href="#how" label="${i18next.t('menu.praxis')}"></menu-item>
+                <menu-item
+                  href="#how"
+                  label="${i18next.t('menu.praxis')}"
+                ></menu-item>
               </li>
               <li class="flex-1 xl:flex-none">
-                <menu-item href="#job" label="${i18next.t('menu.journey')}"></menu-item>
+                <menu-item
+                  href="#job"
+                  label="${i18next.t('menu.journey')}"
+                ></menu-item>
               </li>
               <li class="flex-1 xl:flex-none">
-                <menu-item href="#hey" label="${i18next.t('menu.connect')}"></menu-item>
+                <menu-item
+                  href="#hey"
+                  label="${i18next.t('menu.connect')}"
+                ></menu-item>
               </li>
-              <li class="flex items-center justify-center size-12">
+              <li class="flex size-12 items-center justify-center">
                 <lang-button
-                  @click=${() => this.changeLang()}  
+                  @click=${() => this.changeLang()}
                   label=${this.lang === 'pt' ? 'US' : 'BR'}
-                  title="${this.lang === 'en' ? 'Mudar para português' : 'Change to english'}"
+                  title="${this.lang === 'en'
+                    ? 'Mudar para português'
+                    : 'Change to english'}"
                 ></lang-button>
               </li>
             </ul>
-            <div id="copy" class="xl:hidden absolute font-semibold flex items-center justify-center px-5 bg-stone-300 dark:bg-zinc-900 font-mono uppercase text-[.625rem] h-12 w-full">
-              <span>
-                Copyright 2025 Paulo Melo Jr.
-              </span>
+            <div
+              id="copy"
+              class="absolute flex h-12 w-full items-center justify-center bg-stone-300 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden dark:bg-zinc-900"
+            >
+              <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
           </nav>
         </div>
-        <div class="hidden xl:block h-px inset-x-0 bg-gradient-to-l via-transparent from-stone-300 dark:from-zinc-900"></div>
+        <div
+          class="inset-x-0 hidden h-px bg-gradient-to-l from-stone-300 via-transparent xl:block dark:from-zinc-900"
+        ></div>
       </header>
-    `;
+    `
   }
 
   createRenderRoot() {
-    return this;
+    return this
   }
 }

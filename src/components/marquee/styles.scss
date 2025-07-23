@@ -1,65 +1,58 @@
 @keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    
-    to {
-        transform: translateX(calc(-100% - var(--gap)));
-    }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
 }
 
 @keyframes marquee-hover {
-    from {
-        transform: translateX(0);
-    }
-    
-    to {
-        transform: translateX(calc(-50% - var(--gap)));
-    }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - var(--gap)));
+  }
 }
 
 .marquee {
-    --gap: 2rem;
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-    gap: var(--gap);
+  --gap: 2rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
 
-    mask: linear-gradient(
-        90deg,
-        transparent,
-        black,
-        black,
-        transparent
-    );
+  mask: linear-gradient(90deg, transparent, black, black, transparent);
 
-    &.reverse {
-        .marquee__content {
-            animation-direction: reverse;
-        }
+  &.reverse {
+    .marquee__content {
+      animation-direction: reverse;
     }
+  }
 }
 
 .marquee__content {
-    @apply
-    flex
+  @apply flex
+    h-16
     shrink-0
     items-center
     justify-around
     overflow-hidden
     whitespace-nowrap
     px-0
-    h-16
     text-center
-    leading-none
-    font-medium
     text-[.75rem]
-    xl:text-[1rem]
-    tracking-[0.02em]
+    font-medium
     uppercase
+    leading-none
+    tracking-[0.02em]
     text-stone-950
+    xl:text-[1rem]
     dark:text-zinc-500;
-    min-width: 100%;
-    gap: var(--gap);
-    animation: marquee 56s linear infinite;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: marquee 56s linear infinite;
 }
