@@ -27,7 +27,7 @@ export class TwyneAbout extends LitElement {
         class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
       ></div>
       <div
-        class="grid grid-cols-2 overflow-hidden rounded-[2rem] border border-zinc-950"
+        class="grid grid-cols-2 overflow-hidden rounded-[2rem] border border-zinc-950 text-zinc-500"
       >
         <div class="flex flex-col bg-black xl:p-16">
           <p class="-mt-4 text-[1.25rem] leading-loose 2xl:text-[1.5rem]">

@@ -132,7 +132,7 @@ export class TwyneProposal extends LitElement {
     return html`
       <div
         id="components"
-        class="relative flex items-start justify-center gap-4 overflow-hidden"
+        class="relative flex items-start justify-center gap-4 overflow-hidden min-h-[1348px]"
       >
         <style>
           #components img {

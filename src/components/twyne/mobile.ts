@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
 import i18next from '../../i18n'
-import { LitElement, html } from 'lit'
+import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import e1 from './imgs/e1.png'
@@ -28,18 +28,24 @@ export class TwyneMobile extends LitElement {
     this.lang = i18next.language
   }
 
-  firstUpdated() {
-    const images = document.querySelectorAll('#mobile-images > img')
-    gsap.from(images, {
-      scrollTrigger: {
-        trigger: '#mobile-images',
-        start: 'center center',
-        toggleActions: 'play none none reverse',
-      },
-      stagger: .05,
-      opacity: 0,
-      x: '10rem',
-    })
+  private setupMobileAnimation(): void {
+    const mobileImages = this.querySelectorAll('.mobile-screen')
+    if (!mobileImages.length) return
+
+      gsap.from(mobileImages, {
+        scrollTrigger: {
+          trigger: mobileImages,
+          toggleActions: 'play none none reverse',
+          start: 'top 80%',
+          end: 'center 80%',
+        },
+        stagger: 0.05,
+        x: '5rem',
+      })
+  }
+
+  protected firstUpdated(_changedProperties: PropertyValues): void {
+    this.setupMobileAnimation()
   }
 
   render() {
@@ -50,40 +56,35 @@ export class TwyneMobile extends LitElement {
         >
           ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
         </h2>
-        <style>
-          #mobile img {
-            mask-image: url('${mask}');
-            mask-mode: luminance;
-          }
-        </style>
         <div id="mobile-images" class="flex items-center justify-center gap-4 overflow-hidden">
           <img
             src="${e2}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${e1}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${e3}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${e4}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${e5}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
         </div>
       </section>
+      <style>
+        .mobile-screen {
+          mask-image: url('${mask}');
+          mask-mode: luminance;
+        }
+      </style>
     `
   }
 

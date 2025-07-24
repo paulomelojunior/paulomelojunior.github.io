@@ -577,7 +577,7 @@
         class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
       ></div>
       <div
-        class="grid grid-cols-2 overflow-hidden rounded-[2rem] border border-zinc-950"
+        class="grid grid-cols-2 overflow-hidden rounded-[2rem] border border-zinc-950 text-zinc-500"
       >
         <div class="flex flex-col bg-black xl:p-16">
           <p class="-mt-4 text-[1.25rem] leading-loose 2xl:text-[1.5rem]">
@@ -685,7 +685,7 @@
     `}renderComponentsSection(){return ie`
       <div
         id="components"
-        class="relative flex items-start justify-center gap-4 overflow-hidden"
+        class="relative flex items-start justify-center gap-4 overflow-hidden min-h-[1348px]"
       >
         <style>
           #components img {
@@ -733,48 +733,43 @@
               </li>`)}
         </ul>
       </div>
-    `}createRenderRoot(){return this}};_f([ae({type:String})],mo.prototype,"lang",2);mo=_f([ze("twyne-impact")],mo);const $g="/src/cef3d9.png",Pg="/src/6f2cb8.png",Tg="/src/6b0ed1.png",Ag="/src/b2e798.png",Og="/src/9bbc2e.png",kg="/src/ef0222.png";var Mg=Object.defineProperty,Lg=Object.getOwnPropertyDescriptor,Df=(a,e,t,r)=>{for(var n=r>1?void 0:r?Lg(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Mg(e,t,n),n};let _o=class extends _e{constructor(){super(...arguments),this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language}}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange)}firstUpdated(){const a=document.querySelectorAll("#mobile-images > img");dt.from(a,{scrollTrigger:{trigger:"#mobile-images",start:"center center",toggleActions:"play none none reverse"},stagger:.05,opacity:0,x:"10rem"})}render(){return ie`
+    `}createRenderRoot(){return this}};_f([ae({type:String})],mo.prototype,"lang",2);mo=_f([ze("twyne-impact")],mo);const $g="/src/cef3d9.png",Pg="/src/6f2cb8.png",Tg="/src/6b0ed1.png",Ag="/src/b2e798.png",Og="/src/9bbc2e.png",kg="/src/ef0222.png";var Mg=Object.defineProperty,Lg=Object.getOwnPropertyDescriptor,Df=(a,e,t,r)=>{for(var n=r>1?void 0:r?Lg(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Mg(e,t,n),n};let _o=class extends _e{constructor(){super(...arguments),this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language}}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange)}setupMobileAnimation(){const a=this.querySelectorAll(".mobile-screen");a.length&&dt.from(a,{scrollTrigger:{trigger:a,toggleActions:"play none none reverse",start:"top 80%",end:"center 80%"},stagger:.05,x:"5rem"})}firstUpdated(a){this.setupMobileAnimation()}render(){return ie`
       <section id="mobile" class="mt-32 py-32">
         <h2
           class="mb-32 text-center text-[2.5rem] leading-none tracking-[-.04em] 2xl:text-[3rem] dark:text-zinc-200"
         >
           ${aa(C.t("twyne.mobile.t1"))}
         </h2>
-        <style>
-          #mobile img {
-            mask-image: url('${kg}');
-            mask-mode: luminance;
-          }
-        </style>
         <div id="mobile-images" class="flex items-center justify-center gap-4 overflow-hidden">
           <img
             src="${Pg}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${$g}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${Tg}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${Ag}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
           <img
             src="${Og}"
-            loading="lazy"
-            class=""
+            class="mobile-screen"
           />
         </div>
       </section>
-    `}createRenderRoot(){return this}};Df([ae({type:String})],_o.prototype,"lang",2);_o=Df([ze("twyne-mobile")],_o);var Rg=Object.defineProperty,zg=Object.getOwnPropertyDescriptor,xf=(a,e,t,r)=>{for(var n=r>1?void 0:r?zg(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Rg(e,t,n),n};dt.registerPlugin(W);let Do=class extends _e{constructor(){super(...arguments),this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language}}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const a=this.signElement.querySelectorAll("path");this.animation=dt.from(a,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:1,stagger:.75,delay:.5,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(a){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return ie`
+      <style>
+        .mobile-screen {
+          mask-image: url('${kg}');
+          mask-mode: luminance;
+        }
+      </style>
+    `}createRenderRoot(){return this}};Df([ae({type:String})],_o.prototype,"lang",2);_o=Df([ze("twyne-mobile")],_o);var Rg=Object.defineProperty,zg=Object.getOwnPropertyDescriptor,xf=(a,e,t,r)=>{for(var n=r>1?void 0:r?zg(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Rg(e,t,n),n};dt.registerPlugin(W);let Do=class extends _e{constructor(){super(...arguments),this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language}}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const a=this.signElement.querySelectorAll("path");this.animation=dt.from(a,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:.75,stagger:.75,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(a){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return ie`
       <svg
         id="sign"
         class="absolute bottom-2 rotate-[21deg] stroke-brand-400"
