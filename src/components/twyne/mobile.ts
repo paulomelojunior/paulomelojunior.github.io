@@ -35,7 +35,6 @@ export class TwyneMobile extends LitElement {
         trigger: '#mobile-images',
         start: 'center center',
         toggleActions: 'play none none reverse',
-        markers: true,
       },
       stagger: .05,
       opacity: 0,
