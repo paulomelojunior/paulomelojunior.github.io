@@ -1,3 +1,4 @@
+import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
@@ -27,6 +28,21 @@ export class TwyneMobile extends LitElement {
     this.lang = i18next.language
   }
 
+  firstUpdated() {
+    const images = document.querySelectorAll('#mobile-images > img')
+    gsap.from(images, {
+      scrollTrigger: {
+        trigger: '#mobile-images',
+        start: 'center center',
+        toggleActions: 'play none none reverse',
+        markers: true,
+      },
+      stagger: .05,
+      opacity: 0,
+      x: '10rem',
+    })
+  }
+
   render() {
     return html`
       <section id="mobile" class="mt-32 py-32">
@@ -41,31 +57,31 @@ export class TwyneMobile extends LitElement {
             mask-mode: luminance;
           }
         </style>
-        <div class="flex items-center justify-center gap-4 overflow-hidden">
+        <div id="mobile-images" class="flex items-center justify-center gap-4 overflow-hidden">
           <img
             src="${e2}"
             loading="lazy"
-            class="opacity-30 transition-opacity duration-500"
+            class=""
           />
           <img
             src="${e1}"
             loading="lazy"
-            class="opacity-60 transition-opacity duration-500"
+            class=""
           />
           <img
             src="${e3}"
             loading="lazy"
-            class="transition-opacity duration-500"
+            class=""
           />
           <img
             src="${e4}"
             loading="lazy"
-            class="opacity-60 transition-opacity duration-500"
+            class=""
           />
           <img
             src="${e5}"
             loading="lazy"
-            class="opacity-30 transition-opacity duration-500"
+            class=""
           />
         </div>
       </section>

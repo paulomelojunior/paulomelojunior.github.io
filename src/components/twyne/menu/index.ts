@@ -134,7 +134,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           </div>
         </div>
         <div
-          class="inset-x-0 hidden h-px bg-gradient-to-r from-transparent to-transparent xl:block dark:via-zinc-900"
+          class="inset-x-0 hidden h-px bg-gradient-to-r from-transparent to-transparent xl:block dark:via-zinc-800"
         ></div>
       </header>
     `

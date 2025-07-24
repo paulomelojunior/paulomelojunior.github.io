@@ -77,7 +77,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="invisible absolute inset-x-0 z-40 w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed dark:bg-zinc-900/60 xl:dark:bg-zinc-950"
+        class="invisible absolute inset-x-0 z-40 w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed dark:bg-zinc-900/60 xl:dark:bg-zinc-950/60"
       >
         <div class="container grid items-center xl:grid-cols-2">
           <mail-button
@@ -124,9 +124,6 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </div>
           </nav>
         </div>
-        <div
-          class="inset-x-0 hidden h-px bg-gradient-to-l from-stone-300 via-transparent xl:block dark:from-zinc-900"
-        ></div>
       </header>
     `
   }

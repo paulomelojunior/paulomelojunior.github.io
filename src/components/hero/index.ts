@@ -66,9 +66,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </h1>
           </div>
           <div
-            class="mx-5 hidden h-px bg-gradient-to-r from-zinc-900 via-zinc-950 to-zinc-900 xl:block"
-          ></div>
-          <div class="grid xl:grid-cols-2 xl:gap-24">
+            class="mx-5 hidden relative h-px bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900 xl:block"
+          >
+          </div>
+          <div class="grid xl:grid-cols-2 xl:gap-24 bg-zinc-950">
             <div class="px-5 xl:py-24 2xl:py-32">
               <p class="leading-loose 2xl:text-[1.25rem]">
                 <mark

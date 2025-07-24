@@ -5,8 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(CustomEase, ScrollTrigger)
 
 gsap.defaults({
-  duration: 2,
-  ease: CustomEase.create('custom', '.625,0.5,0,1'),
+  duration: 1.2,
+  ease: CustomEase.create('custom', '.75,0,.5,1'),
 })
 
 window.onload = function load() {
@@ -126,8 +126,8 @@ window.onload = function load() {
         start: 'center bottom',
         toggleActions: 'play none none reverse',
       },
-      x: '5rem',
-      y: '5rem',
+      x: '7rem',
+      y: '7rem',
       stagger: 0.2,
     })
   })

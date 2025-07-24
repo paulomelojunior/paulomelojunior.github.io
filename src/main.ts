@@ -8,7 +8,7 @@ gsap.registerPlugin(CustomEase, DrawSVGPlugin, ScrollTrigger)
 
 gsap.defaults({
   duration: 1,
-  ease: CustomEase.create('custom', '.625,0.5,0,1'),
+  ease: CustomEase.create('custom', '.75,0,.5,1'),
 })
 
 import './components/blur'
