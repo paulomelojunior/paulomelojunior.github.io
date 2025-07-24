@@ -233,7 +233,7 @@
 							${r.label}
 						</div>
 						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem]">
-							${i==="04"?"hello@pmjr.cc":i}
+							${r.label==="Email"?"hello@pmjr.cc":i}
 						</span>
 					</a>
 				</div>`;a.insertAdjacentHTML("beforeend",s)}),this.initScrambleText()}initScrambleText(){const a=this.querySelector("#copyright"),e=this.querySelector(".copyright span");a&&e&&(vt.set(e,{text:"Copyright"}),a.addEventListener("mouseenter",()=>{vt.to(e,{duration:1,scrambleText:{text:"Free to copy",chars:"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",speed:.1}})}),a.addEventListener("mouseleave",()=>{vt.to(e,{duration:.5,scrambleText:{text:"Copyright",chars:"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",speed:.1}})}))}render(){return ie`
