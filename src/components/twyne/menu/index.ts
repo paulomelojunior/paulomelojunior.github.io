@@ -78,17 +78,25 @@ export class CasesMenu extends ThemeMixin(LitElement) {
         class="invisible absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-zinc-950/60"
       >
         <div class="container grid items-center xl:grid-cols-3">
-          <a
-            href="/"
-            class="flex size-12 cursor-pointer items-center justify-center *:opacity-50 *:hover:opacity-100"
-            title="Go back homepage"
-          >
-            <img
-              src="${goBack}"
-              class="transition-all duration-500"
-              title="Back to homepage"
-            />
-          </a>
+          <div class="flex items-center">
+            <a
+              href="/"
+              class="flex size-12 cursor-pointer items-center justify-center *:opacity-50 *:hover:opacity-100"
+              title="Go back homepage"
+            >
+              <img
+                src="${goBack}"
+                class="transition-all duration-500"
+                title="Back to homepage"
+              />
+            </a>
+            <mail-button
+              @click=${() => this.copyEmail()}
+              @mouseleave=${() => this.copyEmailReset()}
+              label="hello@pmjr.cc"
+              hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
+            ></mail-button>
+          </div>
           <nav>
             <ul id="anchors" class="flex justify-evenly">
               <li class="flex-1 border-r border-white/10">
@@ -113,18 +121,10 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           </nav>
           <div class="flex justify-end">
             <div class="flex items-center justify-center">
-              <mail-button
-                @click=${() => this.copyEmail()}
-                @mouseleave=${() => this.copyEmailReset()}
-                label="hello@pmjr.cc"
-                hover="${this.lang === 'en'
-                  ? 'Click to copy'
-                  : 'Copiar e-mail'}"
-              ></mail-button>
-              <div class="flex size-12 items-center justify-center">
+              <div class="flex h-12 items-center justify-center px-1">
                 <lang-button
                   @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? 'US' : 'BR'}
+                  label=${this.lang === 'pt' ? 'EN · US' : 'PT · BR'}
                   title="${this.lang === 'en'
                     ? 'Mudar para Português'
                     : 'Change to English'}"

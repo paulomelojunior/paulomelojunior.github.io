@@ -10,12 +10,12 @@ export class MailButton extends LitElement {
 
   render() {
     const classList = classNames(
-      'hidden xl:flex px-4 gap-2 dark:text-zinc-50 tracking-[0.02em] text-[.75rem] uppercase items-center h-8 leading-none rounded-full whitespace-nowrap'
+      'hidden xl:flex px-4 gap-2 dark:text-zinc-50 tracking-[0.02em] text-[.75rem] uppercase items-center h-8 leading-none rounded-full whitespace-nowrap outline outline-1 outline-stone-800 dark:outline-zinc-800'
     )
 
     return html`<button class="menu-item group/item ${classList} relative">
       <div
-        class="${classList} pointer-events-none absolute inset-0 justify-center"
+        class="${classList} pointer-events-none absolute -inset-px justify-center"
         aria-hidden="true"
       >
         <span class="font-semibold text-zinc-950">

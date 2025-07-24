@@ -40,10 +40,10 @@ export class FooterSection extends LitElement {
         label: 'GitHub',
         url: 'https://github.com/paulomelojunior',
       },
-      instagram: {
-        label: 'Instagram',
-        url: 'https://instagram.com/paulomelojunior',
-      },
+      // instagram: {
+      //   label: 'Instagram',
+      //   url: 'https://instagram.com/paulomelojunior',
+      // },
       linkedin: {
         label: 'LinkedIn',
         url: 'https://linkedin.com/in/paulomelojunior/',
@@ -65,7 +65,7 @@ export class FooterSection extends LitElement {
 						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-stone-200 dark:text-zinc-950">
 							${e.label}
 						</div>
-						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem]">
+						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem] tracking-[0.05em]">
 							${e.label === 'Email' ? 'hello@pmjr.cc' : indexStr}
 						</span>
 					</a>
