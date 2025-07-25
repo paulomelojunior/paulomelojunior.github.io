@@ -153,7 +153,7 @@
       </section>
     `}createRenderRoot(){return this}};af([ae({type:String})],io.prototype,"lang",2);io=af([ze("cases-section")],io);class Fp{constructor(){this._dark=!0,this.listeners=new Set}get dark(){return this._dark}set dark(e){this._dark=e,document.documentElement.classList.toggle("dark",e),localStorage.setItem("theme",e?"dark":"light"),this.notifyListeners()}toggle(){this.dark=!this.dark}subscribe(e){this.listeners.add(e)}unsubscribe(e){this.listeners.delete(e)}notifyListeners(){this.listeners.forEach(e=>{e.requestUpdate()})}init(){const e=localStorage.getItem("theme");e&&(this._dark=e==="dark"),document.documentElement.classList.toggle("dark",this._dark)}}const An=new Fp,Xi=a=>class extends a{connectedCallback(){super.connectedCallback(),An.subscribe(this)}disconnectedCallback(){super.disconnectedCallback(),An.unsubscribe(this)}get dark(){return An.dark}set dark(e){An.dark=e}toggleTheme(){An.toggle()}},$p="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2013L2%206.99999M2%206.99999L8%201M2%206.99999L14%206.99999'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e";var Pp=Object.defineProperty,Tp=Object.getOwnPropertyDescriptor,Wo=(a,e,t,r)=>{for(var n=r>1?void 0:r?Tp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Pp(e,t,n),n};let Gs=class extends Xi(_e){constructor(){super(),this.more=!1,this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language};const a=localStorage.getItem("lang");a&&(this.lang=a,C.changeLanguage(a))}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=C.language==="en"?"pt":"en";C.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(a,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=a},e)}render(){return ie`
       <header
-        class="invisible absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-zinc-950/60"
+        class="invisible absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-zinc-950"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -245,7 +245,7 @@
       >
         <div
           id="footerLinks"
-          class="relative z-10 flex h-full flex-1 items-center pb-24 xl:pb-0"
+          class="relative z-10 flex h-full flex-1 items-center pb-20 xl:pb-0"
         >
           <div
             id="menu"
@@ -323,10 +323,9 @@
             </h1>
           </div>
           <div
-            class="mx-5 hidden relative h-px bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900 xl:block"
-          >
-          </div>
-          <div class="grid xl:grid-cols-2 xl:gap-24 bg-zinc-950">
+            class="relative mx-5 hidden h-px bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900 xl:block"
+          ></div>
+          <div class="grid bg-zinc-950 xl:grid-cols-2 xl:gap-24">
             <div class="px-5 xl:py-24 2xl:py-32">
               <p class="leading-loose 2xl:text-[1.25rem]">
                 <mark
@@ -366,9 +365,9 @@
         </p>
       </div>
     `}firstUpdated(){const a=this.querySelector("#job");if(!a){console.warn("Journey element not found");return}const e=this.getJourneyItems();Object.values(e).forEach(r=>{const n=this.createJourneyItemHTML(r);a.insertAdjacentHTML("beforeend",n)})}render(){return ie`
-      <section>
+      <section id="journey">
         <div
-          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]"
+          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)] xl:py-24 2xl:py-32"
         >
           <div
             id="job"
@@ -388,15 +387,17 @@
           ${e}
         </ul>
       </div>
-    `}createRenderRoot(){return this}};Jo([ae({type:String})],Ws.prototype,"items",2);Jo([ae({type:Boolean})],Ws.prototype,"reverse",2);Ws=Jo([ze("marquee-element")],Ws);var Yp=Object.defineProperty,Xp=Object.getOwnPropertyDescriptor,Zo=(a,e,t,r)=>{for(var n=r>1?void 0:r?Xp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Yp(e,t,n),n};let Ks=class extends _e{constructor(){super(...arguments),this.href="",this.label=""}render(){const a=Wn("absolute pointer-events-none flex items-center justify-center inset-0 text-stone-200 dark:text-zinc-950 dark:font-semibold"),e=Wn("menu-item relative tracking-[0.05em] flex items-center justify-center h-12 px-4 text-stone-950 dark:text-zinc-50 text-[.75rem] leading-none uppercase");return ie`<a class="${e}" href="${this.href}">
+    `}createRenderRoot(){return this}};Jo([ae({type:String})],Ws.prototype,"items",2);Jo([ae({type:Boolean})],Ws.prototype,"reverse",2);Ws=Jo([ze("marquee-element")],Ws);var Yp=Object.defineProperty,Xp=Object.getOwnPropertyDescriptor,Zo=(a,e,t,r)=>{for(var n=r>1?void 0:r?Xp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Yp(e,t,n),n};let Ks=class extends _e{constructor(){super(...arguments),this.href="",this.label=""}render(){const a=Wn("absolute pointer-events-none flex items-center justify-center inset-0 text-stone-200 dark:text-zinc-950 dark:font-semibold"),e=Wn("menu-item relative tracking-[0.05em] flex items-center justify-center h-10 xl:h-12 px-4 text-stone-950 dark:text-zinc-50 text-[.75rem] leading-none uppercase");return ie`<a class="${e}" href="${this.href}">
       <div class="${a}" aria-hidden="true">
         <span class=" relative"> ${this.label} </span>
       </div>
       ${this.label}
     </a>`}createRenderRoot(){return this}};Zo([ae({type:String})],Ks.prototype,"href",2);Zo([ae({type:String})],Ks.prototype,"label",2);Ks=Zo([ze("menu-item")],Ks);var Gp=Object.defineProperty,Wp=Object.getOwnPropertyDescriptor,Qo=(a,e,t,r)=>{for(var n=r>1?void 0:r?Wp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Gp(e,t,n),n};let Js=class extends Xi(_e){constructor(){super(),this.more=!1,this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language};const a=localStorage.getItem("lang");a&&(this.lang=a,C.changeLanguage(a))}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=C.language==="en"?"pt":"en";C.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(a,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=a},e)}render(){return ie`
       <header
-        class="invisible absolute inset-x-0 z-40 w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed dark:bg-zinc-900/60 xl:dark:bg-zinc-950/60"
+        class="invisible absolute translate-y-[1px] inset-x-0 z-40 w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed dark:bg-zinc-950"
       >
+        <div class="fixed bottom-10 inset-x-0 h-40 bg-gradient-to-t from-zinc-950">
+        </div>
         <div class="container grid items-center xl:grid-cols-2">
           <mail-button
             @click=${()=>this.copyEmail()}
@@ -414,7 +415,7 @@
               </li>
               <li class="flex-1 xl:flex-none">
                 <menu-item
-                  href="#job"
+                  href="#journey"
                   label="${C.t("menu.journey")}"
                 ></menu-item>
               </li>
@@ -424,7 +425,7 @@
                   label="${C.t("menu.connect")}"
                 ></menu-item>
               </li>
-              <li class="flex h-12 items-center justify-center px-1">
+              <li class="flex h-10 xl:h-12 items-center justify-center px-1">
                 <lang-button
                   @click=${()=>this.changeLang()}
                   label=${this.lang==="pt"?"EN · US":"PT · BR"}
@@ -434,7 +435,7 @@
             </ul>
             <div
               id="copy"
-              class="absolute flex h-12 w-full items-center justify-center bg-stone-300 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden dark:bg-zinc-900"
+              class="absolute flex h-10 w-full items-center justify-center bg-stone-300 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden dark:bg-zinc-900"
             >
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
@@ -445,7 +446,7 @@
       <button class="${e}" title="${this.title}">
         ${this.label}
       </button>
-    `}createRenderRoot(){return this}};Gi([ae({type:String})],Kn.prototype,"classNames",2);Gi([ae({type:String})],Kn.prototype,"icon",2);Gi([ae({type:String})],Kn.prototype,"label",2);Gi([ae({type:String})],Kn.prototype,"title",2);Kn=Gi([ze("lang-button")],Kn);var Zp=Object.defineProperty,Qp=Object.getOwnPropertyDescriptor,sa=(a,e,t,r)=>{for(var n=r>1?void 0:r?Qp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Zp(e,t,n),n};let Hi=class extends _e{constructor(){super(...arguments),this.href="",this.label="",this.hover=""}render(){const a=Wn("hidden xl:flex px-4 gap-2 dark:text-zinc-50 tracking-[0.02em] text-[.75rem] uppercase items-center h-8 leading-none rounded-full whitespace-nowrap outline outline-1 outline-stone-800 dark:outline-zinc-800");return ie`<button class="menu-item group/item ${a} relative">
+    `}createRenderRoot(){return this}};Gi([ae({type:String})],Kn.prototype,"classNames",2);Gi([ae({type:String})],Kn.prototype,"icon",2);Gi([ae({type:String})],Kn.prototype,"label",2);Gi([ae({type:String})],Kn.prototype,"title",2);Kn=Gi([ze("lang-button")],Kn);var Zp=Object.defineProperty,Qp=Object.getOwnPropertyDescriptor,sa=(a,e,t,r)=>{for(var n=r>1?void 0:r?Qp(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Zp(e,t,n),n};let Hi=class extends _e{constructor(){super(...arguments),this.href="",this.label="",this.hover=""}render(){const a=Wn("hidden xl:flex px-4 gap-2 dark:text-zinc-50 tracking-[0.02em] text-[.75rem] uppercase items-center h-8 leading-none rounded-full whitespace-nowrap outline outline-1 outline-stone-800 dark:outline-zinc-900");return ie`<button class="menu-item group/item ${a} relative">
       <div
         class="${a} pointer-events-none absolute -inset-px justify-center"
         aria-hidden="true"
@@ -685,7 +686,7 @@
     `}renderComponentsSection(){return ie`
       <div
         id="components"
-        class="relative flex items-start justify-center gap-4 overflow-hidden min-h-[1348px]"
+        class="relative flex min-h-[1348px] items-start justify-center gap-4 overflow-hidden"
       >
         <style>
           #components img {
@@ -716,7 +717,7 @@
     `}createRenderRoot(){return this}};mf([ae({type:String})],go.prototype,"lang",2);go=mf([ze("twyne-proposal")],go);var Sg=Object.defineProperty,Fg=Object.getOwnPropertyDescriptor,_f=(a,e,t,r)=>{for(var n=r>1?void 0:r?Fg(e,t):e,i=a.length-1,s;i>=0;i--)(s=a[i])&&(n=(r?s(e,t,n):s(n))||n);return r&&n&&Sg(e,t,n),n};let mo=class extends _e{constructor(){super(...arguments),this.lang=C.language,this.handleLanguageChange=()=>{this.lang=C.language}}connectedCallback(){super.connectedCallback(),C.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),C.off("languageChanged",this.handleLanguageChange)}render(){const a=C.t("twyne.impact.l1",{returnObjects:!0});return ie`
       <div
         id="impact"
-        class="container grid grid-cols-2 items-baseline rounded-b-[2rem] px-24 2xl:px-32 pt-32"
+        class="container grid grid-cols-2 items-baseline rounded-b-[2rem] px-24 pt-32 2xl:px-32"
       >
         <h2
           class="text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
@@ -740,27 +741,15 @@
         >
           ${aa(C.t("twyne.mobile.t1"))}
         </h2>
-        <div id="mobile-images" class="flex items-center justify-center gap-4 overflow-hidden">
-          <img
-            src="${Pg}"
-            class="mobile-screen"
-          />
-          <img
-            src="${$g}"
-            class="mobile-screen"
-          />
-          <img
-            src="${Tg}"
-            class="mobile-screen"
-          />
-          <img
-            src="${Ag}"
-            class="mobile-screen"
-          />
-          <img
-            src="${Og}"
-            class="mobile-screen"
-          />
+        <div
+          id="mobile-images"
+          class="flex items-center justify-center gap-4 overflow-hidden"
+        >
+          <img src="${Pg}" class="mobile-screen" />
+          <img src="${$g}" class="mobile-screen" />
+          <img src="${Tg}" class="mobile-screen" />
+          <img src="${Ag}" class="mobile-screen" />
+          <img src="${Og}" class="mobile-screen" />
         </div>
       </section>
       <style>

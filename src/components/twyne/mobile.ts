@@ -32,16 +32,16 @@ export class TwyneMobile extends LitElement {
     const mobileImages = this.querySelectorAll('.mobile-screen')
     if (!mobileImages.length) return
 
-      gsap.from(mobileImages, {
-        scrollTrigger: {
-          trigger: mobileImages,
-          toggleActions: 'play none none reverse',
-          start: 'top 80%',
-          end: 'center 80%',
-        },
-        stagger: 0.05,
-        x: '5rem',
-      })
+    gsap.from(mobileImages, {
+      scrollTrigger: {
+        trigger: mobileImages,
+        toggleActions: 'play none none reverse',
+        start: 'top 80%',
+        end: 'center 80%',
+      },
+      stagger: 0.05,
+      x: '5rem',
+    })
   }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
@@ -56,27 +56,15 @@ export class TwyneMobile extends LitElement {
         >
           ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
         </h2>
-        <div id="mobile-images" class="flex items-center justify-center gap-4 overflow-hidden">
-          <img
-            src="${e2}"
-            class="mobile-screen"
-          />
-          <img
-            src="${e1}"
-            class="mobile-screen"
-          />
-          <img
-            src="${e3}"
-            class="mobile-screen"
-          />
-          <img
-            src="${e4}"
-            class="mobile-screen"
-          />
-          <img
-            src="${e5}"
-            class="mobile-screen"
-          />
+        <div
+          id="mobile-images"
+          class="flex items-center justify-center gap-4 overflow-hidden"
+        >
+          <img src="${e2}" class="mobile-screen" />
+          <img src="${e1}" class="mobile-screen" />
+          <img src="${e3}" class="mobile-screen" />
+          <img src="${e4}" class="mobile-screen" />
+          <img src="${e5}" class="mobile-screen" />
         </div>
       </section>
       <style>

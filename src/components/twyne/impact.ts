@@ -28,7 +28,7 @@ export class TwyneImpact extends LitElement {
     return html`
       <div
         id="impact"
-        class="container grid grid-cols-2 items-baseline rounded-b-[2rem] px-24 2xl:px-32 pt-32"
+        class="container grid grid-cols-2 items-baseline rounded-b-[2rem] px-24 pt-32 2xl:px-32"
       >
         <h2
           class="text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"

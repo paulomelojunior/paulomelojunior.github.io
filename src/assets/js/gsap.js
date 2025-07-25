@@ -123,12 +123,13 @@ window.onload = function load() {
     gsap.from('.cases', {
       scrollTrigger: {
         trigger: '#cases',
-        start: 'center bottom',
+        start: 'top 100%',
+        end: 'bottom 80%',
         toggleActions: 'play none none reverse',
+        scrub: 4,
       },
-      x: '7rem',
-      y: '7rem',
-      stagger: 0.2,
+      stagger: -.1,
+      y: '20rem',
     })
   })
 

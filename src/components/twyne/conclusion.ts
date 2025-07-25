@@ -39,7 +39,7 @@ export class TwyneConclusion extends LitElement {
         start: '100% 100%',
         toggleActions: 'play none none reverse',
       },
-      duration: .75,
+      duration: 0.75,
       stagger: 0.75,
       drawSVG: false,
     })
