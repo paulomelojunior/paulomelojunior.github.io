@@ -33,5 +33,3 @@ import './components/twyne/impact'
 import './components/twyne/menu'
 import './components/twyne/mobile'
 import './components/twyne/proposal'
-import { themeStore } from './store/theme'
-themeStore.init()

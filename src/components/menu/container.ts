@@ -42,10 +42,6 @@ export class MenuContainer extends ThemeMixin(LitElement) {
     this.lang = newLang
   }
 
-  changeTheme() {
-    this.toggleTheme()
-  }
-
   copyEmail() {
     const email = 'hello@pmjr.cc'
     navigator.clipboard

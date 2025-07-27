@@ -35,8 +35,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="flex items-center gap-4">
               <img
                 src="${profile}"
+                height="64"
+                width="64"
                 alt="${i18next.t('about.picDescription')}"
-                class="h-16 rounded-full"
+                class="h-16 rounded-full bg-zinc-900"
               />
               <div class="grid gap-2 leading-none">
                 <span class="text-[1.25rem] text-zinc-200">
