@@ -1,6 +1,7 @@
 .cases-content {
   position: relative;
   overflow: hidden;
+  border-block: none;
   &:before {
     z-index: -1;
     content: '';
@@ -11,23 +12,34 @@
     background-position: top right;
     mask-image: radial-gradient(circle at top, black, transparent);
   }
+  &:after {
+    content: none;
+  }
 }
 
 .mob-cases-content {
   position: relative;
   overflow: hidden;
+  border-block: 1px solid theme('colors.zinc.900');
   &:before {
     background-image: url('../imgs/pattern.svg');
-    background-position: center;
+    background-position: top center;
     background-repeat: repeat;
     content: '';
     inset: 0;
     mask-image: radial-gradient(
-      circle at top,
+      circle at center,
       theme('colors.black'),
       transparent
     );
     position: absolute;
     z-index: -1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    z-index: -2;
   }
 }
