@@ -1,12 +1,8 @@
-import i18next from '../../i18n'
-import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
 import { gsap } from 'gsap'
-import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
+import i18next from '../../i18n'
+import { LitElement, html, PropertyValues } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
 import logo from './logo.svg'
-
-// Registra o plugin ScrambleTextPlugin
-gsap.registerPlugin(ScrambleTextPlugin)
 
 @customElement('footer-section')
 export class FooterSection extends LitElement {
@@ -26,7 +22,36 @@ export class FooterSection extends LitElement {
     this.lang = i18next.language
   }
 
-  firstUpdated() {
+  private initScrambleText() {
+    const copyrightElement = this.querySelector('#copyright')
+    const copyrightSpan = this.querySelector('.copyright span')
+
+    if (copyrightElement && copyrightSpan) {
+      copyrightElement.addEventListener('mouseenter', () => {
+        gsap.to(copyrightSpan, {
+          duration: 1,
+          scrambleText: {
+            text: 'Free to copy',
+            chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            speed: 0.1,
+          },
+        })
+      })
+
+      copyrightElement.addEventListener('mouseleave', () => {
+        gsap.to(copyrightSpan, {
+          duration: 0.5,
+          scrambleText: {
+            text: 'Copyright',
+            chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            speed: 0.1,
+          },
+        })
+      })
+    }
+  }
+
+  protected firstUpdated(_changedProperties: PropertyValues): void {
     const navList = document.querySelector('#menu')
 
     if (!navList) return
@@ -40,10 +65,6 @@ export class FooterSection extends LitElement {
         label: 'GitHub',
         url: 'https://github.com/paulomelojunior',
       },
-      // instagram: {
-      //   label: 'Instagram',
-      //   url: 'https://instagram.com/paulomelojunior',
-      // },
       linkedin: {
         label: 'LinkedIn',
         url: 'https://linkedin.com/in/paulomelojunior/',
@@ -73,41 +94,7 @@ export class FooterSection extends LitElement {
       navList.insertAdjacentHTML('beforeend', navItem)
     })
 
-    // Inicializa o efeito de scramble text
     this.initScrambleText()
-  }
-
-  private initScrambleText() {
-    const copyrightElement = this.querySelector('#copyright')
-    const copyrightSpan = this.querySelector('.copyright span')
-
-    if (copyrightElement && copyrightSpan) {
-      // Configura o estado inicial - texto vazio
-      gsap.set(copyrightSpan, { text: 'Copyright' })
-
-      // Event listeners para hover
-      copyrightElement.addEventListener('mouseenter', () => {
-        gsap.to(copyrightSpan, {
-          duration: 1,
-          scrambleText: {
-            text: 'Free to copy',
-            chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-            speed: 0.1,
-          },
-        })
-      })
-
-      copyrightElement.addEventListener('mouseleave', () => {
-        gsap.to(copyrightSpan, {
-          duration: 0.5,
-          scrambleText: {
-            text: 'Copyright',
-            chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-            speed: 0.1,
-          },
-        })
-      })
-    }
   }
 
   render() {

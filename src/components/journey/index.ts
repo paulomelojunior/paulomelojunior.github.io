@@ -1,5 +1,5 @@
 import i18next from '../../i18n'
-import { LitElement, html } from 'lit'
+import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import './styles.scss'
 import { ThemeMixin } from '../../store/theme'
@@ -33,12 +33,10 @@ export class JourneySection extends ThemeMixin(LitElement) {
     this.updateJourneyContent()
   }
 
-  // Atualiza o conteúdo da seção journey quando o idioma muda
   private updateJourneyContent() {
-    const journeyElement = this.querySelector('#job') as HTMLElement
+    const journeyElement = document.querySelector('#job') as HTMLElement
 
     if (!journeyElement) {
-      console.warn('Journey element not found')
       return
     }
 
@@ -115,14 +113,8 @@ export class JourneySection extends ThemeMixin(LitElement) {
     `
   }
 
-  firstUpdated() {
+  protected firstUpdated(_changedProperties: PropertyValues): void {
     const journeyElement = this.querySelector('#job') as HTMLElement
-
-    if (!journeyElement) {
-      console.warn('Journey element not found')
-      return
-    }
-
     const journeyItems = this.getJourneyItems()
     const journeyValues = Object.values(journeyItems)
 

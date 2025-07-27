@@ -27,7 +27,7 @@ export class MenuItem extends LitElement {
         clipPath: 'inset(0% 0% 0% 0%)',
       })
     }
-    
+
     function handleLeave(this: HTMLElement) {
       if (this.classList.contains('active')) return
 
