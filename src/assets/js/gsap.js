@@ -23,18 +23,16 @@ window.onload = function load() {
     const header = document.querySelector('header')
     const copyright = document.querySelector('#copy')
     const footerLinks = document.querySelector('#footerLinks')
-    if (!header || !copyright || !footerLinks) return
 
     gsap.set(copyright, {
       opacity: 0,
     })
 
     ScrollTrigger.create({
-      trigger: '.hero h1',
-      start: 'top top',
+      trigger: copyright,
       onLeave: () => {
-        header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]')
-        header.classList.remove('absolute')
+        header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]', 'bg-black')
+        header.classList.remove('absolute', 'bg-zinc-950')
         gsap.to(header, {
           yPercent: 0,
           opacity: 1,
@@ -52,15 +50,16 @@ window.onload = function load() {
           onComplete: () => {
             header.classList.remove(
               'fixed',
-              'bottom-[env(safe-area-inset-bottom)]'
+              'bottom-[env(safe-area-inset-bottom)]',
+              'bg-black'
             )
-            header.classList.add('absolute')
+            header.classList.add('absolute', 'bg-zinc-950')
             header.removeAttribute('style')
           },
         })
         gsap.to(copyright, {
           opacity: 0,
-          duration: 0.2,
+          duration: 0.1,
         })
       },
     })
@@ -73,7 +72,7 @@ window.onload = function load() {
         start: `${footerHeight - headerHeight} bottom`,
         end: `top top`,
         toggleActions: 'play none none reverse',
-        scrub: 0,
+        scrub: true,
       },
       ease: 'none',
       yPercent: -100,

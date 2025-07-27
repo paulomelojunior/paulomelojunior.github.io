@@ -99,7 +99,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     const customClass = item.custom ? ` class="${item.custom}"` : ''
 
     return `
-      <div class="${hideClass} job relative justify-between flex-col gap-6 px-10 xl:px-20 2xl:px-32 xl:rounded-[2rem]">
+      <div class="${hideClass} job relative justify-between flex-col gap-6 px-5 xl:px-20 2xl:px-32 xl:rounded-[2rem]">
         <span class="font-mono text-sm text-zinc-500">
           ${item.start} &bull; <span${customClass}>${item.end}</span>
         </span>

@@ -53,7 +53,7 @@ export class MenuItem extends LitElement {
 
   render() {
     const baseClasses = classNames(
-      `menu-item relative tracking-[0.05em] flex items-center justify-center h-10 xl:h-12 px-4 text-stone-950 dark:text-zinc-50 text-[.75rem] uppercase`
+      `menu-item relative tracking-[0.05em] flex justify-center h-12 xl:h-12 px-4 text-stone-950 dark:text-zinc-50 text-[.75rem] uppercase leading-[3.125rem]`,
     )
 
     const fxClasses = classNames(
@@ -65,7 +65,7 @@ export class MenuItem extends LitElement {
       href="${this.href}"
       data-label="${this.label}"
     >
-      <span aria-hidden="true" class="${fxClasses}"> ${this.label} </span>
+      <div aria-hidden="true" class="${fxClasses}"> ${this.label} </div>
       ${this.label}
     </a>`
   }

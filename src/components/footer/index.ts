@@ -105,7 +105,7 @@ export class FooterSection extends LitElement {
       >
         <div
           id="footerLinks"
-          class="relative z-10 flex h-full flex-1 items-center pb-20 xl:pb-0"
+          class="relative z-10 flex h-full flex-1 items-center pb-24 xl:pb-0"
         >
           <div
             id="menu"
