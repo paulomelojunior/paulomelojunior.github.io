@@ -113,7 +113,7 @@ export class FooterSection extends LitElement {
   render() {
     return html`
       <footer
-        id="hey"
+        id="section-connect"
         class="xl:footer relative z-10 h-lvh overflow-hidden rounded-t-[2rem]"
       >
         <div

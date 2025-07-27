@@ -75,7 +75,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="invisible absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-zinc-950"
+        class="absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-zinc-950"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">

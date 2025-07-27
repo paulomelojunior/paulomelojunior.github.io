@@ -31,7 +31,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         scrollTrigger: {
           trigger: i,
           start: '0% 75%',
-          toggleActions: 'play none none none',
+          toggleActions: 'play none none reverse',
         },
         stagger: 0.12,
         opacity: 0,
@@ -46,7 +46,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         scrollTrigger: {
           trigger: i.children,
           start: '0% 75%',
-          toggleActions: 'play none none none',
+          toggleActions: 'play none none reverse',
         },
         duration: 0.8,
         stagger: 0.1,
@@ -59,10 +59,9 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <section>
+      <section id="section-praxis">
         <div class="container">
           <div
-            id="how"
             class="grid gap-16 overflow-hidden py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-0 xl:py-24 *:xl:p-24 2xl:py-32 *:2xl:p-32"
           >
             <div class="praxis px-5">

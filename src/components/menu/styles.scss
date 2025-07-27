@@ -1,4 +1,4 @@
-.menu-item > div {
+.menu-item > * {
   @apply bg-[linear-gradient(to_bottom,_theme('colors.stone.900')_50%,_#DE6868_50%)]
     dark:bg-[linear-gradient(to_bottom,_theme('colors.zinc.200')_50%,_theme('colors.brand.400')_50%)];
 
@@ -10,10 +10,13 @@
   transition-delay: 0.25s, 0s;
 }
 
-.menu-item:hover > div {
+.menu-item:hover > *,
+.menu-item:focus > *,
+.menu-item:focus-within > *,
+.menu-item.active > * {
   background-position: 0% 0%;
 }
 
-.menu-item:active > div {
+.menu-item:active > * {
   filter: brightness(0.9);
 }

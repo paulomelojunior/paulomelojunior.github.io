@@ -10,41 +10,6 @@ gsap.defaults({
 })
 
 window.onload = function load() {
-  document.querySelectorAll('.invisible').forEach((i) => {
-    i.classList.remove('invisible')
-  })
-
-  const navItems = document.querySelectorAll('.menu-item')
-
-  navItems.forEach((item) => {
-    const target = item.firstElementChild
-    gsap.set(target, {
-      clipPath: 'inset(0% 0% 100% 0%)',
-    })
-  })
-
-  navItems.forEach((item) => {
-    item.addEventListener('mouseenter', () => {
-      const target = item.firstElementChild
-      gsap.to(target, {
-        duration: 0.25,
-        clipPath: 'inset(0% 0% 0% 0%)',
-      })
-    })
-    item.addEventListener('mouseleave', () => {
-      const target = item.firstElementChild
-      gsap.to(target, {
-        duration: 0.25,
-        clipPath: 'inset(100% 0 0 0)',
-        onComplete: () => {
-          gsap.set(target, {
-            clipPath: 'inset(0% 0% 100%)',
-          })
-        },
-      })
-    })
-  })
-
   let mm = gsap.matchMedia()
 
   mm.add('(max-width: 1024px)', () => {
@@ -128,7 +93,7 @@ window.onload = function load() {
         toggleActions: 'play none none reverse',
         scrub: 4,
       },
-      stagger: -.1,
+      stagger: -0.1,
       y: '20rem',
     })
   })

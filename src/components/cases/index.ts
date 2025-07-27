@@ -1,8 +1,8 @@
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import m1 from './mockup-1.png'
-import m2 from './mockup-2.png'
+import m1 from './mockup-1.webp'
+import m2 from './mockup-2.webp'
 
 @customElement('cases-section')
 export class CasesSection extends LitElement {

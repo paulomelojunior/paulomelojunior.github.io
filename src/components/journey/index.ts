@@ -134,9 +134,9 @@ export class JourneySection extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <section id="journey">
+      <section id="section-journey">
         <div
-          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)] xl:py-24 2xl:py-32"
+          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] xl:py-24 2xl:py-32 dark:bg-[linear-gradient(theme('colors.black'),theme('colors.zinc.950')_100%)]"
         >
           <div
             id="job"
