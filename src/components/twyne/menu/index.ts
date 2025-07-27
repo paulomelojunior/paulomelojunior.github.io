@@ -122,12 +122,12 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           <div class="flex justify-end">
             <div class="flex items-center justify-center">
               <div class="flex h-12 items-center justify-center px-1">
-                <lang-button
-                  @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? 'EN · US' : 'PT · BR'}
-                  title="${this.lang === 'en'
-                    ? 'Mudar para Português'
-                    : 'Change to English'}"
+                  <lang-button
+                    @click=${() => this.changeLang()}
+                    label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                    title="${this.lang === 'en'
+                      ? 'Mudar para português'
+                    : 'Change to english'}"
                 ></lang-button>
               </div>
             </div>
