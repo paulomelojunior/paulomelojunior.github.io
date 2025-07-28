@@ -117,7 +117,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </ul>
             <div
               id="copy"
-              class="absolute flex h-12 w-full items-center justify-center bg-stone-300 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden dark:bg-zinc-900"
+              class="absolute flex h-12 w-full items-center justify-center bg-stone-300 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden dark:bg-zinc-950"
             >
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
