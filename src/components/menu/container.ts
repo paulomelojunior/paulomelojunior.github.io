@@ -73,7 +73,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed bg-zinc-950"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-zinc-950 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"

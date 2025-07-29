@@ -31,7 +31,11 @@ window.onload = function load() {
     ScrollTrigger.create({
       trigger: copyright,
       onLeave: () => {
-        header.classList.add('fixed', 'bottom-[env(safe-area-inset-bottom)]', 'bg-black')
+        header.classList.add(
+          'fixed',
+          'bottom-[env(safe-area-inset-bottom)]',
+          'bg-black'
+        )
         header.classList.remove('absolute', 'bg-zinc-950')
         gsap.to(header, {
           yPercent: 0,

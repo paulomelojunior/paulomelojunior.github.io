@@ -30,10 +30,12 @@
     "p2": "Learning from tech experts early on made algorithms a core part of my toolkit, bridging design and engineering to craft seamless, refined digital experiences."
   },
   "journey": {
+    "t0": "Journey",
+
     "t1": "Design <br class='block xl:hidden'> intern",
     "p1": "During my internship, I had the opportunity to refine and develop skills across various functions. HTML and CSS development, marketing initiatives, visual design, branding, and UX/UI design.",
 
-    "t2": "Designer, <br class='block xl:hidden'> front-end dev",
+    "t2": "Designer, <br class='block xl:hidden'> front-end coder",
     "p2": "In multifaceted collaboration with managers and the development team, we successfully redesigned the interfaces and features of company's software.",
     "m2": "Also played a key role in co-creating a platform that facilitates connecting individuals facing legal issues with specialized professionals.",
 

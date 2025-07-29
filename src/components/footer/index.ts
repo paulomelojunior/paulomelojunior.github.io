@@ -31,7 +31,7 @@ export class FooterSection extends LitElement {
         gsap.to(copyrightSpan, {
           duration: 1,
           scrambleText: {
-            text: 'Free to copy',
+            text: 'Made by human',
             chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
             speed: 0.1,
           },

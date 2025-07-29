@@ -36,7 +36,7 @@ export class CasesSection extends LitElement {
 
   render() {
     return html`
-      <section id="cases">
+      <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
             class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-900 to-transparent xl:block"
@@ -46,7 +46,7 @@ export class CasesSection extends LitElement {
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
-                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] font-medium uppercase leading-none text-zinc-600"
+                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em] text-zinc-600"
               >
                 <span> 2025 </span>
                 <span> ${i18next.t('cases.project')} </span>
@@ -76,7 +76,7 @@ export class CasesSection extends LitElement {
               </h2>
               <a
                 href="/twyne"
-                class="flex items-center gap-4 rounded-full bg-zinc-200 py-4 pe-4 ps-6 text-[1rem] font-semibold uppercase leading-none text-black transition-colors duration-500 hover:bg-brand-400"
+                class="flex items-center gap-4 rounded-full bg-zinc-200 py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black transition-colors hover:bg-brand-400"
               >
                 ${i18next.t('cases.cta')}
                 <svg
@@ -90,7 +90,7 @@ export class CasesSection extends LitElement {
                   <path
                     d="M8 13L2 6.99999M2 6.99999L8 1M2 6.99999L14 6.99999"
                     stroke="black"
-                    stroke-width="2"
+                    stroke-width="1.5"
                   />
                 </svg>
               </a>

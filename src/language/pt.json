@@ -30,11 +30,13 @@
     "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, unindo design e engenharia para criar experiências refinadas."
   },
   "journey": {
+    "t0": "Jornada",
+
     "t1": "Estagiário de <br class='block xl:hidden'> design",
     "p1": "Durante meu estágio, tive a oportunidade de refinar e desenvolver habilidades em várias funções. Desenvolvimento HTML e CSS, iniciativas de marketing, design visual, branding e design UX/UI.",
     "m1": "",
 
-    "t2": "Designer, <br class='block xl:hidden'> front-end dev",
+    "t2": "Designer, <br class='block xl:hidden'> front-end coder",
     "p2": "Em colaboração multifacetada com gerentes e a equipe de desenvolvimento, redesenhamos com sucesso as interfaces e funcionalidades do software da empresa.",
     "m2": "Também desempenhei um papel fundamental na co-criação de uma plataforma que facilita a conexão de pessoas enfrentando questões legais com profissionais especializados.",
 

@@ -22,7 +22,7 @@ export class LangButton extends LitElement {
           height="20px"
           stroke-width="1.5"
           viewBox="0 0 24 24"
-          class="stroke-zinc-200 h-8"
+          class="h-8 stroke-zinc-200"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
