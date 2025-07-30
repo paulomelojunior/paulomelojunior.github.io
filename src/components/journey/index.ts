@@ -109,7 +109,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="flex items-center gap-3 rounded-full bg-zinc-200 py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black transition-colors hover:bg-brand-400"
+          class="cta-button flex items-center gap-4 rounded-full py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
         >
           Download CV
           <svg
@@ -118,7 +118,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
             stroke-width="2"
             viewBox="0 0 24 24"
             fill="none"
-            class="stroke-black"
+            stroke="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

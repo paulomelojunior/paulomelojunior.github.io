@@ -67,7 +67,7 @@ export class CasesSection extends LitElement {
               </div>
             </div>
             <div
-              class="mob-cases-content  xl:cases-content relative flex flex-1 flex-col items-center justify-between gap-16 p-16 xl:aspect-square xl:rounded-r-[2rem] xl:py-28 xl:backdrop-blur-sm"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col items-center justify-between gap-16 p-16 xl:aspect-square xl:rounded-r-[2rem] xl:py-28 xl:backdrop-blur-sm"
             >
               <h2
                 class="text-center text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 xl:text-[3em]"
@@ -76,7 +76,7 @@ export class CasesSection extends LitElement {
               </h2>
               <a
                 href="/twyne"
-                class="flex items-center gap-4 rounded-full bg-zinc-200 py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black transition-colors hover:bg-brand-400"
+                class="cta-button flex items-center gap-4 rounded-full py-4 pe-4 ps-6 text-[1.25rem] font-medium leading-none text-black"
               >
                 ${i18next.t('cases.cta')}
                 <svg
@@ -89,7 +89,7 @@ export class CasesSection extends LitElement {
                 >
                   <path
                     d="M8 13L2 6.99999M2 6.99999L8 1M2 6.99999L14 6.99999"
-                    stroke="black"
+                    stroke="currentColor"
                     stroke-width="1.5"
                   />
                 </svg>

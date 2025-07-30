@@ -26,6 +26,6 @@
 }
 
 @layer components {
-  @import 'components/body', 'components/cases', 'components/footer',
+  @import 'components/body', 'components/cases', 'components/cta', 'components/footer',
     'components/error', 'components/lenis', 'components/noise';
 }

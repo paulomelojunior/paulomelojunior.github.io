@@ -117,7 +117,7 @@ export class FooterSection extends LitElement {
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="absolute right-5 ml-5 flex h-20 items-center xl:relative xl:right-auto xl:h-auto"
+              class="absolute right-5 ml-5 xl:px-2 flex h-20 items-center xl:relative xl:right-auto xl:h-auto"
             >
               <img src="${logo}" alt="Logo" class="h-6" />
             </span>

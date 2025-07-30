@@ -131,7 +131,7 @@
               </div>
             </div>
             <div
-              class="mob-cases-content  xl:cases-content relative flex flex-1 flex-col items-center justify-between gap-16 p-16 xl:aspect-square xl:rounded-r-[2rem] xl:py-28 xl:backdrop-blur-sm"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col items-center justify-between gap-16 p-16 xl:aspect-square xl:rounded-r-[2rem] xl:py-28 xl:backdrop-blur-sm"
             >
               <h2
                 class="text-center text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 xl:text-[3em]"
@@ -140,7 +140,7 @@
               </h2>
               <a
                 href="/twyne"
-                class="flex items-center gap-4 rounded-full bg-zinc-200 py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black transition-colors hover:bg-brand-400"
+                class="cta-button flex items-center gap-4 rounded-full py-4 pe-4 ps-6 text-[1.25rem] font-medium leading-none text-black"
               >
                 ${C.t("cases.cta")}
                 <svg
@@ -153,7 +153,7 @@
                 >
                   <path
                     d="M8 13L2 6.99999M2 6.99999L8 1M2 6.99999L14 6.99999"
-                    stroke="black"
+                    stroke="currentColor"
                     stroke-width="1.5"
                   />
                 </svg>
@@ -195,7 +195,7 @@
               ${C.t("connect.title")}
             </span>
             <span
-              class="absolute right-5 ml-5 flex h-20 items-center xl:relative xl:right-auto xl:h-auto"
+              class="absolute right-5 ml-5 xl:px-2 flex h-20 items-center xl:relative xl:right-auto xl:h-auto"
             >
               <img src="${kp}" alt="Logo" class="h-6" />
             </span>
@@ -302,7 +302,7 @@
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="flex items-center gap-3 rounded-full bg-zinc-200 py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black transition-colors hover:bg-brand-400"
+          class="cta-button flex items-center gap-4 rounded-full py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
         >
           Download CV
           <svg
@@ -311,7 +311,7 @@
             stroke-width="2"
             viewBox="0 0 24 24"
             fill="none"
-            class="stroke-black"
+            stroke="currentColor"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
