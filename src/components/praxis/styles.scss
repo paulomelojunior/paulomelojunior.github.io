@@ -2,9 +2,9 @@
   stroke-width: 2;
   vector-effect: non-scaling-stroke;
 
-  @apply dark:stroke-brand-400;
+  @apply stroke-brand-400;
 }
 
 .praxis svg {
-  @apply dark:fill-brand-400/0;
+  @apply fill-brand-400/0;
 }

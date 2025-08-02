@@ -70,8 +70,8 @@ export class HeroSection extends ThemeMixin(LitElement) {
           <div
             class="relative mx-5 hidden h-px bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900 xl:block"
           ></div>
-          <div class="grid bg-zinc-950 xl:grid-cols-2 xl:gap-24">
-            <div class="px-5 xl:py-24 2xl:py-32">
+          <div class="grid bg-zinc-950 px-5 xl:grid-cols-2 xl:gap-24">
+            <div class="xl:py-24 2xl:py-32">
               <p class="leading-loose 2xl:text-[1.25rem]">
                 <mark
                   class="inline-block bg-transparent text-stone-950 dark:text-zinc-50"
@@ -89,9 +89,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
           </div>
         </div>
-        <div id="hero-marquee" class="">
+        <div id="hero-marquee" class="bg-zinc-900 text-zinc-600">
           <div class="container">
             <marquee-element
+              star="fill-brand-500"
               items="Design Engineering, Product Design, UX & UI"
             ></marquee-element>
           </div>

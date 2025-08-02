@@ -45,13 +45,10 @@
     px-0
     text-center
     text-[.75rem]
-    font-medium
     uppercase
     leading-none
     tracking-[0.02em]
-    text-stone-950
-    xl:text-[1rem]
-    dark:text-zinc-500;
+    xl:text-[1rem];
   min-width: 100%;
   gap: var(--gap);
   animation: marquee 56s linear infinite;
