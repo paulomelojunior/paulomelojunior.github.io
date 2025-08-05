@@ -109,7 +109,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="cta-button flex items-center gap-4 rounded-full py-4 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
+          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
         >
           Download CV
           <svg
@@ -176,7 +176,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-journey">
         <div
-          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] xl:py-24 2xl:py-32 dark:bg-[linear-gradient(theme('colors.zinc.950'),theme('colors.zinc.950')_100%)]"
+          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] xl:py-24 2xl:py-32 dark:bg-[linear-gradient(theme('colors.black'),theme('colors.black')_100%)]"
         >
           <div
             id="job"

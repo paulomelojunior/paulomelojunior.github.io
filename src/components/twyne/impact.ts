@@ -41,7 +41,7 @@ export class TwyneImpact extends LitElement {
           ${items.map(
             (item) =>
               html`<li
-                class="flex items-center gap-5 text-center before:text-[1rem] before:text-zinc-600 before:content-['✦']"
+                class="flex items-center gap-5 text-center before:text-[1rem] before:text-brand-400 before:content-['✦']"
               >
                 ${item}
               </li>`

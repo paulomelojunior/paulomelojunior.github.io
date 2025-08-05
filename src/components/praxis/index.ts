@@ -59,8 +59,19 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <section id="section-praxis" class="bg-zinc-900">
+      <section id="section-praxis" class="bg-zinc-950">
+        <div
+          class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
+        ></div>
         <div class="container">
+          <div id="hero-marquee" class="text-zinc-600">
+            <div class="container">
+              <marquee-element
+                star="fill-brand-500"
+                items="Design Engineering, Product Design, UX & UI"
+              ></marquee-element>
+            </div>
+          </div>
           <div
             class="grid gap-16 overflow-hidden px-5 py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
           >
@@ -138,6 +149,9 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               ></marquee-element>
             </div>
           </div>
+          <div
+            class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
+          ></div>
         </div>
       </section>
     `

@@ -1,3 +1,4 @@
+import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
@@ -22,15 +23,42 @@ export class HeroSection extends ThemeMixin(LitElement) {
       this.lang = i18next.language
     })
   }
+  firstUpdated() {
+    document.querySelectorAll('[data-parallax-layers]').forEach((triggerElement) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerElement,
+          start: "0% 0%",
+          end: "100% 0%",
+          scrub: 0
+        }
+      });
+      const layers = [
+        { layer: "1", y: '5rem', opacity: 0 },
+      ];
+      layers.forEach((layerObj, idx) => {
+        tl.to(
+          triggerElement.querySelectorAll(`[data-parallax-layer="${layerObj.layer}"]`),
+          {
+            y: layerObj.y,
+            ease: "none",
+            opacity: layerObj.opacity
+          },
+          idx === 0 ? undefined : "<"
+        );
+      });
+    });
+  }
 
   render() {
     return html`
-      <section class="hero">
+      <section class="hero" data-parallax-layers>
         <div
           class="container flex min-h-[calc(100svh-4rem)] flex-col justify-center gap-10 pt-12 xl:justify-end xl:gap-0 xl:pt-0"
         >
           <div
             class="flex flex-col items-start justify-end gap-8 px-5 xl:py-24 2xl:py-32"
+            data-parallax-layer="1"
           >
             <div class="flex items-center gap-4">
               <img
@@ -51,7 +79,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </div>
             </div>
             <h1
-              class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
+              class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
             >
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}
@@ -68,11 +96,15 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </h1>
           </div>
           <div
-            class="relative mx-5 hidden h-px bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-900 xl:block"
+            class="relative mx-5 hidden h-px bg-gradient-to-r from-black via-zinc-800 to-black xl:block"
+            data-parallax-layer="1"
           ></div>
-          <div class="grid bg-zinc-950 px-5 xl:grid-cols-2 xl:gap-24">
+          <div
+            class="grid px-5 xl:grid-cols-2 xl:gap-24"
+            data-parallax-layer="1"
+          >
             <div class="xl:py-24 2xl:py-32">
-              <p class="leading-loose 2xl:text-[1.25rem]">
+              <p class="leading-loose text-[.875rem] 2xl:text-[1.25rem]">
                 <mark
                   class="inline-block bg-transparent text-stone-950 dark:text-zinc-50"
                   >${i18next.t('about.content.h1')}</mark
@@ -89,14 +121,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
           </div>
         </div>
-        <div id="hero-marquee" class="bg-zinc-900 text-zinc-600">
-          <div class="container">
-            <marquee-element
-              star="fill-brand-500"
-              items="Design Engineering, Product Design, UX & UI"
-            ></marquee-element>
-          </div>
-        </div>
+
       </section>
     `
   }

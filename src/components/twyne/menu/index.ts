@@ -75,7 +75,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-zinc-950"
+        class="absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-black"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -99,17 +99,29 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           </div>
           <nav>
             <ul id="anchors" class="flex justify-evenly">
-              <li class="flex-1 border-r border-white/10">
-                <menu-item href="#goal" label="Goal"></menu-item>
+              <li class="flex-1">
+                <menu-item
+                  href="#goal"
+                  label="${i18next.t('twyne.menu.goal')}"
+                ></menu-item>
               </li>
-              <li class="flex-1 border-r border-white/10">
-                <menu-item href="#proposal" label="Proposal"></menu-item>
+              <li class="flex-1">
+                <menu-item
+                  href="#proposal"
+                  label="${i18next.t('twyne.menu.proposal')}"
+                ></menu-item>
               </li>
-              <li class="flex-1 border-r border-white/10">
-                <menu-item href="#impact" label="Impact"></menu-item>
+              <li class="flex-1">
+                <menu-item
+                  href="#impact"
+                  label="${i18next.t('twyne.menu.impact')}"
+                ></menu-item>
               </li>
-              <li class="flex-1 border-white/10">
-                <menu-item href="#mobile" label="Mobile"></menu-item>
+              <li class="flex-1">
+                <menu-item
+                  href="#mobile"
+                  label="${i18next.t('twyne.menu.mobile')}"
+                ></menu-item>
               </li>
             </ul>
             <div
@@ -133,9 +145,6 @@ export class CasesMenu extends ThemeMixin(LitElement) {
             </div>
           </div>
         </div>
-        <div
-          class="inset-x-0 hidden h-px bg-gradient-to-r from-transparent to-transparent xl:block dark:via-zinc-800"
-        ></div>
       </header>
     `
   }

@@ -47,7 +47,8 @@
     "p4": "Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability."
   },
   "cases": {
-    "title": "Recent project overview",
+    "title": "Recent project",
+    "description": "A robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.",
     "cta": "See details",
     "project": "twyne.io"
   },
@@ -55,6 +56,14 @@
     "title": "Reach out"
   },
   "twyne": {
+    "menu": {
+      "about": "About",
+      "goal": "Goal",
+      "proposal": "Proposal",
+      "impact": "Impact",
+      "mobile": "Mobile",
+      "conclusion": "Conclusion"
+    },
     "t1": "Case study / 01",
     "t2": "Twyne",
     "about": {
@@ -88,7 +97,7 @@
       "p1": "Each component carries decisions guided by performance, readability, and functional clarity, with special attention to business logic and the journey of corporate users."
     },
     "impact": {
-      "t1": "Results <br> that matter",
+      "t1": "Impact",
       "l1": [
         "Reduced rework for the engineering team.",
         "Faster onboarding for new users.",
@@ -97,7 +106,7 @@
       ]
     },
     "mobile": {
-      "t1": "<span class='text-zinc-500'>Built on solid principles.</span> Ready for any platform."
+      "t1": "<span class='block mb-4'>Built on solid principles.</span> Ready for any platform."
     },
     "conclusion": {
       "t1": "Final thoughts",

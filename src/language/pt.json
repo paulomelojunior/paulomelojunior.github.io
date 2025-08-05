@@ -49,6 +49,7 @@
   },
   "cases": {
     "title": "Projeto mais recente",
+    "description": "Um software robusto para gestão, otimização e distribuição de leads, focado em monetização e análise em tempo real.",
     "cta": "Ver detalhes",
     "project": "twyne.io"
   },
@@ -57,6 +58,14 @@
   },
 
   "twyne": {
+    "menu": {
+      "about": "Sobre",
+      "goal": "Objetivo",
+      "proposal": "Proposta",
+      "impact": "Impacto",
+      "mobile": "Mobile",
+      "conclusion": "Conclusão"
+    },
     "t1": "Estudo de caso / 01",
     "t2": "Twyne",
     "about": {
@@ -90,7 +99,7 @@
       "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à jornada dos usuários corporativos."
     },
     "impact": {
-      "t1": "Resultados <br> que importam",
+      "t1": "Impacto",
       "l1": [
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",
@@ -99,7 +108,7 @@
       ]
     },
     "mobile": {
-      "t1": "<span class='text-zinc-500'>Construído com solidez.</span> Pronto para qualquer plataforma."
+      "t1": "<span class='block mb-4'>Construído com solidez.</span> Pronto para qualquer plataforma."
     },
     "conclusion": {
       "t1": "Considerações finais",

@@ -5,13 +5,14 @@ import './styles.scss'
 
 @customElement('progressive-blur')
 export class ProgressiveBlur extends LitElement {
-  @property({ type: String }) custom: string = ''
+  @property({ type: String }) classNames: string = ''
 
   render() {
-    const classList = classNames('progressive-blur', this.custom)
+    const baseClasses = 'progressive-blur'
+    const blurClasses = classNames(baseClasses, this.classNames)
 
     return html`
-      <div class=${classList}>
+      <div class=${blurClasses}>
         ${Array.from({ length: 6 }, () => html`<div></div>`)}
       </div>
     `

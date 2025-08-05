@@ -40,22 +40,21 @@ export class TwyneProposal extends LitElement {
   }
 
   private setupComponentAnimations(): void {
-    const componentsImgs = this.renderRoot.querySelectorAll('#components img')
+    const componentsImgs = this.renderRoot.querySelectorAll('img')
 
     componentsImgs.forEach((img) => {
-      // Configuração inicial
-      gsap.set(img, { clipPath: 'rect(0% 100% 100% 0% round .25rem)' })
-
-      // Animação de entrada
       const animation = gsap.from(img, {
         scrollTrigger: {
           trigger: img,
           start: '0% 100%',
-          toggleActions: 'play none none reverse',
+          end: '0% 50%',
+          toggleActions: 'play none none reverse'
         },
-        clipPath: 'rect(0% 100% 0% 0% round .25rem)',
+        scale: 1,
         opacity: 0,
-        y: '10%',
+        filter: 'blur(1rem)',
+        duration: 1,
+        y: '20%',
       })
 
       this.componentAnimations.push(animation)
@@ -87,7 +86,7 @@ export class TwyneProposal extends LitElement {
         ${proposalList.map(
           (item) => html`
             <li
-              class="flex items-center gap-4 text-center before:text-[1rem] before:text-zinc-600 before:content-['✦']"
+              class="flex items-center gap-4 text-center before:text-[1rem] before:text-brand-400 before:content-['✦']"
             >
               ${item}
             </li>
@@ -102,17 +101,17 @@ export class TwyneProposal extends LitElement {
       <div class="flex flex-col gap-4">
         <div class="flex gap-4">
           <div class="flex flex-col gap-4">
-            <img src="${b1}" loading="lazy" alt="Component B1" />
-            <img src="${b3}" loading="lazy" alt="Component B3" />
+            <img src="${b1}" height="425" width="216" loading="lazy" alt="Component B1" />
+            <img src="${b3}" height="216" width="216" loading="lazy" alt="Component B3" />
           </div>
-          <img src="${b2}" loading="lazy" alt="Component B2" />
+          <img src="${b2}" height="660" width="560" loading="lazy" alt="Component B2" />
         </div>
         <div class="flex gap-4">
-          <img src="${b7}" loading="lazy" alt="Component B7" />
-          <img src="${b5}" loading="lazy" alt="Component B5" />
-          <img src="${b6}" loading="lazy" alt="Component B6" />
+          <img src="${b7}" height="218" width="280" loading="lazy" alt="Component B7" />
+          <img src="${b5}" height="218" width="240" loading="lazy" alt="Component B5" />
+          <img src="${b6}" height="218" width="240" loading="lazy" alt="Component B6" />
         </div>
-        <img src="${b4}" loading="lazy" alt="Component B4" />
+        <img src="${b4}" height="448" width="792" loading="lazy" alt="Component B4" />
       </div>
     `
   }
@@ -120,10 +119,10 @@ export class TwyneProposal extends LitElement {
   private renderComponentColumn(): unknown {
     return html`
       <div class="grid gap-4">
-        <img src="${a1}" loading="lazy" alt="Component A1" />
-        <img src="${a2}" loading="lazy" alt="Component A2" />
-        <img src="${a3}" loading="lazy" alt="Component A3" />
-        <img src="${a4}" loading="lazy" alt="Component A4" />
+        <img src="${a1}" height="264" width="480" loading="lazy" alt="Component A1" />
+        <img src="${a2}" height="248" width="480" loading="lazy" alt="Component A2" />
+        <img src="${a3}" height="492" width="480" loading="lazy" alt="Component A3" />
+        <img src="${a4}" height="296" width="480" loading="lazy" alt="Component A4" />
       </div>
     `
   }
@@ -132,7 +131,7 @@ export class TwyneProposal extends LitElement {
     return html`
       <div
         id="components"
-        class="relative flex min-h-[1348px] items-start justify-center gap-4 overflow-hidden"
+        class="relative flex min-h-[1348px] items-start justify-center gap-4"
       >
         <style>
           #components img {

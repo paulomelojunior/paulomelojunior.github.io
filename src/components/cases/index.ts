@@ -39,17 +39,16 @@ export class CasesSection extends LitElement {
       <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
-            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-900 to-transparent xl:block"
+            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <div
-            class="relative flex rounded-[2rem] from-zinc-950 to-black xl:bg-gradient-to-r 2xl:h-[512px]"
+            class="relative flex rounded-[2rem] from-zinc-950 to-zinc-950 xl:bg-gradient-to-r 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
                 class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em] text-zinc-600"
               >
-                <span> 2025 </span>
-                <span> ${i18next.t('cases.project')} </span>
+                ${i18next.t('cases.project')}
               </span>
               <div class="absolute bottom-0 overflow-hidden">
                 <img
@@ -67,16 +66,19 @@ export class CasesSection extends LitElement {
               </div>
             </div>
             <div
-              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col items-center justify-between gap-16 p-16 xl:aspect-square xl:rounded-r-[2rem] xl:py-28 xl:backdrop-blur-sm"
+              class="mob-cases-content xl:cases-content text-center relative flex flex-1 flex-col p-24 xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm"
             >
               <h2
-                class="text-center text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 xl:text-[3em]"
+                class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 xl:text-[3rem]"
               >
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>
+              <p class="leading-loose mt-8 mb-auto">
+                ${i18next.t('cases.description')}
+              </p>
               <a
                 href="/twyne"
-                class="cta-button flex items-center gap-4 rounded-full py-4 pe-4 ps-6 text-[1.25rem] font-medium leading-none text-black"
+                class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black self-center"
               >
                 ${i18next.t('cases.cta')}
                 <svg
@@ -97,7 +99,7 @@ export class CasesSection extends LitElement {
             </div>
           </div>
           <div
-            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-900 to-transparent xl:block"
+            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
         </div>
       </section>
