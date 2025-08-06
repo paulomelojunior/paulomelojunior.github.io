@@ -101,10 +101,10 @@ window.onload = function load() {
         start: 'top 100%',
         end: 'bottom 80%',
         toggleActions: 'play none none reverse',
-        scrub: 4,
+        scrub: 2,
       },
       stagger: -0.1,
-      y: '20rem',
+      y: '10rem',
     })
   })
 
