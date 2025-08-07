@@ -56,7 +56,6 @@
   "connect": {
     "title": "Social"
   },
-
   "twyne": {
     "menu": {
       "about": "Sobre",
@@ -106,6 +105,16 @@
         "Base que suportou a adição de novos módulos sem atrito.",
         "Fortalecimento da identidade do produto com uma UI moderna."
       ]
+    },
+    "numbers": {
+      "t1": "+400K",
+      "p1": "Registros adiquiridos por dia",
+      
+      "t2": "+2M",
+      "p2": "Clicks de usuários em campanhas",
+      
+      "t3": "+7M",
+      "p3": "Leads negociados diariamente"
     },
     "mobile": {
       "t1": "<span class='block mb-4'>Construído com solidez.</span> Pronto para qualquer plataforma."

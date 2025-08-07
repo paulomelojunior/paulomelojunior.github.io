@@ -105,6 +105,16 @@
         "Strengthened product identity with a modern UI."
       ]
     },
+    "numbers": {
+      "t1": "+400K",
+      "p1": "Registrations acquired per day",
+
+      "t2": "+2M",
+      "p2": "User clicks on campaigns",
+
+      "t3": "+7M",
+      "p3": "Leads negotiated daily"
+    },
     "mobile": {
       "t1": "<span class='block mb-4'>Built on solid principles.</span> Ready for any platform."
     },
