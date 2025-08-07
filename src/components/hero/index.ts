@@ -24,30 +24,32 @@ export class HeroSection extends ThemeMixin(LitElement) {
     })
   }
   firstUpdated() {
-    document.querySelectorAll('[data-parallax-layers]').forEach((triggerElement) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerElement,
-          start: "0% 0%",
-          end: "100% 0%",
-          scrub: 0
-        }
-      });
-      const layers = [
-        { layer: "1", y: '5rem', opacity: 0 },
-      ];
-      layers.forEach((layerObj, idx) => {
-        tl.to(
-          triggerElement.querySelectorAll(`[data-parallax-layer="${layerObj.layer}"]`),
-          {
-            y: layerObj.y,
-            ease: "none",
-            opacity: layerObj.opacity
+    document
+      .querySelectorAll('[data-parallax-layers]')
+      .forEach((triggerElement) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            start: '0% 0%',
+            end: '100% 0%',
+            scrub: 0,
           },
-          idx === 0 ? undefined : "<"
-        );
-      });
-    });
+        })
+        const layers = [{ layer: '1', y: '5rem', opacity: 0 }]
+        layers.forEach((layerObj, idx) => {
+          tl.to(
+            triggerElement.querySelectorAll(
+              `[data-parallax-layer="${layerObj.layer}"]`
+            ),
+            {
+              y: layerObj.y,
+              ease: 'none',
+              opacity: layerObj.opacity,
+            },
+            idx === 0 ? undefined : '<'
+          )
+        })
+      })
   }
 
   render() {
@@ -104,7 +106,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             data-parallax-layer="1"
           >
             <div class="xl:py-24 2xl:py-32">
-              <p class="leading-loose text-[.875rem] 2xl:text-[1.25rem]">
+              <p class="text-[.875rem] leading-loose 2xl:text-[1.25rem]">
                 <mark
                   class="inline-block bg-transparent text-stone-950 dark:text-zinc-50"
                   >${i18next.t('about.content.h1')}</mark
@@ -121,7 +123,6 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
           </div>
         </div>
-
       </section>
     `
   }

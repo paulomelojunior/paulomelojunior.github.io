@@ -66,19 +66,19 @@ export class CasesSection extends LitElement {
               </div>
             </div>
             <div
-              class="mob-cases-content xl:cases-content text-center relative flex flex-1 flex-col p-24 xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-24 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm"
             >
               <h2
                 class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 xl:text-[3rem]"
               >
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>
-              <p class="leading-loose mt-8 mb-auto">
+              <p class="mb-auto mt-8 leading-loose">
                 ${i18next.t('cases.description')}
               </p>
               <a
                 href="/twyne"
-                class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black self-center"
+                class="cta-button flex items-center gap-4 self-center rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
               >
                 ${i18next.t('cases.cta')}
                 <svg

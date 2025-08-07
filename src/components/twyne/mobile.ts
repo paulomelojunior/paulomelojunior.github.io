@@ -44,33 +44,37 @@ export class TwyneMobile extends LitElement {
   // }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
-    document.querySelectorAll('[data-parallax-screens]').forEach((triggerElement) => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#mobile-images',
-          start: "0% 100%",
-          end: "70% 100%",
-          scrub: 2
-        }
-      });
-      const layers = [
-        { layer: "1", y: '10%', opacity: 0 },
-        { layer: "2", y: '20%', opacity: .5, },
-        { layer: "3", y: '30%', opacity: 1, },
-      ];
-      layers.forEach((layerObj, idx) => {
-        tl.from(
-          triggerElement.querySelectorAll(`[data-parallax-screens="${layerObj.layer}"]`),
-          {
-            y: layerObj.y,
-            ease: "none",
-            opacity: layerObj.opacity,
-            filter: "blur(1rem)",
+    document
+      .querySelectorAll('[data-parallax-screens]')
+      .forEach((triggerElement) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#mobile-images',
+            start: '0% 100%',
+            end: '70% 100%',
+            scrub: 2,
           },
-          idx === 0 ? undefined : "<"
-        );
-      });
-    });
+        })
+        const layers = [
+          { layer: '1', y: '10%', opacity: 0 },
+          { layer: '2', y: '20%', opacity: 0.5 },
+          { layer: '3', y: '30%', opacity: 1 },
+        ]
+        layers.forEach((layerObj, idx) => {
+          tl.from(
+            triggerElement.querySelectorAll(
+              `[data-parallax-screens="${layerObj.layer}"]`
+            ),
+            {
+              y: layerObj.y,
+              ease: 'none',
+              opacity: layerObj.opacity,
+              filter: 'blur(1rem)',
+            },
+            idx === 0 ? undefined : '<'
+          )
+        })
+      })
   }
 
   render() {
@@ -83,7 +87,7 @@ export class TwyneMobile extends LitElement {
         </h2>
         <div
           id="mobile-images"
-          class="grid max-w-[1920px] mx-auto grid-cols-5 items-center justify-center gap-4 px-4"
+          class="mx-auto grid max-w-[1920px] grid-cols-5 items-center justify-center gap-4 px-4"
           data-parallax-screens
         >
           <img src="${e2}" data-parallax-screens="1" class="mobile-screen" />
