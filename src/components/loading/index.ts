@@ -32,7 +32,6 @@ export class MobileLoading extends LitElement {
         once: true,
       })
       window.addEventListener('load', this.onWindowLoad, { once: true })
-      // Fallback caso eventos demorem muito
       this.fallbackTimeoutId = window.setTimeout(
         () => this.finishAfterMinTime(),
         8000
