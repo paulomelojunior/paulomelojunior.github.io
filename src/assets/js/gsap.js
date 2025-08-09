@@ -3,12 +3,14 @@ import { CustomEase } from 'gsap/CustomEase'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 
 gsap.registerPlugin(
   CustomEase,
   DrawSVGPlugin,
   ScrollTrigger,
-  ScrambleTextPlugin
+  ScrambleTextPlugin,
+  ScrollToPlugin
 )
 
 gsap.defaults({
@@ -16,7 +18,7 @@ gsap.defaults({
   ease: CustomEase.create('custom', '.75,0,.5,1'),
 })
 
-window.onload = function load() {
+function initGsap() {
   let mm = gsap.matchMedia()
 
   mm.add('(max-width: 1024px)', () => {
@@ -119,4 +121,13 @@ window.onload = function load() {
     stagger: 0.1,
     y: '5rem',
   })
+}
+
+// Inicializa animações após o loader concluir o fade
+window.addEventListener('mobile-loading:done', initGsap, { once: true })
+
+// Fallback: se não houver <mobile-loading>, inicializa no load normal
+if (!document.querySelector('mobile-loading')) {
+  if (document.readyState === 'complete') initGsap()
+  else window.addEventListener('load', initGsap, { once: true })
 }

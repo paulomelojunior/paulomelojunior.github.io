@@ -9,9 +9,10 @@ import d3 from '../twyne/imgs/d3.png'
 @customElement('twyne-screens')
 export class TwyneScreens extends LitElement {
   @property({ type: String }) lang = i18next.language
-  @property({ type: Number }) currentIndex: number = 0;
-  @property({ type: Array }) screens: NodeListOf<HTMLImageElement> = [] as unknown as NodeListOf<HTMLImageElement>;
-  @property({ type: Function }) updateScreens: () => void = () => {};
+  @property({ type: Number }) currentIndex: number = 0
+  @property({ type: Array }) screens: NodeListOf<HTMLImageElement> =
+    [] as unknown as NodeListOf<HTMLImageElement>
+  @property({ type: Function }) updateScreens: () => void = () => {}
 
   connectedCallback() {
     super.connectedCallback()
@@ -30,40 +31,51 @@ export class TwyneScreens extends LitElement {
   protected firstUpdated(_changedProperties: PropertyValues): void {
     const screens = document.querySelectorAll('.carrossel img')
     // Definindo o índice atual da imagem
-    this.currentIndex = 0;
+    this.currentIndex = 0
     // Faz o cast do NodeList para NodeListOf<HTMLImageElement> de forma segura
-    this.screens = screens as NodeListOf<HTMLImageElement>;
+    this.screens = screens as NodeListOf<HTMLImageElement>
 
     // Função para atualizar a exibição das imagens
     this.updateScreens = () => {
       this.screens.forEach((img, idx) => {
         if (idx === this.currentIndex) {
-          gsap.to(img, { opacity: 1, duration: .4, y: 0, delay: .2, onStart: () => img.classList.remove('invisible') });
+          gsap.to(img, {
+            opacity: 1,
+            duration: 0.4,
+            y: 0,
+            delay: 0.2,
+            onStart: () => img.classList.remove('invisible'),
+          })
         } else {
-          gsap.to(img, { opacity: 0, duration: .4, y: 100, onComplete: () => img.classList.add('invisible') });
+          gsap.to(img, {
+            opacity: 0,
+            duration: 0.4,
+            y: 100,
+            onComplete: () => img.classList.add('invisible'),
+          })
         }
-      });
-    };
+      })
+    }
 
     // Inicializa a exibição correta
-    this.updateScreens();
+    this.updateScreens()
 
     // Seleciona os botões Prev e Next
-    const prevBtn = this.renderRoot.querySelector('button:first-of-type');
-    const nextBtn = this.renderRoot.querySelector('button:last-of-type');
+    const prevBtn = this.renderRoot.querySelector('button:first-of-type')
+    const nextBtn = this.renderRoot.querySelector('button:last-of-type')
 
     // Adiciona os listeners para navegação infinita
     if (prevBtn && nextBtn) {
       prevBtn.addEventListener('click', () => {
         this.currentIndex =
-          (this.currentIndex - 1 + this.screens.length) % this.screens.length;
-        this.updateScreens();
-      });
+          (this.currentIndex - 1 + this.screens.length) % this.screens.length
+        this.updateScreens()
+      })
 
       nextBtn.addEventListener('click', () => {
-        this.currentIndex = (this.currentIndex + 1) % this.screens.length;
-        this.updateScreens();
-      });
+        this.currentIndex = (this.currentIndex + 1) % this.screens.length
+        this.updateScreens()
+      })
     }
   }
 
@@ -72,9 +84,24 @@ export class TwyneScreens extends LitElement {
       <section class="relative mt-32">
         <div class="container">
           <div class="carrossel relative overflow-hidden">
-            <img src="${d0}" width="1728" height="976" class="relative rounded-[.5rem]" />
-            <img src="${d2}" width="1728" height="976" class="absolute top-0 left-0 invisible rounded-[.5rem]" />
-            <img src="${d3}" width="1728" height="976" class="absolute top-0 left-0 invisible rounded-[.5rem]" />
+            <img
+              src="${d0}"
+              width="1728"
+              height="976"
+              class="relative rounded-[.5rem]"
+            />
+            <img
+              src="${d2}"
+              width="1728"
+              height="976"
+              class="invisible absolute left-0 top-0 rounded-[.5rem]"
+            />
+            <img
+              src="${d3}"
+              width="1728"
+              height="976"
+              class="invisible absolute left-0 top-0 rounded-[.5rem]"
+            />
           </div>
           <div class="absolute inset-0">
             <div
@@ -88,7 +115,9 @@ export class TwyneScreens extends LitElement {
                   Prev
                 </button>
 
-                <span class="flex font-mono items-center justify-center bg-white/5 px-4 text-[.75rem] uppercase leading-none tracking-[.05em] font-medium">
+                <span
+                  class="flex items-center justify-center bg-white/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em]"
+                >
                   ${this.currentIndex + 1} / ${this.screens.length}
                 </span>
                 <button

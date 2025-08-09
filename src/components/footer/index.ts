@@ -2,7 +2,8 @@ import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html, PropertyValues } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import logo from './logo.svg'
+import { unsafeHTML } from 'lit/directives/unsafe-html.js'
+import logo from './logo.svg?raw'
 
 @customElement('footer-section')
 export class FooterSection extends LitElement {
@@ -117,9 +118,9 @@ export class FooterSection extends LitElement {
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="absolute right-5 ml-5 flex h-20 items-center xl:relative xl:right-auto xl:h-auto xl:px-2"
+              class="absolute right-5 ml-5 flex h-20 items-center stroke-brand-400 xl:relative xl:right-auto xl:h-auto xl:px-2"
             >
-              <img src="${logo}" alt="Logo" class="h-6" />
+              ${unsafeHTML(`${logo}`)}
             </span>
           </div>
         </div>

@@ -61,6 +61,7 @@
     />
     <link rel="stylesheet" href="/src/assets/scss/main.scss" type="text/css" />
     <script type="module" src="src/main.ts"></script>
+    <script type="module" src="src/assets/js/main.js"></script>
 
     <script
       defer
@@ -69,15 +70,23 @@
     ></script>
 
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "sqxxvz6i2r");
+      ;(function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            ;(c[a].q = c[a].q || []).push(arguments)
+          }
+        t = l.createElement(r)
+        t.async = 1
+        t.src = 'https://www.clarity.ms/tag/' + i
+        y = l.getElementsByTagName(r)[0]
+        y.parentNode.insertBefore(t, y)
+      })(window, document, 'clarity', 'script', 'sqxxvz6i2r')
     </script>
   </head>
 
   <body class="relative text-zinc-400">
+    <mobile-loading min-ms="1000"></mobile-loading>
     <div id="noise" class="relative opacity-10"></div>
     <div
       class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-200 xl:hidden"
@@ -126,33 +135,30 @@
       </svg>
     </div>
     <cases-menu></cases-menu>
-    <div class="hero">
-      <main class="hidden xl:block">
-        <section class="container pt-16">
-          <twyne-header></twyne-header>
-          <twyne-about></twyne-about>
-        </section>
-        <twyne-goal></twyne-goal>
-        <twyne-proposal></twyne-proposal>
-        <twyne-screens></twyne-screens>
-
-        <twyne-mobile></twyne-mobile>
-        <twyne-conclusion></twyne-conclusion>
-      </main>
-      <footer>
+    <div class="hero hidden xl:block"></div>
+    <main class="hidden xl:block">
+      <section class="container pt-16">
+        <twyne-header></twyne-header>
+        <twyne-about></twyne-about>
+      </section>
+      <twyne-goal></twyne-goal>
+      <twyne-proposal></twyne-proposal>
+      <twyne-screens></twyne-screens>
+      <twyne-mobile></twyne-mobile>
+      <twyne-conclusion></twyne-conclusion>
+    </main>
+    <footer>
+      <div
+        id="copyright"
+        class="absolute inset-x-0 bottom-0 hidden text-zinc-700 duration-300 xl:z-50 xl:block"
+        aria-hidden="true"
+      >
         <div
-          id="copyright"
-          class="absolute inset-x-0 bottom-0 hidden text-zinc-700 duration-300 xl:z-50 xl:block"
-          aria-hidden="true"
+          class="container flex h-12 items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"
         >
-          <div
-            class="container flex h-12 items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"
-          >
-            <span class="copyright"> Copyright 2025 </span>
-          </div>
+          <span class="copyright"> Copyright 2025 </span>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
-  <script type="module" src="src/assets/js/main.js"></script>
 </html>

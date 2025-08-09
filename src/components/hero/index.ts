@@ -73,20 +73,22 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 class="h-16 rounded-full bg-zinc-900"
               />
               <div class="grid gap-2 leading-none">
-                <span class="text-[1.25rem] text-white">
-                  Paulo Melo Jr.
-                </span>
+                <span class="text-[1.25rem] text-white"> Paulo Melo Jr. </span>
                 <span class="flex items-center gap-2 text-[1rem]">
-                <span class="relative flex size-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400"></span>
-                  <span class="relative inline-flex m-0.5 rounded-full size-2 bg-green-300"></span>
-                </span>
+                  <span class="relative flex size-3">
+                    <span
+                      class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400"
+                    ></span>
+                    <span
+                      class="relative m-0.5 inline-flex size-2 rounded-full bg-green-300"
+                    ></span>
+                  </span>
                   ${i18next.t('about.status')}
                 </span>
               </div>
             </div>
             <h1
-              class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] bg-gradient-to-r text-transparent to-white from-zinc-400 bg-clip-text"
+              class="text-pretty bg-gradient-to-r from-zinc-400 to-white bg-clip-text text-[2.5rem] leading-none tracking-[-0.04em] text-transparent xl:text-[3rem] 2xl:text-[4rem]"
             >
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}

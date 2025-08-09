@@ -1,2 +1,2 @@
-import './lenis.js'
 import './gsap.js'
+import './lenis.js'
