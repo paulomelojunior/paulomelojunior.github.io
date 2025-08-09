@@ -3,6 +3,8 @@ import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import profile1x from './profile-1x.webp'
+import profile2x from './profile-2x.webp'
+import profile3x from './profile-3x.webp'
 import './styles.scss'
 import { ThemeMixin } from '../../store/theme'
 
@@ -65,6 +67,12 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="flex items-center gap-4">
               <img
                 src="${profile1x}"
+                srcset="
+                  ${profile1x} 64w, 
+                  ${profile2x} 96w,
+                  ${profile3x} 128w
+                "
+                sizes="64px"
                 height="64"
                 width="64"
                 fetchpriority="high"
