@@ -413,7 +413,7 @@
           class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
         ></div>
         <div class="container">
-          <div id="hero-marquee">
+          <div id="hero-marquee" aria-hidden="true">
             <marquee-element
               star="fill-brand-500"
               items="Design Engineering, Product Design, UX & UI"
@@ -487,11 +487,13 @@
               </div>
             </div>
           </div>
-          <marquee-element
-            reverse
-            star="fill-brand-500"
-            items="Design Engineering, Product Design, UX & UI"
-          ></marquee-element>
+          <div aria-hidden="true">
+            <marquee-element
+              reverse
+              star="fill-brand-500"
+              items="Design Engineering, Product Design, UX & UI"
+            ></marquee-element>
+          </div>
           <div
             class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
           ></div>
