@@ -1,3 +1,4 @@
+import './lenis'
 import './gsap'
 import './components/blur'
 import './components/cases'
