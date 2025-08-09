@@ -64,10 +64,12 @@ export class PraxisSection extends ThemeMixin(LitElement) {
           class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
         ></div>
         <div class="container">
-          <marquee-element
-            star="fill-brand-500"
-            items="Design Engineering, Product Design, UX & UI"
-          ></marquee-element>
+          <div id="hero-marquee">
+            <marquee-element
+              star="fill-brand-500"
+              items="Design Engineering, Product Design, UX & UI"
+            ></marquee-element>
+          </div>
           <div
             class="grid gap-16 overflow-hidden px-5 py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
           >
