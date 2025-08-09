@@ -64,14 +64,14 @@ export class PraxisSection extends ThemeMixin(LitElement) {
           class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
         ></div>
         <div class="container">
-          <div id="hero-marquee">
+          <div id="hero-marquee" aria-hidden="true">
             <marquee-element
               star="fill-brand-500"
               items="Design Engineering, Product Design, UX & UI"
             ></marquee-element>
           </div>
           <div
-            class="grid gap-16 overflow-hidden px-5 py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
+            class="grid gap-16 overflow-x-hidden px-5 py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
           >
             <div class="praxis">
               <svg
@@ -138,11 +138,13 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </div>
             </div>
           </div>
-          <marquee-element
-            reverse
-            star="fill-brand-500"
-            items="Design Engineering, Product Design, UX & UI"
-          ></marquee-element>
+          <div aria-hidden="true">
+            <marquee-element
+              reverse
+              star="fill-brand-500"
+              items="Design Engineering, Product Design, UX & UI"
+            ></marquee-element>
+          </div>
           <div
             class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
           ></div>

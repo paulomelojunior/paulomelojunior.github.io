@@ -13,6 +13,7 @@ export class MobileLoading extends LitElement {
   private fallbackTimeoutId: number | null = null
   private isExiting = false
 
+  private onDomContentLoaded = () => this.finishAfterMinTime()
   private onWindowLoad = () => this.finishAfterMinTime()
 
   connectedCallback(): void {
@@ -21,11 +22,17 @@ export class MobileLoading extends LitElement {
     this.setAttribute('aria-live', 'polite')
     this.mountedAt = performance.now()
 
-    if (document.readyState === 'complete') {
+    if (
+      document.readyState === 'complete' ||
+      document.readyState === 'interactive'
+    ) {
       this.finishAfterMinTime()
     } else {
+      document.addEventListener('DOMContentLoaded', this.onDomContentLoaded, {
+        once: true,
+      })
       window.addEventListener('load', this.onWindowLoad, { once: true })
-      // Fallback caso 'load' demore muito
+      // Fallback caso eventos demorem muito
       this.fallbackTimeoutId = window.setTimeout(
         () => this.finishAfterMinTime(),
         8000
@@ -35,6 +42,7 @@ export class MobileLoading extends LitElement {
 
   disconnectedCallback(): void {
     super.disconnectedCallback()
+    document.removeEventListener('DOMContentLoaded', this.onDomContentLoaded)
     window.removeEventListener('load', this.onWindowLoad)
     if (this.finishTimeoutId) {
       clearTimeout(this.finishTimeoutId)
