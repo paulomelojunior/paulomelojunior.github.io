@@ -30,7 +30,7 @@ export class MarqueeElement extends LitElement {
     )
 
     const reverse = this.reverse
-    const classList = classNames('marquee', { reverse })
+    const classList = classNames('marquee text-zinc-600', { reverse })
 
     return html`
       <div class=${classList} aria-hidden="true">

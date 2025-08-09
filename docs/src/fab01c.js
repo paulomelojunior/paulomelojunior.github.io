@@ -287,7 +287,7 @@
                 d="M12.9385 8.60896C13.9091 8.20693 14.9494 8 16 8C14.9494 8 13.9091 7.79307 12.9385 7.39104C11.9679 6.989 11.086 6.39972 10.3431 5.65685C9.60028 4.91399 9.011 4.03207 8.60896 3.06147C8.20693 2.09086 8 1.05057 8 0C8 2.12173 7.15714 4.15657 5.65685 5.65686C4.15656 7.15715 2.12173 8 0 8C1.05057 8 2.09086 8.20693 3.06147 8.60896C4.03207 9.011 4.91399 9.60028 5.65686 10.3431C6.39972 11.086 6.989 11.9679 7.39104 12.9385C7.79307 13.9091 8 14.9494 8 16C8 14.9494 8.20693 13.9091 8.60896 12.9385C9.011 11.9679 9.60028 11.086 10.3431 10.3431C11.086 9.60028 11.9679 9.011 12.9385 8.60896Z"
               />
             </svg>
-          </li>`),t=this.reverse,n=Kr("marquee",{reverse:t});return ne`
+          </li>`),t=this.reverse,n=Kr("marquee text-zinc-600",{reverse:t});return ne`
       <div class=${n} aria-hidden="true">
         <ul class="marquee__content">
           ${e}
@@ -413,14 +413,10 @@
           class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
         ></div>
         <div class="container">
-          <div id="hero-marquee" class="text-zinc-600">
-            <div class="container">
-              <marquee-element
-                star="fill-brand-500"
-                items="Design Engineering, Product Design, UX & UI"
-              ></marquee-element>
-            </div>
-          </div>
+          <marquee-element
+            star="fill-brand-500"
+            items="Design Engineering, Product Design, UX & UI"
+          ></marquee-element>
           <div
             class="grid gap-16 overflow-hidden px-5 py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
           >
@@ -489,15 +485,11 @@
               </div>
             </div>
           </div>
-          <div id="hero-marquee">
-            <div class="container text-zinc-600">
-              <marquee-element
-                reverse
-                star="fill-brand-500"
-                items="Design Engineering, Product Design, UX & UI"
-              ></marquee-element>
-            </div>
-          </div>
+          <marquee-element
+            reverse
+            star="fill-brand-500"
+            items="Design Engineering, Product Design, UX & UI"
+          ></marquee-element>
           <div
             class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
           ></div>
