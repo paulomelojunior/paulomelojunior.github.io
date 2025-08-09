@@ -2,7 +2,6 @@ import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import profile from './profile.webp'
 import profile1x from './profile-1x.webp'
 import './styles.scss'
 import { ThemeMixin } from '../../store/theme'
@@ -65,8 +64,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           >
             <div class="flex items-center gap-4">
               <img
-                srcset="${profile1x} 1x, ${profile} 2x"
-                src="${profile}"
+                src="${profile1x}"
                 height="64"
                 width="64"
                 fetchpriority="high"
