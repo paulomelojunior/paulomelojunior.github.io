@@ -15,10 +15,11 @@ export default defineConfig(({ command }) => ({
     rollupOptions: {
       treeshake: 'recommended',
       input: {
-        main: 'index.html',
-        glyphs: 'glyphs.html',
-        twyne: 'twyne.html',
         404: '404.html',
+        archive: 'archive.html',
+        glyphs: 'glyphs.html',
+        main: 'index.html',
+        twyne: 'twyne.html',
       },
       output: {
         hashCharacters: 'hex',
