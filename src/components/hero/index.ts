@@ -3,6 +3,7 @@ import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import profile from './profile.webp'
+import profile1x from './profile-1x.webp'
 import './styles.scss'
 import { ThemeMixin } from '../../store/theme'
 
@@ -64,6 +65,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           >
             <div class="flex items-center gap-4">
               <img
+                srcset="${profile1x} 1x, ${profile} 2x"
                 src="${profile}"
                 height="64"
                 width="64"
@@ -71,17 +73,20 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 class="h-16 rounded-full bg-zinc-900"
               />
               <div class="grid gap-2 leading-none">
-                <span class="text-[1.25rem] text-zinc-200">
+                <span class="text-[1.25rem] text-white">
                   Paulo Melo Jr.
                 </span>
                 <span class="flex items-center gap-2 text-[1rem]">
-                  <div class="size-2 rounded-full bg-green-400"></div>
+                <span class="relative flex size-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400"></span>
+                  <span class="relative inline-flex m-0.5 rounded-full size-2 bg-green-300"></span>
+                </span>
                   ${i18next.t('about.status')}
                 </span>
               </div>
             </div>
             <h1
-              class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
+              class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] bg-gradient-to-r text-transparent to-white from-zinc-400 bg-clip-text"
             >
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}
@@ -108,7 +113,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="xl:py-24 2xl:py-32">
               <p class="text-[.875rem] leading-loose 2xl:text-[1.25rem]">
                 <mark
-                  class="inline-block bg-transparent text-stone-950 dark:text-zinc-50"
+                  class="inline-block bg-transparent text-stone-950 dark:text-white"
                   >${i18next.t('about.content.h1')}</mark
                 >${i18next.t('about.content.p1')}
               </p>
@@ -116,7 +121,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="hidden xl:block xl:py-24 2xl:py-32">
               <p class="leading-loose 2xl:text-[1.25rem]">
                 <mark
-                  class="inline-block bg-transparent text-stone-950 dark:text-zinc-50"
+                  class="inline-block bg-transparent text-stone-950 dark:text-white"
                   >${i18next.t('about.content.h2')}</mark
                 >${i18next.t('about.content.p2')}
               </p>

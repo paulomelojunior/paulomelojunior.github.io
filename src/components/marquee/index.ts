@@ -16,7 +16,6 @@ export class MarqueeElement extends LitElement {
         html`<li>${item}</li>
           <li>
             <svg
-              aria-hidden="true"
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -34,8 +33,8 @@ export class MarqueeElement extends LitElement {
     const classList = classNames('marquee', { reverse })
 
     return html`
-      <div class=${classList}>
-        <ul class="marquee__content" aria-hidden="true">
+      <div class=${classList} aria-hidden="true">
+        <ul class="marquee__content">
           ${marqueeItems}
         </ul>
         <ul class="marquee__content">

@@ -140,7 +140,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </div>
             </div>
           </div>
-          <div id="hero-marquee" aria-hidden="true">
+          <div id="hero-marquee">
             <div class="container text-zinc-600">
               <marquee-element
                 reverse

@@ -125,7 +125,7 @@ export class FooterSection extends LitElement {
         </div>
         <div
           id="copyright"
-          class="absolute inset-x-0 bottom-0 hidden bg-zinc-950 text-zinc-600 duration-300 hover:text-brand-400 xl:z-50 xl:block"
+          class="absolute inset-x-0 bottom-0 hidden bg-black text-zinc-600 duration-300 hover:text-brand-400 xl:z-50 xl:block"
         >
           <div
             class="container flex h-12 items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"

@@ -1,13 +1,18 @@
 import { defineConfig } from 'vite'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   esbuild: {
     loader: 'ts',
     include: /\.ts$/,
+    drop: command === 'build' ? ['console', 'debugger'] : undefined,
+    legalComments: command === 'build' ? 'none' : 'eof',
   },
   build: {
     outDir: 'docs',
+    minify: 'esbuild',
+    cssMinify: true,
     rollupOptions: {
+      treeshake: 'recommended',
       input: {
         main: 'index.html',
         glyphs: 'glyphs.html',
@@ -26,4 +31,4 @@ export default defineConfig({
     port: 2121,
     open: true,
   },
-})
+}))
