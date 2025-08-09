@@ -65,7 +65,7 @@ export class MobileLoading extends LitElement {
     }
     const overlay = (this.querySelector('#loading') as HTMLElement) || this
     const mainContent = document.querySelector('main') as HTMLElement
-    gsap.set(mainContent, { y: '-5rem', opacity: 0 })
+    gsap.set(mainContent, { y: '5rem', opacity: 0 })
     gsap.to(overlay, {
       opacity: 0,
       y: 20,
@@ -82,6 +82,9 @@ export class MobileLoading extends LitElement {
           y: 0,
           opacity: 1,
           duration: 1,
+          onComplete: () => {
+            mainContent.removeAttribute('style')
+          }
         })
         this.remove()
       },

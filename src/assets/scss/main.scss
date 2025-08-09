@@ -29,9 +29,3 @@
   @import 'components/body', 'components/cases', 'components/cta', 'components/lenis',
     'components/footer', 'components/error', 'components/noise';
 }
-
-/* Melhora o FP/FCP atrasando o layout de seções fora de viewport */
-main > section {
-  content-visibility: auto;
-  contain-intrinsic-size: 800px;
-}

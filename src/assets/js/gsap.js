@@ -38,7 +38,7 @@ function initGsap() {
           'bottom-[env(safe-area-inset-bottom)]',
           'bg-black'
         )
-        header.classList.remove('absolute', 'bg-zinc-950')
+        header.classList.remove('absolute')
         gsap.to(header, {
           yPercent: 0,
           opacity: 1,
@@ -59,7 +59,7 @@ function initGsap() {
               'bottom-[env(safe-area-inset-bottom)]',
               'bg-black'
             )
-            header.classList.add('absolute', 'bg-zinc-950')
+            header.classList.add('absolute')
             header.removeAttribute('style')
           },
         })
