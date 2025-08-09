@@ -27,22 +27,6 @@ export class TwyneMobile extends LitElement {
     this.lang = i18next.language
   }
 
-  // private setupMobileAnimation(): void {
-  //   const mobileImages = this.querySelectorAll('.mobile-screen')
-  //   if (!mobileImages.length) return
-
-  //   gsap.from(mobileImages, {
-  //     scrollTrigger: {
-  //       trigger: mobileImages,
-  //       toggleActions: 'play none none reverse',
-  //       start: 'top 80%',
-  //       end: 'center 80%',
-  //     },
-  //     stagger: 0.05,
-  //     x: '5rem',
-  //   })
-  // }
-
   protected firstUpdated(_changedProperties: PropertyValues): void {
     document
       .querySelectorAll('[data-parallax-screens]')

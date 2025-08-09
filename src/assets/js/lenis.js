@@ -1,26 +1,28 @@
 import Lenis from 'lenis'
 
 const lenis = new Lenis()
-
 window.lenis = lenis
-
-document.documentElement.style.overflow = 'hidden'
-document.body.style.overflow = 'hidden'
-
-lenis.stop()
 
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf)
+const hasLoader = !!document.querySelector('mobile-loading')
 
-window.addEventListener('mobile-loading:done', () => {
-  document.documentElement.style.overflow = ''
-  document.body.style.overflow = ''
-  lenis.start()
-})
+if (hasLoader) {
+  lenis.stop()
+  window.addEventListener(
+    'mobile-loading:done',
+    () => {
+      lenis.start()
+      requestAnimationFrame(raf)
+    },
+    { once: true }
+  )
+} else {
+  requestAnimationFrame(raf)
+}
 
 document.addEventListener('click', (e) => {
   const anchor = e.target.closest('a[href^="#"]')

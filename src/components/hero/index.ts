@@ -69,6 +69,9 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 src="${profile}"
                 height="64"
                 width="64"
+                fetchpriority="high"
+                decoding="async"
+                loading="eager"
                 alt="${i18next.t('about.picDescription')}"
                 class="h-16 rounded-full bg-zinc-900"
               />

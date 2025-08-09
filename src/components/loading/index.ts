@@ -92,7 +92,7 @@ export class MobileLoading extends LitElement {
           duration: 1,
           onComplete: () => {
             mainContent.removeAttribute('style')
-          }
+          },
         })
         this.remove()
       },

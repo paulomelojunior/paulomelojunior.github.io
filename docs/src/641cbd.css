@@ -1,1 +1,14 @@
-@font-face{font-display:swap;font-family:Mona Sans;font-style:normal;font-weight:200 900;src:url(/src/f15787.woff2) format("woff2")}@font-face{font-display:swap;font-family:Geist Mono;font-style:normal;font-weight:100 900;src:url(/src/84d7bd.woff2) format("woff2")}
+@font-face {
+  font-display: swap;
+  font-family: Mona Sans;
+  font-style: normal;
+  font-weight: 200 900;
+  src: url(/src/f15787.woff2) format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: Geist Mono;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(/src/84d7bd.woff2) format('woff2');
+}

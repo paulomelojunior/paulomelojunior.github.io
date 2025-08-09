@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Mona Sans';
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('../fonts/mona.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('../fonts/geist-mono.woff2') format('woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +26,6 @@
 }
 
 @layer components {
-  @import 'components/body', 'components/cases', 'components/cta', 'components/lenis',
+  @import 'components/body', 'components/cases', 'components/cta',
     'components/footer', 'components/error', 'components/noise';
 }

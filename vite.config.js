@@ -11,6 +11,7 @@ export default defineConfig(({ command }) => ({
     outDir: 'docs',
     minify: 'esbuild',
     cssMinify: true,
+    cssCodeSplit: false,
     rollupOptions: {
       treeshake: 'recommended',
       input: {
