@@ -18,8 +18,9 @@
 }
 
 body {
-  @apply bg-stone-200
+  @apply 
     pt-[env(safe-area-inset-top)]
+    bg-stone-200
     text-stone-600
     dark:bg-black
     dark:text-zinc-400;

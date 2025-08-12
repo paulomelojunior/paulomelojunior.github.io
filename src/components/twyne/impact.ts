@@ -26,7 +26,7 @@ export class TwyneImpact extends LitElement {
       returnObjects: true,
     }) as string[]
     return html`
-      <div class="container grid gap-16 px-24 pt-32 2xl:px-32">
+      <div id="impact" class="container grid gap-16 px-24 pt-32 2xl:px-32">
         <h2
           class="text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
         >
@@ -59,11 +59,11 @@ export class TwyneImpact extends LitElement {
             </p>
           </div>
         </div>
-        <ul class="grid grid-cols-2 text-[1rem] leading-[2.25] 2xl:text-[1.25rem] dark:text-zinc-200">
+        <ul class="grid grid-cols-2 text-[1rem] leading-[2.25] 2xl:text-[1.25rem]">
           ${items.map(
             (item) =>
               html`<li
-                class="flex items-center gap-4 before:text-[1rem] before:text-brand-400 before:content-['✦']"
+                class="flex items-center gap-4 before:text-[1rem] before:text-zinc-800 before:content-['✦']"
               >
                 ${item}
               </li>`

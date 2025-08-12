@@ -5,9 +5,9 @@
   background-size: 100% 200%;
   background-position: 0% 100%;
   transition:
-    background-position 0.25s cubic-bezier(0.75, 0, 0.5, 1),
-    filter 0.25s cubic-bezier(0.75, 0, 0.5, 1);
-  transition-delay: 0.25s, 0s;
+    background-position 0.2s cubic-bezier(0.75, 0, 0.5, 1),
+    filter 0.2s cubic-bezier(0.75, 0, 0.5, 1);
+  transition-delay: 0.2s, 0s;
 }
 
 .menu-item:hover > div,

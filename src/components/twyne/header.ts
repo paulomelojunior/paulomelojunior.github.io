@@ -23,16 +23,16 @@ export class TwyneHeader extends LitElement {
 
   render() {
     return html`
-      <div class="flex flex-col items-start gap-2 px-14 pb-16 pt-12">
+      <div class="flex flex-col items-start gap-2 px-14 py-16">
         <span
           class="hidden rounded-full text-[.75rem] font-medium uppercase leading-none tracking-[0.05em] dark:text-zinc-500"
         >
           ${i18next.t('twyne.t1')}
         </span>
         <div class="flex items-center gap-6">
-          <img src="${logo}" class="h-14 border-r border-zinc-700 pr-6" />
+          <img src="${logo}" class="h-14 border-r border-zinc-900 pr-6" />
           <h1
-            class="pt-1 text-[2.5rem] leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
+            class="text-[2.5rem] h-14 leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
           >
             ${i18next.t('twyne.t2')}
           </h1>

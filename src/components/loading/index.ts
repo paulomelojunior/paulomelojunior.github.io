@@ -76,7 +76,7 @@ export class MobileLoading extends LitElement {
     gsap.to(overlay, {
       opacity: 0,
       y: 20,
-      duration: 0.25,
+      duration: 0.4,
       force3D: true,
       onComplete: () => {
         this.dispatchEvent(
@@ -89,7 +89,7 @@ export class MobileLoading extends LitElement {
           y: 0,
           opacity: 1,
           duration: 1,
-          onComplete: () => {
+          onComplete :() => {
             mainContent.removeAttribute('style')
           },
         })
