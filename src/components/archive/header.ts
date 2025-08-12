@@ -26,9 +26,9 @@ export class ArchiveHeader extends LitElement {
       <div class="px-14 pb-16 pt-12">
         <div class="flex items-center gap-6">
           <h1
-            class="text-[2.5rem] leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
+            class="text-[2.5rem] leading-none tracking-[-0.05em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
           >
-            Visual archive
+            Portfolio
           </h1>
         </div>
       </div>

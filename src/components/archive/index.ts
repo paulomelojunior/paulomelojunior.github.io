@@ -36,6 +36,7 @@ export class ArchiveTimeline extends LitElement {
             class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <arch-multiplayer></arch-multiplayer>
+          <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block my-16"></div>
           <arch-allugator></arch-allugator>
         </div>
       </section>

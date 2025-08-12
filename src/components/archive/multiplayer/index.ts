@@ -32,13 +32,13 @@ export class ArchTimeline extends LitElement {
 
   render() {
     return html`
-      <div class="grid gap-8 py-16 px-16 bg-black">
+      <div class="grid gap-16 p-16 bg-black">
         <item-header
           title="Orquestra Multiplayer"
-          tags="Visual Design, Produção, Voluntário"
+          tags="Social Media, Visual Design, Produção, Voluntário"
           year="2017"
         ></item-header>
-        <div class="grid grid-cols-3 gap-8 *:rounded-[1rem] *:outline *:outline-4 *:outline-zinc-950">
+        <div class="grid grid-cols-3 gap-16 *:rounded-[.5rem]">
           <img src="${s1}"/>
           <img src="${s0}"/>
           <img src="${s3}"/>
