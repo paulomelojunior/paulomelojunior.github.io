@@ -91,9 +91,9 @@ export class TwyneConclusion extends LitElement {
       >
         ${i18next.t('twyne.conclusion.t1')}
       </h2>
-      <p>${i18next.t('twyne.conclusion.p1')}</p>
-      <p>${i18next.t('twyne.conclusion.p2')}</p>
-      <p>${i18next.t('twyne.conclusion.p3')}</p>
+      <p class="text-default">${i18next.t('twyne.conclusion.p1')}</p>
+      <p class="text-default">${i18next.t('twyne.conclusion.p2')}</p>
+      <p class="text-default">${i18next.t('twyne.conclusion.p3')}</p>
     `
   }
 

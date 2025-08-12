@@ -48,8 +48,8 @@
     "p4": "Hoje responsável por redesenhar a plataforma avançada de gerenciamento de leads da empresa, usando componentes React para melhorar performance e escalabilidade."
   },
   "cases": {
-    "title": "Projeto mais recente",
-    "description": "Um software robusto para gestão, otimização e distribuição de leads, focado em monetização e análise em tempo real.",
+    "title": "Projeto recente",
+    "description": "Um software robusto para gestão, otimização e distribuição de leads.",
     "cta": "Ver detalhes",
     "project": "twyne.io"
   },
@@ -69,7 +69,8 @@
     "t2": "Twyne",
     "about": {
       "t1": "O que é",
-      "p1": "Desenvolvida pela Ifficient, <span class='dark:text-zinc-200'>o Twyne é um software robusto de gestão, otimização e distribuição de leads, com foco em monetização e análise em tempo real.</span> Voltada para o mercado B2B, atende poucos clientes em volume, mas com alto ticket médio e exigências elevadas de personalização."
+      "p1": "Desenvolvida pela Ifficient, <span class='dark:text-zinc-200'>o Twyne é um software robusto de gestão, otimização e distribuição de leads, com foco em monetização e análise em tempo real.</span>",
+      "p2": "Voltada para o mercado B2B, atende poucos clientes em volume, mas com alto ticket médio e exigências elevadas de personalização."
     },
     "projectInfo": {
       "company": "Empresa",
@@ -98,7 +99,7 @@
       "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à jornada dos usuários corporativos."
     },
     "impact": {
-      "t1": "Impacto",
+      "t1": "Impactos",
       "l1": [
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",
@@ -107,13 +108,13 @@
       ]
     },
     "numbers": {
-      "t1": "+400K",
+      "t1": "+ 400 mil",
       "p1": "Registros adiquiridos por dia",
 
-      "t2": "+2M",
+      "t2": "+ 2 milhões",
       "p2": "Clicks de usuários em campanhas",
 
-      "t3": "+7M",
+      "t3": "+ 7 milhões",
       "p3": "Leads negociados diariamente"
     },
     "mobile": {

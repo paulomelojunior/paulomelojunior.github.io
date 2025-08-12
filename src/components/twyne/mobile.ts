@@ -35,7 +35,7 @@ export class TwyneMobile extends LitElement {
           scrollTrigger: {
             trigger: '#mobile-images',
             start: '0% 100%',
-            end: '70% 100%',
+            end: '50% 100%',
             scrub: 2,
           },
         })

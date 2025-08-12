@@ -48,7 +48,7 @@
   },
   "cases": {
     "title": "Recent project",
-    "description": "A robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.",
+    "description": "A robust software for lead management, optimization, and distribution.",
     "cta": "See details",
     "project": "twyne.io"
   },
@@ -68,7 +68,8 @@
     "t2": "Twyne",
     "about": {
       "t1": "about",
-      "p1": "Developed by Ifficient, <span class='dark:text-zinc-200'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span> Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization.",
+      "p1": "Developed by Ifficient, <span class='dark:text-zinc-200'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span>",
+      "p2": "Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization.",
       "details": {
         "company": "Company",
         "companyValue": "Ifficient",
@@ -106,13 +107,13 @@
       ]
     },
     "numbers": {
-      "t1": "+400K",
+      "t1": "+ 400k",
       "p1": "Registrations acquired per day",
 
-      "t2": "+2M",
+      "t2": "+ 2 million",
       "p2": "User clicks on campaigns",
 
-      "t3": "+7M",
+      "t3": "+ 7 million",
       "p3": "Leads negotiated daily"
     },
     "mobile": {
