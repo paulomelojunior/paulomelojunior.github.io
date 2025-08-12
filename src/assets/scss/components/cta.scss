@@ -11,11 +11,11 @@
   background-size: 100% 400%;
   background-position: 0% 100%;
   transition:
-    background-position 0.5s cubic-bezier(0.75, 0, 0.5, 1),
-    color 0.25s cubic-bezier(0.75, 0, 0.5, 1),
-    outline 0.25s cubic-bezier(0.75, 0, 0.5, 1);
+    background-position 0.4s cubic-bezier(0.75, 0, 0.5, 1),
+    color 0.2s cubic-bezier(0.75, 0, 0.5, 1),
+    outline 0.2s cubic-bezier(0.75, 0, 0.5, 1);
   color: theme('colors.black');
-  transition-delay: 0s, 0.25s, 0.25s;
+  transition-delay: 0s, 0.2s, 0.2s;
   outline: 0px solid transparent;
 
   &:hover,

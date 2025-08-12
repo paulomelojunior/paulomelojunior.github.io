@@ -23,7 +23,7 @@ export class MenuItem extends LitElement {
     function handleEnter(this: HTMLElement) {
       const target = this.firstElementChild
       gsap.to(target, {
-        duration: 0.25,
+        duration: 0.2,
         clipPath: 'inset(0% 0% 0% 0%)',
       })
     }
@@ -35,7 +35,7 @@ export class MenuItem extends LitElement {
       if (!target) return
 
       gsap.to(target, {
-        duration: 0.25,
+        duration: 0.2,
         clipPath: 'inset(100% 0 0 0)',
         onComplete: () => {
           gsap.set(target, {
