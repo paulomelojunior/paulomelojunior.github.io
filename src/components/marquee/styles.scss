@@ -48,7 +48,8 @@
     uppercase
     leading-none
     tracking-[0.02em]
-    xl:text-[1rem];
+    lg:text-[.875rem]
+    2xl:text-[1rem];
   min-width: 100%;
   gap: var(--gap);
   animation: marquee 56s linear infinite;

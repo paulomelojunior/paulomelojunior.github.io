@@ -104,7 +104,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
-                <p class="leading-loose 2xl:text-[1.25rem]">
+                <p class="text-[.875rem] leading-loose 2xl:text-[1.25rem]">
                   ${i18next.t('praxis.p1')}
                 </p>
               </div>
@@ -130,7 +130,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>
-                <p class="leading-loose 2xl:text-[1.25rem]">
+                <p class="text-[.875rem] leading-loose 2xl:text-[1.25rem]">
                   ${i18next.t('praxis.p2')}
                 </p>
               </div>

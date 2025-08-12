@@ -70,14 +70,14 @@ export class CasesSection extends LitElement {
               </div>
             </div>
             <div
-              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-24 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col lg:p-16 2xl:p-24 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm"
             >
               <h2
                 class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 xl:text-[3rem]"
               >
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>
-              <p class="mb-auto mt-8 leading-loose">
+              <p class="text-[.875rem] mb-auto mt-8 leading-loose 2xl:text-[1rem]">
                 ${i18next.t('cases.description')}
               </p>
               <a
