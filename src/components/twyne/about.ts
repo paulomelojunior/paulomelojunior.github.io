@@ -48,7 +48,10 @@ export class TwyneAbout extends LitElement {
         class="absolute h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
       ></div>
       <div class="flex flex-col xl:p-16">
-        <p class="-mt-3 text-[1rem] leading-loose 2xl:text-[1.5rem]">
+        <p class="text-default mb-4 text-balance">
+          ${unsafeHTML(i18next.t('twyne.about.p2'))}
+        </p>
+        <p class="text-default text-pretty">
           ${unsafeHTML(i18next.t('twyne.about.p1'))}
         </p>
         <ul class="mt-auto text-[.75rem] leading-none *:py-6 2xl:text-[1rem]">

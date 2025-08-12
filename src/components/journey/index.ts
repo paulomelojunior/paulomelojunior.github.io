@@ -151,7 +151,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-stone-900">
           ${item.title}
         </h2>
-        <p class="text-[.875rem] leading-loose text-pretty 2xl:text-[1rem]">
+        <p class="text-sm/loose 2xl:text-base/loose text-pretty">
           ${item.description}
         </p>
       </div>

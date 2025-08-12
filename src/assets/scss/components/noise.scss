@@ -1,6 +1,6 @@
 #noise {
   @apply pointer-events-none
-    absolute
+    relative
     top-0
     z-50
     h-full
@@ -9,5 +9,5 @@
     bg-[length:216px_auto]
     bg-left-top
     bg-repeat
-    xl:fixed;
+    xl:absolute;
 }

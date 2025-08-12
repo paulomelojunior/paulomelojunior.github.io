@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   border-block: none;
+  
   &:before {
     z-index: -1;
     content: '';
@@ -10,7 +11,7 @@
     background-image: url('../imgs/pattern.svg');
     background-repeat: repeat;
     background-position: top right;
-    mask-image: radial-gradient(circle at bottom, black, transparent);
+    mask-image: radial-gradient(circle at bottom center, black, transparent 50%);
   }
   &:after {
     content: none;

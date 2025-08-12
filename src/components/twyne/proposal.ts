@@ -86,7 +86,7 @@ export class TwyneProposal extends LitElement {
         ${proposalList.map(
           (item) => html`
             <li
-              class="flex items-center gap-4 text-center before:text-[1rem] before:text-brand-400 before:content-['✦']"
+              class="flex items-center gap-4 before:text-[1rem] before:text-brand-400 before:content-['✦']"
             >
               ${item}
             </li>
@@ -224,7 +224,7 @@ export class TwyneProposal extends LitElement {
           </h2>
           <div class="grid grid-cols-2 gap-24">
             ${this.renderProposalList()}
-            <p class="text-pretty text-[1rem] leading-loose 2xl:text-[1.25rem]">
+            <p class="text-default text-pretty">
               ${i18next.t('twyne.proposal.p1')}
             </p>
           </div>
