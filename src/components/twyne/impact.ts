@@ -38,7 +38,7 @@ export class TwyneImpact extends LitElement {
             <h3 class="text-[2rem] leading-none dark:text-zinc-200">
               ${i18next.t('twyne.numbers.t1')}
             </h3>
-            <p class="text-base/none text-pretty">
+            <p class="text-pretty text-base/none">
               ${i18next.t('twyne.numbers.p1')}
             </p>
           </div>
@@ -46,7 +46,7 @@ export class TwyneImpact extends LitElement {
             <h3 class="text-[2rem] leading-none dark:text-zinc-200">
               ${i18next.t('twyne.numbers.t2')}
             </h3>
-            <p class="text-base/none text-pretty">
+            <p class="text-pretty text-base/none">
               ${i18next.t('twyne.numbers.p2')}
             </p>
           </div>
@@ -54,12 +54,14 @@ export class TwyneImpact extends LitElement {
             <h3 class="text-[2rem] leading-none dark:text-zinc-200">
               ${i18next.t('twyne.numbers.t3')}
             </h3>
-            <p class="text-base/none text-pretty">
+            <p class="text-pretty text-base/none">
               ${i18next.t('twyne.numbers.p3')}
             </p>
           </div>
         </div>
-        <ul class="grid grid-cols-2 text-[1rem] leading-[2.25] 2xl:text-[1.25rem]">
+        <ul
+          class="grid grid-cols-2 text-[1rem] leading-[2.25] 2xl:text-[1.25rem]"
+        >
           ${items.map(
             (item) =>
               html`<li

@@ -9,8 +9,6 @@ import social4 from './assets/social-4.png'
 import social5 from './assets/social-5.jpg'
 import social7 from './assets/social-7.png'
 
-
-
 @customElement('arch-allugator')
 export class ArchAllugator extends LitElement {
   @property({ type: String }) lang = i18next.language
@@ -31,49 +29,43 @@ export class ArchAllugator extends LitElement {
 
   render() {
     return html`
-      <div class="grid gap-8 p-16 bg-black">
+      <div class="grid grid-cols-3 gap-4 py-16">
         <item-header
-          title="allugator.com"
+          title="Allugator"
           tags="Design Partner, Branding, Early stage start-up"
           year="2018"
-        ></item-header>
-        <div class="grid grid-cols-3 gap-16 *:rounded-[.5rem] *:transition-all *:duration-300 *:ease-in-out *:opacity-75 *:grayscale hover:*:opacity-100 hover:*:grayscale-0">
-          <div class="col-span-2 row-span-2">
-            <img src="${social7}" />
+        >
+          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+              R$ 2.4 M valuation
+            </h3>
+            <p class="leading-none">EqSeed: 46 investidores em 2018</p>
           </div>
+          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+              + 7000 usuários novos
+            </h3>
+            <p class="leading-none">+ 100% em relação a 2017</p>
+          </div>
+          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+              + 1000 diárias em 2018
+            </h3>
+            <p class="leading-none">+ 100% em relação a 2017</p>
+          </div>
+        </item-header>
+        <div class="col-span-2 grid grid-cols-3 gap-4 *:rounded-[.5rem]">
+          <img class="col-span-2 row-span-2" src="${social7}" />
+          <img src="${social4}" />
           <img src="${social2}" />
           <img src="${social3}" />
           <img src="${social1}" />
           <img src="${social5}" />
-          <img src="${social4}" />
         </div>
-        <div class="grid grid-cols-3 gap-16 my-32 items-center">
-          <div class="grid gap-2 ps-8 border-s border-zinc-800">
-            <h3 class="text-[2rem] leading-none dark:text-zinc-200">
-              R$ 2.4 M valuation	
-            </h3>
-            <p class="text-[1rem] leading-none">
-              EqSeed: 46 investidores em 2018
-            </p>
-          </div>
-          <div class="grid gap-2 ps-8 border-s border-zinc-800">
-            <h3 class="text-[2rem] leading-none dark:text-zinc-200">
-              + 7000 usuários novos
-            </h3>
-            <p class="text-[1rem] leading-none">
-              + 100% em relação a 2017
-            </p>
-          </div>
-          <div class="grid gap-2 ps-8 border-s border-zinc-800">
-            <h3 class="text-[2rem] leading-none dark:text-zinc-200">
-              + 1000 diárias em 2018
-            </h3>
-            <p class="text-[1rem] leading-none">
-              + 100% em relação a 2017
-            </p>
-          </div>
+
+        <div class="col-span-3">
+          <allu-press></allu-press>
         </div>
-        <allu-press></allu-press>
       </div>
     `
   }

@@ -23,7 +23,9 @@ function initGsap() {
   mm.add('(max-width: 1024px)', () => {
     const header = document.querySelector('header') as HTMLElement | null
     const copyright = document.querySelector('#copy') as HTMLElement | null
-    const footerLinks = document.querySelector('#footerLinks') as HTMLElement | null
+    const footerLinks = document.querySelector(
+      '#footerLinks'
+    ) as HTMLElement | null
 
     if (!header || !copyright || !footerLinks) return
 

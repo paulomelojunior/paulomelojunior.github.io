@@ -11,9 +11,10 @@ import s5 from './assets/social-5.gif'
 import s6 from './assets/social-6.png'
 import s7 from './assets/social-7.png'
 import s8 from './assets/social-8.gif'
+import s9 from './assets/social-9.png'
 
 @customElement('arch-multiplayer')
-export class ArchTimeline extends LitElement {
+export class ArchMultiplayer extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   connectedCallback() {
@@ -32,23 +33,24 @@ export class ArchTimeline extends LitElement {
 
   render() {
     return html`
-      <div class="grid gap-16 p-16 bg-black">
+      <div class="grid grid-cols-3 gap-4 py-16">
         <item-header
-          title="Orquestra Multiplayer"
-          tags="Social Media, Visual Design, Produção, Voluntário"
+          title="Orquestra<br>Multiplayer"
+          tags="Voluntário, Produção, Visual Design"
           year="2017"
         ></item-header>
-        <div class="grid grid-cols-3 gap-16 *:rounded-[.5rem]">
-          <img src="${s1}"/>
-          <img src="${s0}"/>
-          <img src="${s3}"/>
-          <img src="${s8}"/>
-          <img src="${s4}"/>
-          <img src="${s2}"/>
-          <img src="${s6}"/>
-          <img src="${s7}"/>
-          <img src="${s5}"/>
-          <img class="col-span-3" src="${p1}" />
+        <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
+          <img src="${s0}" />
+          <img src="${s1}" />
+          <img src="${s8}" />
+          <img src="${s3}" />
+          <img src="${s4}" />
+          <img src="${s2}" />
+          <img src="${s9}" />
+          <img src="${s7}" />
+          <img src="${s6}" />
+          <img src="${s5}" />
+          <img class="col-span-2" src="${p1}" />
         </div>
       </div>
     `

@@ -141,7 +141,7 @@ export class AlluPress extends LitElement {
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
             />
-            <img  
+            <img
               src="${press10}"
               width="1920"
               height="1080"
@@ -168,7 +168,7 @@ export class AlluPress extends LitElement {
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky after:-inset-px top-[calc(100dvh-4rem)] isolate flex h-[4rem] items-center justify-center after:backdrop-blur-md after:rounded-b-[1rem] after:absolute after:z-10 after:bg-black/50 after:content-['']"
+              class="sticky top-[calc(100dvh-4rem)] isolate flex h-[4rem] items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-[1rem] after:bg-black/50 after:backdrop-blur-md after:content-['']"
             >
               <div class="relative z-20 flex gap-px">
                 <button

@@ -7,6 +7,7 @@ import './header'
 import './screens'
 import './allugator'
 import './multiplayer'
+import './ifficient'
 import './item'
 
 @customElement('archive-index')
@@ -31,12 +32,15 @@ export class ArchiveTimeline extends LitElement {
     return html`
       <section class="container pt-16">
         <archive-header></archive-header>
-        <div class="translate-y-[8px] rounded-[2rem] bg-black">
+        <div class="rounded-[2rem] px-5">
+          <arch-ifficient></arch-ifficient>
           <div
-            class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <arch-multiplayer></arch-multiplayer>
-          <div class="h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block my-16"></div>
+          <div
+            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+          ></div>
           <arch-allugator></arch-allugator>
         </div>
       </section>
