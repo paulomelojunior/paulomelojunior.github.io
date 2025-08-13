@@ -33,42 +33,51 @@ export class ArchMultiplayer extends LitElement {
 
   render() {
     return html`
-      <div class="grid grid-cols-3 gap-4 py-16">
+      <div id="multiplayer" class="grid grid-cols-3 gap-16 py-16">
         <item-header
-          title="Orquestra<br>Multiplayer"
+          title="Orquestra Multiplayer"
           tags="Voluntário, Produção, Visual Design"
           year="2017"
         >
-          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+          <p class="text-[.875rem]">
+            Criada por ex-alunos da Escola de Música da UFMG, a Multiplayer
+            explorava trilhas sonoras de séries, filmes e jogos em seu repertório,
+            ligando música erudita à cultura pop.
+          </p>
+          <p class="mb-3 text-[.875rem]">
+            Fui convidado a integrar o projeto como designer, cuidando da
+            comunicação visual e prestando suporte na produção dos eventos.
+          </p>
+          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
             <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              R$ 2.4 M valuation
+              + 1600 pessoas em 2 apresentações
             </h3>
-            <p class="leading-none">EqSeed: 46 investidores em 2018</p>
+            <p class="text-[.875rem] leading-none">Luzes, Câmera, Multiplayer!  @ Cine Theatro Brasil</p>
           </div>
-          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
             <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              + 7000 usuários novos
+              4,7 mil seguidores
             </h3>
-            <p class="leading-none">+ 100% em relação a 2017</p>
+            <p class="text-[.875rem] leading-none">Facebook</p>
           </div>
-          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
             <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              + 1000 diárias em 2018
+              2,1 mil inscritos
             </h3>
-            <p class="leading-none">+ 100% em relação a 2017</p>
-          </div>      
-      </item-header>
+            <p class="text-[.875rem] leading-none">YouTube</p>
+          </div>
+        </item-header>
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
-          <img src="${s0}" />
-          <img src="${s1}" />
-          <img src="${s8}" />
-          <img src="${s3}" />
-          <img src="${s4}" />
-          <img src="${s2}" />
-          <img src="${s9}" />
-          <img src="${s7}" />
-          <img src="${s6}" />
-          <img src="${s5}" />
+          <img src="${s0}"/>
+          <img src="${s1}"/>
+          <img src="${s4}"/>
+          <img src="${s3}"/>
+          <img src="${s8}"/>
+          <img src="${s2}"/>
+          <img src="${s9}"/>
+          <img src="${s7}"/>
+          <img src="${s6}"/>
+          <img src="${s5}"/>
           <img class="col-span-2" src="${p1}" />
         </div>
       </div>

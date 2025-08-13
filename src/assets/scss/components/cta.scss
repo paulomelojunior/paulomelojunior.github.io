@@ -27,4 +27,6 @@
     color: theme('colors.zinc.200');
     background-position: 0% 0%;
   }
+
+  @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-none text-black;
 }

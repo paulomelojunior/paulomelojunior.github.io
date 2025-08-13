@@ -13,7 +13,6 @@ import press9 from './assets/press-9.png'
 import press10 from './assets/press-10.png'
 import press11 from './assets/press-11.png'
 import press12 from './assets/press-12.png'
-import press13 from './assets/press-13.png'
 
 @customElement('allu-press')
 export class AlluPress extends LitElement {
@@ -159,16 +158,10 @@ export class AlluPress extends LitElement {
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
             />
-            <img
-              src="${press13}"
-              width="1920"
-              height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
-            />
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky top-[calc(100dvh-4rem)] isolate flex h-[4rem] items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-[1rem] after:bg-black/50 after:backdrop-blur-md after:content-['']"
+              class="sticky top-[calc(100dvh-4rem)] translate-y-full isolate flex h-[4rem] items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-[1rem] after:bg-black/50 after:backdrop-blur-md after:content-['']"
             >
               <div class="relative z-20 flex gap-px">
                 <button

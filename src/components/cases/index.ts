@@ -84,7 +84,7 @@ export class CasesSection extends LitElement {
               </p>
               <a
                 href="/twyne"
-                class="cta-button flex items-center gap-4 self-center rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
+                class="cta-button flex items-center gap-4 self-center"
               >
                 ${i18next.t('cases.cta')}
                 <svg

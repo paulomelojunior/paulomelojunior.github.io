@@ -28,7 +28,7 @@ export class ArchiveHeader extends LitElement {
           <h1
             class="text-[2.5rem] h-14 leading-none tracking-[-0.05em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
           >
-            Portfolio
+            ${i18next.t('featured')}
           </h1>
         </div>
       </div>

@@ -72,15 +72,24 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
     }
   }
 
+  getPreviousPage() {
+    if (window.history.length > 1) {
+      window.history.back()
+    } else {
+      window.location.href = '/'
+    }
+  }
+
   render() {
+
     return html`
       <header
         class="absolute inset-x-0 z-40 hidden w-full bg-stone-200/60 bg-gradient-to-b backdrop-blur-md backdrop-saturate-200 xl:fixed xl:block dark:bg-black"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
-            <a
-              href="/"
+            <button
+              @click=${() => this.getPreviousPage()}
               class="flex size-12 cursor-pointer items-center justify-center *:opacity-50 *:hover:opacity-100"
               title="Go back homepage"
             >
@@ -89,7 +98,7 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
                 class="transition-all duration-500"
                 title="Back to homepage"
               />
-            </a>
+            </button>
             <mail-button
               @click=${() => this.copyEmail()}
               @mouseleave=${() => this.copyEmailReset()}

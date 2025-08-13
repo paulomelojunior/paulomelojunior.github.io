@@ -78,7 +78,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
         ></div>
-        <div class="container grid items-center xl:grid-cols-2">
+        <div class="container grid items-center xl:grid-cols-3">
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
@@ -87,32 +87,23 @@ export class MenuContainer extends ThemeMixin(LitElement) {
           ></mail-button>
           <nav>
             <ul id="anchors" class="flex justify-end">
-              <li class="flex-1 xl:flex-none">
+              <li class="flex-1">
                 <menu-item
                   href="#section-praxis"
                   label="${i18next.t('menu.praxis')}"
                 ></menu-item>
               </li>
-              <li class="flex-1 xl:flex-none">
+              <li class="flex-1">
                 <menu-item
                   href="#section-journey"
                   label="${i18next.t('menu.journey')}"
                 ></menu-item>
               </li>
-              <li class="flex-1 xl:flex-none">
+              <li class="flex-1">
                 <menu-item
                   href="#section-connect"
                   label="${i18next.t('menu.connect')}"
                 ></menu-item>
-              </li>
-              <li class="flex h-12 items-center justify-center px-1 xl:h-12">
-                <lang-button
-                  @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
-                  title="${this.lang === 'en'
-                    ? 'Mudar para português'
-                    : 'Change to english'}"
-                ></lang-button>
               </li>
             </ul>
             <div
@@ -122,6 +113,20 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
           </nav>
+          <div class="flex items-center justify-end gap-2">
+              <a class="cta-button py-2 px-4" href="/archive">
+                ${i18next.t('featured')}
+              </a>
+              <div class="flex h-12 items-center justify-center px-1 xl:h-12">
+                <lang-button
+                  @click=${() => this.changeLang()}
+                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                  title="${this.lang === 'en'
+                    ? 'Mudar para português'
+                    : 'Change to english'}"
+                ></lang-button>
+              </div>
+            </div>
         </div>
       </header>
     `
