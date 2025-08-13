@@ -111,7 +111,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
           target="_blank"
           class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
         >
-          Download CV
+          ${this.lang === 'en' ? 'Download CV' : 'Baixar CV'}
           <svg
             width="20px"
             height="20px"

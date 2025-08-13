@@ -2,13 +2,13 @@ import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-import './menu'
-import './header'
-import './screens'
 import './allugator'
-import './multiplayer'
+import './header'
 import './ifficient'
 import './item'
+import './menu'
+import './multiplayer'
+import './screens'
 
 @customElement('archive-index')
 export class ArchiveTimeline extends LitElement {

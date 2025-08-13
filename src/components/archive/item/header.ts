@@ -34,7 +34,7 @@ export class ItemHeader extends LitElement {
     )
 
     return html`
-      <div class="sticky top-24 grid items-end gap-8">
+      <div class="sticky top-20 grid items-end gap-8">
         <div class="mb-2 flex flex-wrap gap-2 leading-none text-[.875rem]">
           <span class="text-zinc-200"> ${this.year} </span>
           ${headerTags}

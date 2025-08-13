@@ -1,6 +1,7 @@
 import './lenis'
 import './gsap'
 import './components/archive'
+import './components/archive/fail'
 import './components/blur'
 import './components/cases'
 import './components/footer'

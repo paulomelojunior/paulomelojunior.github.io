@@ -84,7 +84,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
 
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-black/80 bg-gradient-to-b backdrop-blur backdrop-saturate-200 xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-black xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -142,7 +142,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           </nav>
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
-              <a class="cta-button py-2 px-4" href="/archive">
+              <a class="cta-button py-1.5 px-4 uppercase font-medium text-[.75rem] tracking-[0.05em]" href="/projects">
                 Selected works
               </a>
               <div class="flex h-12 items-center justify-center px-1">

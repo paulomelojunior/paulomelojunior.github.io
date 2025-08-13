@@ -78,13 +78,13 @@ export class CasesSection extends LitElement {
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>
               <p
-                class="mb-auto mt-8 text-pretty text-sm/loose xl:text-base/loose"
+                class="mb-auto mt-8 text-pretty text-sm/loose 2xl:text-base/loose"
               >
                 ${i18next.t('cases.description')}
               </p>
               <a
                 href="/twyne"
-                class="cta-button flex items-center gap-4 self-center"
+                class="cta-button flex items-center gap-3 self-center ps-6"
               >
                 ${i18next.t('cases.cta')}
                 <svg

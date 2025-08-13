@@ -29,7 +29,7 @@ export class ArchiveFail extends LitElement {
         for small screens yet.
         <a
           href="/"
-          class="flex items-center gap-4 rounded-full bg-brand-400 py-4 pe-6 ps-4 text-[1rem] font-semibold uppercase leading-none text-black"
+          class=" flex items-center gap-4 rounded-full bg-zinc-200 py-3 pe-6 ps-4 text-[1rem] font-semibold uppercase leading-none text-black"
         >
           <svg
             width="14"

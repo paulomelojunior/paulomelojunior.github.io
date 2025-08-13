@@ -14,7 +14,7 @@
     background-position 0.4s cubic-bezier(0.75, 0, 0.5, 1),
     color 0.2s cubic-bezier(0.75, 0, 0.5, 1),
     outline 0.2s cubic-bezier(0.75, 0, 0.5, 1);
-  color: theme('colors.black');
+  color: theme('colors.zinc.950');
   transition-delay: 0s, 0.2s, 0.2s;
   outline: 0px solid transparent;
 
@@ -28,5 +28,5 @@
     background-position: 0% 0%;
   }
 
-  @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-none text-black;
+  @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-[20px] text-zinc-950;
 }

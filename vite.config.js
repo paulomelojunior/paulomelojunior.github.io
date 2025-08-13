@@ -16,9 +16,9 @@ export default defineConfig(({ command }) => ({
       treeshake: 'recommended',
       input: {
         404: '404.html',
-        archive: 'archive.html',
         glyphs: 'glyphs.html',
         main: 'index.html',
+        projects: 'projects.html',
         twyne: 'twyne.html',
       },
       output: {

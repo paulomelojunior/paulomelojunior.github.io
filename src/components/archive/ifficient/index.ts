@@ -59,7 +59,7 @@ export class ArchIfficient extends LitElement {
           </p>
           <a
             href="/twyne"
-            class="cta-button inline-flex items-center gap-4 mt-6"
+            class="cta-button inline-flex items-center gap-4 mt-6 px-6"
           >
             Ver projeto completo
           </a>
@@ -71,9 +71,9 @@ export class ArchIfficient extends LitElement {
           >
             <img id="ifficient-homepage" class="w-full" src="${p1}" />
             <div
-              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full bg-white px-4 py-2 text-zinc-950 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-medium"
+              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full py-3 px-5 text-[1rem] font-medium leading-[20px] text-white opacity-0 group-hover:opacity-100 transition-all backdrop-blur duration-200 bg-zinc-200/20 hover:bg-zinc-200/30"
             >
-              See full page
+              ${this.lang === 'en' ? 'Full view' : 'Ver tudo'}
             </div>
           </div>
           <div class="grid grid-cols-3 gap-4 *:rounded-[.75rem]">
