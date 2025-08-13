@@ -43,7 +43,7 @@ export class ItemHeader extends LitElement {
           ${unsafeHTML(this.title)}
         </h2>
         ${this.projectedContentHtml
-          ? html`<div class="grid gap-4 text-balance leading-loose">
+          ? html`<div class="flex flex-col gap-4 text-balance leading-loose items-start">
               ${unsafeHTML(this.projectedContentHtml)}
             </div>`
           : null}

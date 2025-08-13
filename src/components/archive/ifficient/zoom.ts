@@ -58,7 +58,7 @@ export class ImgZoom extends LitElement {
 
   render() {
     const escClasses =
-      'fixed right-5 leading-none top-5 z-[60] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 rounded-full items-center hover:bg-zinc-200 hover:text-zinc-950 hover:font-semibold text-zinc-200'
+      'fixed right-5 leading-none top-5 z-[60] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-1 h-8 rounded-full items-center hover:bg-zinc-200 hover:text-zinc-950 hover:font-semibold text-zinc-200'
     return html`
       <button class="${escClasses}" @click=${this.close}>
         Esc

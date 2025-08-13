@@ -55,16 +55,15 @@ export class ArchAllugator extends LitElement {
           </div>
         </item-header>
         <div class="col-span-2 grid grid-cols-3 gap-4 *:rounded-[.5rem]">
-          <img class="col-span-2 row-span-2" src="${social7}" />
           <img src="${social4}" />
           <img src="${social2}" />
           <img src="${social3}" />
+          <img class="col-span-2 row-span-2" src="${social7}" />
           <img src="${social1}" />
           <img src="${social5}" />
-        </div>
-
-        <div class="col-span-3">
-          <allu-press></allu-press>
+          <div class="col-span-3">
+            <allu-press></allu-press>
+          </div>
         </div>
       </div>
     `

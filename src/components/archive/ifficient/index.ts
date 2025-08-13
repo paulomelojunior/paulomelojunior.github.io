@@ -48,7 +48,7 @@ export class ArchIfficient extends LitElement {
   render() {
     return html`
       <div class="grid grid-cols-3 gap-4 py-16">
-        <item-header title="Ifficient" tags="UX, UI, Front-end">
+        <item-header title="Ifficient" tags="Product, UX, UI, Front-end">
           <p>
             Companhia de marketing interativo especializada em geração de leads,
             com base em Denver, CO.
@@ -57,6 +57,12 @@ export class ArchIfficient extends LitElement {
             Nela liderei o design dos softwares Twyne e Path Evolution,
             assegurando escalabilidade e consistência na evolução dos produtos.
           </p>
+          <a
+            href="/twyne"
+            class="cta-button inline-flex items-center gap-4 mt-2 rounded-full py-3 px-4 text-[1rem] font-medium leading-none text-black"
+          >
+            Ver projeto completo
+          </a>
         </item-header>
         <div class="col-span-2 grid gap-4 *:rounded-[.75rem]">
           <div
@@ -65,7 +71,7 @@ export class ArchIfficient extends LitElement {
           >
             <img id="ifficient-homepage" class="w-full" src="${p1}" />
             <div
-              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full bg-white px-4 py-2 text-zinc-950 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full bg-white px-4 py-2 text-zinc-950 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-medium"
             >
               See full page
             </div>

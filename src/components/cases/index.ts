@@ -50,7 +50,7 @@ export class CasesSection extends LitElement {
               >
                 2025 ${i18next.t('cases.project')}
               </span>
-              <div class="absolute bottom-0 overflow-hidden">
+              <div class="absolute bottom-0 overflow-hidden pointer-events-none">
                 <img
                   loading="lazy"
                   class="cases absolute w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"

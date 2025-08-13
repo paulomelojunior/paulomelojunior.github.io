@@ -38,7 +38,26 @@ export class ArchMultiplayer extends LitElement {
           title="Orquestra<br>Multiplayer"
           tags="Voluntário, Produção, Visual Design"
           year="2017"
-        ></item-header>
+        >
+          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+              R$ 2.4 M valuation
+            </h3>
+            <p class="leading-none">EqSeed: 46 investidores em 2018</p>
+          </div>
+          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+              + 7000 usuários novos
+            </h3>
+            <p class="leading-none">+ 100% em relação a 2017</p>
+          </div>
+          <div class="my-3 grid gap-2 border-s border-zinc-800 ps-4">
+            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+              + 1000 diárias em 2018
+            </h3>
+            <p class="leading-none">+ 100% em relação a 2017</p>
+          </div>      
+      </item-header>
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
           <img src="${s0}" />
           <img src="${s1}" />

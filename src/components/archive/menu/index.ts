@@ -101,26 +101,20 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
             <ul id="anchors" class="flex justify-evenly">
               <li class="flex-1">
                 <menu-item
-                  href="#goal"
-                  label="${i18next.t('twyne.menu.goal')}"
+                  href="#ifficient"
+                  label="Ifficient"
                 ></menu-item>
               </li>
               <li class="flex-1">
                 <menu-item
-                  href="#proposal"
-                  label="${i18next.t('twyne.menu.proposal')}"
+                  href="#allugator"
+                  label="Allugator"
                 ></menu-item>
               </li>
               <li class="flex-1">
                 <menu-item
-                  href="#impact"
-                  label="${i18next.t('twyne.menu.impact')}"
-                ></menu-item>
-              </li>
-              <li class="flex-1">
-                <menu-item
-                  href="#mobile"
-                  label="${i18next.t('twyne.menu.mobile')}"
+                  href="#multiplayer"
+                  label="Multiplayer"
                 ></menu-item>
               </li>
             </ul>

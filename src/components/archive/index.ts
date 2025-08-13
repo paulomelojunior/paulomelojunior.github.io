@@ -30,18 +30,22 @@ export class ArchiveTimeline extends LitElement {
 
   render() {
     return html`
-      <section class="container pt-16">
+      <section class="container pt-12">
         <archive-header></archive-header>
-        <div class="rounded-[2rem] px-5">
+        <div class="px-5">
           <arch-ifficient></arch-ifficient>
+          <div
+            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+          ></div>
+          <arch-allugator></arch-allugator>
           <div
             class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <arch-multiplayer></arch-multiplayer>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="mt-16 mb-32 h-px w-full bg-gradient-to-r bg-transparent"
           ></div>
-          <arch-allugator></arch-allugator>
+          <cases-section></cases-section>
         </div>
       </section>
     `
