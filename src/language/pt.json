@@ -2,7 +2,7 @@
   "menu": {
     "about": "Sobre",
     "journey": "Jornada",
-    "praxis": "Praxis",
+    "praxis": "Método",
     "connect": "Contato",
     "languages": {
       "en": "EN",
@@ -48,13 +48,17 @@
     "p4": "Hoje responsável por redesenhar a plataforma avançada de gerenciamento de leads da empresa, usando componentes React para melhorar performance e escalabilidade."
   },
   "cases": {
-    "title": "Projeto recente",
+    "title": "Projeto mais recente",
     "description": "Um software robusto para gestão, otimização e distribuição de leads.",
     "cta": "Ver detalhes",
     "project": "twyne.io"
   },
   "connect": {
     "title": "Social"
+  },
+  "featured": {
+    "title": "Projetos em destaque",
+    "button": "Projetos"
   },
   "twyne": {
     "menu": {

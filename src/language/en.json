@@ -2,7 +2,7 @@
   "menu": {
     "about": "About",
     "journey": "Journey",
-    "praxis": "Praxis",
+    "praxis": "Method",
     "connect": "Connect",
     "languages": {
       "en": "EN",
@@ -54,6 +54,10 @@
   },
   "connect": {
     "title": "Reach out"
+  },
+  "featured": {
+    "title": "Featured projects",
+    "button": "Projects"
   },
   "twyne": {
     "menu": {

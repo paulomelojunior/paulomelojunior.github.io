@@ -67,11 +67,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="flex items-center gap-4">
               <img
                 src="${profile1x}"
-                srcset="
-                  ${profile1x} 64w, 
-                  ${profile2x} 96w,
-                  ${profile3x} 128w
-                "
+                srcset="${profile1x} 64w, ${profile2x} 96w, ${profile3x} 128w"
                 sizes="64px"
                 height="64"
                 width="64"

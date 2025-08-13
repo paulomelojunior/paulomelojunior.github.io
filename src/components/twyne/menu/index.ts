@@ -72,15 +72,24 @@ export class CasesMenu extends ThemeMixin(LitElement) {
     }
   }
 
+  getPreviousPage() {
+    if (window.history.length > 1) {
+      window.history.back()
+    } else {
+      window.location.href = '/'
+    }
+  }
+
   render() {
+
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-b backdrop-blur backdrop-saturate-200 xl:fixed xl:block bg-black/80"
+        class="absolute inset-x-0 z-40 hidden w-full bg-black xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
-            <a
-              href="/"
+            <button
+              @click=${() => this.getPreviousPage()}
               class="flex size-12 cursor-pointer items-center justify-center *:opacity-50 *:hover:opacity-100"
               title="Go back homepage"
             >
@@ -89,7 +98,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
                 class="transition-all duration-500"
                 title="Back to homepage"
               />
-            </a>
+            </button>
             <mail-button
               @click=${() => this.copyEmail()}
               @mouseleave=${() => this.copyEmailReset()}
@@ -132,7 +141,10 @@ export class CasesMenu extends ThemeMixin(LitElement) {
             </div>
           </nav>
           <div class="flex justify-end">
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center gap-2">
+              <a class="cta-button py-1.5 px-4 uppercase font-medium text-[.75rem] tracking-[0.05em]" href="/projects">
+                Selected works
+              </a>
               <div class="flex h-12 items-center justify-center px-1">
                 <lang-button
                   @click=${() => this.changeLang()}

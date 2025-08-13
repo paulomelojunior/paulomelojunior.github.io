@@ -23,7 +23,9 @@ function initGsap() {
   mm.add('(max-width: 1024px)', () => {
     const header = document.querySelector('header') as HTMLElement | null
     const copyright = document.querySelector('#copy') as HTMLElement | null
-    const footerLinks = document.querySelector('#footerLinks') as HTMLElement | null
+    const footerLinks = document.querySelector(
+      '#footerLinks'
+    ) as HTMLElement | null
 
     if (!header || !copyright || !footerLinks) return
 
@@ -35,37 +37,37 @@ function initGsap() {
         header.classList.add(
           'fixed',
           'bottom-[env(safe-area-inset-bottom)]',
-          'bg-black'
         )
         header.classList.remove('absolute')
         gsap.to(header, {
           yPercent: 0,
           opacity: 1,
-          duration: 0.25,
+          duration: 0.2,
         })
         gsap.to(copyright, {
           opacity: 1,
+          duration: 0,
         })
       },
       onEnterBack: () => {
+        gsap.to(copyright, {
+          opacity: 0,
+          duration: 0,
+        })
         gsap.to(header, {
           yPercent: 50,
           opacity: 0,
-          duration: 0.25,
+          duration: 0.2,
           onComplete: () => {
             header.classList.remove(
               'fixed',
               'bottom-[env(safe-area-inset-bottom)]',
-              'bg-black'
             )
             header.classList.add('absolute')
             header.removeAttribute('style')
           },
         })
-        gsap.to(copyright, {
-          opacity: 0,
-          duration: 0.1,
-        })
+
       },
     })
 

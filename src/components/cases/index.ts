@@ -42,7 +42,7 @@ export class CasesSection extends LitElement {
             class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <div
-            class="relative flex rounded-[2rem] from-zinc-950 to-zinc-black xl:bg-gradient-to-r 2xl:h-[512px]"
+            class="to-zinc-black relative flex rounded-[2rem] from-zinc-950 xl:bg-gradient-to-r 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -50,10 +50,10 @@ export class CasesSection extends LitElement {
               >
                 2025 ${i18next.t('cases.project')}
               </span>
-              <div class="absolute bottom-0 overflow-hidden">
+              <div class="absolute bottom-0 overflow-hidden pointer-events-none">
                 <img
                   loading="lazy"
-                  class="cases absolute max-w-none w-[calc(1264px*0.8)] 2xl:w-auto drop-shadow-[0_5rem_5rem_black]"
+                  class="cases absolute w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"
                   src="${m1}"
                   width="1264"
                   height="720"
@@ -61,7 +61,7 @@ export class CasesSection extends LitElement {
                 />
                 <img
                   loading="lazy"
-                  class="cases max-w-none w-[calc(1264px*0.8)] 2xl:w-auto drop-shadow-[0_5rem_5rem_black]"
+                  class="cases w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"
                   src="${m2}"
                   width="1264"
                   height="720"
@@ -70,19 +70,21 @@ export class CasesSection extends LitElement {
               </div>
             </div>
             <div
-              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-20 2xl:p-24 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm 2xl:p-24"
             >
               <h2
                 class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 2xl:text-[3rem]"
               >
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>
-              <p class="text-sm/loose xl:text-base/loose text-pretty mb-auto mt-8">
+              <p
+                class="mb-auto mt-8 text-pretty text-sm/loose 2xl:text-base/loose"
+              >
                 ${i18next.t('cases.description')}
               </p>
               <a
                 href="/twyne"
-                class="cta-button flex items-center gap-4 self-center rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
+                class="cta-button flex items-center gap-3 self-center ps-6"
               >
                 ${i18next.t('cases.cta')}
                 <svg

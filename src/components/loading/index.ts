@@ -89,7 +89,7 @@ export class MobileLoading extends LitElement {
           y: 0,
           opacity: 1,
           duration: 1,
-          onComplete :() => {
+          onComplete: () => {
             mainContent.removeAttribute('style')
           },
         })

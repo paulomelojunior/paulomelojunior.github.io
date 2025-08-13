@@ -73,12 +73,12 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black/80 bg-gradient-to-b backdrop-blur backdrop-saturate-200 xl:fixed"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:fixed"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
         ></div>
-        <div class="container grid items-center xl:grid-cols-2">
+        <div class="container grid items-center xl:grid-cols-3">
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
@@ -86,29 +86,29 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
           ></mail-button>
           <nav>
-            <ul id="anchors" class="flex justify-end">
-              <li class="flex-1 xl:flex-none">
+            <ul id="anchors" class="flex justify-end px-0 xl:px-8">
+              <li class="flex-1">
                 <menu-item
                   href="#section-praxis"
                   label="${i18next.t('menu.praxis')}"
                 ></menu-item>
               </li>
-              <li class="flex-1 xl:flex-none">
+              <li class="flex-1">
                 <menu-item
                   href="#section-journey"
                   label="${i18next.t('menu.journey')}"
                 ></menu-item>
               </li>
-              <li class="flex-1 xl:flex-none">
+              <li class="flex-1">
                 <menu-item
                   href="#section-connect"
                   label="${i18next.t('menu.connect')}"
                 ></menu-item>
               </li>
-              <li class="flex h-12 items-center justify-center px-1 xl:h-12">
+              <li class="flex items-center pe-4 xl:hidden">
                 <lang-button
                   @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                  label=${this.lang === 'pt' ? `POR` : `ENG`}
                   title="${this.lang === 'en'
                     ? 'Mudar para português'
                     : 'Change to english'}"
@@ -122,6 +122,20 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
           </nav>
+          <div class="hidden xl:flex items-center justify-end gap-2">
+              <a class="cta-button py-1.5 px-4 uppercase font-medium text-[.75rem] tracking-[0.05em]" href="/projects">
+                ${i18next.t('featured.button')}
+              </a>
+              <div class="flex h-12 items-center justify-center px-1 xl:h-12">
+                <lang-button
+                  @click=${() => this.changeLang()}
+                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                  title="${this.lang === 'en'
+                    ? 'Mudar para português'
+                    : 'Change to english'}"
+                ></lang-button>
+              </div>
+            </div>
         </div>
       </header>
     `
