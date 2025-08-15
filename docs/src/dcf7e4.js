@@ -1061,7 +1061,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
     </div>`}createRenderRoot(){return this}};th([B({type:String})],Ra.prototype,"lang",2);Ra=th([ue("twyne-about")],Ra);var Em=Object.defineProperty,$m=Object.getOwnPropertyDescriptor,nh=(s,e,t,n)=>{for(var r=n>1?void 0:n?$m(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&Em(e,t,r),r};ne.registerPlugin(J);let za=class extends re{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const s=this.signElement.querySelectorAll("path");this.animation=ne.from(s,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:.75,stagger:.75,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(s){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return Y`
       <svg
         id="sign"
-        class="absolute bottom-6 rotate-[21deg] stroke-zinc-600"
+        class="rotate-[21deg] stroke-zinc-600 mt-2"
         width="44"
         height="67"
         viewBox="0 0 44 67"
@@ -1083,7 +1083,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       </svg>
     `}renderContent(){return Y`
       <h2
-        class="mb-4 font-semibold uppercase leading-none tracking-[0.05em] xl:text-[0.75rem] dark:text-zinc-500"
+        class="mb-4 mt-16 font-semibold uppercase leading-none tracking-[0.05em] xl:text-[0.75rem] dark:text-zinc-500"
       >
         ${_.t("twyne.conclusion.t1")}
       </h2>
@@ -1091,8 +1091,8 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       <p class="text-default">${_.t("twyne.conclusion.p2")}</p>
       <p class="text-default">${_.t("twyne.conclusion.p3")}</p>
     `}render(){return Y`
-      <section>
-        <div class="container grid grid-cols-4 py-32">
+      <section id="conclusion">
+        <div class="container grid grid-cols-4 pt-32">
           <div
             class="relative col-span-2 col-start-2 flex aspect-square flex-col items-center justify-center gap-8 text-balance text-center text-[1.25rem] leading-loose text-zinc-300 2xl:text-[1.5rem]"
           >
@@ -1232,6 +1232,13 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
                   label="${_.t("twyne.menu.mobile")}"
                 ></menu-item>
               </li>
+              
+              <li class="flex-1">
+                <menu-item
+                  href="#conclusion"
+                  label="${_.t("twyne.menu.conclusion")}"
+                ></menu-item>
+              </li>
             </ul>
             <div
               id="copy"
@@ -1256,7 +1263,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
           </div>
         </div>
       </header>
-    `}createRenderRoot(){return this}};Cl([B({type:Boolean})],ho.prototype,"more",2);Cl([B({type:String})],ho.prototype,"lang",2);ho=Cl([ue("cases-menu")],ho);const jm="/src/cef3d9.png",Im="/src/6f2cb8.png",Bm="/src/6b0ed1.png",Nm="/src/b2e798.png",Hm="/src/9bbc2e.png";var Um=Object.defineProperty,Vm=Object.getOwnPropertyDescriptor,oh=(s,e,t,n)=>{for(var r=n>1?void 0:n?Vm(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&Um(e,t,r),r};let Na=class extends re{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){document.querySelectorAll("[data-parallax-screens]").forEach(e=>{let t=ne.timeline({scrollTrigger:{trigger:"#mobile-images",start:"0% 100%",end:"50% 100%",scrub:2}});[{layer:"1",y:"10%",opacity:0},{layer:"2",y:"20%",opacity:.5},{layer:"3",y:"30%",opacity:1}].forEach((r,i)=>{t.from(e.querySelectorAll(`[data-parallax-screens="${r.layer}"]`),{y:r.y,ease:"none",opacity:r.opacity,filter:"blur(1rem)"},i===0?void 0:"<")})})}render(){return Y`
+    `}createRenderRoot(){return this}};Cl([B({type:Boolean})],ho.prototype,"more",2);Cl([B({type:String})],ho.prototype,"lang",2);ho=Cl([ue("cases-menu")],ho);const jm="/src/cef3d9.png",Im="/src/6f2cb8.png",Bm="/src/6b0ed1.png",Nm="/src/b2e798.png",Hm="/src/9bbc2e.png";var Um=Object.defineProperty,Vm=Object.getOwnPropertyDescriptor,oh=(s,e,t,n)=>{for(var r=n>1?void 0:n?Vm(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&Um(e,t,r),r};let Na=class extends re{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){document.querySelectorAll("[data-parallax-screens]").forEach(e=>{let t=ne.timeline({scrollTrigger:{trigger:"#mobile-images",start:"0% 100%",end:"50% 100%",scrub:2}});[{layer:"1",y:"10%",opacity:0},{layer:"2",y:"20%",opacity:.5},{layer:"3",y:"30%",opacity:1}].forEach((r,i)=>{t.from(e.querySelectorAll(`[data-parallax-screens="${r.layer}"]`),{y:r.y,ease:"none",opacity:r.opacity},i===0?void 0:"<")})})}render(){return Y`
       <section id="mobile" class="mt-32 py-32">
         <h2
           class="mb-32 text-center text-[2.5rem] font-light leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
@@ -1440,7 +1447,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky -inset-x-4 top-[calc(100dvh-12rem)] isolate flex h-[12rem] items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-gradient-to-t after:from-black after:content-['']"
+              class="sticky -inset-x-4 top-[calc(100dvh-15rem)] isolate flex h-[15rem] items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-gradient-to-t after:from-black after:content-['']"
             >
               <progressive-blur></progressive-blur>
               <div class="relative z-20 flex gap-px pb-2">

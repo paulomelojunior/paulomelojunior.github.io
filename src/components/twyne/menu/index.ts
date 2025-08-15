@@ -132,6 +132,13 @@ export class CasesMenu extends ThemeMixin(LitElement) {
                   label="${i18next.t('twyne.menu.mobile')}"
                 ></menu-item>
               </li>
+              
+              <li class="flex-1">
+                <menu-item
+                  href="#conclusion"
+                  label="${i18next.t('twyne.menu.conclusion')}"
+                ></menu-item>
+              </li>
             </ul>
             <div
               id="copy"

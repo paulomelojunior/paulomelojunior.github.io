@@ -53,7 +53,7 @@ export class TwyneMobile extends LitElement {
               y: layerObj.y,
               ease: 'none',
               opacity: layerObj.opacity,
-              filter: 'blur(1rem)',
+              // filter: 'blur(1rem)',
             },
             idx === 0 ? undefined : '<'
           )
