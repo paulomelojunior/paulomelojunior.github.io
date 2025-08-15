@@ -106,7 +106,7 @@ export class MobileLoading extends LitElement {
       <div
         class="container mx-5 mt-auto flex h-full items-end gap-4 pb-32 xl:mx-auto"
       >
-        <span class="size-10 fill-brand-400"> ${unsafeHTML(`${spin}`)} </span>
+        <span class="size-10 fill-zinc-500"> ${unsafeHTML(`${spin}`)} </span>
         <span
           class="animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-white"
         >

@@ -23,7 +23,7 @@ export class ArchiveHeader extends LitElement {
 
   render() {
     return html`
-      <div class="pt-16 pb-8 px-5">
+      <div class="pt-16 pb-8 px-3">
         <div class="flex items-center gap-6">
           <h1
             class="text-[2.5rem] leading-none tracking-[-0.05em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"

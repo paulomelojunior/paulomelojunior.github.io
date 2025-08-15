@@ -2,8 +2,7 @@ import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html, PropertyValues } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { unsafeHTML } from 'lit/directives/unsafe-html.js'
-import logo from './logo.svg?raw'
+import logo from './logo.png'
 
 @customElement('footer-section')
 export class FooterSection extends LitElement {
@@ -32,7 +31,7 @@ export class FooterSection extends LitElement {
         gsap.to(copyrightSpan, {
           duration: 1,
           scrambleText: {
-            text: 'Made by human',
+            text: 'Made by a human being',
             chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
             speed: 0.1,
           },
@@ -118,26 +117,27 @@ export class FooterSection extends LitElement {
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="absolute right-5 ml-5 flex h-20 items-center stroke-brand-400 xl:relative xl:right-auto xl:h-auto xl:px-2"
+              class="absolute right-5 ml-5 flex h-20 items-center self-center stroke-brand-400 xl:relative xl:right-auto xl:h-auto xl:px-2"
             >
-              ${unsafeHTML(`${logo}`)}
+              <img src="${logo}" class="size-12" alt="pmjr.cc" />
             </span>
           </div>
         </div>
         <div
-          id="copyright"
-          class="absolute inset-x-0 bottom-0 hidden bg-black text-zinc-600 duration-300 hover:text-brand-400 xl:z-50 xl:block"
+          
+          class="absolute inset-x-0 bottom-0 hidden bg-black text-zinc-600 xl:z-50 xl:block"
         >
           <div
-            class="container flex h-12 items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"
+            class="container flex items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"
           >
             <a
               href="https://github.com/paulomelojunior/pmjr.cc"
               target="_blank"
               rel="noopener noreferrer"
-              class="copyright"
+              class="copyright *:hover:text-zinc-400 h-12 flex items-center justify-center gap-2"
+              id="copyright"
             >
-              MIT License [<span>Copyright</span>] 2025, pmjr.cc
+              MIT License <span class="transition-colors duration-500">Copyright</span> 2025, pmjr.cc
             </a>
           </div>
         </div>

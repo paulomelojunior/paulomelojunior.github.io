@@ -16,7 +16,7 @@ export class ArchiveTimeline extends ThemeMixin(LitElement) {
     return html`
       <section class="container pt-12">
         <archive-header></archive-header>
-        <div class="px-5">
+        <div class="px-3">
           <arch-ifficient></arch-ifficient>
           <div
             class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"

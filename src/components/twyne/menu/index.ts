@@ -2,7 +2,7 @@ import i18next from '../../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../../store/theme'
-import goBack from './go-back.svg'
+import goBack from './go-back.png'
 
 @customElement('cases-menu')
 export class CasesMenu extends ThemeMixin(LitElement) {
@@ -90,12 +90,12 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-12 cursor-pointer items-center justify-center *:opacity-50 *:hover:opacity-100"
+              class="flex size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950"
               title="Go back homepage"
             >
               <img
                 src="${goBack}"
-                class="transition-all duration-500"
+                class="transition-opacity duration-500"
                 title="Back to homepage"
               />
             </button>
