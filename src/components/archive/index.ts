@@ -1,7 +1,3 @@
-import i18next from '../../i18n'
-import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-
 import './allugator'
 import './header'
 import './ifficient'
@@ -10,24 +6,12 @@ import './menu'
 import './multiplayer'
 import './screens'
 
+import { html, LitElement } from 'lit'
+import { customElement } from 'lit/decorators.js'
+import { ThemeMixin } from '../../store/theme'
+
 @customElement('archive-index')
-export class ArchiveTimeline extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class ArchiveTimeline extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section class="container pt-12">

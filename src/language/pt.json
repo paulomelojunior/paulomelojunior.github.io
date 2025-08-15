@@ -57,7 +57,7 @@
     "title": "Social"
   },
   "featured": {
-    "title": "Projetos em destaque",
+    "title": "Projetos <br> em destaque",
     "button": "Projetos"
   },
   "twyne": {
@@ -129,6 +129,55 @@
       "p1": "A modularidade do UI kit permite reuso inteligente, reduzindo complexidade e aumentando a velocidade de desenvolvimento.",
       "p2": "As decisões de layout, tipografia, contraste e espaçamento foram calibradas para sustentar ambientes densos de dados sem comprometer a legibilidade.",
       "p3": "O resultado é uma interface que se adapta ao contexto de uso sem perder coerência visual nem integridade funcional."
+    }
+  },
+  "allugator": {
+    "title": "Allugator",
+    "tags": "Design Partner, Branding, Early stage start-up",
+    "year": "2018",
+    "description": "Atuando como designer generalista, contribuí com entregas-chave para o crescimento da startup em seu estágio inicial, da reformulação da identidade e comunicação da marca à evolução do produto digital.",
+    "metrics": {
+      "valuation": {
+        "title": "R$ 2.4 M valuation",
+        "subtitle": "EqSeed: 46 investidores em 2018"
+      },
+      "users": {
+        "title": "+ 7000 usuários novos",
+        "subtitle": "+ 100% em relação a 2017"
+      },
+      "daily": {
+        "title": "+ 1000 diárias em 2018",
+        "subtitle": "+ 100% em relação a 2017"
+      }
+    }
+  },
+  "ifficient": {
+    "title": "Ifficient",
+    "tags": "Product, UX, UI, Front-end",
+    "description1": "Companhia de marketing interativo especializada em geração de leads, com base em Denver, CO.",
+    "description2": "Nela liderei o design dos softwares Twyne e Path Evolution, assegurando escalabilidade e consistência na evolução dos produtos.",
+    "cta": "Ver projeto completo",
+    "fullView": "Ver tudo"
+  },
+  "multiplayer": {
+    "title": "Orquestra Multiplayer",
+    "tags": "Voluntário, Produção, Visual Design",
+    "year": "2017",
+    "description1": "Criada por ex-alunos da Escola de Música da UFMG, a Multiplayer explorava trilhas sonoras de séries, filmes e jogos em seu repertório, ligando música erudita à cultura pop.",
+    "description2": "Fui convidado a integrar o projeto como designer, cuidando da comunicação visual e prestando suporte na produção dos eventos.",
+    "metrics": {
+      "audience": {
+        "title": "+ 1600 pessoas em 2 apresentações",
+        "subtitle": "Luzes, Câmera, Multiplayer!  @ Cine Theatro Brasil"
+      },
+      "facebook": {
+        "title": "4,7 mil seguidores",
+        "subtitle": "Facebook"
+      },
+      "youtube": {
+        "title": "2,1 mil inscritos",
+        "subtitle": "YouTube"
+      }
     }
   }
 }

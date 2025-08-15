@@ -56,7 +56,7 @@
     "title": "Reach out"
   },
   "featured": {
-    "title": "Featured projects",
+    "title": "Featured <br> projects",
     "button": "Projects"
   },
   "twyne": {
@@ -128,6 +128,55 @@
       "p1": "The modularity of the component library enables smart reuse, reducing complexity and increasing development speed.",
       "p2": "Decisions on layout, typography, contrast, and spacing were calibrated to support dense data environments without compromising readability.",
       "p3": "The result is an interface that adapts to the usage context without losing visual coherence or functional integrity."
+    }
+  },
+  "allugator": {
+    "title": "Allugator",
+    "tags": "Design Partner, Branding, Early stage start-up",
+    "year": "2018",
+    "description": "Acting as a generalist designer, I contributed key deliverables for the startup's growth in its early stage, from rebranding and brand communication to digital product evolution.",
+    "metrics": {
+      "valuation": {
+        "title": "R$ 2.4 M valuation",
+        "subtitle": "EqSeed: 46 investors in 2018"
+      },
+      "users": {
+        "title": "+ 7000 new users",
+        "subtitle": "+ 100% compared to 2017"
+      },
+      "daily": {
+        "title": "+ 1000 daily in 2018",
+        "subtitle": "+ 100% compared to 2017"
+      }
+    }
+  },
+  "ifficient": {
+    "title": "Ifficient",
+    "tags": "Product, UX, UI, Front-end",
+    "description1": "Interactive marketing company specialized in lead generation, based in Denver, CO.",
+    "description2": "There I led the design of Twyne and Path Evolution software, ensuring scalability and consistency in product evolution.",
+    "cta": "See complete project",
+    "fullView": "Full view"
+  },
+  "multiplayer": {
+    "title": "Multiplayer Orchestra",
+    "tags": "Volunteer, Production, Visual Design",
+    "year": "2017",
+    "description1": "Created by former students of UFMG's School of Music, Multiplayer explored soundtracks from series, movies, and games in their repertoire, connecting classical music to pop culture.",
+    "description2": "I was invited to join the project as a designer, taking care of visual communication and providing support in event production.",
+    "metrics": {
+      "audience": {
+        "title": "+ 1600 people in 2 presentations",
+        "subtitle": "Lights, Camera, Multiplayer! @ Cine Theatro Brasil"
+      },
+      "facebook": {
+        "title": "4.7k followers",
+        "subtitle": "Facebook"
+      },
+      "youtube": {
+        "title": "2.1k subscribers",
+        "subtitle": "YouTube"
+      }
     }
   }
 }

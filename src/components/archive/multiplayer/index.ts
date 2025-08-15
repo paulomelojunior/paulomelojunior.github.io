@@ -32,41 +32,41 @@ export class ArchMultiplayer extends LitElement {
   }
 
   render() {
+    const contentHtml = `
+      <p class="text-[.875rem]">
+        ${i18next.t('multiplayer.description1')}
+      </p>
+      <p class="mb-3 text-[.875rem]">
+        ${i18next.t('multiplayer.description2')}
+      </p>
+      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+          ${i18next.t('multiplayer.metrics.audience.title')}
+        </h3>
+        <p class="text-[.875rem] leading-none">${i18next.t('multiplayer.metrics.audience.subtitle')}</p>
+      </div>
+      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+          ${i18next.t('multiplayer.metrics.facebook.title')}
+        </h3>
+        <p class="text-[.875rem] leading-none">${i18next.t('multiplayer.metrics.facebook.subtitle')}</p>
+      </div>
+      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+          ${i18next.t('multiplayer.metrics.youtube.title')}
+        </h3>
+        <p class="text-[.875rem] leading-none">${i18next.t('multiplayer.metrics.youtube.subtitle')}</p>
+      </div>
+    `
+
     return html`
       <div id="multiplayer" class="grid grid-cols-3 gap-16 py-16">
         <item-header
-          title="Orquestra Multiplayer"
-          tags="Voluntário, Produção, Visual Design"
-          year="2017"
-        >
-          <p class="text-[.875rem]">
-            Criada por ex-alunos da Escola de Música da UFMG, a Multiplayer
-            explorava trilhas sonoras de séries, filmes e jogos em seu repertório,
-            ligando música erudita à cultura pop.
-          </p>
-          <p class="mb-3 text-[.875rem]">
-            Fui convidado a integrar o projeto como designer, cuidando da
-            comunicação visual e prestando suporte na produção dos eventos.
-          </p>
-          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              + 1600 pessoas em 2 apresentações
-            </h3>
-            <p class="text-[.875rem] leading-none">Luzes, Câmera, Multiplayer!  @ Cine Theatro Brasil</p>
-          </div>
-          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              4,7 mil seguidores
-            </h3>
-            <p class="text-[.875rem] leading-none">Facebook</p>
-          </div>
-          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              2,1 mil inscritos
-            </h3>
-            <p class="text-[.875rem] leading-none">YouTube</p>
-          </div>
-        </item-header>
+          title="${i18next.t('multiplayer.title')}"
+          tags="${i18next.t('multiplayer.tags')}"
+          year="${i18next.t('multiplayer.year')}"
+          .contentHtml=${contentHtml}
+        ></item-header>
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
           <img src="${s0}"/>
           <img src="${s1}"/>

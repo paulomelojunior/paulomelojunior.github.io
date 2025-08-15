@@ -143,7 +143,7 @@ export class CasesMenu extends ThemeMixin(LitElement) {
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a class="cta-button py-1.5 px-4 uppercase font-medium text-[.75rem] tracking-[0.05em]" href="/projects">
-                Selected works
+                ${i18next.t('featured.button')}
               </a>
               <div class="flex h-12 items-center justify-center px-1">
                 <lang-button

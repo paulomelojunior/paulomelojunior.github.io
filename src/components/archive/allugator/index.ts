@@ -28,37 +28,38 @@ export class ArchAllugator extends LitElement {
   }
 
   render() {
+    const contentHtml = `
+      <p class="mb-3 text-[.875rem]">
+        ${i18next.t('allugator.description')}
+      </p>
+      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+          ${i18next.t('allugator.metrics.valuation.title')}
+        </h3>
+        <p class="text-[.875rem] leading-none">${i18next.t('allugator.metrics.valuation.subtitle')}</p>
+      </div>
+      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+          ${i18next.t('allugator.metrics.users.title')}
+        </h3>
+        <p class="text-[.875rem] leading-none">${i18next.t('allugator.metrics.users.subtitle')}</p>
+      </div>
+      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+          ${i18next.t('allugator.metrics.daily.title')}
+        </h3>
+        <p class="text-[.875rem] leading-none">${i18next.t('allugator.metrics.daily.subtitle')}</p>
+      </div>
+    `
+
     return html`
       <div id="allugator" class="grid grid-cols-3 gap-16 py-16">
         <item-header
-          title="Allugator"
-          tags="Design Partner, Branding, Early stage start-up"
-          year="2018"
-        >
-          <p class="mb-3 text-[.875rem]">
-            Atuando como designer generalista, contribuí com entregas-chave para
-            o crescimento da startup em seu estágio inicial, da reformulação da
-            identidade e comunicação da marca à evolução do produto digital.
-          </p>
-          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              R$ 2.4 M valuation
-            </h3>
-            <p class="text-[.875rem] leading-none">EqSeed: 46 investidores em 2018</p>
-          </div>
-          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              + 7000 usuários novos
-            </h3>
-            <p class="text-[.875rem] leading-none">+ 100% em relação a 2017</p>
-          </div>
-          <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-            <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
-              + 1000 diárias em 2018
-            </h3>
-            <p class="text-[.875rem] leading-none">+ 100% em relação a 2017</p>
-          </div>
-        </item-header>
+          title="${i18next.t('allugator.title')}"
+          tags="${i18next.t('allugator.tags')}"
+          year="${i18next.t('allugator.year')}"
+          .contentHtml=${contentHtml}
+        ></item-header>
         <div class="col-span-2 grid grid-cols-3 gap-4 *:rounded-[.5rem]">
           <img src="${social4}" />
           <img src="${social2}" />

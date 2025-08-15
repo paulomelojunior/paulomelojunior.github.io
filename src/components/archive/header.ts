@@ -1,7 +1,7 @@
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-// import logo from './imgs/logo.svg'
+import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
 @customElement('archive-header')
 export class ArchiveHeader extends LitElement {
@@ -28,7 +28,7 @@ export class ArchiveHeader extends LitElement {
           <h1
             class="text-[2.5rem] h-14 leading-none tracking-[-0.05em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
           >
-            ${i18next.t('featured.title')}
+            ${unsafeHTML(i18next.t('featured.title'))}
           </h1>
         </div>
       </div>
