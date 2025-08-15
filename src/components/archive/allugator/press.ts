@@ -97,36 +97,42 @@ export class AlluPress extends LitElement {
               width="1728"
               height="976"
               class="relative rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press2}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press4}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press5}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press6}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press7}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press8}"
@@ -139,24 +145,28 @@ export class AlluPress extends LitElement {
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press10}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press11}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
             <img
               src="${press12}"
               width="1920"
               height="1080"
               class="invisible absolute left-0 top-0 rounded-[1rem]"
+              loading="lazy"
             />
           </div>
           <div class="absolute inset-0">

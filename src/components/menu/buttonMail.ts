@@ -10,7 +10,7 @@ export class MailButton extends LitElement {
 
   render() {
     const classList = classNames(
-      'hidden xl:flex px-4 gap-2 dark:text-zinc-50 tracking-[0.05em] text-[.75rem] uppercase items-center h-8 leading-[3.125rem] rounded-full whitespace-nowrap'
+      'hidden xl:flex px-4 gap-2 dark:text-zinc-50 tracking-[0.05em] text-[.75rem] uppercase items-center h-8 leading-[3.125rem] rounded-full whitespace-nowrap font-medium'
     )
 
     return html`<button class="menu-item group/item ${classList} relative">
@@ -18,7 +18,7 @@ export class MailButton extends LitElement {
         class="${classList} pointer-events-none absolute inset-0 justify-center"
         aria-hidden="true"
       >
-        <span class="font-medium text-zinc-950">
+        <span class="font-semibold text-zinc-950">
           ${this.hover ? this.hover : this.label}
         </span>
       </div>

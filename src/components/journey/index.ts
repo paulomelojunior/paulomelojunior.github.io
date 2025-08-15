@@ -109,10 +109,11 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] font-medium leading-none text-black"
+          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none text-black"
         >
-          ${this.lang === 'en' ? 'Download CV' : 'Baixar CV'}
+          ${this.lang === 'en' ? 'Resume' : 'Currículo'}
           <svg
+            alt="${this.lang === 'en' ? 'Download' : 'Baixar'}"
             width="20px"
             height="20px"
             stroke-width="2"

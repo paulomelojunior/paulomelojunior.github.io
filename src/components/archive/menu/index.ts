@@ -137,15 +137,16 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a
-                class="cta-button flex items-center gap-2 uppercase font-medium text-[.75rem] py-1.5 pe-2 tracking-[0.05em]"
+                class="cta-button flex items-center gap-2 uppercase font-semibold text-[.75rem] py-1.5 pe-2 tracking-[0.05em]"
                 href="/Paulo Melo Jr. - Currículo.pdf"
                 target="_blank"
               >
-                ${this.lang === 'en' ? 'Download CV' : 'Baixar CV'}
+                ${this.lang === 'en' ? 'Resume' : 'Currículo'}
                 <svg
+                  alt="${this.lang === 'en' ? 'Download' : 'Baixar'}"
                   width="20px"
                   height="20px"
-                  stroke-width="1.5"
+                  stroke-width="2"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -153,13 +154,13 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
                 >
                   <path
                     d="M12 13V22M12 22L15.5 18.5M12 22L8.5 18.5"
-                    stroke-width="1.5"
+                    stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>
                   <path
                     d="M20 17.6073C21.4937 17.0221 23 15.6889 23 13C23 9 19.6667 8 18 8C18 6 18 2 12 2C6 2 6 6 6 8C4.33333 8 1 9 1 13C1 15.6889 2.50628 17.0221 4 17.6073"
-                    stroke-width="1.5"
+                    stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>

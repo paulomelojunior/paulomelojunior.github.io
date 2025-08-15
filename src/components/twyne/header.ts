@@ -23,7 +23,7 @@ export class TwyneHeader extends LitElement {
 
   render() {
     return html`
-      <div class="flex flex-col items-start gap-2 px-14 py-16">
+      <div class="flex flex-col items-start gap-2 px-14 pt-12 pb-16">
         <span
           class="hidden rounded-full text-[.75rem] font-medium uppercase leading-none tracking-[0.05em] dark:text-zinc-500"
         >

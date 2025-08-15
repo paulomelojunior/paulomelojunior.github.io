@@ -1,3 +1,4 @@
+import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
@@ -70,10 +71,23 @@ export class MenuContainer extends ThemeMixin(LitElement) {
     }
   }
 
+  // firstUpdated() {
+  //   gsap.to(this.querySelector('header') as HTMLElement, {
+  //     scrollTrigger: {
+  //       trigger: 'h1',
+  //       start: 'bottom top',
+  //       toggleActions: 'play none none reverse',
+  //     },
+  //     duration: .4,
+  //     ease: 'none',
+  //     borderColor: 'hsla(0, 0%, 100%, 0.075)',
+  //   })
+  // }
+
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:fixed"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:fixed border-b border-transparent"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
@@ -123,7 +137,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </div>
           </nav>
           <div class="hidden xl:flex items-center justify-end gap-2">
-              <a class="cta-button py-1.5 px-4 uppercase font-medium text-[.75rem] tracking-[0.05em]" href="/projects">
+              <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="/projects">
                 ${i18next.t('featured.button')}
               </a>
               <div class="flex h-12 items-center justify-center px-1 xl:h-12">

@@ -68,17 +68,17 @@ export class ArchMultiplayer extends LitElement {
           .contentHtml=${contentHtml}
         ></item-header>
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
-          <img src="${s0}"/>
-          <img src="${s1}"/>
-          <img src="${s4}"/>
-          <img src="${s3}"/>
-          <img src="${s8}"/>
-          <img src="${s2}"/>
-          <img src="${s9}"/>
-          <img src="${s7}"/>
-          <img src="${s6}"/>
-          <img src="${s5}"/>
-          <img class="col-span-2" src="${p1}" />
+          <img src="${s0}" loading="lazy" />
+          <img src="${s1}" loading="lazy" />
+          <img src="${s4}" loading="lazy"/>
+          <img src="${s3}" loading="lazy"/>
+          <img src="${s8}" loading="lazy"/>
+          <img src="${s2}" loading="lazy"/>
+          <img src="${s9}" loading="lazy"/>
+          <img src="${s7}" loading="lazy"/>
+          <img src="${s6}" loading="lazy"/>
+          <img src="${s5}" loading="lazy"/>
+          <img class="col-span-2" src="${p1}" loading="lazy" />
         </div>
       </div>
     `

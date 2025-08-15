@@ -23,10 +23,10 @@ export class ArchiveHeader extends LitElement {
 
   render() {
     return html`
-      <div class="py-16 px-5">
+      <div class="pt-16 pb-8 px-5">
         <div class="flex items-center gap-6">
           <h1
-            class="text-[2.5rem] h-14 leading-none tracking-[-0.05em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
+            class="text-[2.5rem] leading-none tracking-[-0.05em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
           >
             ${unsafeHTML(i18next.t('featured.title'))}
           </h1>

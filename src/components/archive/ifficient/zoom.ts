@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import Lenis from 'lenis'
+import p1 from './assets/homepage.webp'
 
 @customElement('img-zoom')
 export class ImgZoom extends LitElement {
@@ -82,7 +83,7 @@ export class ImgZoom extends LitElement {
         class="zoom-overlay fixed inset-0 z-50 overflow-auto overscroll-contain bg-white/10 backdrop-blur-sm"
       >
         <div class="zoom-content container max-w-[1280px] my-24">
-          <img src="${this.src}" class="h-auto rounded-[.75rem]" />
+          <img src="${p1}" class="h-auto rounded-[.75rem]" loading="lazy" />
         </div>
       </div>
     `
