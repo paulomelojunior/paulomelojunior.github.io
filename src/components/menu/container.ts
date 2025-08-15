@@ -130,9 +130,11 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </ul>
             <div
               id="copy"
-              class="absolute flex h-12 w-full items-center justify-center bg-stone-300 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden dark:bg-zinc-950"
+              class="absolute flex h-12 w-full items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden bg-zinc-950"
             >
-              <span> Copyright 2025 Paulo Melo Jr. </span>
+              <span> [c] 2025 pmjr.cc </span>
+              <span class="text-zinc-600"> / </span>
+              <span> Made by a human being </span>
             </div>
           </nav>
           <div class="hidden xl:flex items-center justify-end gap-2">
