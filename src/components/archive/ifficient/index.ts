@@ -69,7 +69,7 @@ export class ArchIfficient extends LitElement {
           >
             <img id="ifficient-homepage" class="w-full" src="${p1}" />
             <div
-              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full py-3 px-5 text-[1rem] font-medium leading-[20px] text-white opacity-0 group-hover:opacity-100 transition-all backdrop-blur duration-200 bg-zinc-200/20 hover:bg-zinc-200/30"
+              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full py-3 px-5 text-[1rem] font-medium leading-[20px] text-white opacity-0 group-hover:opacity-100 transition-all backdrop-blur duration-200 bg-zinc-200/15 hover:bg-zinc-200/30"
             >
               ${i18next.t('ifficient.fullView')}
             </div>
