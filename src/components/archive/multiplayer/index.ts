@@ -1,17 +1,17 @@
 import i18next from '../../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import p1 from './assets/1.png'
-import s0 from './assets/social-0.png'
-import s1 from './assets/social-1.png'
-import s2 from './assets/social-2.png'
-import s3 from './assets/social-3.png'
-import s4 from './assets/social-4.png'
+import p1 from './assets/1.webp'
+import s0 from './assets/social-0.webp'
+import s1 from './assets/social-1.webp'
+import s2 from './assets/social-2.webp'
+import s3 from './assets/social-3.webp'
+import s4 from './assets/social-4.webp'
 import s5 from './assets/social-5.gif'
-import s6 from './assets/social-6.png'
-import s7 from './assets/social-7.png'
+import s6 from './assets/social-6.webp'
+import s7 from './assets/social-7.webp'
 import s8 from './assets/social-8.gif'
-import s9 from './assets/social-9.png'
+import s9 from './assets/social-5.webp'
 
 @customElement('arch-multiplayer')
 export class ArchMultiplayer extends LitElement {
@@ -70,12 +70,12 @@ export class ArchMultiplayer extends LitElement {
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
           <img src="${s0}" loading="lazy" />
           <img src="${s1}" loading="lazy" />
-          <img src="${s4}" loading="lazy"/>
           <img src="${s3}" loading="lazy"/>
+          <img src="${s4}" loading="lazy"/>
           <img src="${s8}" loading="lazy"/>
           <img src="${s2}" loading="lazy"/>
-          <img src="${s9}" loading="lazy"/>
           <img src="${s7}" loading="lazy"/>
+          <img src="${s9}" loading="lazy"/>
           <img src="${s6}" loading="lazy"/>
           <img src="${s5}" loading="lazy"/>
           <img class="col-span-2" src="${p1}" loading="lazy" />

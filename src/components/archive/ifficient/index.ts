@@ -2,9 +2,9 @@ import i18next from '../../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import p1 from './assets/homepage-preview.webp'
-import e1 from './assets/e1.png'
-import e2 from './assets/e2.png'
-import e3 from './assets/e3.png'
+import e1 from './assets/e1.webp'
+import e2 from './assets/e2.webp'
+import e3 from './assets/e3.webp'
 import './zoom'
 
 @customElement('arch-ifficient')
