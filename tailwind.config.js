@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'selector',
-  content: ['./*.html', './src/**/*.ts', './src/assets/js/*.js'],
+  content: ['./*.html', './src/**/*.ts', './src/assets/js/*.js', './src/language/*.json'],
   theme: {
     fontFamily: {
       sans: [

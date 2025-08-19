@@ -1,11 +1,11 @@
 import './allugator'
+import './damus'
 import './header'
 import './ifficient'
 import './item'
 import './menu'
 import './multiplayer'
 import './screens'
-
 import { html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
@@ -18,6 +18,10 @@ export class ArchiveTimeline extends ThemeMixin(LitElement) {
         <archive-header></archive-header>
         <div class="px-3">
           <arch-ifficient></arch-ifficient>
+          <div
+            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+          ></div>
+          <arch-damus></arch-damus>
           <div
             class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>

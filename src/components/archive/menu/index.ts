@@ -118,6 +118,12 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
               </li>
               <li class="flex-1">
                 <menu-item
+                  href="#damus"
+                  label="Damus"
+                ></menu-item>
+              </li>
+              <li class="flex-1">
+                <menu-item
                   href="#multiplayer"
                   label="Multiplayer"
                 ></menu-item>

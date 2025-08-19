@@ -9,6 +9,9 @@ i18next.use(LanguageDetector).init({
     order: ['navigator', 'htmlTag'],
     caches: ['localStorage'],
   },
+  interpolation: {
+    escapeValue: false,
+  },
   resources: {
     en: { translation: en },
     pt: { translation: pt },
