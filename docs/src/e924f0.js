@@ -288,14 +288,14 @@ var dh=Object.defineProperty;var hh=(s,e,t)=>e in s?dh(s,e,{enumerable:!0,config
               </li>
               <li class="flex-1">
                 <menu-item
-                  href="#allugator"
-                  label="Allugator"
+                  href="#damus"
+                  label="Damus"
                 ></menu-item>
               </li>
               <li class="flex-1">
                 <menu-item
-                  href="#damus"
-                  label="Damus"
+                  href="#allugator"
+                  label="Allugator"
                 ></menu-item>
               </li>
               <li class="flex-1">
