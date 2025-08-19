@@ -233,7 +233,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};os([B({type:String})],ei.prototype,"title",2);os([B({type:String})],ei.prototype,"tags",2);os([B({type:String})],ei.prototype,"year",2);os([B({type:String})],ei.prototype,"contentHtml",2);ei=os([ue("item-header")],ei);class w0{constructor(){this._dark=!0,this.listeners=new Set}get dark(){return this._dark}set dark(e){this._dark=e,document.documentElement.classList.toggle("dark",e),localStorage.setItem("theme",e?"dark":"light"),this.notifyListeners()}toggle(){this.dark=!this.dark}subscribe(e){this.listeners.add(e)}unsubscribe(e){this.listeners.delete(e)}notifyListeners(){this.listeners.forEach(e=>{e.requestUpdate()})}init(){const e=localStorage.getItem("theme");e&&(this._dark=e==="dark"),document.documentElement.classList.toggle("dark",this._dark)}}const mi=new w0,xr=s=>class extends s{connectedCallback(){super.connectedCallback(),mi.subscribe(this)}disconnectedCallback(){super.disconnectedCallback(),mi.unsubscribe(this)}get dark(){return mi.dark}set dark(e){mi.dark=e}toggleTheme(){mi.toggle()}},S0="/src/bf8bfa.png";var E0=Object.defineProperty,$0=Object.getOwnPropertyDescriptor,bl=(s,e,t,n)=>{for(var r=n>1?void 0:n?$0(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&E0(e,t,r),r};let uo=class extends xr(re){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}getPreviousPage(){window.location.href="/"}render(){return Y`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-black xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-t from-black backdrop-blur to-black/80 xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -256,7 +256,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
             ></mail-button>
           </div>
           <nav>
-            <ul id="anchors" class="flex justify-evenly">
+            <ul id="anchors" class="flex justify-evenly px-5 xl:px-10">
               <li class="flex-1">
                 <menu-item
                   href="#ifficient"
@@ -709,7 +709,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       </section>
     `}createRenderRoot(){return this}};Zd([B({type:String})],Aa.prototype,"lang",2);Aa=Zd([ue("hero-section")],Aa);var um=Object.defineProperty,cm=Object.getOwnPropertyDescriptor,Qd=(s,e,t,n)=>{for(var r=n>1?void 0:n?cm(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&um(e,t,r),r};let La=class extends xr(re){constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language,this.updateJourneyContent()}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}updateJourneyContent(){const s=document.querySelector("#job");if(!s)return;s.innerHTML="";const e=this.getJourneyItems(),t=Object.values(e),n=this.createJourneyHeader();s.insertAdjacentHTML("beforeend",n),t.forEach(r=>{const i=this.createJourneyItemHTML(r);s.insertAdjacentHTML("beforeend",i)})}getJourneyItems(){return{1:{hide:!1,custom:"text-brand-400",start:"2019",end:"2025",title:_.t("journey.t4"),description:_.t("journey.p4"),more:void 0},2:{hide:!1,start:"2018",end:"2019",title:_.t("journey.t3"),description:_.t("journey.p3"),more:_.t("journey.m3"),custom:void 0},3:{hide:!1,start:"2016",end:"2018",title:_.t("journey.t2"),description:_.t("journey.p2"),more:_.t("journey.m2"),custom:void 0},4:{hide:!0,start:"2015",end:"2016",title:_.t("journey.t1"),description:_.t("journey.p1"),custom:void 0,more:void 0}}}createJourneyHeader(){return`
       <h2
-        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200 px-5 xl:px-20 2xl:px-32"
+        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] text-zinc-200 px-5 xl:px-20 2xl:px-32"
       >
         ${_.t("journey.t0")}
       </h2>
@@ -717,7 +717,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none text-black"
+          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none"
         >
           ${this.lang==="en"?"Resume":"Currículo"}
           <svg
@@ -799,7 +799,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       ${this.label}
     </a>`}createRenderRoot(){return this}};bo([B({type:String})],ts.prototype,"classNames",2);bo([B({type:String})],ts.prototype,"href",2);bo([B({type:String})],ts.prototype,"label",2);ts=bo([ue("menu-item")],ts);var gm=Object.defineProperty,mm=Object.getOwnPropertyDescriptor,xl=(s,e,t,n)=>{for(var r=n>1?void 0:n?mm(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&gm(e,t,r),r};let co=class extends xr(re){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}render(){return Y`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:fixed border-b border-transparent"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-gradient-to-t from-black backdrop-blur to-black/80 xl:fixed border-b border-transparent"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
@@ -812,7 +812,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
             hover="${this.lang==="en"?"Click to copy":"Copiar e-mail"}"
           ></mail-button>
           <nav>
-            <ul id="anchors" class="flex justify-end px-0 xl:px-8">
+            <ul id="anchors" class="flex justify-end px-0 xl:px-20">
               <li class="flex-1">
                 <menu-item
                   href="#section-praxis"
@@ -1186,7 +1186,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};sh([B({type:String})],Ba.prototype,"lang",2);Ba=sh([ue("twyne-impact")],Ba);const Mm="/src/bf8bfa.png";var Rm=Object.defineProperty,zm=Object.getOwnPropertyDescriptor,Cl=(s,e,t,n)=>{for(var r=n>1?void 0:n?zm(e,t):e,i=s.length-1,o;i>=0;i--)(o=s[i])&&(r=(n?o(e,t,r):o(r))||r);return n&&r&&Rm(e,t,r),r};let ho=class extends xr(re){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}getPreviousPage(){window.history.length>1?window.history.back():window.location.href="/"}render(){return Y`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-black xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-t from-black backdrop-blur to-black/80 xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -1232,13 +1232,6 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
                 <menu-item
                   href="#mobile"
                   label="${_.t("twyne.menu.mobile")}"
-                ></menu-item>
-              </li>
-              
-              <li class="flex-1">
-                <menu-item
-                  href="#conclusion"
-                  label="${_.t("twyne.menu.conclusion")}"
                 ></menu-item>
               </li>
             </ul>
@@ -1295,7 +1288,7 @@ var uh=Object.defineProperty;var ch=(s,e,t)=>e in s?uh(s,e,{enumerable:!0,config
       >
         ${s.map(e=>Y`
             <li
-              class="flex items-center gap-4 before:text-[1rem] before:text-brand-400 before:content-['✦']"
+              class="flex items-center gap-4 before:text-[1rem] before:text-zinc-700 before:content-['✦']"
             >
               ${e}
             </li>

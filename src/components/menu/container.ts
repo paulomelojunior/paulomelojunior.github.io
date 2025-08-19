@@ -86,7 +86,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:fixed border-b border-transparent"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-gradient-to-t from-black backdrop-blur to-black/80 xl:fixed border-b border-transparent"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
@@ -99,7 +99,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
           ></mail-button>
           <nav>
-            <ul id="anchors" class="flex justify-end px-0 xl:px-8">
+            <ul id="anchors" class="flex justify-end px-0 xl:px-20">
               <li class="flex-1">
                 <menu-item
                   href="#section-praxis"

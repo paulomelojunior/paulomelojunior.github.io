@@ -101,7 +101,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
   private createJourneyHeader(): string {
     return `
       <h2
-        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200 px-5 xl:px-20 2xl:px-32"
+        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] text-zinc-200 px-5 xl:px-20 2xl:px-32"
       >
         ${i18next.t('journey.t0')}
       </h2>
@@ -109,7 +109,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none text-black"
+          class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none"
         >
           ${this.lang === 'en' ? 'Resume' : 'Currículo'}
           <svg

@@ -80,7 +80,7 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
 
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-black xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-t from-black backdrop-blur to-black/80 xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -103,7 +103,7 @@ export class ArchiveMenu extends ThemeMixin(LitElement) {
             ></mail-button>
           </div>
           <nav>
-            <ul id="anchors" class="flex justify-evenly">
+            <ul id="anchors" class="flex justify-evenly px-5 xl:px-10">
               <li class="flex-1">
                 <menu-item
                   href="#ifficient"
