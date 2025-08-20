@@ -152,7 +152,7 @@
   },
   "damus": {
     "title": "Damus",
-    "tags": "Rebranding proposal, Graphic design, Concept",
+    "tags": "Experiment, Rebranding, Graphic design",
     "year": "2024",
     "description1": "<a href='https://damus.io/' rel='noreferrer noopener' class='underline text-zinc-200' target='_blank' title='Damus official website'>Damus</a> is a client for the decentralized social network Nostr, available for iOS, iPad, and macOS. It allows users to post text, images, videos, and GIFs, as well as interact with other users through the sending of <a href='https://en.wikipedia.org/wiki/Satoshi' class='underline text-zinc-200' target='_blank' title='Satoshi is the smallest unit of the system, representing 0.00000001 bitcoin, a hundredth of a millionth of a bitcoin.'>satoshis</a> and encrypted private messages.",
     "description2": "The goal of Damus is to offer an alternative to traditional social networks, focusing on freedom of expression and privacy."
