@@ -27,7 +27,7 @@
     "t1": "Design no pensar.",
     "p1": "Do insight à interface, projeto com foco nas pessoas. Unindo estética, propósito e tecnologia de ponta por meio do Design Thinking e Human-Centered Design.",
     "t2": "Tecnologia para realizar.",
-    "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, unindo design e engenharia para criar experiências refinadas."
+    "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, assim conecto design e engenharia para criar experiências refinadas."
   },
   "journey": {
     "t0": "Jornada",
@@ -185,6 +185,30 @@
         "title": "2,1 mil inscritos",
         "subtitle": "YouTube"
       }
+    }
+  },
+  "seo": {
+    "common": {
+      "description": "Entusiasta de tecnologias descentralizadas, Paulo é designer e coder do Brasil. Aqui você encontra links para se conectar com ele.",
+      "keywords": "Paulo Melo Júnior, Paulo Melo Jr, Paul M, pmjr, designer de produto digital, product designer, designer de interface, UI/UX, UX designer, UI designer, creative coder, front-end, frontend, web design, design system, GSAP, animações, motion design, branding, portfólio, Brasil, São Paulo, tecnologias descentralizadas, bitcoin, nostr"
+    },
+    "home": {
+      "title": "Paulo Melo Jr. ✦ Designer de Produto Digital"
+    },
+    "projects": {
+      "title": "Projetos — Paulo Melo Jr.",
+      "keywords": "arquivo, projetos, cases"
+    },
+    "glyphs": {
+      "title": "Glifos — pmjr.cc",
+      "keywords": "glifos, símbolos, caracteres especiais, unicode, copiar símbolos, ícones"
+    },
+    "twyne": {
+      "title": "Twyne — Estudo de Caso",
+      "keywords": "twyne, estudo de caso, app social, nostr, design de produto, ui/ux, onboarding, notificações, feed, mobile, web"
+    },
+    "404": {
+      "title": "Página não encontrada ✦ 404"
     }
   }
 }
