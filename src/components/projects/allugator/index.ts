@@ -9,8 +9,8 @@ import social4 from './assets/social-4.webp'
 import social5 from './assets/social-5.webp'
 import social6 from './assets/social-6.webp'
 
-@customElement('arch-allugator')
-export class ArchAllugator extends LitElement {
+@customElement('projects-allugator')
+export class ProjectsAllugator extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   connectedCallback() {

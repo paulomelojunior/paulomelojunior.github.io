@@ -10,26 +10,26 @@ import { html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
 
-@customElement('archive-index')
-export class ArchiveTimeline extends ThemeMixin(LitElement) {
+@customElement('projects-index')
+export class ProjectsIndex extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section class="container pt-12">
-        <archive-header></archive-header>
+        <projects-header></projects-header>
         <div class="px-3">
-          <arch-ifficient></arch-ifficient>
+          <projects-ifficient></projects-ifficient>
           <div
             class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
-          <arch-damus></arch-damus>
+          <projects-damus></projects-damus>
           <div
             class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
-          <arch-allugator></arch-allugator>
+          <projects-allugator></projects-allugator>
           <div
             class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
-          <arch-multiplayer></arch-multiplayer>
+          <projects-multiplayer></projects-multiplayer>
           <div
             class="mt-16 mb-32 h-px w-full bg-gradient-to-r bg-transparent"
           ></div>

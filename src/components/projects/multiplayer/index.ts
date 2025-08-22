@@ -13,8 +13,8 @@ import s7 from './assets/social-7.webp'
 import s8 from './assets/social-8.gif'
 import s9 from './assets/social-5.webp'
 
-@customElement('arch-multiplayer')
-export class ArchMultiplayer extends LitElement {
+@customElement('projects-multiplayer')
+export class ProjectsMultiplayer extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   connectedCallback() {

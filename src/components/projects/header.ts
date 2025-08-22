@@ -3,8 +3,8 @@ import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
-@customElement('archive-header')
-export class ArchiveHeader extends LitElement {
+@customElement('projects-header')
+export class ProjectsHeader extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   connectedCallback() {

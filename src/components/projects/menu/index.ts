@@ -4,8 +4,8 @@ import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../../store/theme'
 import goBack from './go-back.png'
 
-@customElement('archive-menu')
-export class ArchiveMenu extends ThemeMixin(LitElement) {
+@customElement('projects-menu')
+export class ProjectsMenu extends ThemeMixin(LitElement) {
   @property({ type: Boolean }) more = false
   @property({ type: String }) lang = i18next.language
 

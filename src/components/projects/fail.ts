@@ -2,8 +2,8 @@ import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-@customElement('archive-fail')
-export class ArchiveFail extends LitElement {
+@customElement('projects-fail')
+export class ProjectsFail extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   connectedCallback() {

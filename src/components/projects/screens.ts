@@ -3,8 +3,8 @@ import i18next from '../../i18n'
 import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-@customElement('archive-screens')
-export class ArchiveScreens extends LitElement {
+@customElement('projects-screens')
+export class ProjectsScreens extends LitElement {
   @property({ type: String }) lang = i18next.language
   @property({ type: Number }) currentIndex: number = 0
   @property({ type: Array }) screens: NodeListOf<HTMLImageElement> =

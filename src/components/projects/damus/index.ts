@@ -7,8 +7,8 @@ import pic3 from './assets/3.webp'
 import pic4 from './assets/4.webp'
 import pic5 from './assets/5.webp'
 
-@customElement('arch-damus')
-export class ArchDamus extends LitElement {
+@customElement('projects-damus')
+export class ProjectsDamus extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   connectedCallback() {
