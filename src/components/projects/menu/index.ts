@@ -80,7 +80,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
 
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-t from-black backdrop-blur to-black/80 xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-b from-black backdrop-blur to-black/80 backdrop-saturate-200 xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">

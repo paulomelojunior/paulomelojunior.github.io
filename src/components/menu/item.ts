@@ -57,7 +57,7 @@ export class MenuItem extends LitElement {
     )
 
     const fxClasses = classNames(
-      'absolute flex items-center justify-center inset-0 text-zinc-950'
+      'absolute flex items-center justify-center inset-0 text-white'
     )
 
     return html`<a

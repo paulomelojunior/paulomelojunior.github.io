@@ -1,6 +1,5 @@
 .menu-item > div {
-  @apply bg-[linear-gradient(to_bottom,_theme('colors.stone.900')_50%,_#DE6868_50%)]
-    dark:bg-[linear-gradient(to_bottom,_theme('colors.zinc.200')_50%,_theme('colors.brand.400')_50%)];
+  @apply bg-[linear-gradient(to_bottom,_theme('colors.zinc.900')_50%,_theme('colors.brand.400')_50%)];
 
   background-size: 100% 200%;
   background-position: 0% 100%;

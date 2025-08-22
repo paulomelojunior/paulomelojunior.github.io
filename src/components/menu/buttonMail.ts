@@ -18,7 +18,7 @@ export class MailButton extends LitElement {
         class="${classList} pointer-events-none absolute inset-0 justify-center"
         aria-hidden="true"
       >
-        <span class="font-semibold text-zinc-950">
+        <span class="font-semibold text-white">
           ${this.hover ? this.hover : this.label}
         </span>
       </div>
