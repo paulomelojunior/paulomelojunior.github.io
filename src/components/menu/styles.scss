@@ -19,3 +19,66 @@
 .menu-item:active > div {
   filter: brightness(0.9);
 }
+
+.menu-toggle {
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  span {
+      line-height: 3rem;
+      transition: 0.2s cubic-bezier(0.75, 0, 0.5, 1);
+      visibility: hidden;
+      opacity: 0;
+      display: grid;
+  }
+  &:hover {
+      span {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(calc(-100% - 1rem));
+      }
+
+      &:after,
+      &:before {
+        width: 100%;
+        top: calc(50% - 1px);
+      }
+  }
+  &:after,
+  &:before {
+      background: currentColor;
+      content: '';
+      height: 2px;
+      position: absolute;
+      right: 0;
+      transition: 0.2s cubic-bezier(0.75, 0, 0.5, 1);
+  }
+  &:after {
+      top: calc(60% - 1px);
+      width: 50%;
+  }
+  &:before {
+      top: calc(40% - 1px);
+      width: 50%;
+  }
+  &--close {
+      span {
+          color: transparent;
+      }
+      &:after,
+      &:before {
+          top: calc(50% - 1px);
+          width: 60%;
+          right: 40%;
+          background: var(--gray);
+      }
+
+      &:after {
+          transform: rotate(-135deg);
+      }
+
+      &:before {
+          transform: rotate(-225deg);
+      }
+  }
+}

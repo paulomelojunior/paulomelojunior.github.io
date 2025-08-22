@@ -2,6 +2,7 @@ import i18next from '../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
+import home from './home.png'
 
 @customElement('menu-container')
 export class MenuContainer extends ThemeMixin(LitElement) {
@@ -86,39 +87,49 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-gradient-to-b from-black backdrop-blur to-black/80 backdrop-saturate-200 xl:fixed border-b border-transparent"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:bg-gradient-to-b xl:from-black xl:backdrop-blur xl:to-black/80 xl:fixed"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
         ></div>
-        <div class="container grid items-center xl:grid-cols-3">
+        <div class="container grid items-center grid-cols-2 xl:grid-cols-3">
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
             label="hello@pmjr.cc"
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
+            class="hidden xl:flex"
           ></mail-button>
+          <div
+            class="flex size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950 xl:hidden"
+          >
+            <img
+              src="${home}"
+              class="transition-opacity duration-500"
+              title="Back to homepage"
+            />
+          </div>
           <nav>
             <ul id="anchors" class="flex justify-end px-0 xl:px-20">
-              <li class="flex-1">
+              <li class="hidden flex-1 xl:flex">
                 <menu-item
                   href="#section-praxis"
                   label="${i18next.t('menu.praxis')}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li class="hidden flex-1 xl:flex">
                 <menu-item
                   href="#section-journey"
                   label="${i18next.t('menu.journey')}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li class="hidden flex-1 xl:flex">
                 <menu-item
                   href="#section-connect"
                   label="${i18next.t('menu.connect')}"
                 ></menu-item>
               </li>
-              <li class="flex items-center pe-4 xl:hidden">
+              <li class="hidden items-center pe-4 xl:flex">
                 <lang-button
                   @click=${() => this.changeLang()}
                   label=${this.lang === 'pt' ? `POR` : `ENG`}
@@ -127,30 +138,37 @@ export class MenuContainer extends ThemeMixin(LitElement) {
                     : 'Change to english'}"
                 ></lang-button>
               </li>
+              <li class="flex items-center pe-4 xl:hidden">
+                <button class="menu-toggle">
+                  <span>
+                    menu
+                  </span>
+                </button>
+              </li>
             </ul>
-            <div
-              id="copy"
-              class="absolute flex h-12 w-full items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden bg-zinc-950"
-            >
-              <span> [c] 2025 pmjr.cc </span>
-              <span class="text-zinc-600"> / </span>
-              <span> Made by a human being </span>
-            </div>
           </nav>
+          <div
+            id="copy"
+            class="absolute grid-span-2 translate-y-full flex h-12 w-full items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden bg-zinc-950"
+          >
+            <span> [c] 2025 pmjr.cc </span>
+            <span class="text-zinc-600"> / </span>
+            <span> Made by a human being </span>
+          </div>
           <div class="hidden xl:flex items-center justify-end gap-2">
-              <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="/projects">
-                ${i18next.t('featured.button')}
-              </a>
-              <div class="flex h-12 items-center justify-center px-1 xl:h-12">
-                <lang-button
-                  @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
-                  title="${this.lang === 'en'
-                    ? 'Mudar para português'
-                    : 'Change to english'}"
-                ></lang-button>
-              </div>
+            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="/projects">
+              ${i18next.t('featured.button')}
+            </a>
+            <div class="flex h-12 items-center justify-center px-1 xl:h-12">
+              <lang-button
+                @click=${() => this.changeLang()}
+                label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                title="${this.lang === 'en'
+                  ? 'Mudar para português'
+                  : 'Change to english'}"
+              ></lang-button>
             </div>
+          </div>
         </div>
       </header>
     `
