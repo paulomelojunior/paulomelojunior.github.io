@@ -49,13 +49,6 @@
     />
 
     <link rel="icon" href="favicon.png" />
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Critical resource hints -->
-    <link rel="preconnect" href="https://cloud.umami.is" crossorigin />
-    <link rel="dns-prefetch" href="https://cloud.umami.is" />
-    
-    <!-- Preload critical fonts -->
     <link
       rel="preload"
       href="/src/f15787.woff2"
@@ -69,37 +62,15 @@
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
-    />
-    
-    <!-- Prefetch home page -->
-    <link rel="prefetch" href="/src/ddeee9.html" />
-    <link rel="prefetch" href="/src/bcf44b.html" />
-    
+    />
 
     <script
       defer
       src="https://cloud.umami.is/script.js"
       data-website-id="d44e261f-79ca-4f11-8d2c-954a118de644"
     ></script>
-    
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
-      }
-    </script>
-    <script type="module" crossorigin src="/src/a52d4d.js"></script>
-    <script type="module" crossorigin src="/src/a3a601.js"></script>
-    <script type="module" crossorigin src="/src/6dcd26.js"></script>
-    <link rel="stylesheet" crossorigin href="/src/7908cc.css">
+    <script type="module" crossorigin src="/src/1b744f.js"></script>
+    <link rel="stylesheet" crossorigin href="/src/260ca3.css">
   </head>
 
   <body class="relative">

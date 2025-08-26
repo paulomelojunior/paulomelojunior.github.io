@@ -14,25 +14,6 @@
   src: url('../fonts/geist-mono.woff2') format('woff2');
 }
 
-/* Critical CSS - above the fold styles */
-@layer critical {
-  html {
-    font-family: 'Mona Sans', sans-serif;
-    line-height: 1.5;
-    -webkit-text-size-adjust: 100%;
-    -moz-tab-size: 4;
-    tab-size: 4;
-  }
-  
-  body {
-    margin: 0;
-    background-color: #000;
-    color: #a1a1aa;
-    font-family: inherit;
-    line-height: inherit;
-  }
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

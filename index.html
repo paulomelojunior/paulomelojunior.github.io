@@ -49,13 +49,7 @@
     />
 
     <link rel="icon" href="favicon.png" />
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Critical resource hints -->
     <link rel="preconnect" href="https://cloud.umami.is" crossorigin />
-    <link rel="dns-prefetch" href="https://cloud.umami.is" />
-    
-    <!-- Preload critical fonts -->
     <link
       rel="preload"
       href="/src/assets/fonts/mona.woff2"
@@ -70,35 +64,12 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    
-    <!-- Preload critical images -->
-    <link rel="preload" href="/src/components/hero/profile-1x.webp" as="image" type="image/webp" />
-    
-    <!-- Prefetch next page resources -->
-    <link rel="prefetch" href="/projects.html" />
-    <link rel="prefetch" href="/twyne.html" />
     <script
       defer
       src="https://cloud.umami.is/script.js"
       data-website-id="d44e261f-79ca-4f11-8d2c-954a118de644"
     ></script>
-    
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
-      }
-    </script>
-    
-    <link rel="stylesheet" href="/src/assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/src/assets/scss/main.css" type="text/css" />
     <script type="module" src="src/main.ts"></script>
   </head>
   <body class="relative">
