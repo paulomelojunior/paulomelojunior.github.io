@@ -71,19 +71,6 @@ export class MenuContainer extends ThemeMixin(LitElement) {
     }
   }
 
-  // firstUpdated() {
-  //   gsap.to(this.querySelector('header') as HTMLElement, {
-  //     scrollTrigger: {
-  //       trigger: 'h1',
-  //       start: 'bottom top',
-  //       toggleActions: 'play none none reverse',
-  //     },
-  //     duration: .4,
-  //     ease: 'none',
-  //     borderColor: 'hsla(0, 0%, 100%, 0.075)',
-  //   })
-  // }
-
   render() {
     return html`
       <header
@@ -111,19 +98,19 @@ export class MenuContainer extends ThemeMixin(LitElement) {
           </div>
           <nav>
             <ul id="anchors" class="flex justify-end px-0 xl:px-20">
-              <li class="flex-1 xl:flex">
+              <li class="flex-1">
                 <menu-item
                   href="#section-praxis"
                   label="${i18next.t('menu.praxis')}"
                 ></menu-item>
               </li>
-              <li class="flex-1 xl:flex">
+              <li class="flex-1">
                 <menu-item
                   href="#section-journey"
                   label="${i18next.t('menu.journey')}"
                 ></menu-item>
               </li>
-              <li class="flex-1 xl:flex">
+              <li class="flex-1">
                 <menu-item
                   href="#section-connect"
                   label="${i18next.t('menu.connect')}"

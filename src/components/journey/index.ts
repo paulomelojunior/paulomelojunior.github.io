@@ -149,7 +149,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <span class="font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-500 mb-2">
           ${item.start} &bull; <span${customClass}>${item.end}</span>
         </span>
-        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-stone-900">
+        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-brand-900">
           ${item.title}
         </h2>
         <p class="text-sm/loose 2xl:text-base/loose text-pretty">
@@ -177,7 +177,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-journey">
         <div
-          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] xl:py-24 2xl:py-32 dark:bg-[linear-gradient(theme('colors.black'),theme('colors.black')_100%)]"
+          class="xl:py-24 2xl:py-32 bg-[linear-gradient(var(--color-black),var(--color-black)_100%)]"
         >
           <div
             id="job"

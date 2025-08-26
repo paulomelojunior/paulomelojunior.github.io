@@ -1,11 +1,15 @@
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
+  plugins: [
+    tailwindcss({
+      content: ['./*.html', './src/**/*.ts', './src/language/*.json'],
+    })
+  ],
   esbuild: {
     loader: 'ts',
     include: /\.ts$/,
-    drop: command === 'build' ? ['console', 'debugger'] : undefined,
-    legalComments: command === 'build' ? 'none' : 'eof',
   },
   build: {
     outDir: 'docs',
@@ -34,4 +38,4 @@ export default defineConfig(({ command }) => ({
     port: 2121,
     open: true,
   },
-}))
+})

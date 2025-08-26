@@ -32,7 +32,7 @@ export class TwyneHeader extends LitElement {
         <div class="flex items-center gap-6">
           <img src="${logo}" class="h-14 border-r border-zinc-900 pr-6" />
           <h1
-            class="h-14 text-[2.5rem] leading-none tracking-[-0.04em] text-stone-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
+            class="h-14 text-[2.5rem] leading-none tracking-[-0.04em] text-brand-950 xl:text-[3rem] 2xl:text-[4rem] dark:text-zinc-200"
           >
             ${i18next.t('twyne.t2')}
           </h1>

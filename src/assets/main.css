@@ -3,7 +3,7 @@
   font-weight: 200 900;
   font-display: swap;
   font-style: normal;
-  src: url('../fonts/mona.woff2') format('woff2');
+  src: url('fonts/mona.woff2') format('woff2');
 }
 
 @font-face {
@@ -11,12 +11,31 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  src: url('../fonts/geist-mono.woff2') format('woff2');
+  src: url('fonts/geist-mono.woff2') format('woff2');
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Mona Sans', sans-serif;
+  --font-sans--font-feature-settings: "ss01";
+
+  --font-mono: 'Geist Mono', monospace;
+
+  --color-brand-100: oklch(.9 .16 264);
+  --color-brand-200: oklch(.8 .16 264);
+  --color-brand-300: oklch(.7 .16 264);
+  --color-brand-400: oklch(.6 .16 264);
+  --color-brand-500: oklch(.5 .16 264);
+  --color-brand-600: oklch(.4 .16 264);
+  --color-brand-700: oklch(.3 .16 264);
+  --color-brand-800: oklch(.2 .16 264);
+  --color-brand-900: oklch(.1 .16 264);
+}
+
+@utility container {
+  margin-inline: auto;
+}
 
 @layer base {
   ::selection {
@@ -48,9 +67,9 @@
 
   /* Body */
   body {
-    @apply bg-stone-200
+    @apply bg-brand-200
       pt-[env(safe-area-inset-top)]
-      text-stone-600
+      text-brand-600
       dark:bg-black
       dark:text-zinc-400;
   }
@@ -67,7 +86,7 @@
       z-50
       h-full
       w-full
-      bg-[url('../imgs/noise.avif')]
+      bg-[url('imgs/noise.avif')]
       bg-[length:216px_auto]
       bg-left-top
       bg-repeat
@@ -81,7 +100,7 @@
   
   .hero::before {
     position: absolute;
-    background: url('../imgs/pattern-light.svg');
+    background: url('imgs/pattern-light.svg');
     content: '';
     height: 100vh;
     top: -2px;
@@ -104,7 +123,7 @@
   
   @media (prefers-color-scheme: dark) {
     .hero::before {
-      background-image: url('../imgs/pattern.svg');
+      background-image: url('imgs/pattern.svg');
     }
   }
 
@@ -120,7 +139,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../imgs/pattern.svg');
+    background-image: url('imgs/pattern.svg');
     background-repeat: repeat;
     background-position: top right;
     mask-image: radial-gradient(
@@ -137,7 +156,7 @@
   }
   
   .mob-cases-content::before {
-    background-image: url('../imgs/pattern.svg');
+    background-image: url('imgs/pattern.svg');
     background-position: top center;
     background-repeat: repeat;
     content: '';
@@ -164,10 +183,10 @@
     background-image: linear-gradient(
       to bottom,
       theme('colors.white') 25%,
-      theme('colors.brand.400') 25%,
-      theme('colors.brand.400') 50%,
-      theme('colors.brand.400') 50%,
-      theme('colors.brand.400') 75%,
+      var(--color-brand-400) 25%,
+      var(--color-brand-400) 50%,
+      var(--color-brand-400) 50%,
+      var(--color-brand-400) 75%,
       theme('colors.zinc.800') 75%
     );
     background-size: 100% 400%;
@@ -201,7 +220,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    background-image: url('../imgs/pattern.svg');
+    background-image: url('imgs/pattern.svg');
     background-attachment: fixed;
     mask-image: radial-gradient(circle at bottom, white, black 50%);
     mask-mode: luminance;
@@ -218,7 +237,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    background-image: url('../imgs/pattern.svg');
+    background-image: url('imgs/pattern.svg');
     background-attachment: fixed;
     mask-image: radial-gradient(circle at bottom, white, black 50%);
     mask-mode: luminance;
@@ -256,7 +275,7 @@
 
   /* Menu */
   .menu-item > div {
-    @apply bg-[linear-gradient(to_bottom,_theme('colors.zinc.200')_50%,_theme('colors.brand.400')_50%)];
+    @apply bg-[linear-gradient(to_bottom,_var(--color-zinc-200)_50%,_var(--color-brand-400)_50%)];
     background-size: 100% 200%;
     background-position: 0% 100%;
     transition:
@@ -350,7 +369,7 @@
   }
 
   .praxis svg {
-    @apply fill-[#DE686800] dark:fill-brand-400/0;
+    @apply fill-brand-400/0;
   }
 
   /* Marquee */
