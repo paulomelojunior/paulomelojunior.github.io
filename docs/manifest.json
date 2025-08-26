@@ -1,0 +1,61 @@
+{
+  "name": "Paulo Melo Jr. - Designer de Produto Digital",
+  "short_name": "Paulo Jr.",
+  "description": "Enthusiast of decentralized technologies, Paul is a designer and coder from Brazil.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4d88ff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["design", "portfolio", "business"],
+  "screenshots": [
+    {
+      "src": "/cover.jpg",
+      "sizes": "1200x675",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projetos",
+      "short_name": "Projetos",
+      "description": "Ver portfolio de projetos",
+      "url": "/projects",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Twyne Case Study",
+      "short_name": "Twyne",
+      "description": "Ver case study do Twyne",
+      "url": "/twyne",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
