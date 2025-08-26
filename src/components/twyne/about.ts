@@ -42,10 +42,10 @@ export class TwyneAbout extends LitElement {
   render() {
     return html` <div
       id="about"
-      class="relative grid grid-cols-2 overflow-hidden rounded-[2rem] bg-gradient-to-b from-zinc-950"
+      class="relative grid grid-cols-2 overflow-hidden rounded-4xl bg-linear-to-b from-zinc-950"
     >
       <div
-        class="absolute h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+        class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
       ></div>
       <div class="flex flex-col xl:p-16">
         <p class="text-default mb-4 text-balance -mt-2">
@@ -94,7 +94,7 @@ export class TwyneAbout extends LitElement {
           class="absolute left-16 top-16 max-w-none flex-none rounded-ss-lg border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
         />
         <progressive-blur
-          class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent"
+          class="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black to-transparent"
         ></progressive-blur>
       </div>
     </div>`

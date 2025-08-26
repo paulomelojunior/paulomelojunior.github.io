@@ -3,87 +3,87 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
 \f\r"'\`<>=]|("|')|))|$)`,"g"),Yu=/'/g,Xu=/"/g,Gd=/^(?:script|style|textarea|title)$/i,Gg=s=>(e,...t)=>({_$litType$:s,strings:e,values:t}),V=Gg(1),xn=Symbol.for("lit-noChange"),ze=Symbol.for("lit-nothing"),Gu=new WeakMap,ln=Dn.createTreeWalker(Dn,129);function Kd(s,e){if(!wl(s)||!s.hasOwnProperty("raw"))throw Error("invalid template strings array");return Vu!==void 0?Vu.createHTML(e):e}const Kg=(s,e)=>{const t=s.length-1,i=[];let n,r=e===2?"<svg>":e===3?"<math>":"",o=_r;for(let a=0;a<t;a++){const l=s[a];let u,c,d=-1,h=0;for(;h<l.length&&(o.lastIndex=h,c=o.exec(l),c!==null);)h=o.lastIndex,o===_r?c[1]==="!--"?o=qu:c[1]!==void 0?o=Wu:c[2]!==void 0?(Gd.test(c[2])&&(n=RegExp("</"+c[2],"g")),o=Qi):c[3]!==void 0&&(o=Qi):o===Qi?c[0]===">"?(o=n??_r,d=-1):c[1]===void 0?d=-2:(d=o.lastIndex-c[2].length,u=c[1],o=c[3]===void 0?Qi:c[3]==='"'?Xu:Yu):o===Xu||o===Yu?o=Qi:o===qu||o===Wu?o=_r:(o=Qi,n=void 0);const f=o===Qi&&s[a+1].startsWith("/>")?" ":"";r+=o===_r?l+Yg:d>=0?(i.push(u),l.slice(0,d)+Yd+l.slice(d)+Oi+f):l+Oi+(d===-2?a:f)}return[Kd(s,r+(s[t]||"<?>")+(e===2?"</svg>":e===3?"</math>":"")),i]};class ts{constructor({strings:e,_$litType$:t},i){let n;this.parts=[];let r=0,o=0;const a=e.length-1,l=this.parts,[u,c]=Kg(e,t);if(this.el=ts.createElement(u,i),ln.currentNode=this.el.content,t===2||t===3){const d=this.el.content.firstChild;d.replaceWith(...d.childNodes)}for(;(n=ln.nextNode())!==null&&l.length<a;){if(n.nodeType===1){if(n.hasAttributes())for(const d of n.getAttributeNames())if(d.endsWith(Yd)){const h=c[o++],f=n.getAttribute(d).split(Oi),g=/([.?@])?(.*)/.exec(h);l.push({type:1,index:r,name:g[2],strings:f,ctor:g[1]==="."?Zg:g[1]==="?"?Qg:g[1]==="@"?em:xo}),n.removeAttribute(d)}else d.startsWith(Oi)&&(l.push({type:6,index:r}),n.removeAttribute(d));if(Gd.test(n.tagName)){const d=n.textContent.split(Oi),h=d.length-1;if(h>0){n.textContent=ho?ho.emptyScript:"";for(let f=0;f<h;f++)n.append(d[f],Qr()),ln.nextNode(),l.push({type:2,index:++r});n.append(d[h],Qr())}}}else if(n.nodeType===8)if(n.data===Xd)l.push({type:2,index:r});else{let d=-1;for(;(d=n.data.indexOf(Oi,d+1))!==-1;)l.push({type:7,index:r}),d+=Oi.length-1}r++}}static createElement(e,t){const i=Dn.createElement("template");return i.innerHTML=e,i}}function er(s,e,t=s,i){var o,a;if(e===xn)return e;let n=i!==void 0?(o=t._$Co)==null?void 0:o[i]:t._$Cl;const r=es(e)?void 0:e._$litDirective$;return(n==null?void 0:n.constructor)!==r&&((a=n==null?void 0:n._$AO)==null||a.call(n,!1),r===void 0?n=void 0:(n=new r(s),n._$AT(s,t,i)),i!==void 0?(t._$Co??(t._$Co=[]))[i]=n:t._$Cl=n),n!==void 0&&(e=er(s,n._$AS(s,e.values),n,i)),e}class Jg{constructor(e,t){this._$AV=[],this._$AN=void 0,this._$AD=e,this._$AM=t}get parentNode(){return this._$AM.parentNode}get _$AU(){return this._$AM._$AU}u(e){const{el:{content:t},parts:i}=this._$AD,n=((e==null?void 0:e.creationScope)??Dn).importNode(t,!0);ln.currentNode=n;let r=ln.nextNode(),o=0,a=0,l=i[0];for(;l!==void 0;){if(o===l.index){let u;l.type===2?u=new os(r,r.nextSibling,this,e):l.type===1?u=new l.ctor(r,l.name,l.strings,this,e):l.type===6&&(u=new tm(r,this,e)),this._$AV.push(u),l=i[++a]}o!==(l==null?void 0:l.index)&&(r=ln.nextNode(),o++)}return ln.currentNode=Dn,n}p(e){let t=0;for(const i of this._$AV)i!==void 0&&(i.strings!==void 0?(i._$AI(e,i,t),t+=i.strings.length-2):i._$AI(e[t])),t++}}class os{get _$AU(){var e;return((e=this._$AM)==null?void 0:e._$AU)??this._$Cv}constructor(e,t,i,n){this.type=2,this._$AH=ze,this._$AN=void 0,this._$AA=e,this._$AB=t,this._$AM=i,this.options=n,this._$Cv=(n==null?void 0:n.isConnected)??!0}get parentNode(){let e=this._$AA.parentNode;const t=this._$AM;return t!==void 0&&(e==null?void 0:e.nodeType)===11&&(e=t.parentNode),e}get startNode(){return this._$AA}get endNode(){return this._$AB}_$AI(e,t=this){e=er(this,e,t),es(e)?e===ze||e==null||e===""?(this._$AH!==ze&&this._$AR(),this._$AH=ze):e!==this._$AH&&e!==xn&&this._(e):e._$litType$!==void 0?this.$(e):e.nodeType!==void 0?this.T(e):Xg(e)?this.k(e):this._(e)}O(e){return this._$AA.parentNode.insertBefore(e,this._$AB)}T(e){this._$AH!==e&&(this._$AR(),this._$AH=this.O(e))}_(e){this._$AH!==ze&&es(this._$AH)?this._$AA.nextSibling.data=e:this.T(Dn.createTextNode(e)),this._$AH=e}$(e){var r;const{values:t,_$litType$:i}=e,n=typeof i=="number"?this._$AC(e):(i.el===void 0&&(i.el=ts.createElement(Kd(i.h,i.h[0]),this.options)),i);if(((r=this._$AH)==null?void 0:r._$AD)===n)this._$AH.p(t);else{const o=new Jg(n,this),a=o.u(this.options);o.p(t),this.T(a),this._$AH=o}}_$AC(e){let t=Gu.get(e.strings);return t===void 0&&Gu.set(e.strings,t=new ts(e)),t}k(e){wl(this._$AH)||(this._$AH=[],this._$AR());const t=this._$AH;let i,n=0;for(const r of e)n===t.length?t.push(i=new os(this.O(Qr()),this.O(Qr()),this,this.options)):i=t[n],i._$AI(r),n++;n<t.length&&(this._$AR(i&&i._$AB.nextSibling,n),t.length=n)}_$AR(e=this._$AA.nextSibling,t){var i;for((i=this._$AP)==null?void 0:i.call(this,!1,!0,t);e!==this._$AB;){const n=e.nextSibling;e.remove(),e=n}}setConnected(e){var t;this._$AM===void 0&&(this._$Cv=e,(t=this._$AP)==null||t.call(this,e))}}class xo{get tagName(){return this.element.tagName}get _$AU(){return this._$AM._$AU}constructor(e,t,i,n,r){this.type=1,this._$AH=ze,this._$AN=void 0,this.element=e,this.name=t,this._$AM=n,this.options=r,i.length>2||i[0]!==""||i[1]!==""?(this._$AH=Array(i.length-1).fill(new String),this.strings=i):this._$AH=ze}_$AI(e,t=this,i,n){const r=this.strings;let o=!1;if(r===void 0)e=er(this,e,t,0),o=!es(e)||e!==this._$AH&&e!==xn,o&&(this._$AH=e);else{const a=e;let l,u;for(e=r[0],l=0;l<r.length-1;l++)u=er(this,a[i+l],t,l),u===xn&&(u=this._$AH[l]),o||(o=!es(u)||u!==this._$AH[l]),u===ze?e=ze:e!==ze&&(e+=(u??"")+r[l+1]),this._$AH[l]=u}o&&!n&&this.j(e)}j(e){e===ze?this.element.removeAttribute(this.name):this.element.setAttribute(this.name,e??"")}}class Zg extends xo{constructor(){super(...arguments),this.type=3}j(e){this.element[this.name]=e===ze?void 0:e}}class Qg extends xo{constructor(){super(...arguments),this.type=4}j(e){this.element.toggleAttribute(this.name,!!e&&e!==ze)}}class em extends xo{constructor(e,t,i,n,r){super(e,t,i,n,r),this.type=5}_$AI(e,t=this){if((e=er(this,e,t,0)??ze)===xn)return;const i=this._$AH,n=e===ze&&i!==ze||e.capture!==i.capture||e.once!==i.once||e.passive!==i.passive,r=e!==ze&&(i===ze||n);n&&this.element.removeEventListener(this.name,this,i),r&&this.element.addEventListener(this.name,this,e),this._$AH=e}handleEvent(e){var t;typeof this._$AH=="function"?this._$AH.call(((t=this.options)==null?void 0:t.host)??this.element,e):this._$AH.handleEvent(e)}}class tm{constructor(e,t,i){this.element=e,this.type=6,this._$AN=void 0,this._$AM=t,this.options=i}get _$AU(){return this._$AM._$AU}_$AI(e){er(this,e)}}const Wo=Br.litHtmlPolyfillSupport;Wo==null||Wo(ts,os),(Br.litHtmlVersions??(Br.litHtmlVersions=[])).push("3.3.1");const im=(s,e,t)=>{const i=(t==null?void 0:t.renderBefore)??e;let n=i._$litPart$;if(n===void 0){const r=(t==null?void 0:t.renderBefore)??null;i._$litPart$=n=new os(e.insertBefore(Qr(),r),r,void 0,t??{})}return n._$AI(s),n};const mn=globalThis;let ne=class extends zn{constructor(){super(...arguments),this.renderOptions={host:this},this._$Do=void 0}createRenderRoot(){var t;const e=super.createRenderRoot();return(t=this.renderOptions).renderBefore??(t.renderBefore=e.firstChild),e}update(e){const t=this.render();this.hasUpdated||(this.renderOptions.isConnected=this.isConnected),super.update(e),this._$Do=im(t,this.renderRoot,this.renderOptions)}connectedCallback(){var e;super.connectedCallback(),(e=this._$Do)==null||e.setConnected(!0)}disconnectedCallback(){var e;super.disconnectedCallback(),(e=this._$Do)==null||e.setConnected(!1)}render(){return xn}};var nc;ne._$litElement$=!0,ne.finalized=!0,(nc=mn.litElementHydrateSupport)==null||nc.call(mn,{LitElement:ne});const Yo=mn.litElementPolyfillSupport;Yo==null||Yo({LitElement:ne});(mn.litElementVersions??(mn.litElementVersions=[])).push("4.2.1");const ae=s=>(e,t)=>{t!==void 0?t.addInitializer((()=>{customElements.define(s,e)})):customElements.define(s,e)};const nm={attribute:!0,type:String,converter:co,reflect:!1,hasChanged:xl},rm=(s=nm,e,t)=>{const{kind:i,metadata:n}=t;let r=globalThis.litPropertyMetadata.get(n);if(r===void 0&&globalThis.litPropertyMetadata.set(n,r=new Map),i==="setter"&&((s=Object.create(s)).wrapped=!0),r.set(t.name,s),i==="accessor"){const{name:o}=t;return{set(a){const l=e.get.call(this);e.set.call(this,a),this.requestUpdate(o,l,s)},init(a){return a!==void 0&&this.C(o,void 0,s,a),a}}}if(i==="setter"){const{name:o}=t;return function(a){const l=this[o];e.call(this,a),this.requestUpdate(o,l,s)}}throw Error("Unsupported decorator location: "+i)};function I(s){return(e,t)=>typeof t=="object"?rm(s,e,t):((i,n,r)=>{const o=n.hasOwnProperty(r);return n.constructor.createProperty(r,i),o?Object.getOwnPropertyDescriptor(n,r):void 0})(s,e,t)}const sm="/src/6fcbae.png",om="/src/2fe1e5.png",am="/src/d23901.png",lm="/src/9b1b5d.png",um="/src/64d59d.png",cm="/src/6db26f.png",dm="/src/34521f.png",hm="/src/bda8b1.png",fm="/src/25e321.png",pm="/src/7a9943.png",gm="/src/a20a34.png";var mm=Object.defineProperty,_m=Object.getOwnPropertyDescriptor,as=(s,e,t,i)=>{for(var n=i>1?void 0:i?_m(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&mm(e,t,n),n};let tr=class extends ne{constructor(){super(...arguments),this.lang=_.language,this.currentIndex=0,this.screens=[],this.updateScreens=()=>{},this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){const e=document.querySelectorAll(".carrossel img");this.currentIndex=0,this.screens=e,this.updateScreens=()=>{this.screens.forEach((n,r)=>{r===this.currentIndex?ie.to(n,{opacity:1,duration:.4,y:0,delay:.2,onStart:()=>n.classList.remove("invisible")}):ie.to(n,{opacity:0,duration:.4,y:"2rem",onComplete:()=>n.classList.add("invisible")})})},this.updateScreens();const t=this.renderRoot.querySelector("button:first-of-type"),i=this.renderRoot.querySelector("button:last-of-type");t&&i&&(t.addEventListener("click",()=>{this.currentIndex=(this.currentIndex-1+this.screens.length)%this.screens.length,this.updateScreens()}),i.addEventListener("click",()=>{this.currentIndex=(this.currentIndex+1)%this.screens.length,this.updateScreens()}))}render(){return V`
       <section class="relative">
         <div class="container">
-          <div class="carrossel relative overflow-hidden rounded-b-[1rem]">
+          <div class="carrossel relative overflow-hidden rounded-b-2xl">
             <img
               src="${sm}"
               width="1728"
               height="976"
-              class="relative rounded-[1rem]"
+              class="relative rounded-2xl"
               loading="lazy"
             />
             <img
               src="${om}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${am}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${lm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${um}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${cm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${dm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
             />
             <img
               src="${hm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${fm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${pm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${gm}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky top-[calc(100dvh-4rem)] translate-y-full isolate flex h-[4rem] items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-[1rem] after:bg-black/50 after:backdrop-blur-md after:content-['']"
+              class="sticky top-[calc(100dvh-4rem)] translate-y-full isolate flex h-16 items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-2xl after:bg-black/50 after:backdrop-blur-md after:content-['']"
             >
               <div class="relative z-20 flex gap-px">
                 <button
@@ -183,7 +183,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
         </div>
       </div>
     `}createRenderRoot(){return this}};Qd([I({type:String})],ka.prototype,"lang",2);ka=Qd([ae("projects-header")],ka);const jm="/src/e761eb.webp",Im="/src/140c7b.webp",Nm="/src/36a4a4.webp",Bm="/src/ae754e.webp",Hm="/src/492162.webp",Um="/src/bec54c.webp",Vm="/src/555530.webp",qm="/src/6a0945.webp",Wm="/src/4fb0f0.webp",Ym="/src/52e81e.webp",Xm="/src/f150ed.webp",Gm="/src/55a96b.webp",Km="/src/85d489.webp";var Jm=Object.defineProperty,Zm=Object.getOwnPropertyDescriptor,eh=(s,e,t,i)=>{for(var n=i>1?void 0:i?Zm(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&Jm(e,t,n),n};let Pa=class extends ne{constructor(){super(...arguments),this.src="",this.overlayRafId=0,this.onKeydown=s=>{s.key==="Escape"&&this.close()},this.onBackdropClick=s=>{s.target===this.querySelector(".zoom-overlay")&&this.close()},this.close=()=>{this.remove()}}connectedCallback(){var s;super.connectedCallback(),(s=window.lenis)==null||s.stop(),document.body.style.overflow="hidden",document.addEventListener("keydown",this.onKeydown)}disconnectedCallback(){var s,e,t;super.disconnectedCallback(),this.overlayRafId&&cancelAnimationFrame(this.overlayRafId),this.overlayRafId=0,(e=(s=this.overlayLenis)==null?void 0:s.destroy)==null||e.call(s),this.overlayLenis=void 0,(t=window.lenis)==null||t.start(),document.body.style.overflow="",document.removeEventListener("keydown",this.onKeydown)}firstUpdated(){const s=this.querySelector(".zoom-overlay"),e=this.querySelector(".zoom-content");if(!s||!e)return;this.overlayLenis=new dc({wrapper:s,content:e});const t=i=>{var n;(n=this.overlayLenis)==null||n.raf(i),this.overlayRafId=requestAnimationFrame(t)};this.overlayRafId=requestAnimationFrame(t),s.addEventListener("click",this.onBackdropClick)}render(){return V`
-      <button class="${"fixed right-5 leading-none top-5 z-[60] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-1 h-8 rounded-full items-center hover:bg-zinc-200 hover:text-zinc-950 hover:font-semibold text-zinc-200"}" @click=${this.close}>
+      <button class="${"fixed right-5 leading-none top-5 z-60 flex transition-all ps-3 pe-1 xl:pe-1.5 gap-1 h-8 rounded-full items-center hover:bg-zinc-200 hover:text-zinc-950 hover:font-semibold text-zinc-200"}" @click=${this.close}>
         Esc
         <svg
           class="size-5 stroke-zinc-200"
@@ -266,7 +266,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};ls([I({type:String})],ir.prototype,"title",2);ls([I({type:String})],ir.prototype,"tags",2);ls([I({type:String})],ir.prototype,"year",2);ls([I({type:String})],ir.prototype,"contentHtml",2);ir=ls([ae("item-header")],ir);class n0{constructor(){this._dark=!0,this.listeners=new Set}get dark(){return this._dark}set dark(e){this._dark=e,document.documentElement.classList.toggle("dark",e),localStorage.setItem("theme",e?"dark":"light"),this.notifyListeners()}toggle(){this.dark=!this.dark}subscribe(e){this.listeners.add(e)}unsubscribe(e){this.listeners.delete(e)}notifyListeners(){this.listeners.forEach(e=>{e.requestUpdate()})}init(){const e=localStorage.getItem("theme");e&&(this._dark=e==="dark"),document.documentElement.classList.toggle("dark",this._dark)}}const yr=new n0,Cn=s=>class extends s{connectedCallback(){super.connectedCallback(),yr.subscribe(this)}disconnectedCallback(){super.disconnectedCallback(),yr.unsubscribe(this)}get dark(){return yr.dark}set dark(e){yr.dark=e}toggleTheme(){yr.toggle()}},r0="/src/bf8bfa.png";var s0=Object.defineProperty,o0=Object.getOwnPropertyDescriptor,Cl=(s,e,t,i)=>{for(var n=i>1?void 0:i?o0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&s0(e,t,n),n};let fo=class extends Cn(ne){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}getPreviousPage(){window.location.href="/"}render(){return V`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-b from-black backdrop-blur to-black/80 backdrop-saturate-200 xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-b from-black backdrop-blur to-black/80 backdrop-saturate-200 xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -437,7 +437,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky -inset-x-4 top-[calc(100dvh-12rem)] isolate flex h-[12rem] items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-gradient-to-t after:from-black after:content-['']"
+              class="sticky -inset-x-4 top-[calc(100dvh-12rem)] isolate flex h-48 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-black after:content-['']"
             >
               <progressive-blur></progressive-blur>
               <div class="relative z-20 flex gap-px pb-2">
@@ -468,19 +468,19 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
         <div class="px-3">
           <projects-ifficient></projects-ifficient>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <projects-damus></projects-damus>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <projects-allugator></projects-allugator>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <projects-multiplayer></projects-multiplayer>
           <div
-            class="mt-16 mb-32 h-px w-full bg-gradient-to-r bg-transparent"
+            class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
           ></div>
           <cases-section></cases-section>
         </div>
@@ -511,7 +511,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           Go back
         </a>
         <svg
-          class="absolute bottom-8 h-12 rotate-[21deg] stroke-zinc-600"
+          class="absolute bottom-8 h-12 rotate-21 stroke-zinc-600"
           width="44"
           height="67"
           viewBox="0 0 44 67"
@@ -544,10 +544,10 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
       <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
-            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <div
-            class="to-zinc-black relative flex rounded-[2rem] from-zinc-950 xl:bg-gradient-to-r 2xl:h-[512px]"
+            class="to-zinc-black relative flex rounded-4xl from-zinc-950 xl:bg-linear-to-r 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -575,7 +575,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
               </div>
             </div>
             <div
-              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm 2xl:p-24"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-4xl xl:backdrop-blur-sm 2xl:p-24"
             >
               <h2
                 class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 2xl:text-[3rem]"
@@ -610,7 +610,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
             </div>
           </div>
           <div
-            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
         </div>
       </section>
@@ -628,7 +628,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
 				</div>`;e.insertAdjacentHTML("beforeend",a)}),this.initScrambleText()}render(){return V`
       <footer
         id="section-connect"
-        class="xl:footer relative z-10 h-lvh overflow-hidden rounded-t-[2rem]"
+        class="xl:footer relative z-10 h-lvh overflow-hidden rounded-t-4xl"
       >
         <div
           id="footerLinks"
@@ -707,7 +707,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
               </div>
             </div>
             <h1
-              class="text-pretty bg-gradient-to-r from-zinc-300 to-white bg-clip-text text-[2.5rem] leading-none tracking-[-0.04em] text-transparent xl:text-[3rem] 2xl:text-[4rem]"
+              class="text-pretty bg-linear-to-r from-zinc-300 to-white bg-clip-text text-[2.5rem] leading-none tracking-[-0.04em] text-transparent xl:text-[3rem] 2xl:text-[4rem]"
             >
               <span class="block xl:hidden">
                 ${_.t("about.content.m1")}
@@ -724,7 +724,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
             </h1>
           </div>
           <div
-            class="relative mx-5 hidden h-px bg-gradient-to-r from-black via-zinc-800 to-black xl:block"
+            class="relative mx-5 hidden h-px bg-linear-to-r from-black via-zinc-800 to-black xl:block"
             data-parallax-layer="1"
           ></div>
           <div
@@ -756,7 +756,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
       >
         ${_.t("journey.t0")}
       </h2>
-      <div class="flex items-center justify-end order-1 xl:order-none px-5 xl:px-20 2xl:px-32">
+      <div class="flex items-center justify-end order-1 xl:order-0 px-5 xl:px-20 2xl:px-32">
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
@@ -803,7 +803,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
     `}firstUpdated(s){const e=this.querySelector("#job"),t=this.getJourneyItems(),i=Object.values(t),n=this.createJourneyHeader();e.insertAdjacentHTML("beforeend",n),i.forEach(r=>{const o=this.createJourneyItemHTML(r);e.insertAdjacentHTML("beforeend",o)})}render(){return V`
       <section id="section-journey">
         <div
-          class="bg-[linear-gradient(theme('colors.stone.100'),theme('colors.stone.200')_40%)] xl:py-24 2xl:py-32 dark:bg-[linear-gradient(theme('colors.black'),theme('colors.black')_100%)]"
+          class="bg-[linear-gradient(var(--color-stone-100),var(--color-stone-200)_40%)] xl:py-24 2xl:py-32 dark:bg-[linear-gradient(var(--color-black),var(--color-black)_100%)]"
         >
           <div
             id="job"
@@ -833,7 +833,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           ${e}
         </ul>
       </div>
-    `}createRenderRoot(){return this}};wo([I({type:String})],is.prototype,"star",2);wo([I({type:String})],is.prototype,"items",2);wo([I({type:Boolean})],is.prototype,"reverse",2);is=wo([ae("marquee-element")],is);var W0=Object.defineProperty,Y0=Object.getOwnPropertyDescriptor,Co=(s,e,t,i)=>{for(var n=i>1?void 0:i?Y0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&W0(e,t,n),n};let ns=class extends ne{constructor(){super(...arguments),this.classNames="",this.href="",this.label=""}firstUpdated(){const s=document.querySelectorAll(".menu-item");s.forEach(i=>{const n=i.firstElementChild;ie.set(n,{clipPath:"inset(0% 0% 100% 0%)"})});function e(){const i=this.firstElementChild;ie.to(i,{duration:.2,clipPath:"inset(0% 0% 0% 0%)"})}function t(){if(this.classList.contains("active"))return;const i=this.firstElementChild;i&&ie.to(i,{duration:.2,clipPath:"inset(100% 0 0 0)",onComplete:()=>{ie.set(i,{clipPath:"inset(0% 0% 100%)"})}})}s.forEach(i=>{i.addEventListener("mouseenter",e),i.addEventListener("mouseleave",t)})}render(){const s=rr("menu-item font-semibold relative tracking-[0.05em] flex justify-center h-12 xl:h-12 px-4 text-zinc-400 text-[.75rem] uppercase xl:items-center leading-[3.125rem]"),e=rr("absolute flex items-center justify-center inset-0 text-zinc-950");return V`<a
+    `}createRenderRoot(){return this}};wo([I({type:String})],is.prototype,"star",2);wo([I({type:String})],is.prototype,"items",2);wo([I({type:Boolean})],is.prototype,"reverse",2);is=wo([ae("marquee-element")],is);var W0=Object.defineProperty,Y0=Object.getOwnPropertyDescriptor,Co=(s,e,t,i)=>{for(var n=i>1?void 0:i?Y0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&W0(e,t,n),n};let ns=class extends ne{constructor(){super(...arguments),this.classNames="",this.href="",this.label=""}firstUpdated(){const s=document.querySelectorAll(".menu-item");s.forEach(i=>{const n=i.firstElementChild;ie.set(n,{clipPath:"inset(0% 0% 100% 0%)"})});function e(){const i=this.firstElementChild;ie.to(i,{duration:.2,clipPath:"inset(0% 0% 0% 0%)"})}function t(){if(this.classList.contains("active"))return;const i=this.firstElementChild;i&&ie.to(i,{duration:.2,clipPath:"inset(100% 0 0 0)",onComplete:()=>{ie.set(i,{clipPath:"inset(0% 0% 100%)"})}})}s.forEach(i=>{i.addEventListener("mouseenter",e),i.addEventListener("mouseleave",t)})}render(){const s=rr("menu-item font-semibold relative tracking-[0.05em] flex justify-center h-12 xl:h-12 px-4 text-zinc-400 text-[.75rem] uppercase xl:items-center leading-12.5"),e=rr("absolute flex items-center justify-center inset-0 text-zinc-950");return V`<a
       class="${s} ${this.classNames}"
       href="${this.href}"
       data-label="${this.label}"
@@ -842,10 +842,10 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
       ${this.label}
     </a>`}createRenderRoot(){return this}};Co([I({type:String})],ns.prototype,"classNames",2);Co([I({type:String})],ns.prototype,"href",2);Co([I({type:String})],ns.prototype,"label",2);ns=Co([ae("menu-item")],ns);const X0="/src/bf8bfa.png";var G0=Object.defineProperty,K0=Object.getOwnPropertyDescriptor,Sl=(s,e,t,i)=>{for(var n=i>1?void 0:i?K0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&G0(e,t,n),n};let po=class extends Cn(ne){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}render(){return V`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-gradient-to-b from-black backdrop-blur to-black/80 xl:fixed"
+        class="absolute inset-x-0 z-40 w-full translate-y-px bg-linear-to-b from-black backdrop-blur to-black/80 xl:fixed"
       >
         <div
-          class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
+          class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-linear-to-t from-black"
         ></div>
         <div class="container grid items-center grid-cols-1 xl:grid-cols-3">
           <mail-button
@@ -922,7 +922,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           </div>
         </div>
       </header>
-    `}createRenderRoot(){return this}};Sl([I({type:Boolean})],po.prototype,"more",2);Sl([I({type:String})],po.prototype,"lang",2);po=Sl([ae("menu-container")],po);var J0=Object.defineProperty,Z0=Object.getOwnPropertyDescriptor,cs=(s,e,t,i)=>{for(var n=i>1?void 0:i?Z0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&J0(e,t,n),n};let sr=class extends ne{constructor(){super(...arguments),this.classNames="",this.icon="",this.label="",this.title=""}render(){const e=rr("relative text-[.75rem] tracking-[0.05em] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 xl:h-6 hover:h-8 rounded-full leading-[2.125rem] xl:items-center hover:bg-zinc-200 hover:text-zinc-950 text-zinc-400 font-semibold stroke-zinc-400 hover:stroke-zinc-950 hover:fill-zinc-200",this.classNames);return V`
+    `}createRenderRoot(){return this}};Sl([I({type:Boolean})],po.prototype,"more",2);Sl([I({type:String})],po.prototype,"lang",2);po=Sl([ae("menu-container")],po);var J0=Object.defineProperty,Z0=Object.getOwnPropertyDescriptor,cs=(s,e,t,i)=>{for(var n=i>1?void 0:i?Z0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&J0(e,t,n),n};let sr=class extends ne{constructor(){super(...arguments),this.classNames="",this.icon="",this.label="",this.title=""}render(){const e=rr("relative text-[.75rem] tracking-[0.05em] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 xl:h-6 hover:h-8 rounded-full leading-8.5 xl:items-center hover:bg-zinc-200 hover:text-zinc-950 text-zinc-400 font-semibold stroke-zinc-400 hover:stroke-zinc-950 hover:fill-zinc-200",this.classNames);return V`
       <button class="${e}" title="${this.title}">
         ${this.label}
         <svg
@@ -965,7 +965,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           ></path>
         </svg>
       </button>
-    `}createRenderRoot(){return this}};cs([I({type:String})],sr.prototype,"classNames",2);cs([I({type:String})],sr.prototype,"icon",2);cs([I({type:String})],sr.prototype,"label",2);cs([I({type:String})],sr.prototype,"title",2);sr=cs([ae("lang-button")],sr);var Q0=Object.defineProperty,e1=Object.getOwnPropertyDescriptor,So=(s,e,t,i)=>{for(var n=i>1?void 0:i?e1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&Q0(e,t,n),n};let rs=class extends ne{constructor(){super(...arguments),this.href="",this.label="",this.hover=""}render(){const s=rr("hidden xl:flex px-3 gap-2 dark:text-zinc-50 tracking-[0.05em] text-[.75rem] uppercase items-center h-8 leading-[3.125rem] rounded-full whitespace-nowrap font-medium");return V`<button class="menu-item group/item ${s} relative">
+    `}createRenderRoot(){return this}};cs([I({type:String})],sr.prototype,"classNames",2);cs([I({type:String})],sr.prototype,"icon",2);cs([I({type:String})],sr.prototype,"label",2);cs([I({type:String})],sr.prototype,"title",2);sr=cs([ae("lang-button")],sr);var Q0=Object.defineProperty,e1=Object.getOwnPropertyDescriptor,So=(s,e,t,i)=>{for(var n=i>1?void 0:i?e1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&Q0(e,t,n),n};let rs=class extends ne{constructor(){super(...arguments),this.href="",this.label="",this.hover=""}render(){const s=rr("hidden xl:flex px-3 gap-2 dark:text-zinc-50 tracking-[0.05em] text-[.75rem] uppercase items-center h-8 leading-12.5 rounded-full whitespace-nowrap font-medium");return V`<button class="menu-item group/item ${s} relative">
       <div
         class="${s} pointer-events-none absolute inset-0 justify-center"
         aria-hidden="true"
@@ -978,7 +978,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
     </button>`}createRenderRoot(){return this}};So([I({type:String})],rs.prototype,"href",2);So([I({type:String})],rs.prototype,"label",2);So([I({type:String})],rs.prototype,"hover",2);rs=So([ae("mail-button")],rs);var t1=Object.defineProperty,i1=Object.getOwnPropertyDescriptor,uh=(s,e,t,i)=>{for(var n=i>1?void 0:i?i1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&t1(e,t,n),n};let ja=class extends Cn(ne){constructor(){super(...arguments),this.lang=_.language}connectedCallback(){super.connectedCallback(),_.on("languageChanged",()=>{this.lang=_.language})}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",()=>{this.lang=_.language})}firstUpdated(){this.renderRoot.querySelectorAll(".praxis svg").forEach(t=>{const i=t.querySelectorAll("path");ie.from(i,{scrollTrigger:{trigger:t,start:"0% 75%",toggleActions:"play none none reverse"},stagger:.12,opacity:0,fill:(this.dark,"#4d88ff"),drawSVG:!1})}),this.renderRoot.querySelectorAll(".praxis").forEach(t=>{ie.from(t.children,{scrollTrigger:{trigger:t.children,start:"0% 75%",toggleActions:"play none none reverse"},duration:.8,stagger:.1,x:"5rem",filter:"blur(.5rem)",opacity:i=>i===0?1:0})})}render(){return V`
       <section id="section-praxis" class="bg-zinc-950">
         <div
-          class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
+          class="relative mx-5 h-px bg-linear-to-r from-black via-zinc-800 to-black"
         ></div>
         <div class="container">
           <marquee-element
@@ -990,7 +990,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           >
             <div class="praxis">
               <svg
-                class="size-16 flex-shrink-0 xl:size-24"
+                class="size-16 shrink-0 xl:size-24"
                 width="82"
                 height="81"
                 viewBox="0 0 82 81"
@@ -1017,7 +1017,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-[6rem] 2xl:text-[2.5rem]"
+                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem]"
                 >
                   ${_.t("praxis.t1")}
                 </h2>
@@ -1028,7 +1028,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
             </div>
             <div class="praxis">
               <svg
-                class="size-16 flex-shrink-0 xl:size-24"
+                class="size-16 shrink-0 xl:size-24"
                 width="82"
                 height="66"
                 viewBox="0 0 82 66"
@@ -1043,7 +1043,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-[6rem] 2xl:text-[2.5rem]"
+                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem]"
                 >
                   ${_.t("praxis.t2")}
                 </h2>
@@ -1059,16 +1059,16 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
+            class="relative mx-5 h-px bg-linear-to-r from-black via-zinc-800 to-black"
           ></div>
         </div>
       </section>
     `}createRenderRoot(){return this}};uh([I({type:String})],ja.prototype,"lang",2);ja=uh([ae("praxis-section")],ja);const n1="/src/4f3f0c.png";var r1=Object.defineProperty,s1=Object.getOwnPropertyDescriptor,ch=(s,e,t,i)=>{for(var n=i>1?void 0:i?s1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&r1(e,t,n),n};let Ia=class extends ne{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(){const s=document.querySelector("#cover-image");s&&ie.to(s,{scrollTrigger:{trigger:"#about",start:"top 20%",end:"bottom 20%",scrub:2},y:"-5rem",ease:"none"})}render(){return V` <div
       id="about"
-      class="relative grid grid-cols-2 overflow-hidden rounded-[2rem] bg-gradient-to-b from-zinc-950"
+      class="relative grid grid-cols-2 overflow-hidden rounded-4xl bg-linear-to-b from-zinc-950"
     >
       <div
-        class="absolute h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+        class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
       ></div>
       <div class="flex flex-col xl:p-16">
         <p class="text-default mb-4 text-balance -mt-2">
@@ -1117,13 +1117,13 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           class="absolute left-16 top-16 max-w-none flex-none rounded-ss-lg border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
         />
         <progressive-blur
-          class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent"
+          class="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black to-transparent"
         ></progressive-blur>
       </div>
     </div>`}createRenderRoot(){return this}};ch([I({type:String})],Ia.prototype,"lang",2);Ia=ch([ae("twyne-about")],Ia);var o1=Object.defineProperty,a1=Object.getOwnPropertyDescriptor,dh=(s,e,t,i)=>{for(var n=i>1?void 0:i?a1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&o1(e,t,n),n};ie.registerPlugin(J);let Na=class extends ne{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const s=this.signElement.querySelectorAll("path");this.animation=ie.from(s,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:.75,stagger:.75,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(s){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return V`
       <svg
         id="sign"
-        class="rotate-[21deg] stroke-zinc-600 mt-2"
+        class="rotate-21 stroke-zinc-600 mt-2"
         width="44"
         height="67"
         viewBox="0 0 44 67"
@@ -1246,7 +1246,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};ph([I({type:String})],Ua.prototype,"lang",2);Ua=ph([ae("twyne-impact")],Ua);const g1="/src/bf8bfa.png";var m1=Object.defineProperty,_1=Object.getOwnPropertyDescriptor,El=(s,e,t,i)=>{for(var n=i>1?void 0:i?_1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&m1(e,t,n),n};let go=class extends Cn(ne){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}getPreviousPage(){window.history.length>1?window.history.back():window.location.href="/"}render(){return V`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-gradient-to-b from-black backdrop-blur to-black/80 backdrop-saturate-200 xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-b from-black backdrop-blur to-black/80 backdrop-saturate-200 xl:fixed xl:block"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -1453,15 +1453,15 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
             border-radius: 0.25rem;
           }
         </style>
-        <div class="container absolute inset-y-0 -z-10 bg-gradient-to-t"></div>
+        <div class="container absolute inset-y-0 -z-10 bg-linear-to-t"></div>
         ${this.renderComponentGrid()} ${this.renderComponentColumn()}
       </div>
     `}render(){return V`
       <section id="proposal">
         <div
-          class="container hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+          class="container hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
         ></div>
-        <div class="container rounded-t-[2rem] p-24 2xl:p-32">
+        <div class="container rounded-t-4xl p-24 2xl:p-32">
           <h2
             class="mb-10 text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
           >
@@ -1502,7 +1502,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky -inset-x-4 top-[calc(100dvh-15rem)] isolate flex h-[15rem] items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-gradient-to-t after:from-black after:content-['']"
+              class="sticky -inset-x-4 top-[calc(100dvh-15rem)] isolate flex h-60 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-black after:content-['']"
             >
               <progressive-blur></progressive-blur>
               <div class="relative z-20 flex gap-px pb-2">
@@ -1554,7 +1554,7 @@ var yh=Object.defineProperty;var vh=(s,e,t)=>e in s?yh(s,e,{enumerable:!0,config
 <clipPath id="paint0_angular_1307_1673_clip_path"><path d="M40 20H36C36 28.8366 28.8366 36 20 36V40V44C33.2548 44 44 33.2548 44 20H40ZM20 40V36C11.1634 36 4 28.8366 4 20H0H-4C-4 33.2548 6.74517 44 20 44V40ZM0 20H4C4 11.1634 11.1634 4 20 4V0V-4C6.74517 -4 -4 6.74517 -4 20H0ZM20 0V4C28.8366 4 36 11.1634 36 20H40H44C44 6.74517 33.2548 -4 20 -4V0Z" mask="url(#path-1-inside-1_1307_1673)"/></clipPath></defs>\r
 </svg>`;var V1=Object.defineProperty,q1=Object.getOwnPropertyDescriptor,_h=(s,e,t,i)=>{for(var n=i>1?void 0:i?q1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&V1(e,t,n),n};let Wa=class extends ne{constructor(){super(...arguments),this.minMs=500,this.mountedAt=0,this.finishTimeoutId=null,this.fallbackTimeoutId=null,this.isExiting=!1,this.onDomContentLoaded=()=>this.finishAfterMinTime(),this.onWindowLoad=()=>this.finishAfterMinTime()}connectedCallback(){super.connectedCallback(),this.setAttribute("aria-busy","true"),this.setAttribute("aria-live","polite"),this.mountedAt=performance.now(),document.readyState==="complete"||document.readyState==="interactive"?this.finishAfterMinTime():(document.addEventListener("DOMContentLoaded",this.onDomContentLoaded,{once:!0}),window.addEventListener("load",this.onWindowLoad,{once:!0}),this.fallbackTimeoutId=window.setTimeout(()=>this.finishAfterMinTime(),8e3))}disconnectedCallback(){super.disconnectedCallback(),document.removeEventListener("DOMContentLoaded",this.onDomContentLoaded),window.removeEventListener("load",this.onWindowLoad),this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null)}finishAfterMinTime(){const s=performance.now()-this.mountedAt,e=Math.max(0,this.minMs-s);this.finishTimeoutId=window.setTimeout(()=>this.exit(),e)}exit(){if(this.isExiting)return;this.isExiting=!0,this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null);const s=this.querySelector("#loading")||this,e=document.querySelector("main");ie.set(e,{y:"5rem",opacity:0}),ie.to(s,{opacity:0,y:20,duration:.4,force3D:!0,onComplete:()=>{this.dispatchEvent(new CustomEvent("mobile-loading:done",{bubbles:!0,composed:!0})),ie.to(e,{y:0,opacity:1,duration:1,onComplete:()=>{e.removeAttribute("style")}}),this.remove()}})}render(){return V` <div
       id="loading"
-      class="fixed top-0 z-[100] h-svh w-full bg-black"
+      class="fixed top-0 z-100 h-svh w-full bg-black"
     >
       <div
         class="container mx-5 mt-auto flex h-full items-end gap-4 pb-32 xl:mx-auto"

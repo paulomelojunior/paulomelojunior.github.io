@@ -61,7 +61,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-praxis" class="bg-zinc-950">
         <div
-          class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
+          class="relative mx-5 h-px bg-linear-to-r from-black via-zinc-800 to-black"
         ></div>
         <div class="container">
           <marquee-element
@@ -73,7 +73,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
           >
             <div class="praxis">
               <svg
-                class="size-16 flex-shrink-0 xl:size-24"
+                class="size-16 shrink-0 xl:size-24"
                 width="82"
                 height="81"
                 viewBox="0 0 82 81"
@@ -100,7 +100,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-[6rem] 2xl:text-[2.5rem]"
+                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem]"
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
@@ -111,7 +111,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             </div>
             <div class="praxis">
               <svg
-                class="size-16 flex-shrink-0 xl:size-24"
+                class="size-16 shrink-0 xl:size-24"
                 width="82"
                 height="66"
                 viewBox="0 0 82 66"
@@ -126,7 +126,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-[6rem] 2xl:text-[2.5rem]"
+                  class="text-[1.5rem] text-zinc-200 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem]"
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>
@@ -142,7 +142,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="relative mx-5 h-px bg-gradient-to-r from-black via-zinc-800 to-black"
+            class="relative mx-5 h-px bg-linear-to-r from-black via-zinc-800 to-black"
           ></div>
         </div>
       </section>

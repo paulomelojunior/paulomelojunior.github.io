@@ -1,3 +1,26 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Mona Sans', sans-serif;
+  --font-sans--font-feature-settings: 'ss01';
+
+  --font-mono: 'Geist Mono', monospace;
+
+  --color-brand-100: oklch(0.9 0.16 264);
+  --color-brand-200: oklch(0.8 0.16 264);
+  --color-brand-300: oklch(0.7 0.16 264);
+  --color-brand-400: oklch(0.6 0.16 264);
+  --color-brand-500: oklch(0.5 0.16 264);
+  --color-brand-600: oklch(0.4 0.16 264);
+  --color-brand-700: oklch(0.3 0.16 264);
+  --color-brand-800: oklch(0.2 0.16 264);
+  --color-brand-900: oklch(0.1 0.16 264);
+}
+
+@utility container {
+  margin-inline: auto;
+}
+
 @font-face {
   font-family: 'Mona Sans';
   font-weight: 200 900;
@@ -12,29 +35,6 @@
   font-display: swap;
   font-style: normal;
   src: url('fonts/geist-mono.woff2') format('woff2');
-}
-
-@import "tailwindcss";
-
-@theme {
-  --font-sans: 'Mona Sans', sans-serif;
-  --font-sans--font-feature-settings: "ss01";
-
-  --font-mono: 'Geist Mono', monospace;
-
-  --color-brand-100: oklch(.9 .16 264);
-  --color-brand-200: oklch(.8 .16 264);
-  --color-brand-300: oklch(.7 .16 264);
-  --color-brand-400: oklch(.6 .16 264);
-  --color-brand-500: oklch(.5 .16 264);
-  --color-brand-600: oklch(.4 .16 264);
-  --color-brand-700: oklch(.3 .16 264);
-  --color-brand-800: oklch(.2 .16 264);
-  --color-brand-900: oklch(.1 .16 264);
-}
-
-@utility container {
-  margin-inline: auto;
 }
 
 @layer base {
@@ -58,7 +58,7 @@
   
   ::-webkit-scrollbar-thumb {
     @apply bg-zinc-800;
-    border: 0 solid theme('colors.zinc.900');
+    border: 0 solid var(--color-zinc-900);
   }
   
   ::-webkit-scrollbar-thumb:hover {
@@ -87,8 +87,8 @@
       h-full
       w-full
       bg-[url('imgs/noise.avif')]
-      bg-[length:216px_auto]
-      bg-left-top
+      bg-size-[216px_auto]
+      bg-top-left
       bg-repeat
       xl:absolute;
   }
@@ -107,7 +107,7 @@
     inset-inline: 0;
     mask-image: radial-gradient(
       circle at top center,
-      theme('colors.black'),
+      var(--color-black),
       transparent 50%
     );
     pointer-events: none;
@@ -152,7 +152,7 @@
   .mob-cases-content {
     position: relative;
     overflow: hidden;
-    border-block: 1px solid theme('colors.zinc.900');
+    border-block: 1px solid var(--color-zinc-900);
   }
   
   .mob-cases-content::before {
@@ -163,7 +163,7 @@
     inset: 0;
     mask-image: radial-gradient(
       circle at center,
-      theme('colors.black'),
+      var(--color-black),
       transparent
     );
     position: absolute;
@@ -182,12 +182,12 @@
   .cta-button {
     background-image: linear-gradient(
       to bottom,
-      theme('colors.white') 25%,
+      var(--color-white) 25%,
       var(--color-brand-400) 25%,
       var(--color-brand-400) 50%,
       var(--color-brand-400) 50%,
       var(--color-brand-400) 75%,
-      theme('colors.zinc.800') 75%
+      var(--color-zinc-800) 75%
     );
     background-size: 100% 400%;
     background-position: 0% 100%;
@@ -195,7 +195,7 @@
       background-position 0.4s cubic-bezier(0.75, 0, 0.5, 1),
       color 0.2s cubic-bezier(0.75, 0, 0.5, 1),
       outline 0.2s cubic-bezier(0.75, 0, 0.5, 1);
-    color: theme('colors.zinc.950');
+    color: var(--color-zinc-950);
     transition-delay: 0s, 0.2s, 0.2s;
     outline: 0px solid transparent;
     @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-[20px] text-zinc-200;
@@ -207,7 +207,7 @@
   .cta-button.active {
     outline-width: 2px;
     outline-color: transparent;
-    color: theme('colors.zinc.950');
+    color: var(--color-zinc-950);
     background-position: 0% 0%;
   }
 
@@ -275,7 +275,7 @@
 
   /* Menu */
   .menu-item > div {
-    @apply bg-[linear-gradient(to_bottom,_var(--color-zinc-200)_50%,_var(--color-brand-400)_50%)];
+    @apply bg-[linear-gradient(to_bottom,var(--color-zinc-200)_50%,var(--color-brand-400)_50%)];
     background-size: 100% 200%;
     background-position: 0% 100%;
     transition:
@@ -429,7 +429,7 @@
   .progressive-blur > * {
     @apply absolute
       inset-0
-      backdrop-blur-[var(--progressive-blur)];
+      backdrop-blur-(--progressive-blur);
   }
 
   .progressive-blur > *:nth-child(1) {

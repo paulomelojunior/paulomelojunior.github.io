@@ -91,87 +91,87 @@ export class AlluPress extends LitElement {
     return html`
       <section class="relative">
         <div class="container">
-          <div class="carrossel relative overflow-hidden rounded-b-[1rem]">
+          <div class="carrossel relative overflow-hidden rounded-b-2xl">
             <img
               src="${press0}"
               width="1728"
               height="976"
-              class="relative rounded-[1rem]"
+              class="relative rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press2}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press4}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press5}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press6}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press7}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press8}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
             />
             <img
               src="${press9}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press10}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press11}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press12}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-[1rem]"
+              class="invisible absolute left-0 top-0 rounded-2xl"
               loading="lazy"
             />
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky top-[calc(100dvh-4rem)] translate-y-full isolate flex h-[4rem] items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-[1rem] after:bg-black/50 after:backdrop-blur-md after:content-['']"
+              class="sticky top-[calc(100dvh-4rem)] translate-y-full isolate flex h-16 items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-2xl after:bg-black/50 after:backdrop-blur-md after:content-['']"
             >
               <div class="relative z-20 flex gap-px">
                 <button

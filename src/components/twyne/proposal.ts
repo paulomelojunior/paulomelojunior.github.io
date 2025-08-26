@@ -204,7 +204,7 @@ export class TwyneProposal extends LitElement {
             border-radius: 0.25rem;
           }
         </style>
-        <div class="container absolute inset-y-0 -z-10 bg-gradient-to-t"></div>
+        <div class="container absolute inset-y-0 -z-10 bg-linear-to-t"></div>
         ${this.renderComponentGrid()} ${this.renderComponentColumn()}
       </div>
     `
@@ -214,9 +214,9 @@ export class TwyneProposal extends LitElement {
     return html`
       <section id="proposal">
         <div
-          class="container hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+          class="container hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
         ></div>
-        <div class="container rounded-t-[2rem] p-24 2xl:p-32">
+        <div class="container rounded-t-4xl p-24 2xl:p-32">
           <h2
             class="mb-10 text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
           >

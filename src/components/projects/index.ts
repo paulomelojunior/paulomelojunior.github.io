@@ -19,19 +19,19 @@ export class ProjectsIndex extends ThemeMixin(LitElement) {
         <div class="px-3">
           <projects-ifficient></projects-ifficient>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <projects-damus></projects-damus>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <projects-allugator></projects-allugator>
           <div
-            class="my-16 h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <projects-multiplayer></projects-multiplayer>
           <div
-            class="mt-16 mb-32 h-px w-full bg-gradient-to-r bg-transparent"
+            class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
           ></div>
           <cases-section></cases-section>
         </div>

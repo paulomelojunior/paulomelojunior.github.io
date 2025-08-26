@@ -61,7 +61,7 @@ export class TwyneConclusion extends LitElement {
     return html`
       <svg
         id="sign"
-        class="rotate-[21deg] stroke-zinc-600 mt-2"
+        class="rotate-21 stroke-zinc-600 mt-2"
         width="44"
         height="67"
         viewBox="0 0 44 67"

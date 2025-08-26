@@ -39,10 +39,10 @@ export class CasesSection extends LitElement {
       <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
-            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <div
-            class="to-zinc-black relative flex rounded-[2rem] from-zinc-950 xl:bg-gradient-to-r 2xl:h-[512px]"
+            class="to-zinc-black relative flex rounded-4xl from-zinc-950 xl:bg-linear-to-r 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -70,7 +70,7 @@ export class CasesSection extends LitElement {
               </div>
             </div>
             <div
-              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-[2rem] xl:backdrop-blur-sm 2xl:p-24"
+              class="mob-cases-content xl:cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-4xl xl:backdrop-blur-sm 2xl:p-24"
             >
               <h2
                 class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-200 2xl:text-[3rem]"
@@ -105,7 +105,7 @@ export class CasesSection extends LitElement {
             </div>
           </div>
           <div
-            class="hidden h-px w-full bg-gradient-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
         </div>
       </section>

@@ -101,7 +101,7 @@ export class FooterSection extends LitElement {
     return html`
       <footer
         id="section-connect"
-        class="xl:footer relative z-10 h-lvh overflow-hidden rounded-t-[2rem]"
+        class="xl:footer relative z-10 h-lvh overflow-hidden rounded-t-4xl"
       >
         <div
           id="footerLinks"

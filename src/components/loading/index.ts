@@ -101,7 +101,7 @@ export class MobileLoading extends LitElement {
   render() {
     return html` <div
       id="loading"
-      class="fixed top-0 z-[100] h-svh w-full bg-black"
+      class="fixed top-0 z-100 h-svh w-full bg-black"
     >
       <div
         class="container mx-5 mt-auto flex h-full items-end gap-4 pb-32 xl:mx-auto"

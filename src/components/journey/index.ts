@@ -105,7 +105,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
       >
         ${i18next.t('journey.t0')}
       </h2>
-      <div class="flex items-center justify-end order-1 xl:order-none px-5 xl:px-20 2xl:px-32">
+      <div class="flex items-center justify-end order-1 xl:order-0 px-5 xl:px-20 2xl:px-32">
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
