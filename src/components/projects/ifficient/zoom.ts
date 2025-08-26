@@ -1,7 +1,15 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import Lenis from 'lenis'
-import p1 from './assets/homepage.webp'
+import p0 from './assets/homepage-0.webp'
+import p1 from './assets/homepage-1.webp'
+import p2 from './assets/homepage-2.webp'
+import p3 from './assets/homepage-3.webp'
+import p4 from './assets/homepage-4.webp'
+import p5 from './assets/homepage-5.webp'
+import p6 from './assets/homepage-6.webp'
+import p7 from './assets/homepage-7.webp'
+import p8 from './assets/homepage-8.webp'
 
 @customElement('img-zoom')
 export class ImgZoom extends LitElement {
@@ -80,10 +88,20 @@ export class ImgZoom extends LitElement {
         </svg>
       </button>
       <div
-        class="zoom-overlay fixed inset-0 z-50 overflow-auto overscroll-contain bg-white/10 backdrop-blur-sm"
+        class="zoom-overlay fixed inset-0 z-50 overflow-auto overscroll-contain bg-white/20 backdrop-blur backdrop-brightness-50"
       >
         <div class="zoom-content container max-w-[1280px] my-24">
-          <img src="${p1}" class="h-auto rounded-[.75rem]" loading="lazy" />
+          <picture>
+            <img class="rounded-t-[.5rem]" src="${p0}" type="image/webp" />
+            <img src="${p1}" loading="lazy" type="image/webp" />
+            <img src="${p2}" loading="lazy" type="image/webp" />
+            <img src="${p3}" loading="lazy" type="image/webp" />
+            <img src="${p4}" loading="lazy" type="image/webp" />
+            <img src="${p5}" loading="lazy" type="image/webp" />
+            <img src="${p6}" loading="lazy" type="image/webp" />
+            <img src="${p7}" loading="lazy" type="image/webp" />
+            <img class="rounded-b-[.5rem]" src="${p8}" loading="lazy" type="image/webp" />
+          </picture>
         </div>
       </div>
     `

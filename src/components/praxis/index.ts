@@ -2,7 +2,7 @@ import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import './styles.scss'
+
 import { ThemeMixin } from '../../store/theme'
 
 @customElement('praxis-section')

@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import classNames from 'classnames'
-import './styles.scss'
+
 
 @customElement('marquee-element')
 export class MarqueeElement extends LitElement {

@@ -5,7 +5,7 @@ import { customElement, property } from 'lit/decorators.js'
 import profile1x from './profile-1x.webp'
 import profile2x from './profile-2x.webp'
 import profile3x from './profile-3x.webp'
-import './styles.scss'
+
 import { ThemeMixin } from '../../store/theme'
 
 @customElement('hero-section')

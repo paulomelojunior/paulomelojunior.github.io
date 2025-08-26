@@ -12,11 +12,12 @@ export default defineConfig(({ command }) => ({
     minify: 'esbuild',
     cssMinify: true,
     cssCodeSplit: false,
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       treeshake: 'recommended',
       input: {
         404: '404.html',
-        glyphs: 'glyphs.html',
         main: 'index.html',
         projects: 'projects.html',
         twyne: 'twyne.html',

@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import classNames from 'classnames'
-import './styles.scss'
+
 
 @customElement('progressive-blur')
 export class ProgressiveBlur extends LitElement {

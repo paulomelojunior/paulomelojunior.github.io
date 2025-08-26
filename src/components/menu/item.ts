@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import './styles.scss'
+
 import classNames from 'classnames'
 
 @customElement('menu-item')
@@ -57,7 +57,7 @@ export class MenuItem extends LitElement {
     )
 
     const fxClasses = classNames(
-      'absolute flex items-center justify-center inset-0 text-white'
+      'absolute flex items-center justify-center inset-0 text-zinc-950'
     )
 
     return html`<a

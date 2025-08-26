@@ -1,7 +1,7 @@
 import i18next from '../../i18n'
 import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import './styles.scss'
+
 import { ThemeMixin } from '../../store/theme'
 
 interface JourneyItem {

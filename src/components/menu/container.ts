@@ -87,12 +87,12 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-black xl:bg-gradient-to-b xl:from-black xl:backdrop-blur xl:to-black/80 xl:fixed"
+        class="absolute inset-x-0 z-40 w-full translate-y-[1px] bg-gradient-to-b from-black backdrop-blur to-black/80 xl:fixed"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-gradient-to-t from-black"
         ></div>
-        <div class="container grid items-center grid-cols-2 xl:grid-cols-3">
+        <div class="container grid items-center grid-cols-1 xl:grid-cols-3">
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
@@ -101,7 +101,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             class="hidden xl:flex"
           ></mail-button>
           <div
-            class="flex size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950 xl:hidden"
+            class="hidden size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950 xl:hidden"
           >
             <img
               src="${home}"
@@ -111,34 +111,34 @@ export class MenuContainer extends ThemeMixin(LitElement) {
           </div>
           <nav>
             <ul id="anchors" class="flex justify-end px-0 xl:px-20">
-              <li class="hidden flex-1 xl:flex">
+              <li class="flex-1 xl:flex">
                 <menu-item
                   href="#section-praxis"
                   label="${i18next.t('menu.praxis')}"
                 ></menu-item>
               </li>
-              <li class="hidden flex-1 xl:flex">
+              <li class="flex-1 xl:flex">
                 <menu-item
                   href="#section-journey"
                   label="${i18next.t('menu.journey')}"
                 ></menu-item>
               </li>
-              <li class="hidden flex-1 xl:flex">
+              <li class="flex-1 xl:flex">
                 <menu-item
                   href="#section-connect"
                   label="${i18next.t('menu.connect')}"
                 ></menu-item>
               </li>
-              <li class="hidden items-center pe-4 xl:flex">
+              <li class="items-center pe-4 flex xl:hidden">
                 <lang-button
                   @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? `POR` : `ENG`}
+                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
                   title="${this.lang === 'en'
                     ? 'Mudar para português'
                     : 'Change to english'}"
                 ></lang-button>
               </li>
-              <li class="flex items-center pe-4 xl:hidden">
+              <li class="hidden items-center pe-4 xl:hidden">
                 <button class="menu-toggle">
                   <span>
                     menu
