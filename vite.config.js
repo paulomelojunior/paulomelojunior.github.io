@@ -3,9 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    tailwindcss({
-      content: ['./*.html', './src/**/*.ts', './src/language/*.json'],
-    })
+    tailwindcss(),
   ],
   esbuild: {
     loader: 'ts',

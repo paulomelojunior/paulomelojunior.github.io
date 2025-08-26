@@ -39,8 +39,12 @@
 
 @layer base {
   ::selection {
-    @apply bg-brand-400
-        text-black;
+    @apply bg-brand-300 text-black;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 
@@ -219,7 +223,6 @@
   .footer::before {
     position: absolute;
     inset: 0;
-    content: '';
     background-image: url('imgs/pattern.svg');
     background-attachment: fixed;
     mask-image: radial-gradient(circle at bottom, white, black 50%);

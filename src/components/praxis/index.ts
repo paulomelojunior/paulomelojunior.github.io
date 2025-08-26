@@ -25,6 +25,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   firstUpdated() {
     const praxisPath = this.renderRoot.querySelectorAll('.praxis svg')
+    
     praxisPath.forEach((i) => {
       const p = i.querySelectorAll('path')
       gsap.from(p, {
@@ -35,7 +36,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         },
         stagger: 0.12,
         opacity: 0,
-        fill: this.dark ? 'var(--color-brand-400)' : 'var(--color-brand-400)',
+        fill: this.dark ? 'var(--color-brand-500)' : 'var(--color-brand-400)',
         drawSVG: false,
       })
     })
