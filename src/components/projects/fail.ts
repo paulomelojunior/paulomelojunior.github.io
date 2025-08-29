@@ -23,13 +23,13 @@ export class ProjectsFail extends LitElement {
   render() {
     return html`
       <div
-        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-200 xl:hidden"
+        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-100 xl:hidden"
       >
         Sorry, this page isn't available <br />
         for small screens yet.
         <a
           href="/"
-          class=" flex items-center gap-4 rounded-full bg-zinc-200 py-3 pe-6 ps-4 text-[1rem] font-semibold uppercase leading-none text-black"
+          class=" flex items-center gap-4 rounded-full bg-zinc-100 py-3 pe-6 ps-4 text-[1rem] font-semibold uppercase leading-none text-zinc-950"
         >
           <svg
             width="14"

@@ -28,14 +28,14 @@ export class TwyneImpact extends LitElement {
     return html`
       <div id="impact" class="container grid gap-16 px-24 pt-32 2xl:px-32">
         <h2
-          class="text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
+          class="text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-100"
         >
           ${unsafeHTML(i18next.t('twyne.impact.t1'))}
         </h2>
 
         <div class="grid grid-cols-3">
           <div class="grid gap-2 border-s border-zinc-800 ps-8">
-            <h3 class="text-[2rem] leading-none dark:text-zinc-200">
+            <h3 class="text-[2rem] leading-none dark:text-zinc-100">
               ${i18next.t('twyne.numbers.t1')}
             </h3>
             <p class="text-pretty text-base/none">
@@ -43,7 +43,7 @@ export class TwyneImpact extends LitElement {
             </p>
           </div>
           <div class="grid gap-2 border-s border-zinc-800 ps-8">
-            <h3 class="text-[2rem] leading-none dark:text-zinc-200">
+            <h3 class="text-[2rem] leading-none dark:text-zinc-100">
               ${i18next.t('twyne.numbers.t2')}
             </h3>
             <p class="text-pretty text-base/none">
@@ -51,7 +51,7 @@ export class TwyneImpact extends LitElement {
             </p>
           </div>
           <div class="grid gap-2 border-s border-zinc-800 ps-8">
-            <h3 class="text-[2rem] leading-none dark:text-zinc-200">
+            <h3 class="text-[2rem] leading-none dark:text-zinc-100">
               ${i18next.t('twyne.numbers.t3')}
             </h3>
             <p class="text-pretty text-base/none">

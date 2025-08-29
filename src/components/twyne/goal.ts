@@ -29,7 +29,7 @@ export class TwyneGoal extends LitElement {
             class="col-span-2 col-start-2 flex aspect-square flex-col justify-center"
           >
             <h2
-              class="mb-10 text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-200"
+              class="mb-10 text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] dark:text-zinc-100"
             >
               ${i18next.t('twyne.goal.t1')}
             </h2>

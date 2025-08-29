@@ -101,7 +101,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
   private createJourneyHeader(): string {
     return `
       <h2
-        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] text-zinc-200 px-5 xl:px-20 2xl:px-32"
+        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] text-zinc-100 px-5 xl:px-20 2xl:px-32"
       >
         ${i18next.t('journey.t0')}
       </h2>
@@ -149,7 +149,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <span class="font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-500 mb-2">
           ${item.start} &bull; <span${customClass}>${item.end}</span>
         </span>
-        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-200 text-brand-900">
+        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none dark:text-zinc-100 text-brand-900">
           ${item.title}
         </h2>
         <p class="text-sm/loose 2xl:text-base/loose text-pretty">
@@ -177,7 +177,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-journey">
         <div
-          class="xl:py-24 2xl:py-32 bg-[linear-gradient(var(--color-black),var(--color-black)_100%)]"
+          class="xl:py-24 2xl:py-32 bg-[linear-gradient(var(--color-zinc-950),var(--color-zinc-950)_100%)]"
         >
           <div
             id="job"

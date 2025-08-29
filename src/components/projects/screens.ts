@@ -102,23 +102,23 @@ export class ProjectsScreens extends LitElement {
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky -inset-x-4 top-[calc(100dvh-12rem)] isolate flex h-48 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-black after:content-['']"
+              class="sticky -inset-x-4 top-[calc(100dvh-12rem)] isolate flex h-48 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-zinc-950 after:content-['']"
             >
               <progressive-blur></progressive-blur>
               <div class="relative z-20 flex gap-px pb-2">
                 <button
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-200/10 py-3 pe-4 ps-5 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-200 transition-all hover:bg-zinc-200 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 pe-4 ps-5 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-100 transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Prev
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-white/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em]"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em]"
                 >
                   ${this.currentIndex + 1} / ${this.screens.length}
                 </span>
                 <button
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-200/10 py-3 pe-5 ps-4 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-200 transition-all hover:bg-zinc-200 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 pe-5 ps-4 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-100 transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Next
                 </button>

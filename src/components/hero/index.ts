@@ -120,7 +120,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="xl:py-24 2xl:py-32">
               <p class="text-default text-pretty">
                 <mark
-                  class="inline-block bg-transparent text-brand-950 dark:text-white"
+                  class="inline-block bg-transparent text-brand-950 dark:text-zinc-50"
                   >${i18next.t('about.content.h1')}</mark
                 >${i18next.t('about.content.p1')}
               </p>

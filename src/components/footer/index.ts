@@ -81,7 +81,7 @@ export class FooterSection extends LitElement {
       const indexStr = (i + 1).toString().padStart(2, '0')
       const navItem = `
 				<div class="border-b border-brand-300 dark:border-zinc-900 xl:border-0">
-					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-brand-900 dark:text-zinc-200 relative" rel="noopener noreferrer" href="${e.url}">
+					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-brand-900 dark:text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
 						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-brand-200 dark:text-zinc-950">
 							${e.label}
@@ -125,7 +125,7 @@ export class FooterSection extends LitElement {
         </div>
         <div
           
-          class="absolute inset-x-0 bottom-0 hidden bg-black text-zinc-600 xl:z-50 xl:block"
+          class="absolute inset-x-0 bottom-0 hidden bg-zinc-950 text-zinc-600 xl:z-50 xl:block"
         >
           <div
             class="container flex items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"
@@ -134,7 +134,7 @@ export class FooterSection extends LitElement {
               href="https://github.com/paulomelojunior/pmjr.cc"
               target="_blank"
               rel="noopener noreferrer"
-              class="copyright *:hover:text-zinc-400 h-12 flex items-center justify-center gap-2"
+              class="copyright *:hover:text-zinc-300 h-12 flex items-center justify-center gap-2"
               id="copyright"
             >
               MIT License <span class="transition-colors duration-500">Copyright</span> 2025, pmjr.cc

@@ -101,7 +101,7 @@ export class MobileLoading extends LitElement {
   render() {
     return html` <div
       id="loading"
-      class="fixed top-0 z-100 h-svh w-full bg-black"
+      class="fixed top-0 z-100 h-svh w-full bg-zinc-950"
     >
       <div
         class="container mx-5 mt-auto flex h-full items-end gap-4 pb-32 xl:mx-auto"
@@ -110,7 +110,7 @@ export class MobileLoading extends LitElement {
           ${unsafeHTML(`${spin}`)}
         </div>
         <span
-          class="animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-white"
+          class="animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-zinc-50"
         >
           ${this.lang === 'pt' ? html`Carregando...` : html`Loading...`}
         </span>

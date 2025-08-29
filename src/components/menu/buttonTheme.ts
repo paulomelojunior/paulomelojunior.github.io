@@ -9,7 +9,7 @@ export class ThemeButton extends LitElement {
 
   render() {
     const baseClasses =
-      'relative tracking-[0.05em] flex items-center transition-all justify-center size-8 hover:size-10 rounded-full hover:bg-brand-950 dark:hover:bg-zinc-200 hover:text-brand-950 dark:hover:text-zinc-200'
+      'relative tracking-[0.05em] flex items-center transition-all justify-center size-8 hover:size-10 rounded-full hover:bg-brand-950 dark:hover:bg-zinc-100 hover:text-brand-950 dark:hover:text-zinc-100'
     const buttonClasses = classNames(baseClasses, this.classNames)
 
     return html`

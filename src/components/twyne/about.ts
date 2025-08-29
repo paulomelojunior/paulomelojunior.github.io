@@ -42,7 +42,7 @@ export class TwyneAbout extends LitElement {
   render() {
     return html` <div
       id="about"
-      class="relative grid grid-cols-2 overflow-hidden rounded-4xl bg-linear-to-b from-zinc-950"
+      class="relative grid grid-cols-2 overflow-hidden rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
     >
       <div
         class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
@@ -54,30 +54,30 @@ export class TwyneAbout extends LitElement {
         <p class="text-default text-pretty">
           ${unsafeHTML(i18next.t('twyne.about.p1'))}
         </p>
-        <ul class="mt-auto text-[.75rem] leading-none *:py-6 2xl:text-[1rem]">
+        <ul class="mt-auto text-[.75rem] leading-none *:py-6 2xl:text-[1rem] *:border-b *:border-zinc-800">
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.company')} </span>
-            <span class="text-right text-zinc-200">
+            <span class="text-right text-zinc-100">
               ${i18next.t('twyne.about.details.companyValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.industry')} </span>
-            <span class="text-right text-zinc-200">
+            <span class="text-right text-zinc-100">
               ${i18next.t('twyne.about.details.industryValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.product')} </span>
-            <span class="text-right text-zinc-200">
+            <span class="text-right text-zinc-100">
               ${i18next.t('twyne.about.details.productValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
-            <span class="text-brand-400">
+            <span>
               ${i18next.t('twyne.about.details.contributions')}
             </span>
-            <span class="flex gap-2 text-right text-zinc-200">
+            <span class="flex gap-2 text-right text-zinc-100">
               ${i18next.t('twyne.about.details.contribution1')}
               <span class="text-zinc-500">/</span>
               ${i18next.t('twyne.about.details.contribution2')}
@@ -94,7 +94,7 @@ export class TwyneAbout extends LitElement {
           class="absolute left-16 top-16 max-w-none flex-none rounded-ss-lg border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
         />
         <progressive-blur
-          class="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black to-transparent"
+          class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent"
         ></progressive-blur>
       </div>
     </div>`

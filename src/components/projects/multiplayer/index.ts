@@ -40,19 +40,19 @@ export class ProjectsMultiplayer extends LitElement {
         ${i18next.t('multiplayer.description2')}
       </p>
       <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-100">
           ${i18next.t('multiplayer.metrics.audience.title')}
         </h3>
         <p class="text-[.875rem] leading-none">${i18next.t('multiplayer.metrics.audience.subtitle')}</p>
       </div>
       <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-100">
           ${i18next.t('multiplayer.metrics.facebook.title')}
         </h3>
         <p class="text-[.875rem] leading-none">${i18next.t('multiplayer.metrics.facebook.subtitle')}</p>
       </div>
       <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-        <h3 class="text-[1.25rem] leading-none dark:text-zinc-200">
+        <h3 class="text-[1.25rem] leading-none dark:text-zinc-100">
           ${i18next.t('multiplayer.metrics.youtube.title')}
         </h3>
         <p class="text-[.875rem] leading-none">${i18next.t('multiplayer.metrics.youtube.subtitle')}</p>

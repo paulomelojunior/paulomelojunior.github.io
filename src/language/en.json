@@ -72,7 +72,7 @@
     "t2": "Twyne",
     "about": {
       "t1": "about",
-      "p1": "Developed by Ifficient, <span class='dark:text-zinc-200'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span>",
+      "p1": "Developed by Ifficient, <span class='dark:text-zinc-100'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span>",
       "p2": "Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization.",
       "details": {
         "company": "Company",
@@ -89,7 +89,7 @@
     },
     "goal": {
       "t1": "Goal",
-      "p1": "Tackling one of the biggest challenges in digital design: creating a <span class='text-zinc-200'>modular</span>, <span class='text-zinc-200'>scalable</span>, and <span class='text-zinc-200'>adaptable</span> interface for highly complex software, with constant growth in features and requirements.",
+      "p1": "Tackling one of the biggest challenges in digital design: creating a <span class='text-zinc-100'>modular</span>, <span class='text-zinc-100'>scalable</span>, and <span class='text-zinc-100'>adaptable</span> interface for highly complex software, with constant growth in features and requirements.",
       "p2": "The visual approach needed to balance performance, readability, and continuous evolution, without requiring a restart for every new feature. Delivering clarity and control even in dense flows."
     },
     "proposal": {
@@ -154,7 +154,7 @@
     "title": "Damus",
     "tags": "Experiment, Restoneing, Graphic design",
     "year": "2024",
-    "description1": "<a href='https://damus.io/' rel='noreferrer noopener' class='underline text-zinc-200' target='_blank' title='Damus official website'>Damus</a> is a client for the decentralized social network Nostr, available for iOS, iPad, and macOS. It allows users to post text, images, videos, and GIFs, as well as interact with other users through the sending of <a href='https://en.wikipedia.org/wiki/Satoshi' class='underline text-zinc-200' target='_blank' title='Satoshi is the smallest unit of the system, representing 0.00000001 bitcoin, a hundredth of a millionth of a bitcoin.'>satoshis</a> and encrypted private messages.",
+    "description1": "<a href='https://damus.io/' rel='noreferrer noopener' class='underline text-zinc-100' target='_blank' title='Damus official website'>Damus</a> is a client for the decentralized social network Nostr, available for iOS, iPad, and macOS. It allows users to post text, images, videos, and GIFs, as well as interact with other users through the sending of <a href='https://en.wikipedia.org/wiki/Satoshi' class='underline text-zinc-100' target='_blank' title='Satoshi is the smallest unit of the system, representing 0.00000001 bitcoin, a hundredth of a millionth of a bitcoin.'>satoshis</a> and encrypted private messages.",
     "description2": "The goal of Damus is to offer an alternative to traditional social networks, focusing on freedom of expression and privacy."
   },
   "ifficient": {

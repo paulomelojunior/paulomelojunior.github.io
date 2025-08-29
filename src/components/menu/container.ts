@@ -74,10 +74,10 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 w-full translate-y-px bg-linear-to-b from-black backdrop-blur to-black/80 xl:fixed"
+        class="absolute inset-x-0 z-40 w-full translate-y-px bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 xl:fixed"
       >
         <div
-          class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-linear-to-t from-black"
+          class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-linear-to-t from-zinc-950"
         ></div>
         <div class="container grid items-center grid-cols-1 xl:grid-cols-3">
           <mail-button
@@ -119,7 +119,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               <li class="items-center pe-4 flex xl:hidden">
                 <lang-button
                   @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                  label=${this.lang === 'pt' ? `BR` : `US`}
                   title="${this.lang === 'en'
                     ? 'Mudar para português'
                     : 'Change to english'}"
