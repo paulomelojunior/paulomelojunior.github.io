@@ -38,7 +38,7 @@
 
   --color-zinc-950: oklch(0 0 0);
   --color-zinc-900: oklch(0.16 0.005 var(--hue));
-  --color-zinc-800: oklch(0.2 var(--chroma) var(--hue));
+  --color-zinc-800: oklch(0.24 var(--chroma) var(--hue));
   --color-zinc-700: oklch(0.3 var(--chroma) var(--hue));
   --color-zinc-600: oklch(0.4 var(--chroma) var(--hue));
   --color-zinc-500: oklch(0.5 var(--chroma) var(--hue));
@@ -47,18 +47,6 @@
   --color-zinc-200: oklch(0.8 var(--chroma) var(--hue));
   --color-zinc-100: oklch(0.9 var(--chroma) var(--hue));
   --color-zinc-50:  oklch(1.0 var(--chroma) var(--hue));
-
-  /* --color-zinc-950: oklch(1.0 var(--chroma) var(--hue));
-  --color-zinc-900: oklch(0.9 var(--chroma) var(--hue));
-  --color-zinc-800: oklch(0.8 var(--chroma) var(--hue));
-  --color-zinc-700: oklch(0.7 var(--chroma) var(--hue));
-  --color-zinc-600: oklch(0.6 var(--chroma) var(--hue));
-  --color-zinc-500: oklch(0.5 var(--chroma) var(--hue));
-  --color-zinc-300: oklch(0.4 var(--chroma) var(--hue));
-  --color-zinc-300: oklch(0.3 var(--chroma) var(--hue));
-  --color-zinc-100: oklch(0.2 var(--chroma) var(--hue));
-  --color-zinc-100: oklch(0.1 var(--chroma) var(--hue));
-  --color-zinc-50:  oklch(0.0 var(--chroma) var(--hue)); */
 }
 
 @utility container {
