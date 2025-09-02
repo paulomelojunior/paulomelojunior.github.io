@@ -333,12 +333,11 @@
   .menu-toggle:hover span {
     visibility: visible;
     opacity: 1;
-    transform: translateX(calc(-100% - 1rem));
+    transform: translateX(calc(-2rem));
   }
 
   .menu-toggle:hover::after,
   .menu-toggle:hover::before {
-    width: 100%;
     top: calc(50% - 1px);
   }
 
@@ -349,17 +348,17 @@
     height: 2px;
     position: absolute;
     right: 0;
-    transition: 0.2s cubic-bezier(0.75, 0, 0.5, 1);
+    transition: 0.4s cubic-bezier(0.75, 0, 0.5, 1);
   }
 
   .menu-toggle::after {
-    top: calc(60% - 1px);
-    width: 50%;
+    top: calc(58% - 1px);
+    width: 40%;
   }
 
   .menu-toggle::before {
-    top: calc(40% - 1px);
-    width: 50%;
+    top: calc(42% - 1px);
+    width: 40%;
   }
 
   .menu-toggle--close span {
@@ -369,9 +368,8 @@
   .menu-toggle--close::after,
   .menu-toggle--close::before {
     top: calc(50% - 1px);
-    width: 60%;
-    right: 40%;
-    background: var(--gray);
+    width: 40%;
+    background: currentColor;
   }
 
   .menu-toggle--close::after {

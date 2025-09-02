@@ -78,42 +78,31 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full translate-y-px bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 xl:fixed"
+        class="absolute inset-x-0 z-40 w-full translate-y-px bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 xl:fixed"
       >
         <div
           class="pointer-events-none fixed inset-x-0 bottom-12 h-40 bg-linear-to-t from-zinc-950"
         ></div>
         <div class="container xl:grid flex items-center xl:grid-cols-3">
           <nav class="xl:hidden">
-            <ul id="anchors" class="flex bg-zinc-950 backdrop-blur-3xl overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0 *:opacity-0'}">
+            <div class="fixed inset-0 bg-zinc-950/50"></div>
+            <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center gap-4 w-dvw transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0'}">
               <li>
                 <mobile-item
                   href="/twyne"
-                  label="Last project"
+                  label="${i18next.t('menu.twyne')}"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
                   href="/projects"
-                  label="Selected works"
+                  label="${i18next.t('menu.projects')}"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
                   href="/"
-                  label="GitHub"
-                ></mobile-item>
-              </li>
-              <li>
-                <mobile-item
-                  href="/"
-                  label="LinkedIn"
-                ></mobile-item>
-              </li>
-              <li>
-                <mobile-item
-                  href="/"
-                  label="Email"
+                  label="${i18next.t('menu.resume')}"
                 ></mobile-item>
               </li>
             </ul>
@@ -135,13 +124,14 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
           ></mail-button>
           <button
-            class="menu-toggle xl:hidden ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
+            class="menu-toggle ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
             @click=${() => this.toggleMore()}
           >
-            <span class="uppercase text-[.75rem] font-semibold">
+            <span class="uppercase">
               Menu
             </span>
           </button>
+
           <nav>
             <ul id="anchors" class="hidden xl:flex justify-end px-0 xl:px-20">
               <li class="flex-1">
@@ -171,8 +161,23 @@ export class MenuContainer extends ThemeMixin(LitElement) {
                     : 'Change to english'}"
                 ></lang-button>
               </li>
+              <li class="items-center pe-4 flex xl:hidden">
+                <button class="menu-toggle">
+                  <span>
+                    menu
+                  </span>
+                </button>
+              </li>
             </ul>
           </nav>
+          <div
+            id="copy"
+            class="absolute grid-span-2 translate-y-full flex h-12 w-full items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden bg-zinc-950"
+          >
+            <span> [c] 2025 pmjr.cc </span>
+            <span class="text-zinc-600"> / </span>
+            <span> Made by a human being </span>
+          </div>
           <div class="hidden xl:flex items-center justify-end gap-2">
             <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="/projects">
               ${i18next.t('featured.button')}
