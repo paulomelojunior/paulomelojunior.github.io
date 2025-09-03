@@ -133,7 +133,7 @@
   },
   "allugator": {
     "title": "Allugator",
-    "tags": "Design Partner, stoneing, Early stage start-up",
+    "tags": "Design Partner, Branding, Early stage start-up",
     "year": "2018",
     "description": "Atuando como designer generalista, contribuí com entregas-chave para o crescimento da startup em seu estágio inicial, da reformulação da identidade e comunicação da marca à evolução do produto digital.",
     "metrics": {
@@ -153,7 +153,7 @@
   },
   "damus": {
     "title": "Damus",
-    "tags": "Experimento,Restoneing, Design gráfico",
+    "tags": "Experimento, Rebranding, Design gráfico",
     "year": "2024",
     "description1": "<a href='https://damus.io/' rel='noreferrer noopener' class='underline text-zinc-100' target='_blank' title='Site oficial do Damus'>Damus</a> é um cliente para a rede social descentralizada Nostr, disponível para iOS, iPad e macOS. Ele permite aos usuários postar textos, imagens, vídeos e GIFs, além de interagir com outros usuários através de envio de <a href='https://pt.wikipedia.org/wiki/Bitcoin' class='underline text-zinc-100' target='_blank' title='Satoshi, é a menor quantidade do sistema, representando 0,00000001 bitcoin, um centésimo de milionésimo de bitcoin.'>satoshis</a> e mensagens privadas criptografadas.",
     "description2": "O objetivo do Damus é oferecer uma alternativa às redes sociais tradicionais, com foco na liberdade de expressão e privacidade."
@@ -193,22 +193,22 @@
       "keywords": "Paulo Melo Júnior, Paulo Melo Jr, Paul M, pmjr, designer de produto digital, product designer, designer de interface, UI/UX, UX designer, UI designer, creative coder, front-end, frontend, web design, design system, GSAP, animações, motion design, stoneing, portfólio, Brasil, São Paulo, tecnologias descentralizadas, bitcoin, nostr"
     },
     "home": {
-      "title": "Paulo Melo Jr. · Designer and coder"
+      "title": "Paulo Melo · Designer and coder"
     },
     "projects": {
-      "title": "Projetos · Paulo Melo Jr.",
+      "title": "Projetos em destaque · Paulo Melo",
       "keywords": "arquivo, projetos, cases"
     },
     "glyphs": {
-      "title": "Glifos · pmjr.cc",
+      "title": "Glifos · Paulo Melo",
       "keywords": "glifos, símbolos, caracteres especiais, unicode, copiar símbolos, ícones"
     },
     "twyne": {
-      "title": "Twyne · Paulo Melo Jr.",
-      "keywords": "twyne, estudo de caso, app social, nostr, design de produto, ui/ux, onboarding, notificações, feed, mobile, web"
+      "title": "Twyne · Paulo Melo",
+      "keywords": "twyne, estudo de caso, design de produto, ui/ux, onboarding, mobile, web, adtech, marketing interativo, geração de leads"
     },
     "404": {
-      "title": "404 · Página não encontrada · Paulo Melo Jr."
+      "title": "404 · Página não encontrada · Paulo Melo"
     }
   }
 }
